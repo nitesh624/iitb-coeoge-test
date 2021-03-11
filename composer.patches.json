@@ -1,0 +1,6 @@
+{
+  "patches": {
+    "drupal/group": {
+      "Drupal group custom patch(group-content-entity-tokens-2916907-7)": "patch/group/group_url_alias.patch"
+    }}
+}
