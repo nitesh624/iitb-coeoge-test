@@ -1,0 +1,24 @@
+uuid: b781b146-c52d-4296-995e-b7b817b149ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_view.field_select_view
+    - paragraphs.paragraphs_type.hero_view
+  module:
+    - viewsreference
+id: paragraph.hero_view.default
+targetEntityType: paragraph
+bundle: hero_view
+mode: default
+content:
+  field_select_view:
+    weight: 0
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

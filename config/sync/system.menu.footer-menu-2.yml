@@ -1,0 +1,10 @@
+uuid: 704bdd10-a65a-4c4a-a442-d7bff62a5942
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GN7c53MISar8rYlI6a3_OKjC2vnJQPu2xyJtOBNMMFY
+id: footer-menu-2
+label: Footer-menu-2
+description: 'Footer column 2 menu'
+locked: false

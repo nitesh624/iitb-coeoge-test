@@ -1,0 +1,27 @@
+uuid: 78fd9765-6bfb-4874-b5cb-fe7eedb6a2d6
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+  module:
+    - node
+_core:
+  default_config_hash: fd61NksXi-ap7x2-_NeQ0OygBevNzd4Kl2GV8AHFK84
+id: department_staff_alias
+label: 'Department staff Alias'
+type: 'canonical_entities:node'
+pattern: 'staff/[node:title]'
+selection_criteria:
+  15079ae2-ae28-406c-bdb1-aa39eae76917:
+    id: node_type
+    bundles:
+      staff_page: staff_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 15079ae2-ae28-406c-bdb1-aa39eae76917
+selection_logic: and
+weight: -5
+relationships: {  }

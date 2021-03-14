@@ -1,0 +1,27 @@
+uuid: bc857f85-94d7-42dd-8417-34b1ac738bbc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_news
+  module:
+    - node
+_core:
+  default_config_hash: LqySHGv_lKyQ9gNl6xGqBDhROO1xDeCrYOuaB_tkTgg
+id: news_type_alias
+label: 'News type alias'
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  8bbe570c-8b27-4819-a09d-e90d049a3dad:
+    id: node_type
+    bundles:
+      news_item: news_item
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8bbe570c-8b27-4819-a09d-e90d049a3dad
+selection_logic: and
+weight: -5
+relationships: {  }

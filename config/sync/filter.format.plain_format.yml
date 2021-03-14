@@ -1,0 +1,16 @@
+uuid: 2fe0849a-cca7-48d1-9c77-3bee27abb1a2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DpjIGCkJvbSdiftqMtT9Cp7AS3kfOT_OBw6MT07H7ww
+name: 'Plain format'
+format: plain_format
+weight: 0
+filters:
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }

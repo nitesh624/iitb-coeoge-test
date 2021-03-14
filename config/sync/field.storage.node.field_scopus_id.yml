@@ -1,0 +1,26 @@
+uuid: fb94e4d1-323d-43e6-8b07-ee1a0daf97ec
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - node
+_core:
+  default_config_hash: Gnba7WoHoCyAXvpR2GqK1JGIVlz7gYTj1_aL6eKH_AY
+id: node.field_scopus_id
+field_name: field_scopus_id
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

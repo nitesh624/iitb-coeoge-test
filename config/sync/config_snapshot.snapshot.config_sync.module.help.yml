@@ -1,0 +1,11 @@
+uuid: f0300320-48be-4e95-8d54-09ff8230ab81
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+id: config_sync.module.help
+snapshotSet: config_sync
+extensionType: module
+extensionName: help
+items: {  }

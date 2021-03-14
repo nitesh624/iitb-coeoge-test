@@ -1,0 +1,26 @@
+uuid: e865f438-a4aa-4a3e-a7fa-94fd6219dcf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lecture_credit
+    - node.type.course_details
+  enforced:
+    module:
+      - course_details
+  module:
+    - options
+_core:
+  default_config_hash: zprYlvWhtgG52gXvnxUWOaJ1_idJOZRg2y-K4E-zg7k
+id: node.course_details.field_lecture_credit
+field_name: field_lecture_credit
+entity_type: node
+bundle: course_details
+label: 'Lecture Credits'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

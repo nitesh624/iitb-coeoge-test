@@ -1,0 +1,20 @@
+uuid: 091cb64a-1d4f-4d88-a8d7-e37edbcc682b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: saFIbQbMSqcXDTKpVF4WzbbyFJZCbpbJFcJSfy7UCK8
+name: acad_fac_max_1300x1300
+label: 'Acad Fac Max 1300x1300'
+effects:
+  f46291b0-7206-4d2a-bb6e-293883ce389a:
+    uuid: f46291b0-7206-4d2a-bb6e-293883ce389a
+    id: image_scale
+    weight: 1
+    data:
+      width: 1300
+      height: 1300
+      upscale: false

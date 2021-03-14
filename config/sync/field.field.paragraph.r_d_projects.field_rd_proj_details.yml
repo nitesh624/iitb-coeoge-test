@@ -1,0 +1,28 @@
+uuid: 5971b64d-3ae1-44b9-b3b7-a975585da4f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rd_proj_details
+    - paragraphs.paragraphs_type.r_d_projects
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - text
+_core:
+  default_config_hash: psU1Q2c5cXKCFIgNn-rmCDK9V4Q4CHboS-Qul6MSsJk
+id: paragraph.r_d_projects.field_rd_proj_details
+field_name: field_rd_proj_details
+entity_type: paragraph
+bundle: r_d_projects
+label: 'R&D Project Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

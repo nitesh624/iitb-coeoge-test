@@ -1,0 +1,27 @@
+uuid: 3886f547-ebd1-457d-8dc6-d0d80595fdae
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: Pa3Cm3ZHbM6eLKR_vzDpPp-CwSk84REqO68bDcJ5X4U
+id: node.fac_page.promote
+field_name: promote
+entity_type: node
+bundle: fac_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,11 @@
+uuid: 996b85ad-137a-4d4f-99a4-f950db193923
+langcode: en
+status: true
+dependencies:
+  module:
+    - slick_extras
+id: config_sync.module.slick_extras
+snapshotSet: config_sync
+extensionType: module
+extensionName: slick_extras
+items: {  }

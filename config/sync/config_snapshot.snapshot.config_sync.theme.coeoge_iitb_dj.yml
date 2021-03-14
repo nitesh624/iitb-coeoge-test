@@ -1,0 +1,72 @@
+uuid: cddb4037-dcd0-46f2-83b2-e02594c2e03a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - coeoge_iitb_dj
+id: config_sync.theme.coeoge_iitb_dj
+snapshotSet: config_sync
+extensionType: theme
+extensionName: coeoge_iitb_dj
+items:
+  -
+    collection: ''
+    name: che_iitb_dj.settings
+    data:
+      favicon:
+        mimetype: image/vnd.microsoft.icon
+        path: ''
+        url: ''
+        use_default: 1
+      schemas:
+        bootstrap: 8000
+        iibt_dj: 8000
+      features:
+        comment_user_picture: 1
+        comment_user_verification: 1
+        favicon: 1
+        node_user_picture: 1
+      logo:
+        path: ''
+        url: ''
+        use_default: 1
+      region_wells:
+        header: ''
+        header_search: ''
+        navigation_collapsible: ''
+        slider: ''
+        highlighted: ''
+        help: ''
+        top_head: ''
+        top1: ''
+        top2: ''
+        top3: ''
+        top4: ''
+        content_top: ''
+        content: ''
+        sidebar_first: ''
+        sidebar_second: ''
+        footer1: ''
+        footer2: ''
+        footer3: ''
+        footer4: ''
+        footer_bar_left: ''
+        footer_bar_right: ''
+      fluid_container: 0
+      table_bordered: 1
+      table_responsive: '-1'
+      cdn_provider_import_data: ''
+      table: ''
+      navbar_position: fixed-top
+      show_social_icon: 1
+      facebook_url: 'https://www.facebook.com/iitbombay'
+      twitter_url: 'https://twitter.com/iitbombay'
+      google_plus_url: 'https://plus.google.com/+iitbombay'
+      linkedin_url: 'https://www.linkedin.com/edu/school?id=13496&trk=edu-cp-title'
+      show_heading_branding: 1
+      heading_branding_text: 'Indian Institute of Technology Bombay'
+      heading_branding_url: 'http://www.iitb.ac.in/'
+      heading_branding_title: 'IIT Bombay Home'
+      faculty_header_bg_file: /profiles/contrib/iitbdeptweb/themes/iitb_dj/img/research1.jpg
+      event_header_bg_file: /profiles/contrib/iitbdeptweb/themes/iitb_dj/img/seats.jpg
+      news_header_bg_file: /profiles/contrib/iitbdeptweb/themes/iitb_dj/img/news.jpg

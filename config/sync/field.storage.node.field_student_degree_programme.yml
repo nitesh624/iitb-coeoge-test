@@ -1,0 +1,38 @@
+uuid: 55e20185-39c2-455f-852d-efdcc925cef5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: QHdQmJjzVWbQ_jyWQjV6B-GrpZCxKL_7E-KJYEm_NuQ
+id: node.field_student_degree_programme
+field_name: field_student_degree_programme
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: PhD
+      label: PhD
+    -
+      value: M.Tech
+      label: M.Tech
+    -
+      value: 'Dual Degree'
+      label: 'Dual Degree'
+    -
+      value: B.Tech
+      label: B.Tech
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

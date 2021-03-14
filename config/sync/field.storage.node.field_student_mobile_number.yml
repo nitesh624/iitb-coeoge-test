@@ -1,0 +1,26 @@
+uuid: 8c4a787e-03a9-4efc-a8dc-847c8b6d2a4f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+_core:
+  default_config_hash: 98bsOxkfavq50994PHqHX4YB8J271yr93_yb9NJA3Rw
+id: node.field_student_mobile_number
+field_name: field_student_mobile_number
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,67 @@
+uuid: 81dbbb80-7472-49a9-86f0-2dc2b8194689
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.landing_page_paragraphs
+    - paragraphs.paragraphs_type.attachments
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.card_list
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.hero_view
+    - paragraphs.paragraphs_type.list_view
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.landing_page_paragraphs.field_content
+field_name: field_content
+entity_type: node
+bundle: landing_page_paragraphs
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attachments: attachments
+      banner: banner
+      card_list: card_list
+      gallery: gallery
+      hero_view: hero_view
+      list_view: list_view
+      text: text
+    target_bundles_drag_drop:
+      attachments:
+        enabled: true
+        weight: 9
+      banner:
+        enabled: true
+        weight: 10
+      card:
+        weight: 11
+        enabled: false
+      card_list:
+        enabled: true
+        weight: 12
+      gallery:
+        enabled: true
+        weight: 13
+      hero_view:
+        enabled: true
+        weight: 14
+      list_view:
+        enabled: true
+        weight: 16
+      r_d_projects:
+        weight: 16
+        enabled: false
+      text:
+        enabled: true
+        weight: 18
+field_type: entity_reference_revisions

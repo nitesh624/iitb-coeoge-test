@@ -1,0 +1,22 @@
+uuid: d7a1bb95-a066-4091-a629-5df5025abf8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iitb_dj
+_core:
+  default_config_hash: u9Ohv0_8_Sas-6J2dkiqFgO3F0TJw9qYtmQ4YLc89e8
+id: iitb_dj_content
+theme: iitb_dj
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

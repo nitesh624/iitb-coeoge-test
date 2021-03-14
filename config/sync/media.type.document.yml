@@ -1,0 +1,13 @@
+uuid: 3a2da4ac-4ce1-496c-a8ae-fe487850c7cc
+langcode: en
+status: true
+dependencies: {  }
+id: document
+label: Document
+description: 'The paragraph that allows editors to upload files like PDF, Word, PPT .'
+source: file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

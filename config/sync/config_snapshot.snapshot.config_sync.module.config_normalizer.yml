@@ -1,0 +1,11 @@
+uuid: be151822-cf88-4a4b-97c4-5a3c799491a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_normalizer
+id: config_sync.module.config_normalizer
+snapshotSet: config_sync
+extensionType: module
+extensionName: config_normalizer
+items: {  }

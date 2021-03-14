@@ -1,0 +1,25 @@
+uuid: 1e1294b6-8211-4737-ae26-4fe48b588922
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_event
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: 8VP84IYLF-6aQmLbNSpUEfqIFKnGmP96EHcw7MtEWQo
+id: node.field_event_name_of_speaker_and_
+field_name: field_event_name_of_speaker_and_
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

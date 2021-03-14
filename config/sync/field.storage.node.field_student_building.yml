@@ -1,0 +1,26 @@
+uuid: 6ac0ce82-8441-43cc-b89d-f1cc7d831868
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+_core:
+  default_config_hash: w3PjkS3gkCA6jPLGZtNB2jid3r4YhpWb0K9HYDBIFyE
+id: node.field_student_building
+field_name: field_student_building
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

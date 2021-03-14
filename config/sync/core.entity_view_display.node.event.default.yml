@@ -1,0 +1,85 @@
+uuid: 1bdd267a-1144-43a2-9f94-430caf4160a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_end_date_and_time
+    - field.field.node.event.field_event_name_of_speaker_and_
+    - field.field.node.event.field_event_title_of_seminar_con
+    - field.field.node.event.field_event_types
+    - field.field.node.event.field_event_venue
+    - field.field.node.event.field_start_date_and_time
+    - node.type.event
+  enforced:
+    module:
+      - acadmix_event
+  module:
+    - datetime
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: L05EyEM1A9vRxbRvqOsEz03rIX09Qe03hx11g_6cEJM
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_end_date_and_time:
+    weight: 8
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_event_name_of_speaker_and_:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_event_title_of_seminar_con:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_event_types:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_venue:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_start_date_and_time:
+    weight: 7
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  langcode: true
+  links: true

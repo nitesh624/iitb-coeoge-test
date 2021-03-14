@@ -1,0 +1,26 @@
+uuid: 4a54f59d-542e-42a3-8b1c-692cdd641708
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date_and_time
+    - node.type.event
+  enforced:
+    module:
+      - acadmix_event
+  module:
+    - datetime
+_core:
+  default_config_hash: Be3Kh206wiBAdcHzX8N5teePNrcdlIaWdIniCYOlQPQ
+id: node.event.field_start_date_and_time
+field_name: field_start_date_and_time
+entity_type: node
+bundle: event
+label: 'Start Date and Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

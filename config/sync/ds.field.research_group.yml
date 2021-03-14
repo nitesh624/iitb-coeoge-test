@@ -1,0 +1,20 @@
+id: research_group
+label: 'Research groups'
+ui_limit: ''
+properties:
+  block: 'views_block:related_faculty_research_area-block_1'
+  use_block_title: false
+  add_block_wrappers: false
+  config:
+    id: 'views_block:related_faculty_research_area-block_1'
+    label: ''
+    provider: views
+    label_display: visible
+    views_label: ''
+    items_per_page: '40'
+type: block
+type_label: 'Block field'
+entities:
+  taxonomy_term: taxonomy_term
+_core:
+  default_config_hash: ygh--2wLRdYXlGGk0CSbj7T5NY7vitDCgLqgbGXAo2k

@@ -1,0 +1,35 @@
+uuid: b10b175e-a877-47b5-9b52-5e55135651fb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - file
+    - image
+    - taxonomy
+_core:
+  default_config_hash: w4H6VJ95YR1H7a3NCqDP8FdgeKKUDa0Fkn1FYWPIv_E
+id: taxonomy_term.field_research_areas_image
+field_name: field_research_areas_image
+entity_type: taxonomy_term
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,171 @@
+uuid: a5b42faf-43a4-43d9-9508-fc6995382ddb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.laboratory_facility.body
+    - field.field.node.laboratory_facility.field_cost_of_purchase
+    - field.field.node.laboratory_facility.field_date_of_purchase
+    - field.field.node.laboratory_facility.field_facility_access_available_
+    - field.field.node.laboratory_facility.field_indented_by_faculty_
+    - field.field.node.laboratory_facility.field_instrument_class
+    - field.field.node.laboratory_facility.field_labfac_image
+    - field.field.node.laboratory_facility.field_purpose_of_equipment
+    - field.field.node.laboratory_facility.field_source_of_funding
+    - field.field.node.laboratory_facility.field_status_of_facility
+    - field.field.node.laboratory_facility.field_type_of_the_facility
+    - image.style.iitb_laborartory_facility_thumbnail_100_100_
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - datetime
+    - image
+    - path
+    - text
+_core:
+  default_config_hash: M7HZgegA0icjmc0jp4709JkByd6233frwaNrotjijQo
+id: node.laboratory_facility.default
+targetEntityType: node
+bundle: laboratory_facility
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cost_of_purchase:
+    weight: 128
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_date_of_purchase:
+    weight: 127
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_facility_access_available_:
+    weight: 129
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_indented_by_faculty_:
+    weight: 131
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_instrument_class:
+    weight: 125
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_labfac_image:
+    weight: 132
+    settings:
+      preview_image_style: iitb_laborartory_facility_thumbnail_100_100_
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_purpose_of_equipment:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_source_of_funding:
+    weight: 130
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_status_of_facility:
+    weight: 126
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_type_of_the_facility:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

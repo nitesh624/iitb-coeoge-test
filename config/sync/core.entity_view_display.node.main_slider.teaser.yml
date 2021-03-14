@@ -1,0 +1,40 @@
+uuid: 15345882-540e-4f8b-911f-c53191feed6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.main_slider.body
+    - field.field.node.main_slider.field_faculty_name_ref_slider
+    - field.field.node.main_slider.field_slider_image
+    - field.field.node.main_slider.field_slider_subtitle
+    - node.type.main_slider
+  enforced:
+    module:
+      - acadmix_slider
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: ELqGTjGm_aZtHvvKtkogzWJZ-kcrMj_j1GEiS7BSjO0
+id: node.main_slider.teaser
+targetEntityType: node
+bundle: main_slider
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_faculty_name_ref_slider: true
+  field_slider_image: true
+  field_slider_subtitle: true
+  langcode: true

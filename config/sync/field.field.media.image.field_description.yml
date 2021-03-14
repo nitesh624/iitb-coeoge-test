@@ -1,0 +1,29 @@
+uuid: 94991c8f-ddd6-498c-9ace-8e9a5b6580da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_description
+    - media.type.image
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    plain_format: '0'
+    restricted_html: '0'
+    full_html: '0'
+id: media.image.field_description
+field_name: field_description
+entity_type: media
+bundle: image
+label: Caption
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

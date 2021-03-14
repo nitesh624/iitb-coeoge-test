@@ -1,0 +1,26 @@
+uuid: 38b6564f-1c83-4dc8-9ca2-90a8ca3981c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_of_funding
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - options
+_core:
+  default_config_hash: dD2XMJXO7h6_Ur7VtrRMI1iFYCifVEu3pHhBt6PhAKo
+id: node.laboratory_facility.field_source_of_funding
+field_name: field_source_of_funding
+entity_type: node
+bundle: laboratory_facility
+label: 'Source of Funding'
+description: 'Select the source of funding'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

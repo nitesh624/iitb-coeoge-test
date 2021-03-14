@@ -1,0 +1,27 @@
+uuid: 126831fa-0978-43b8-a5f7-8d21c1a83afb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: RywZQEyW2ZPt2Zo5Y_wBqJj1hwzFQ3Dx_Q0N8Zjxd5o
+id: node.field_staff_head
+field_name: field_staff_head
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

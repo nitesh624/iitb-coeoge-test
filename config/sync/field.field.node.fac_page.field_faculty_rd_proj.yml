@@ -1,0 +1,30 @@
+uuid: fefba7f3-a0b3-405d-8eb3-8d02721412b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_rd_proj
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: bNNNP2Yp6sNca5zvzlQf1c7W_5g2On1RQcg6h3JQ5j8
+id: node.fac_page.field_faculty_rd_proj
+field_name: field_faculty_rd_proj
+entity_type: node
+bundle: fac_page
+label: 'Faculty R&D Projects'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+field_type: entity_reference_revisions

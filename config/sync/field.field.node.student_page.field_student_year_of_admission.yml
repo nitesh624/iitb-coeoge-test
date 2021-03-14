@@ -1,0 +1,28 @@
+uuid: 9db0812d-3b9e-4b3e-9818-cb30b40f8200
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_year_of_admission
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+_core:
+  default_config_hash: 2kZDUDbNwOwgOyMk4rBidmZA6WAMNH9PuGnar4sLgAQ
+id: node.student_page.field_student_year_of_admission
+field_name: field_student_year_of_admission
+entity_type: node
+bundle: student_page
+label: 'Year of Admission'
+description: 'Enter the year in YYYY format'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1975
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

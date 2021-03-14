@@ -1,0 +1,28 @@
+uuid: 720f4519-dfac-42b9-a05e-a221ca200429
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+  module:
+    - text
+_core:
+  default_config_hash: dpvOGzIDIyPRYLU9GnJN1ATKyK-5bUAKgh2FlBtw0M4
+id: node.student_page.body
+field_name: body
+entity_type: node
+bundle: student_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

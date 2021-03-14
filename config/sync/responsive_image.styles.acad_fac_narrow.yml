@@ -1,0 +1,28 @@
+uuid: f74fedbf-7a27-4860-aae4-0e268aaa5b45
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.acad_fac_max_1300x1300
+    - image.style.acad_fac_max_325x325
+    - image.style.acad_fac_max_650x650
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: Umj5KTYrfwM79WjP6IJpQHZGv0GEmu70WZarLM3BfTs
+id: acad_fac_narrow
+label: 'Acad Fac Narrow'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width: 1290px) 325px, (min-width: 851px) 25vw, (min-width: 560px) 50vw, 100vw'
+      sizes_image_styles:
+        - acad_fac_max_1300x1300
+        - acad_fac_max_325x325
+        - acad_fac_max_650x650
+breakpoint_group: responsive_image
+fallback_image_style: acad_fac_max_325x325

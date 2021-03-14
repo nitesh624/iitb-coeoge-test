@@ -1,0 +1,2025 @@
+uuid: 6ccb63b4-2d06-4145-831e-dbfd8c3d383e
+langcode: en
+status: true
+dependencies:
+  module:
+    - acadmix_event
+id: config_sync.module.acadmix_event
+snapshotSet: config_sync
+extensionType: module
+extensionName: acadmix_event
+items:
+  -
+    collection: ''
+    name: core.base_field_override.node.event.promote
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+      id: node.event.promote
+      field_name: promote
+      entity_type: node
+      bundle: event
+      label: 'Promoted to front page'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: 0
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+  -
+    collection: ''
+    name: core.entity_form_display.node.event.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.event.body
+          - field.field.node.event.field_end_date_and_time
+          - field.field.node.event.field_event_name_of_speaker_and_
+          - field.field.node.event.field_event_title_of_seminar_con
+          - field.field.node.event.field_event_types
+          - field.field.node.event.field_event_venue
+          - field.field.node.event.field_start_date_and_time
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+          - path
+          - text
+      id: node.event.default
+      targetEntityType: node
+      bundle: event
+      mode: default
+      content:
+        body:
+          type: text_textarea_with_summary
+          weight: 5
+          settings:
+            rows: 9
+            summary_rows: 3
+            placeholder: ''
+          third_party_settings: {  }
+          region: content
+        created:
+          type: datetime_timestamp
+          weight: 7
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_end_date_and_time:
+          weight: 29
+          settings: {  }
+          third_party_settings: {  }
+          type: datetime_default
+          region: content
+        field_event_name_of_speaker_and_:
+          weight: 2
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_event_title_of_seminar_con:
+          weight: 27
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_event_types:
+          weight: 4
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: entity_reference_autocomplete
+          region: content
+        field_event_venue:
+          weight: 3
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_start_date_and_time:
+          weight: 28
+          settings: {  }
+          third_party_settings: {  }
+          type: datetime_default
+          region: content
+        langcode:
+          type: language_select
+          weight: 2
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        path:
+          type: path
+          weight: 10
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        promote:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 8
+          region: content
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 11
+          region: content
+          third_party_settings: {  }
+        sticky:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 9
+          region: content
+          third_party_settings: {  }
+        title:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        uid:
+          type: entity_reference_autocomplete
+          weight: 6
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          region: content
+          third_party_settings: {  }
+      hidden: {  }
+  -
+    collection: ''
+    name: core.entity_view_display.node.event.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.event.body
+          - field.field.node.event.field_end_date_and_time
+          - field.field.node.event.field_event_name_of_speaker_and_
+          - field.field.node.event.field_event_title_of_seminar_con
+          - field.field.node.event.field_event_types
+          - field.field.node.event.field_event_venue
+          - field.field.node.event.field_start_date_and_time
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+          - options
+          - text
+          - user
+      id: node.event.default
+      targetEntityType: node
+      bundle: event
+      mode: default
+      content:
+        body:
+          label: hidden
+          type: text_default
+          weight: 4
+          settings: {  }
+          third_party_settings: {  }
+          region: content
+        field_end_date_and_time:
+          weight: 8
+          label: above
+          settings:
+            format_type: medium
+            timezone_override: ''
+          third_party_settings: {  }
+          type: datetime_default
+          region: content
+        field_event_name_of_speaker_and_:
+          weight: 1
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_event_title_of_seminar_con:
+          weight: 6
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: list_default
+          region: content
+        field_event_types:
+          weight: 3
+          label: above
+          settings:
+            link: true
+          third_party_settings: {  }
+          type: entity_reference_label
+          region: content
+        field_event_venue:
+          weight: 2
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_start_date_and_time:
+          weight: 7
+          label: above
+          settings:
+            format_type: medium
+            timezone_override: ''
+          third_party_settings: {  }
+          type: datetime_default
+          region: content
+      hidden:
+        langcode: true
+        links: true
+  -
+    collection: ''
+    name: core.entity_view_display.node.event.full
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.full
+          - field.field.node.event.body
+          - field.field.node.event.field_end_date_and_time
+          - field.field.node.event.field_event_name_of_speaker_and_
+          - field.field.node.event.field_event_title_of_seminar_con
+          - field.field.node.event.field_event_types
+          - field.field.node.event.field_event_venue
+          - field.field.node.event.field_start_date_and_time
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+          - ds
+          - text
+          - user
+      third_party_settings:
+        ds:
+          layout:
+            id: ds_1col
+            library: null
+            disable_css: false
+            entity_classes: all_classes
+            settings:
+              wrappers:
+                ds_content: div
+              outer_wrapper: div
+              attributes: ''
+              link_attribute: ''
+              link_custom: ''
+              classes:
+                layout_class: {  }
+                ds_content: {  }
+          regions:
+            ds_content:
+              - field_start_date_and_time
+              - field_end_date_and_time
+              - field_event_venue
+              - field_event_types
+              - field_event_name_of_speaker_and_
+              - field_event_title_of_seminar_con
+              - body
+              - links
+      id: node.event.full
+      targetEntityType: node
+      bundle: event
+      mode: full
+      content:
+        body:
+          label: hidden
+          type: text_default
+          weight: 6
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: Details
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-12
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          region: ds_content
+        field_end_date_and_time:
+          weight: 1
+          label: above
+          settings:
+            timezone_override: Asia/Kolkata
+            date_format: 'M d, Y - H:i'
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: End
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold event-date-label'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: datetime_custom
+          region: ds_content
+        field_event_file:
+          type: file_default
+          weight: 7
+          region: ds_content
+          label: above
+          settings:
+            use_description_as_link_text: true
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: 'Related files'
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_event_name_of_speaker_and_:
+          weight: 4
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: Speaker
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: text_default
+          region: ds_content
+        field_event_title_of_seminar_con:
+          type: string
+          weight: 5
+          region: ds_content
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: Title
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: 'col-sm-10 fw-bold'
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_event_types:
+          weight: 3
+          label: above
+          settings:
+            link: true
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: 'Event Type'
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: entity_reference_label
+          region: ds_content
+        field_event_venue:
+          weight: 2
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: Venue
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold event-venue-label'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: text_default
+          region: ds_content
+        field_start_date_and_time:
+          weight: 0
+          label: above
+          settings:
+            timezone_override: Asia/Kolkata
+            date_format: 'M d, Y - H:i'
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: Start
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold event-date-label'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: datetime_custom
+          region: ds_content
+        links:
+          weight: 8
+          region: ds_content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: core.entity_view_display.node.event.teaser
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.teaser
+          - field.field.node.event.body
+          - field.field.node.event.field_event_name_of_speaker_and_
+          - field.field.node.event.field_event_title_of_seminar_con
+          - field.field.node.event.field_event_types
+          - field.field.node.event.field_event_venue
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - text
+          - user
+      id: node.event.teaser
+      targetEntityType: node
+      bundle: event
+      mode: teaser
+      content:
+        body:
+          label: hidden
+          type: text_summary_or_trimmed
+          weight: 101
+          settings:
+            trim_length: 600
+          third_party_settings: {  }
+          region: content
+        links:
+          weight: 100
+          region: content
+      hidden:
+        field_event_name_of_speaker_and_: true
+        field_event_title_of_seminar_con: true
+        field_event_types: true
+        field_event_venue: true
+        langcode: true
+  -
+    collection: ''
+    name: field.field.node.event.body
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.body
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - text
+      id: node.event.body
+      field_name: body
+      entity_type: node
+      bundle: event
+      label: Body
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        display_summary: true
+      field_type: text_with_summary
+  -
+    collection: ''
+    name: field.field.node.event.field_end_date_and_time
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_end_date_and_time
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+      id: node.event.field_end_date_and_time
+      field_name: field_end_date_and_time
+      entity_type: node
+      bundle: event
+      label: 'End Date and Time'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: datetime
+  -
+    collection: ''
+    name: field.field.node.event.field_event_name_of_speaker_and_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_event_name_of_speaker_and_
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - text
+      id: node.event.field_event_name_of_speaker_and_
+      field_name: field_event_name_of_speaker_and_
+      entity_type: node
+      bundle: event
+      label: 'Event Name of Speaker and Affiliation'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+  -
+    collection: ''
+    name: field.field.node.event.field_event_title_of_seminar_con
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_event_title_of_seminar_con
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+      id: node.event.field_event_title_of_seminar_con
+      field_name: field_event_title_of_seminar_con
+      entity_type: node
+      bundle: event
+      label: 'Event Title of Seminar/Conference'
+      description: 'Provide the detailed title of the Seminar/Conference here.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.event.field_event_types
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_event_types
+          - node.type.event
+          - taxonomy.vocabulary.event_type_
+        enforced:
+          module:
+            - acadmix_event
+      id: node.event.field_event_types
+      field_name: field_event_types
+      entity_type: node
+      bundle: event
+      label: 'Event Types'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            event_type_: event_type_
+          sort:
+            field: name
+            direction: asc
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+  -
+    collection: ''
+    name: field.field.node.event.field_event_venue
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_event_venue
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - text
+      id: node.event.field_event_venue
+      field_name: field_event_venue
+      entity_type: node
+      bundle: event
+      label: 'Event Venue'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+  -
+    collection: ''
+    name: field.field.node.event.field_start_date_and_time
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_start_date_and_time
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+      id: node.event.field_start_date_and_time
+      field_name: field_start_date_and_time
+      entity_type: node
+      bundle: event
+      label: 'Start Date and Time'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: datetime
+  -
+    collection: ''
+    name: field.storage.node.field_end_date_and_time
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+          - node
+      id: node.field_end_date_and_time
+      field_name: field_end_date_and_time
+      entity_type: node
+      type: datetime
+      settings:
+        datetime_type: datetime
+      module: datetime
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_event_name_of_speaker_and_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - node
+          - text
+      id: node.field_event_name_of_speaker_and_
+      field_name: field_event_name_of_speaker_and_
+      entity_type: node
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_event_title_of_seminar_con
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - node
+      id: node.field_event_title_of_seminar_con
+      field_name: field_event_title_of_seminar_con
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_event_types
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - node
+          - taxonomy
+      id: node.field_event_types
+      field_name: field_event_types
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_event_venue
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - node
+          - text
+      id: node.field_event_venue
+      field_name: field_event_venue
+      entity_type: node
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_start_date_and_time
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+          - node
+      id: node.field_start_date_and_time
+      field_name: field_start_date_and_time
+      entity_type: node
+      type: datetime
+      settings:
+        datetime_type: datetime
+      module: datetime
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: node.type.event
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - menu_ui
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+      name: Event
+      type: event
+      description: "Create an event which can be given a start and end date, thus appearing in the events calendar. You can include talks, seminars, CEP courses, etc.\r\n"
+      help: "For the title of the page (the first field below) please use a terse phrase (about three words), not the complete title of the talk.  Example: &quot;Pipeline Course&quot;, &quot;Optimisation School&quot;, &quot;Patankar's Talk&quot;, &quot;Nanomaterials Conference&quot; etc.\r\nThe title of the talk can be entered separately below.\r\nIf the event is not a talk, simply provide details in the &quot;Body&quot; section below, with links to appropriate pages.\r\n"
+      new_revision: false
+      preview_mode: 1
+      display_submitted: false
+  -
+    collection: ''
+    name: pathauto.pattern.event_type_alias
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - node
+        enforced:
+          module:
+            - acadmix_event
+      id: event_type_alias
+      label: 'Event type alias'
+      type: 'canonical_entities:node'
+      pattern: 'event/[node:title]'
+      selection_criteria:
+        68c470f4-95b6-4c96-a4cf-d6da03d48dec:
+          id: node_type
+          bundles:
+            event: event
+          negate: false
+          context_mapping:
+            node: node
+          uuid: 68c470f4-95b6-4c96-a4cf-d6da03d48dec
+      selection_logic: and
+      weight: -5
+      relationships: {  }
+  -
+    collection: ''
+    name: taxonomy.vocabulary.event_type_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_event
+      name: 'Event Type'
+      vid: event_type_
+      description: 'It describe the types of Events'
+      hierarchy: 0
+      weight: 0
+  -
+    collection: ''
+    name: views.view.event_block
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_event_types
+          - field.storage.node.field_event_venue
+          - field.storage.node.field_start_date_and_time
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+          - node
+          - text
+          - user
+      id: event_block
+      label: 'Event Block'
+      module: views
+      description: ''
+      tag: ''
+      base_table: node_field_data
+      base_field: nid
+      core: 8.x
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'access content'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: basic
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            pager:
+              type: some
+              options:
+                items_per_page: 5
+                offset: 0
+            style:
+              type: default
+            row:
+              type: fields
+              options:
+                default_field_elements: false
+                inline: {  }
+                separator: ''
+                hide_empty: false
+            fields:
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: false
+                  ellipsis: false
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: h3
+                element_class: 'title mg_0'
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: false
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: node
+                entity_field: title
+                plugin_id: field
+              field_event_types:
+                id: field_event_types
+                table: node__field_event_types
+                field: field_event_types
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: true
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: div
+                element_wrapper_class: ''
+                element_default_classes: false
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: target_id
+                type: entity_reference_label
+                settings:
+                  link: false
+                group_column: target_id
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_event_venue:
+                id: field_event_venue
+                table: node__field_event_venue
+                field: field_event_venue
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: span
+                element_class: 'date fas fa-map-marker-alt'
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: div
+                element_wrapper_class: ''
+                element_default_classes: false
+                empty: ''
+                hide_empty: true
+                empty_zero: false
+                hide_alter_empty: false
+                click_sort_column: value
+                type: text_default
+                settings: {  }
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_start_date_and_time:
+                id: field_start_date_and_time
+                table: node__field_start_date_and_time
+                field: field_start_date_and_time
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: span
+                element_class: 'date fas fa-clock'
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: div
+                element_wrapper_class: ''
+                element_default_classes: false
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: datetime_time_ago
+                settings:
+                  future_format: '@interval to go'
+                  past_format: '@interval ago'
+                  granularity: 1
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+            filters:
+              status:
+                value: '1'
+                table: node_field_data
+                field: status
+                plugin_id: boolean
+                entity_type: node
+                entity_field: status
+                id: status
+                expose:
+                  operator: ''
+                group: 1
+              type:
+                id: type
+                table: node_field_data
+                field: type
+                value:
+                  event: event
+                entity_type: node
+                entity_field: type
+                plugin_id: bundle
+                group: 1
+              field_end_date_and_time_value:
+                id: field_end_date_and_time_value
+                table: node__field_end_date_and_time
+                field: field_end_date_and_time_value
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '>='
+                value:
+                  min: ''
+                  max: ''
+                  value: today
+                  type: offset
+                group: 2
+                exposed: false
+                expose:
+                  operator_id: ''
+                  label: ''
+                  description: ''
+                  use_operator: false
+                  operator: ''
+                  identifier: ''
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                  placeholder: ''
+                  min_placeholder: ''
+                  max_placeholder: ''
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                plugin_id: datetime
+              field_start_date_and_time_value:
+                id: field_start_date_and_time_value
+                table: node__field_start_date_and_time
+                field: field_start_date_and_time_value
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '>='
+                value:
+                  min: ''
+                  max: ''
+                  value: today
+                  type: offset
+                group: 2
+                exposed: false
+                expose:
+                  operator_id: ''
+                  label: ''
+                  description: ''
+                  use_operator: false
+                  operator: ''
+                  identifier: ''
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                  placeholder: ''
+                  min_placeholder: ''
+                  max_placeholder: ''
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                plugin_id: datetime
+            sorts:
+              field_start_date_and_time_value:
+                id: field_start_date_and_time_value
+                table: node__field_start_date_and_time
+                field: field_start_date_and_time_value
+                relationship: none
+                group_type: group
+                admin_label: ''
+                order: ASC
+                exposed: false
+                expose:
+                  label: ''
+                granularity: minute
+                plugin_id: datetime
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                relationship: none
+                group_type: group
+                admin_label: ''
+                order: ASC
+                exposed: false
+                expose:
+                  label: ''
+                entity_type: node
+                entity_field: title
+                plugin_id: standard
+            title: 'Upcoming Events'
+            header:
+              area_text_custom:
+                id: area_text_custom
+                table: views
+                field: area_text_custom
+                relationship: none
+                group_type: group
+                admin_label: ''
+                empty: false
+                tokenize: false
+                content: '<h3><i class="fas fa-calendar-alt"></i>&nbsp;[view:title]</h3>'
+                plugin_id: text_custom
+            footer: {  }
+            empty:
+              area_text_custom:
+                id: area_text_custom
+                table: views
+                field: area_text_custom
+                relationship: none
+                group_type: group
+                admin_label: ''
+                empty: true
+                tokenize: false
+                content: "<h3><i class=\"fas fa-calendar-alt\"></i>&nbsp;[view:title]</h3>\n<h4> No future events planned</h4>"
+                plugin_id: text_custom
+            relationships: {  }
+            arguments: {  }
+            display_extenders: {  }
+            use_more: true
+            use_more_always: true
+            use_more_text: 'view past events'
+            link_url: events-all
+            link_display: custom_url
+            filter_groups:
+              operator: AND
+              groups:
+                1: AND
+                2: OR
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.field_event_types'
+              - 'config:field.storage.node.field_event_venue'
+              - 'config:field.storage.node.field_start_date_and_time'
+        block_1:
+          display_plugin: block
+          id: block_1
+          display_title: Block
+          position: 1
+          display_options:
+            display_extenders: {  }
+            block_hide_empty: true
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.field_event_types'
+              - 'config:field.storage.node.field_event_venue'
+              - 'config:field.storage.node.field_start_date_and_time'
+  -
+    collection: ''
+    name: views.view.events_page
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.body
+          - field.storage.node.field_start_date_and_time
+          - node.type.event
+        enforced:
+          module:
+            - acadmix_event
+        module:
+          - datetime
+          - node
+          - text
+          - user
+          - views_bootstrap
+      id: events_page
+      label: 'Events page'
+      module: views
+      description: 'Display all events'
+      tag: ''
+      base_table: node_field_data
+      base_field: nid
+      core: 8.x
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'access content'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: basic
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            pager:
+              type: full
+              options:
+                items_per_page: 20
+                offset: 0
+                id: 0
+                total_pages: null
+                tags:
+                  previous: ‹‹
+                  next: ››
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page: false
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options: '5, 10, 25, 50'
+                  items_per_page_options_all: false
+                  items_per_page_options_all_label: '- All -'
+                  offset: false
+                  offset_label: Offset
+                quantity: 9
+            style:
+              type: views_bootstrap_grid
+              options:
+                grouping: {  }
+                row_class: mb-30
+                default_row_class: true
+                alignment: horizontal
+                columns: '4'
+                col_xs: col-xs-12
+                col_sm: col-sm-6
+                col_md: col-md-3
+                col_lg: col-lg-3
+            row:
+              type: fields
+            fields:
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: false
+                  ellipsis: false
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: h4
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: node
+                entity_field: title
+                plugin_id: field
+              field_start_date_and_time:
+                id: field_start_date_and_time
+                table: node__field_start_date_and_time
+                field: field_start_date_and_time
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: span
+                element_class: 'fas fa-calendar-alt'
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: false
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: datetime_custom
+                settings:
+                  timezone_override: ''
+                  date_format: ' M d, Y'
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              view_node:
+                id: view_node
+                table: node
+                field: view_node
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: true
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                text: 'read more'
+                output_url_as_text: true
+                absolute: false
+                entity_type: node
+                plugin_id: entity_link
+              body:
+                id: body
+                table: node__body
+                field: body
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 200
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: true
+                  more_link_text: 'read more'
+                  more_link_path: '{{ view_node }}'
+                  strip_tags: false
+                  trim: true
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: text_default
+                settings: {  }
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+            filters:
+              status:
+                value: '1'
+                table: node_field_data
+                field: status
+                plugin_id: boolean
+                entity_type: node
+                entity_field: status
+                id: status
+                expose:
+                  operator: ''
+                group: 1
+              type:
+                id: type
+                table: node_field_data
+                field: type
+                value:
+                  event: event
+                entity_type: node
+                entity_field: type
+                plugin_id: bundle
+            sorts:
+              field_start_date_and_time_value:
+                id: field_start_date_and_time_value
+                table: node__field_start_date_and_time
+                field: field_start_date_and_time_value
+                relationship: none
+                group_type: group
+                admin_label: ''
+                order: DESC
+                exposed: false
+                expose:
+                  label: ''
+                granularity: second
+                plugin_id: datetime
+            title: 'Past Events'
+            header: {  }
+            footer: {  }
+            empty: {  }
+            relationships: {  }
+            arguments: {  }
+            display_extenders: {  }
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url.query_args
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.body'
+              - 'config:field.storage.node.field_start_date_and_time'
+        page_1:
+          display_plugin: page
+          id: page_1
+          display_title: Page
+          position: 1
+          display_options:
+            display_extenders: {  }
+            path: events-all
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url.query_args
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.body'
+              - 'config:field.storage.node.field_start_date_and_time'

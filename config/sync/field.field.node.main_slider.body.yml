@@ -1,0 +1,28 @@
+uuid: d7c807d6-e38a-4acf-a6e8-be43ab505404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.main_slider
+  enforced:
+    module:
+      - acadmix_slider
+  module:
+    - text
+_core:
+  default_config_hash: NiaLG0YEALJ0vKKeBF7sg3MlyMkV9qXUdQsR2hWfY1g
+id: node.main_slider.body
+field_name: body
+entity_type: node
+bundle: main_slider
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

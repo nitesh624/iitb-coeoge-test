@@ -1,0 +1,15 @@
+uuid: ce5202c9-bf6a-4b8d-bfdc-840884c3d9dd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: DVCKTIhqIpSjec2c1pS3t-5hMINMAx3VeU5LZU-4lyQ
+id: r_d_projects
+label: 'R&D Projects'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

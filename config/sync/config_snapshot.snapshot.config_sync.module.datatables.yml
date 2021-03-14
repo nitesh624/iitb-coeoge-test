@@ -1,0 +1,11 @@
+uuid: 526a7eba-f2e8-4cbf-9027-01ff1031e38f
+langcode: en
+status: true
+dependencies:
+  module:
+    - datatables
+id: config_sync.module.datatables
+snapshotSet: config_sync
+extensionType: module
+extensionName: datatables
+items: {  }

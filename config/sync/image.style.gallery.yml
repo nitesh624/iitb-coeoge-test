@@ -1,0 +1,25 @@
+uuid: f7b572ce-5feb-4c35-a6d5-854a947a36ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_16_9
+  module:
+    - crop
+name: gallery
+label: Gallery
+effects:
+  2004f570-223b-4656-a20a-c8df8b5a3598:
+    uuid: 2004f570-223b-4656-a20a-c8df8b5a3598
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: crop_16_9
+  17a9d735-8ab5-4541-8986-33c460ec505a:
+    uuid: 17a9d735-8ab5-4541-8986-33c460ec505a
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 300
+      height: 250
+      anchor: center-center

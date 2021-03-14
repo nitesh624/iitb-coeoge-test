@@ -1,0 +1,23 @@
+uuid: 2797dd46-fd1d-4898-b667-e041c88f3095
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+_core:
+  default_config_hash: 8-Za_DZE_BYAR6MIEfu1qC09MkSdFh2uQLPRpetd18U
+id: node.field_student_email
+field_name: field_student_email
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

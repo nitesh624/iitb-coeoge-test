@@ -1,0 +1,30 @@
+uuid: a58c1682-9766-42e4-bc37-96de8abee2fe
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: WA_zLZmhheOMqkMBE0sZRHJT97RQ1DjrmINfDD2fLNA
+id: node.field_cost_of_purchase
+field_name: field_cost_of_purchase
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

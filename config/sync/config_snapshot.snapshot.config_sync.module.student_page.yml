@@ -1,0 +1,1649 @@
+uuid: 73cc049a-5759-40fc-ba85-d34ebe1b8bfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - student_page
+id: config_sync.module.student_page
+snapshotSet: config_sync
+extensionType: module
+extensionName: student_page
+items:
+  -
+    collection: ''
+    name: core.base_field_override.node.student_page.promote
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.promote
+      field_name: promote
+      entity_type: node
+      bundle: student_page
+      label: 'Promoted to front page'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: 0
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+  -
+    collection: ''
+    name: core.entity_form_display.node.student_page.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.student_page.body
+          - field.field.node.student_page.field_student_admission_status
+          - field.field.node.student_page.field_student_awards_and_fellows
+          - field.field.node.student_page.field_student_background
+          - field.field.node.student_page.field_student_building
+          - field.field.node.student_page.field_student_current_employment
+          - field.field.node.student_page.field_student_degree_programme
+          - field.field.node.student_page.field_student_email
+          - field.field.node.student_page.field_student_employment_history
+          - field.field.node.student_page.field_student_full_name
+          - field.field.node.student_page.field_student_hostel_and_room_nu
+          - field.field.node.student_page.field_student_lab_room_number
+          - field.field.node.student_page.field_student_mobile_number
+          - field.field.node.student_page.field_student_phone_no
+          - field.field.node.student_page.field_student_photo
+          - field.field.node.student_page.field_student_public_profile_url
+          - field.field.node.student_page.field_student_r_d_projects
+          - field.field.node.student_page.field_student_roll_number
+          - field.field.node.student_page.field_student_year_of_admission
+          - image.style.thumbnail
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - image
+          - link
+          - name
+          - path
+          - text
+      id: node.student_page.default
+      targetEntityType: node
+      bundle: student_page
+      mode: default
+      content:
+        body:
+          type: text_textarea_with_summary
+          weight: 25
+          settings:
+            rows: 9
+            summary_rows: 3
+            placeholder: ''
+          third_party_settings: {  }
+          region: content
+        created:
+          type: datetime_timestamp
+          weight: 2
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_student_admission_status:
+          weight: 11
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_student_awards_and_fellows:
+          weight: 21
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_student_background:
+          weight: 18
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_student_building:
+          weight: 16
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_student_current_employment:
+          weight: 19
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_student_degree_programme:
+          weight: 8
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_student_email:
+          weight: 12
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: email_default
+          region: content
+        field_student_employment_history:
+          weight: 20
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_student_full_name:
+          weight: 7
+          settings: {  }
+          third_party_settings: {  }
+          type: name_default
+          region: content
+        field_student_hostel_and_room_nu:
+          weight: 15
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_student_lab_room_number:
+          weight: 17
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_student_mobile_number:
+          weight: 14
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_student_phone_no:
+          weight: 13
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_student_photo:
+          weight: 24
+          settings:
+            progress_indicator: throbber
+            preview_image_style: thumbnail
+          third_party_settings: {  }
+          type: image_image
+          region: content
+        field_student_public_profile_url:
+          weight: 23
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+          third_party_settings: {  }
+          type: link_default
+          region: content
+        field_student_r_d_projects:
+          weight: 22
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_student_roll_number:
+          weight: 9
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_student_year_of_admission:
+          weight: 10
+          settings:
+            placeholder: ''
+          third_party_settings: {  }
+          type: number
+          region: content
+        path:
+          type: path
+          weight: 5
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        promote:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 3
+          region: content
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 6
+          region: content
+          third_party_settings: {  }
+        sticky:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 4
+          region: content
+          third_party_settings: {  }
+        title:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        uid:
+          type: entity_reference_autocomplete
+          weight: 1
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          region: content
+          third_party_settings: {  }
+      hidden: {  }
+  -
+    collection: ''
+    name: core.entity_view_display.node.student_page.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.student_page.body
+          - field.field.node.student_page.field_student_admission_status
+          - field.field.node.student_page.field_student_awards_and_fellows
+          - field.field.node.student_page.field_student_background
+          - field.field.node.student_page.field_student_building
+          - field.field.node.student_page.field_student_current_employment
+          - field.field.node.student_page.field_student_degree_programme
+          - field.field.node.student_page.field_student_email
+          - field.field.node.student_page.field_student_employment_history
+          - field.field.node.student_page.field_student_full_name
+          - field.field.node.student_page.field_student_hostel_and_room_nu
+          - field.field.node.student_page.field_student_lab_room_number
+          - field.field.node.student_page.field_student_mobile_number
+          - field.field.node.student_page.field_student_phone_no
+          - field.field.node.student_page.field_student_photo
+          - field.field.node.student_page.field_student_public_profile_url
+          - field.field.node.student_page.field_student_r_d_projects
+          - field.field.node.student_page.field_student_roll_number
+          - field.field.node.student_page.field_student_year_of_admission
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - image
+          - link
+          - name
+          - options
+          - text
+          - user
+      id: node.student_page.default
+      targetEntityType: node
+      bundle: student_page
+      mode: default
+      content:
+        body:
+          label: hidden
+          type: text_default
+          weight: 101
+          settings: {  }
+          third_party_settings: {  }
+          region: content
+        field_student_admission_status:
+          weight: 102
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: list_default
+          region: content
+        field_student_awards_and_fellows:
+          weight: 103
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_student_background:
+          weight: 104
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_student_building:
+          weight: 105
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_student_current_employment:
+          weight: 108
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_student_degree_programme:
+          weight: 106
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: list_default
+          region: content
+        field_student_email:
+          weight: 107
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: email_mailto
+          region: content
+        field_student_employment_history:
+          weight: 109
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_student_full_name:
+          weight: 110
+          label: above
+          settings:
+            format: default
+            markup: false
+            output: default
+            multiple: default
+            multiple_delimiter: ', '
+            multiple_and: text
+            multiple_delimiter_precedes_last: never
+            multiple_el_al_min: '3'
+            multiple_el_al_first: '1'
+          third_party_settings: {  }
+          type: name_default
+          region: content
+        field_student_hostel_and_room_nu:
+          weight: 111
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_student_lab_room_number:
+          weight: 112
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_student_mobile_number:
+          weight: 113
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_student_phone_no:
+          weight: 114
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_student_photo:
+          weight: 115
+          label: above
+          settings:
+            image_style: ''
+            image_link: ''
+          third_party_settings: {  }
+          type: image
+          region: content
+        field_student_public_profile_url:
+          weight: 116
+          label: above
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          type: link
+          region: content
+        field_student_r_d_projects:
+          weight: 117
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_student_roll_number:
+          weight: 118
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_student_year_of_admission:
+          weight: 119
+          label: above
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          third_party_settings: {  }
+          type: number_integer
+          region: content
+        links:
+          weight: 100
+          region: content
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: core.entity_view_display.node.student_page.teaser
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.teaser
+          - field.field.node.student_page.body
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - text
+          - user
+      id: node.student_page.teaser
+      targetEntityType: node
+      bundle: student_page
+      mode: teaser
+      content:
+        body:
+          label: hidden
+          type: text_summary_or_trimmed
+          weight: 101
+          settings:
+            trim_length: 600
+          third_party_settings: {  }
+          region: content
+        links:
+          weight: 100
+          region: content
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: field.field.node.student_page.body
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.body
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - text
+      id: node.student_page.body
+      field_name: body
+      entity_type: node
+      bundle: student_page
+      label: Body
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        display_summary: true
+      field_type: text_with_summary
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_admission_status
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_admission_status
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - options
+      id: node.student_page.field_student_admission_status
+      field_name: field_student_admission_status
+      entity_type: node
+      bundle: student_page
+      label: 'Admission Status'
+      description: 'Choose appropriately to be listed in the correct category'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_float
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_awards_and_fellows
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_awards_and_fellows
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - text
+      id: node.student_page.field_student_awards_and_fellows
+      field_name: field_student_awards_and_fellows
+      entity_type: node
+      bundle: student_page
+      label: 'Awards and Fellowships'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_background
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_background
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - text
+      id: node.student_page.field_student_background
+      field_name: field_student_background
+      entity_type: node
+      bundle: student_page
+      label: Background
+      description: 'Please enter your basic Qualifications and Experience in reverse chronological order.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_building
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_building
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.field_student_building
+      field_name: field_student_building
+      entity_type: node
+      bundle: student_page
+      label: Building
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_current_employment
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_current_employment
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - text
+      id: node.student_page.field_student_current_employment
+      field_name: field_student_current_employment
+      entity_type: node
+      bundle: student_page
+      label: Employment
+      description: 'Your current employment or higher study'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_degree_programme
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_degree_programme
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - options
+      id: node.student_page.field_student_degree_programme
+      field_name: field_student_degree_programme
+      entity_type: node
+      bundle: student_page
+      label: 'Degree Programme'
+      description: 'Choose the Degree Programme/Project you are registered in IIT Bombay. '
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_email
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_email
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.field_student_email
+      field_name: field_student_email
+      entity_type: node
+      bundle: student_page
+      label: Email
+      description: 'Enter your email address, preferably long term (Gmail, Yahoo, etc). It will not be visible to the viewers of this page. Emails will be sent to you through a contact form. The department may also use it to contact you after you have completed your stay here.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: email
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_employment_history
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_employment_history
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - text
+      id: node.student_page.field_student_employment_history
+      field_name: field_student_employment_history
+      entity_type: node
+      bundle: student_page
+      label: 'Employment History'
+      description: 'Enter your past employments'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_full_name
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_full_name
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - name
+      id: node.student_page.field_student_full_name
+      field_name: field_student_full_name
+      entity_type: node
+      bundle: student_page
+      label: 'Full Name'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        size:
+          title: 6
+          given: 20
+          middle: 20
+          family: 20
+          generational: 5
+          credentials: 35
+        title_display:
+          title: description
+          given: description
+          middle: description
+          family: description
+          generational: description
+          credentials: description
+        field_type:
+          title: select
+          given: text
+          middle: text
+          family: text
+          generational: select
+          credentials: text
+        inline_css:
+          title: ''
+          given: ''
+          middle: ''
+          family: ''
+          generational: ''
+          credentials: ''
+        component_css: ''
+        component_layout: default
+        show_component_required_marker: false
+        credentials_inline: false
+        override_format: default
+      field_type: name
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_hostel_and_room_nu
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_hostel_and_room_nu
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.field_student_hostel_and_room_nu
+      field_name: field_student_hostel_and_room_nu
+      entity_type: node
+      bundle: student_page
+      label: 'Hostel and Room Number'
+      description: 'Enter your Hostel and Room Number. Eg, H1, #23.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_lab_room_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_lab_room_number
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.field_student_lab_room_number
+      field_name: field_student_lab_room_number
+      entity_type: node
+      bundle: student_page
+      label: 'Lab Room Number'
+      description: 'Enter the room number of the Laboratory/Office space you work in.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_mobile_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_mobile_number
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.field_student_mobile_number
+      field_name: field_student_mobile_number
+      entity_type: node
+      bundle: student_page
+      label: 'Mobile Number'
+      description: 'The mobile phone number you enter here will be visible only to faculty of our department.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_phone_no
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_phone_no
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.field_student_phone_no
+      field_name: field_student_phone_no
+      entity_type: node
+      bundle: student_page
+      label: 'Phone No'
+      description: "Enter at least one contact phone number (Lab, Hostel, Mobile).  Suffix it with (O) for office, (R) for hostel, and (M) for mobile: Eg: +91 (22) 2576 42xx (O), +91 98338 xxxxx (M)\r\n\r\nIf you do not wish your mobile phone number to be shown to public, you may enter it in the \"Mobile Number\" field below, which is accessible only to faculty of this department."
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_photo
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_photo
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - image
+      id: node.student_page.field_student_photo
+      field_name: field_student_photo
+      entity_type: node
+      bundle: student_page
+      label: Photo
+      description: 'Photographs must be within 200x300 resolution. Please use a "Portrait" and not a "Landscape" orientation.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        file_directory: studpage/photo
+        file_extensions: 'png gif jpg jpeg'
+        max_filesize: ''
+        max_resolution: 200x300
+        min_resolution: ''
+        alt_field: true
+        alt_field_required: true
+        title_field: false
+        title_field_required: false
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        handler: 'default:file'
+        handler_settings: {  }
+      field_type: image
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_public_profile_url
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_public_profile_url
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - link
+      id: node.student_page.field_student_public_profile_url
+      field_name: field_student_public_profile_url
+      entity_type: node
+      bundle: student_page
+      label: 'Public Profile URL'
+      description: 'Enter a URL  to  public profiles, as in LinkedIn, etc.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 1
+      field_type: link
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_r_d_projects
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_r_d_projects
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+        module:
+          - text
+      id: node.student_page.field_student_r_d_projects
+      field_name: field_student_r_d_projects
+      entity_type: node
+      bundle: student_page
+      label: 'R&D Projects'
+      description: "Enter one research/technology project per box. You can disable the WYSIWYG editor (rich-text), and enter plaint text also. Please use only simple formatting tools, such as\r\n<ul> <li> bold </li> <li>italics </li> <li>lists </li> </ul>"
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_roll_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_roll_number
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.field_student_roll_number
+      field_name: field_student_roll_number
+      entity_type: node
+      bundle: student_page
+      label: 'Roll Number'
+      description: 'Enter your roll number for the current registration.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.student_page.field_student_year_of_admission
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_student_year_of_admission
+          - node.type.student_page
+        enforced:
+          module:
+            - student_page
+      id: node.student_page.field_student_year_of_admission
+      field_name: field_student_year_of_admission
+      entity_type: node
+      bundle: student_page
+      label: 'Year of Admission'
+      description: 'Enter the year in YYYY format'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        min: 1975
+        max: null
+        prefix: ''
+        suffix: ''
+      field_type: integer
+  -
+    collection: ''
+    name: field.storage.node.field_student_admission_status
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+          - options
+      id: node.field_student_admission_status
+      field_name: field_student_admission_status
+      entity_type: node
+      type: list_float
+      settings:
+        allowed_values:
+          -
+            value: !!float 0
+            label: Current
+          -
+            value: !!float 1
+            label: Alumnus
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_awards_and_fellows
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+          - text
+      id: node.field_student_awards_and_fellows
+      field_name: field_student_awards_and_fellows
+      entity_type: node
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_background
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+          - text
+      id: node.field_student_background
+      field_name: field_student_background
+      entity_type: node
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_building
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+      id: node.field_student_building
+      field_name: field_student_building
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_current_employment
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+          - text
+      id: node.field_student_current_employment
+      field_name: field_student_current_employment
+      entity_type: node
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_degree_programme
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+          - options
+      id: node.field_student_degree_programme
+      field_name: field_student_degree_programme
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: PhD
+            label: PhD
+          -
+            value: M.Tech
+            label: M.Tech
+          -
+            value: 'Dual Degree'
+            label: 'Dual Degree'
+          -
+            value: B.Tech
+            label: B.Tech
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_email
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+      id: node.field_student_email
+      field_name: field_student_email
+      entity_type: node
+      type: email
+      settings: {  }
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_employment_history
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+          - text
+      id: node.field_student_employment_history
+      field_name: field_student_employment_history
+      entity_type: node
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_full_name
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - name
+          - node
+      id: node.field_student_full_name
+      field_name: field_student_full_name
+      entity_type: node
+      type: name
+      settings:
+        components:
+          title: true
+          given: true
+          middle: true
+          family: true
+          generational: false
+          credentials: false
+        minimum_components:
+          given: true
+          family: true
+          title: false
+          middle: false
+          generational: false
+          credentials: false
+        labels:
+          title: Title
+          given: 'First name'
+          middle: 'Middle name'
+          family: 'Last name'
+          generational: Generational
+          credentials: Credentials
+        max_length:
+          title: 31
+          given: 63
+          middle: 127
+          family: 63
+          generational: 15
+          credentials: 255
+        autocomplete_source:
+          title:
+            title: title
+          given: {  }
+          middle: {  }
+          family: {  }
+          generational:
+            generational: '0'
+          credentials: {  }
+        autocomplete_separator:
+          title: ' '
+          given: ' -'
+          middle: ' -'
+          family: ' -'
+          generational: ' '
+          credentials: ', '
+        allow_family_or_given: false
+        title_options:
+          - '-- --'
+          - Mr.
+          - Mrs.
+          - Miss
+          - Ms.
+          - Dr.
+          - Prof.
+        generational_options:
+          - '-- --'
+          - Jr.
+          - Sr.
+          - I
+          - II
+          - III
+          - IV
+          - V
+          - VI
+          - VII
+          - VIII
+          - IX
+          - X
+        sort_options:
+          title: false
+          generational: false
+      module: name
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_hostel_and_room_nu
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+      id: node.field_student_hostel_and_room_nu
+      field_name: field_student_hostel_and_room_nu
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_lab_room_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+      id: node.field_student_lab_room_number
+      field_name: field_student_lab_room_number
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_mobile_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+      id: node.field_student_mobile_number
+      field_name: field_student_mobile_number
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_phone_no
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+      id: node.field_student_phone_no
+      field_name: field_student_phone_no
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_photo
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - file
+          - image
+          - node
+      id: node.field_student_photo
+      field_name: field_student_photo
+      entity_type: node
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_public_profile_url
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - link
+          - node
+      id: node.field_student_public_profile_url
+      field_name: field_student_public_profile_url
+      entity_type: node
+      type: link
+      settings: {  }
+      module: link
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_r_d_projects
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+          - text
+      id: node.field_student_r_d_projects
+      field_name: field_student_r_d_projects
+      entity_type: node
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_roll_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+      id: node.field_student_roll_number
+      field_name: field_student_roll_number
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_student_year_of_admission
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - node
+      id: node.field_student_year_of_admission
+      field_name: field_student_year_of_admission
+      entity_type: node
+      type: integer
+      settings:
+        unsigned: false
+        size: normal
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: node.type.student_page
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - student_page
+        module:
+          - menu_ui
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+      name: 'Student Page'
+      type: student_page
+      description: 'Create a Student page (personal information, contact, and CV upload)'
+      help: "<p>\r\nPlease enter your details below. \r\n</p>\r\n<ul>\r\n       <li> Enter your full name in the appropriate boxes </li>\r\n       <li>Choose your guide(s) as the Associated Faculty. </li>\r\n\t<li>Fields marked with a red star, are required. </li>\r\n\t<li>Photo image has a size limitation of 300x300.</li>\r\n\t<li>You can attach a CV (use PDF only), to the file attachment section.</li>\r\n</ul>\r\n"
+      new_revision: false
+      preview_mode: 1
+      display_submitted: false

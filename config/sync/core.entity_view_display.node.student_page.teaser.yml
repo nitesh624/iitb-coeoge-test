@@ -1,0 +1,70 @@
+uuid: 42e7dc0a-4299-43bf-8b80-bce7d02fa35e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.student_page.body
+    - field.field.node.student_page.field_student_admission_status
+    - field.field.node.student_page.field_student_awards_and_fellows
+    - field.field.node.student_page.field_student_background
+    - field.field.node.student_page.field_student_building
+    - field.field.node.student_page.field_student_current_employment
+    - field.field.node.student_page.field_student_degree_programme
+    - field.field.node.student_page.field_student_email
+    - field.field.node.student_page.field_student_employment_history
+    - field.field.node.student_page.field_student_full_name
+    - field.field.node.student_page.field_student_hostel_and_room_nu
+    - field.field.node.student_page.field_student_lab_room_number
+    - field.field.node.student_page.field_student_mobile_number
+    - field.field.node.student_page.field_student_phone_no
+    - field.field.node.student_page.field_student_photo
+    - field.field.node.student_page.field_student_public_profile_url
+    - field.field.node.student_page.field_student_r_d_projects
+    - field.field.node.student_page.field_student_roll_number
+    - field.field.node.student_page.field_student_year_of_admission
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: sUfueNr7mkm266jAZ-HcfVE7UjFL46t1cbnJbho5AEU
+id: node.student_page.teaser
+targetEntityType: node
+bundle: student_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_student_admission_status: true
+  field_student_awards_and_fellows: true
+  field_student_background: true
+  field_student_building: true
+  field_student_current_employment: true
+  field_student_degree_programme: true
+  field_student_email: true
+  field_student_employment_history: true
+  field_student_full_name: true
+  field_student_hostel_and_room_nu: true
+  field_student_lab_room_number: true
+  field_student_mobile_number: true
+  field_student_phone_no: true
+  field_student_photo: true
+  field_student_public_profile_url: true
+  field_student_r_d_projects: true
+  field_student_roll_number: true
+  field_student_year_of_admission: true
+  langcode: true

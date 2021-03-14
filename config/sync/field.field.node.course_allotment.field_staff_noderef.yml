@@ -1,0 +1,33 @@
+uuid: 14c8bab1-ac7c-4b8e-85e0-a1f45235bb04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_noderef
+    - node.type.course_allotment
+    - node.type.staff_page
+  enforced:
+    module:
+      - course_allotment
+_core:
+  default_config_hash: 0SoaxPpLUCPnWbeRJEGxpefnWNlKD8i6yyOnJgPS1PY
+id: node.course_allotment.field_staff_noderef
+field_name: field_staff_noderef
+entity_type: node
+bundle: course_allotment
+label: 'Staff Associated'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      staff_page: staff_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

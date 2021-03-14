@@ -1,0 +1,118 @@
+uuid: 515ab27f-7f8c-4094-a331-0b5ac5375661
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news_item.body
+    - field.field.node.news_item.field_news_date
+    - field.field.node.news_item.field_news_images
+    - field.field.node.news_item.field_news_type
+    - image.style.acad_news_thumbnail_400_300_
+    - node.type.news_item
+  enforced:
+    module:
+      - acadmix_news
+  module:
+    - datetime
+    - image
+    - path
+    - text
+_core:
+  default_config_hash: t-b8k2XvgOOJJfVmoW9haRFZDbP4U07IWNBg4RdhaeU
+id: node.news_item.default
+targetEntityType: node
+bundle: news_item
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_news_date:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_news_images:
+    weight: 123
+    settings:
+      progress_indicator: throbber
+      preview_image_style: acad_news_thumbnail_400_300_
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_news_type:
+    weight: 124
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

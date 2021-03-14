@@ -1,0 +1,27 @@
+uuid: 15c46a68-b5f8-45e3-b695-40049277d6dc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_slider
+  module:
+    - node
+_core:
+  default_config_hash: oKZoxg9cqzUQ73P0b8nIZLL_HraoeSkR8hPNkwY54ts
+id: _main_slider_alias
+label: ' Main Slider Alias'
+type: 'canonical_entities:node'
+pattern: 'feature-research/[node:title]'
+selection_criteria:
+  18cfb8f6-f2e8-4dcb-bce4-01a96c9b509e:
+    id: node_type
+    bundles:
+      main_slider: main_slider
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 18cfb8f6-f2e8-4dcb-bce4-01a96c9b509e
+selection_logic: and
+weight: -5
+relationships: {  }

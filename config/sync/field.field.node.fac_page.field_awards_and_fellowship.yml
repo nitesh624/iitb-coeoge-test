@@ -1,0 +1,26 @@
+uuid: 5287f291-3434-4c1d-a011-953c4728a692
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_awards_and_fellowship
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - text
+_core:
+  default_config_hash: HtoWl32uTZhPNotLcj_UYktE7WoF4ncOeteIabxCP8U
+id: node.fac_page.field_awards_and_fellowship
+field_name: field_awards_and_fellowship
+entity_type: node
+bundle: fac_page
+label: 'Awards and Fellowship'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,28 @@
+uuid: 99bb15d7-0e67-44be-99ed-d6b621888065
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - text
+_core:
+  default_config_hash: xlYiIkxbrMOVUUNclbk9eWVQSTAym3m0FXwlUd_X79o
+id: node.fac_page.body
+field_name: body
+entity_type: node
+bundle: fac_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,28 @@
+uuid: 5e28cb40-8072-4605-bd46-27abec40cca4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - course_details
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: flE26apsWRjFySqHawVPym7vkabU3RbAZTacdIS5jxs
+id: node.field_course_texts
+field_name: field_course_texts
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

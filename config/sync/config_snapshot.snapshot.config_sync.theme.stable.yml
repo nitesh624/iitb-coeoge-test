@@ -1,0 +1,11 @@
+uuid: 01750b54-2ca5-47c3-a1b2-c799c5dcc534
+langcode: en
+status: true
+dependencies:
+  theme:
+    - stable
+id: config_sync.theme.stable
+snapshotSet: config_sync
+extensionType: theme
+extensionName: stable
+items: {  }

@@ -1,0 +1,22 @@
+uuid: af7b7357-68f7-40fa-a160-2dfe5c8165d9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - coeoge_iitb_dj
+_core:
+  default_config_hash: T_fi9YS3XWUmYti31FDuzWryTo7PGpfRT4-VXMSMMPY
+id: coeoge_iitb_dj_local_tasks
+theme: coeoge_iitb_dj
+region: content_top
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

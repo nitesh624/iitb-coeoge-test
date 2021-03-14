@@ -1,0 +1,74 @@
+uuid: acabf8b8-3443-4f77-a18a-95d1832657bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fac_page.body
+    - field.field.node.fac_page.field_affiliations
+    - field.field.node.fac_page.field_awards_and_fellowship
+    - field.field.node.fac_page.field_background
+    - field.field.node.fac_page.field_building_new
+    - field.field.node.fac_page.field_courses_taught
+    - field.field.node.fac_page.field_detailed_information_page
+    - field.field.node.fac_page.field_email_new
+    - field.field.node.fac_page.field_employment_category
+    - field.field.node.fac_page.field_faculty_cv
+    - field.field.node.fac_page.field_faculty_designation
+    - field.field.node.fac_page.field_faculty_photo
+    - field.field.node.fac_page.field_faculty_rd_proj
+    - field.field.node.fac_page.field_full_name
+    - field.field.node.fac_page.field_google_scholar_id
+    - field.field.node.fac_page.field_mobile_number_new
+    - field.field.node.fac_page.field_orcid
+    - field.field.node.fac_page.field_phone_no_new
+    - field.field.node.fac_page.field_research_area
+    - field.field.node.fac_page.field_room_no
+    - field.field.node.fac_page.field_scopus_id
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: za2965y4L2h912TQZqBbX6vyda1y9zQ9HthS5B0Zud0
+id: node.fac_page.teaser
+targetEntityType: node
+bundle: fac_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_affiliations: true
+  field_awards_and_fellowship: true
+  field_background: true
+  field_building_new: true
+  field_courses_taught: true
+  field_detailed_information_page: true
+  field_email_new: true
+  field_employment_category: true
+  field_faculty_cv: true
+  field_faculty_designation: true
+  field_faculty_photo: true
+  field_faculty_rd_proj: true
+  field_full_name: true
+  field_google_scholar_id: true
+  field_mobile_number_new: true
+  field_orcid: true
+  field_phone_no_new: true
+  field_research_area: true
+  field_room_no: true
+  field_scopus_id: true
+  langcode: true

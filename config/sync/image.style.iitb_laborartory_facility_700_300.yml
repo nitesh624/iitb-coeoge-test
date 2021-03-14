@@ -1,0 +1,20 @@
+uuid: e029237e-d47a-40a2-b2fb-9bd89dbaa173
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - laboratory_facility
+_core:
+  default_config_hash: vjUykdXGRO34eO_8Fz0HSycMJOgFs_HQiXnZOhDxulk
+name: iitb_laborartory_facility_700_300
+label: 'IITB Laborartory Facility (700×300)'
+effects:
+  04bc32cf-0cb8-4fee-ba19-2bbd0e62ea89:
+    uuid: 04bc32cf-0cb8-4fee-ba19-2bbd0e62ea89
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: 300
+      upscale: false

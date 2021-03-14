@@ -1,0 +1,25 @@
+uuid: 1e76e7f3-33c0-4656-a563-dafa065641d0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: G4GfJcRXHhI-ihK87cGKBv_654iOjYL8PBgDq3Rvn0U
+id: node.field_student_awards_and_fellows
+field_name: field_student_awards_and_fellows
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

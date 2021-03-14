@@ -1,0 +1,25 @@
+uuid: 1aac8cbd-f2cc-4d38-9c28-bf859bf0c309
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: g3QJGq-7tYl-dEGVkN8J9yeCagN6v3BTGDaUdQQ0esc
+id: node.field_student_background
+field_name: field_student_background
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

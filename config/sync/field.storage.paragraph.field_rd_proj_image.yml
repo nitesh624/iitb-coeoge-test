@@ -1,0 +1,35 @@
+uuid: 5cc80762-b92f-48f2-9be1-426d998631cf
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - file
+    - image
+    - paragraphs
+_core:
+  default_config_hash: bgUkMtDWjNtimIRlABa-9UQ9Shd7nkctjmOXoLlkV5s
+id: paragraph.field_rd_proj_image
+field_name: field_rd_proj_image
+entity_type: paragraph
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 1e93fcb6-96e5-4bda-bc46-ce5c09e671ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - big_pipe
+id: config_sync.module.big_pipe
+snapshotSet: config_sync
+extensionType: module
+extensionName: big_pipe
+items: {  }

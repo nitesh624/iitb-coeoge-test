@@ -1,0 +1,20 @@
+uuid: db1668c9-0243-49d2-8a92-c05cdda7bda6
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_slider
+_core:
+  default_config_hash: LTrIzfeeeOrpRk5Mf7mFlOu4JS6cI8Yw8wi41mqbmgE
+name: slider_inner_image
+label: 'slider inner image'
+effects:
+  c16c8594-360a-43f5-af74-d482a9ac0110:
+    uuid: c16c8594-360a-43f5-af74-d482a9ac0110
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      upscale: false

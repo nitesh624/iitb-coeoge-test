@@ -1,0 +1,21 @@
+uuid: 8806723b-fdaa-4eee-9eaf-b1b6cb4e1071
+langcode: en
+status: true
+dependencies:
+  module:
+    - nodeorder
+id: config_sync.module.nodeorder
+snapshotSet: config_sync
+extensionType: module
+extensionName: nodeorder
+items:
+  -
+    collection: ''
+    name: nodeorder.settings
+    data:
+      vocabularies:
+        staff_category: true
+      override_taxonomy_page: true
+      show_links_on_node: true
+      link_to_ordering_page: true
+      link_to_ordering_page_taxonomy_admin: true

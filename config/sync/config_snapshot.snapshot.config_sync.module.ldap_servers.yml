@@ -1,0 +1,11 @@
+uuid: 96a793cb-7a0f-4619-9989-da2e90f43dc5
+langcode: en
+status: true
+dependencies:
+  module:
+    - ldap_servers
+id: config_sync.module.ldap_servers
+snapshotSet: config_sync
+extensionType: module
+extensionName: ldap_servers
+items: {  }

@@ -1,0 +1,33 @@
+uuid: 49a45bd9-f788-48e0-b564-d8ab3cb5ace4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_indented_by_faculty_
+    - node.type.fac_page
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+_core:
+  default_config_hash: 65-vY5JO_dcgwI8p-xqcJPutRDWY-zeF4ra9HhK4xAc
+id: node.laboratory_facility.field_indented_by_faculty_
+field_name: field_indented_by_faculty_
+entity_type: node
+bundle: laboratory_facility
+label: 'Indented by (Faculty)'
+description: 'Select the name of the Faculty who has place this indent/request for purchase.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fac_page: fac_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

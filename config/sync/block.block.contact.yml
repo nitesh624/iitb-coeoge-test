@@ -1,0 +1,25 @@
+uuid: 2e70cc78-0f2a-47e0-b2d4-d2f2c5c92719
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:98d15d3a-f34c-4403-805f-696395fe6cb6'
+  module:
+    - block_content
+  theme:
+    - coeoge_iitb_dj
+id: contact
+theme: coeoge_iitb_dj
+region: footer1
+weight: 0
+provider: null
+plugin: 'block_content:98d15d3a-f34c-4403-805f-696395fe6cb6'
+settings:
+  id: 'block_content:98d15d3a-f34c-4403-805f-696395fe6cb6'
+  label: Contact
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: e30b6a55-b3d9-4cdd-8ffa-05f03f783926
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - course_details
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: vOWWhP-4k9leLgZ3yImnDC1yjuHoJW0scM0cDlgRarc
+id: node.field_total_credits
+field_name: field_total_credits
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

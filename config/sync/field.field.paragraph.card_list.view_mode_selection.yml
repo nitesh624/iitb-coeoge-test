@@ -1,0 +1,21 @@
+uuid: 87005047-8e58-43c7-84fa-43f2393a0a6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.view_mode_selection
+    - paragraphs.paragraphs_type.card_list
+id: paragraph.card_list.view_mode_selection
+field_name: view_mode_selection
+entity_type: paragraph
+bundle: card_list
+label: 'View Mode'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: field_view_mode
+  handler_settings: {  }
+field_type: entity_reference

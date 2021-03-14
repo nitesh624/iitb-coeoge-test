@@ -1,0 +1,11 @@
+uuid: c87bf02f-fdc2-4dc3-93a8-1591a73b3950
+langcode: en
+status: true
+dependencies:
+  module:
+    - facets
+id: config_sync.module.facets
+snapshotSet: config_sync
+extensionType: module
+extensionName: facets
+items: {  }

@@ -1,0 +1,25 @@
+uuid: 73c299d3-5ad5-4368-9f8e-90b674405912
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_event
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: koI4QjjJTGpYfVQjneRF6DnfwUW3EzNaDqpTI-0dBhM
+id: node.field_event_types
+field_name: field_event_types
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

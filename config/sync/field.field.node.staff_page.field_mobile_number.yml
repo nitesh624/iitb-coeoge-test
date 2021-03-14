@@ -1,0 +1,24 @@
+uuid: 9504d4b6-6476-41b7-87f9-a4e6ae42100e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile_number
+    - node.type.staff_page
+  enforced:
+    module:
+      - staff_page
+_core:
+  default_config_hash: n2CQztSuIe5vjW9H82_P-t8p6mn9CQWYXniEO0O1np8
+id: node.staff_page.field_mobile_number
+field_name: field_mobile_number
+entity_type: node
+bundle: staff_page
+label: 'Mobile Number'
+description: 'The mobile phone number you enter here will be visible only to faculty of our department.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

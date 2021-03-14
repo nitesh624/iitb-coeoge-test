@@ -1,0 +1,198 @@
+uuid: a1239646-8e98-4631-b0c3-db67bfde5b2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.student_page.body
+    - field.field.node.student_page.field_student_admission_status
+    - field.field.node.student_page.field_student_awards_and_fellows
+    - field.field.node.student_page.field_student_background
+    - field.field.node.student_page.field_student_building
+    - field.field.node.student_page.field_student_current_employment
+    - field.field.node.student_page.field_student_degree_programme
+    - field.field.node.student_page.field_student_email
+    - field.field.node.student_page.field_student_employment_history
+    - field.field.node.student_page.field_student_full_name
+    - field.field.node.student_page.field_student_hostel_and_room_nu
+    - field.field.node.student_page.field_student_lab_room_number
+    - field.field.node.student_page.field_student_mobile_number
+    - field.field.node.student_page.field_student_phone_no
+    - field.field.node.student_page.field_student_photo
+    - field.field.node.student_page.field_student_public_profile_url
+    - field.field.node.student_page.field_student_r_d_projects
+    - field.field.node.student_page.field_student_roll_number
+    - field.field.node.student_page.field_student_year_of_admission
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+  module:
+    - image
+    - link
+    - name
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: MsAqGY5ieFf2bn0DKJJw7-Bf8BUjGSHIKytngH5TW10
+id: node.student_page.default
+targetEntityType: node
+bundle: student_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_student_admission_status:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_student_awards_and_fellows:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_student_background:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_student_building:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student_current_employment:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_student_degree_programme:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_student_email:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_student_employment_history:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_student_full_name:
+    weight: 110
+    label: above
+    settings:
+      format: default
+      markup: false
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+    third_party_settings: {  }
+    type: name_default
+    region: content
+  field_student_hostel_and_room_nu:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student_lab_room_number:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student_mobile_number:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student_phone_no:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student_photo:
+    weight: 115
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_student_public_profile_url:
+    weight: 116
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_student_r_d_projects:
+    weight: 117
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_student_roll_number:
+    weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student_year_of_admission:
+    weight: 119
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

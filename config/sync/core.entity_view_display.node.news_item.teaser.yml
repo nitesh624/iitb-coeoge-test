@@ -1,0 +1,40 @@
+uuid: 6b89b667-816b-48c6-a003-6e8a81b6c78b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news_item.body
+    - field.field.node.news_item.field_news_date
+    - field.field.node.news_item.field_news_images
+    - field.field.node.news_item.field_news_type
+    - node.type.news_item
+  enforced:
+    module:
+      - acadmix_news
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: WqdWj3zLHkM3b0ajuyQQ9dFCR45dEtzzdoVouZXgvp8
+id: node.news_item.teaser
+targetEntityType: node
+bundle: news_item
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_news_date: true
+  field_news_images: true
+  field_news_type: true
+  langcode: true

@@ -1,0 +1,12 @@
+uuid: 2ceb77a1-e28b-43cd-9241-d9a5a1af738c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cYrYIhZWTqyc3hQazNS42Wm-UmPYJxjoqNT9TsxNQYw
+id: iitbmigration
+label: 'IITB Migration'
+description: 'IITB data migrations for department distribution.'
+source_type: 'CSV files'
+module: null
+shared_configuration: null

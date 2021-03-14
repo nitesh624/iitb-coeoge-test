@@ -1,0 +1,13 @@
+uuid: 1969d9c4-7030-41e9-b7b6-88090a5b9f07
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: hnTbw4FW7qH_Fc0M3RyzxdDzVdz75MFkD-lHgffTLzM
+name: 'Research Area'
+vid: research_area
+description: 'Research Area terms'
+weight: 0

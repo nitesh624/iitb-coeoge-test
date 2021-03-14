@@ -1,0 +1,20 @@
+uuid: 54a057a2-0a03-497b-8a34-86f149f0e4db
+langcode: en
+status: true
+dependencies:
+  theme:
+    - iitb_dj
+_core:
+  default_config_hash: VoskpFOCik8vwhud1Pg9rnHEbtiWyEpxJvqkQ5f_pvU
+id: iitb_dj_local_actions
+theme: iitb_dj
+region: content_top
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

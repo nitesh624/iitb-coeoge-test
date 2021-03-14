@@ -1,0 +1,24 @@
+uuid: 4f99349f-a09d-406a-a5fe-e17ccebb6af7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.staff_page
+  enforced:
+    module:
+      - staff_page
+_core:
+  default_config_hash: wdWhBr464qG3FCMQMljUWW-J8ploEEpmI98OYEFbGo8
+id: node.staff_page.field_email
+field_name: field_email
+entity_type: node
+bundle: staff_page
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

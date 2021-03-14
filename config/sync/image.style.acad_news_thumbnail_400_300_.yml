@@ -1,0 +1,20 @@
+uuid: 3b3e243d-3891-474d-9f8d-82726ddbdadb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_news
+_core:
+  default_config_hash: Y5ylWxwG9gXN9znT5mSnQ0u2sbLEjwac86XTk7ltfPQ
+name: acad_news_thumbnail_400_300_
+label: 'Acad News Thumbnail (400×300)'
+effects:
+  fd20fd3f-9b6c-47ef-bf3f-da739870c51c:
+    uuid: fd20fd3f-9b6c-47ef-bf3f-da739870c51c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

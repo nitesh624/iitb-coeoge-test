@@ -1,0 +1,11 @@
+uuid: b77220ff-a27b-4d2e-aeed-c479edd1ff26
+langcode: en
+status: true
+dependencies:
+  module:
+    - breakpoint
+id: config_sync.module.breakpoint
+snapshotSet: config_sync
+extensionType: module
+extensionName: breakpoint
+items: {  }

@@ -1,0 +1,20 @@
+uuid: d1c3e25e-e7f9-43af-ae80-8bf30641892f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_slider
+_core:
+  default_config_hash: nv10nxJP8ewiVLMOFZJHnoPN7dDmwl1ZQk0AeakNjNs
+name: slider_inner_thumbnail_100_100_
+label: 'slider inner Thumbnail (100×100)'
+effects:
+  9a364713-4492-4deb-bb78-629c3b82a12e:
+    uuid: 9a364713-4492-4deb-bb78-629c3b82a12e
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      upscale: false

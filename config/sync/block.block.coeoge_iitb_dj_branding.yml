@@ -1,0 +1,25 @@
+uuid: 5da4fc01-9587-49c7-9318-ba62c15e457e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - coeoge_iitb_dj
+_core:
+  default_config_hash: mz8giJq5-mUGXBOAWxYG92etnCcT72mNmAXU3yO03SU
+id: coeoge_iitb_dj_branding
+theme: coeoge_iitb_dj
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

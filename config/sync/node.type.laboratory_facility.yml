@@ -1,0 +1,23 @@
+uuid: 57c550a3-4e70-44bc-bb8d-40d8e68db7e1
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: eDhHq9aiEYptMsO-Zg9lWNrMUfL4Bmr-6eCqkVGeDWg
+name: 'Laboratory Facility'
+type: laboratory_facility
+description: 'Enter a new experimental or computational facility procured in a lab.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

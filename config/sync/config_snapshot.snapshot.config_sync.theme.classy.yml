@@ -1,0 +1,11 @@
+uuid: ad5bddcb-9206-43e9-abc8-96cc73ad0dff
+langcode: en
+status: true
+dependencies:
+  theme:
+    - classy
+id: config_sync.theme.classy
+snapshotSet: config_sync
+extensionType: theme
+extensionName: classy
+items: {  }

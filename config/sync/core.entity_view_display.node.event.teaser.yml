@@ -1,0 +1,46 @@
+uuid: b80d211a-d3e5-465f-b95a-069ed9631753
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_end_date_and_time
+    - field.field.node.event.field_event_name_of_speaker_and_
+    - field.field.node.event.field_event_title_of_seminar_con
+    - field.field.node.event.field_event_types
+    - field.field.node.event.field_event_venue
+    - field.field.node.event.field_start_date_and_time
+    - node.type.event
+  enforced:
+    module:
+      - acadmix_event
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: _vn8ZJQjxyUNJRrn6ZhTMycEfxbsrwuMYIkh_J60aK0
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_end_date_and_time: true
+  field_event_name_of_speaker_and_: true
+  field_event_title_of_seminar_con: true
+  field_event_types: true
+  field_event_venue: true
+  field_start_date_and_time: true
+  langcode: true

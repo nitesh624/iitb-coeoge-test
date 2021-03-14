@@ -1,0 +1,32 @@
+uuid: 22b1cd60-6383-4982-8fb0-07f8c0d2630b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_view.field_title
+    - field.field.paragraph.list_view.field_view_ref
+    - paragraphs.paragraphs_type.list_view
+  module:
+    - viewsreference
+id: paragraph.list_view.default
+targetEntityType: paragraph
+bundle: list_view
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view_ref:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true

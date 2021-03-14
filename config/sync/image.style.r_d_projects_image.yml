@@ -1,0 +1,20 @@
+uuid: 94e7b21d-700f-4c22-a221-b50d792d5ff3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: aEBOYvl5aRa_h1i9fMw4Nov5Ts_ufW_7DS6e8beTzZU
+name: r_d_projects_image
+label: 'R&D Projects Image'
+effects:
+  8a453494-6853-4114-84a8-8a8178e23ec6:
+    uuid: 8a453494-6853-4114-84a8-8a8178e23ec6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

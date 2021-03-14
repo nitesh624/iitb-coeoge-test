@@ -1,0 +1,26 @@
+uuid: 1ce4ab2f-105b-4e4d-a8cc-3cefb96540cb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+_core:
+  default_config_hash: 4r-a2ktC250MY9Q0-2_aicIXzqhIt6YSU7uSJofMdgY
+id: node.field_student_lab_room_number
+field_name: field_student_lab_room_number
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

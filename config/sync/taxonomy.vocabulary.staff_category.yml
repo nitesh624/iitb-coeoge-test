@@ -1,0 +1,13 @@
+uuid: 335b348b-2fb7-4a6c-92a1-c4c4309492b9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+_core:
+  default_config_hash: gne-MwHHFhlqCnQqqBdh9_o4VOTe1FH-uDNiNMgcpes
+name: 'Staff Category'
+vid: staff_category
+description: 'Contains the staff category'
+weight: 0

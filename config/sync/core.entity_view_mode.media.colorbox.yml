@@ -1,0 +1,10 @@
+uuid: 7cab3caf-7fb7-497d-acd0-b07f541d65ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.colorbox
+label: Colorbox
+targetEntityType: media
+cache: true

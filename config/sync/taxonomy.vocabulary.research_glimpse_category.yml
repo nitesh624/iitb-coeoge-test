@@ -1,0 +1,13 @@
+uuid: 9214256b-8c4f-4825-92cf-c49b8f37b710
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - research_glimpses
+_core:
+  default_config_hash: Wf5Gji1iSefUWCUkVJ14kguYdlMr-Lezgn2Y3KslkmE
+name: 'Research Glimpse Category'
+vid: research_glimpse_category
+description: 'Categorization of Research Glimpse '
+weight: 0

@@ -1,0 +1,11 @@
+uuid: 17febd31-bd98-4438-9066-ffe9a1d09267
+langcode: en
+status: true
+dependencies:
+  module:
+    - shs
+id: config_sync.module.shs
+snapshotSet: config_sync
+extensionType: module
+extensionName: shs
+items: {  }

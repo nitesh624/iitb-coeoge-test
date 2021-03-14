@@ -1,0 +1,28 @@
+uuid: 12c91de5-5ef6-427d-8511-4857e9c89052
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.research_glimpses
+  enforced:
+    module:
+      - research_glimpses
+  module:
+    - text
+_core:
+  default_config_hash: HY4hyT18Ao27IoqEodNk9ZqVhFlvMR4QhKX4Tof8CrE
+id: node.research_glimpses.body
+field_name: body
+entity_type: node
+bundle: research_glimpses
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,69 @@
+uuid: dc6c77b9-436a-407f-90b0-056123b9a03c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: AyLxyOeBm8uqB_HFihUFKW8-LUx8VbD11uJbk_eciRE
+id: node.field_instrument_class
+field_name: field_instrument_class
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Biotechnology
+      label: Biotechnology
+    -
+      value: 'Composition Analysis'
+      label: 'Composition Analysis'
+    -
+      value: Computer
+      label: Computer
+    -
+      value: 'Interfacial Analysis'
+      label: 'Interfacial Analysis'
+    -
+      value: Microscopy
+      label: Microscopy
+    -
+      value: 'Molecular Modelling (Software)'
+      label: 'Molecular Modelling (Software)'
+    -
+      value: 'Process Design (Software)'
+      label: 'Process Design (Software)'
+    -
+      value: Reactions
+      label: Reactions
+    -
+      value: Rheology
+      label: Rheology
+    -
+      value: 'Sample Preparation'
+      label: 'Sample Preparation'
+    -
+      value: 'Size Analysis'
+      label: 'Size Analysis'
+    -
+      value: Spectroscopy
+      label: Spectroscopy
+    -
+      value: 'Transport Modelling (Software)'
+      label: 'Transport Modelling (Software)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

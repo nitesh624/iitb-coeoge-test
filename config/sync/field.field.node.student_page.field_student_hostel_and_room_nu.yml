@@ -1,0 +1,24 @@
+uuid: 3667f618-e2a9-41db-99e8-9e21088cdcad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_hostel_and_room_nu
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+_core:
+  default_config_hash: MqaIzqA95GAILaG4KyrFEALJ9-DIewwR8xFbVXbS2-8
+id: node.student_page.field_student_hostel_and_room_nu
+field_name: field_student_hostel_and_room_nu
+entity_type: node
+bundle: student_page
+label: 'Hostel and Room Number'
+description: 'Enter your Hostel and Room Number. Eg, H1, #23.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

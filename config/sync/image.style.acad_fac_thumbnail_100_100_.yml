@@ -1,0 +1,20 @@
+uuid: f4927914-6733-494a-bdd7-9f9b39729fb0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: obA8NilWYOPv-BY-Ds6yWCu96ELQKg-WwxCoEUw5Xgg
+name: acad_fac_thumbnail_100_100_
+label: 'Acad Fac Thumbnail (100×100)'
+effects:
+  1ec55067-0450-47fd-bd92-779adb0a348b:
+    uuid: 1ec55067-0450-47fd-bd92-779adb0a348b
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      upscale: false

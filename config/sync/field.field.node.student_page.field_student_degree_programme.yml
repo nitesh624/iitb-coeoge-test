@@ -1,0 +1,26 @@
+uuid: 42c346b5-b76f-472a-b381-f0b58ca33ec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_degree_programme
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+  module:
+    - options
+_core:
+  default_config_hash: ek0niRSKnaGd-esDkg6a1btrj32JG4WTMDOdd2a7Loo
+id: node.student_page.field_student_degree_programme
+field_name: field_student_degree_programme
+entity_type: node
+bundle: student_page
+label: 'Degree Programme'
+description: 'Choose the Degree Programme/Project you are registered in IIT Bombay. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

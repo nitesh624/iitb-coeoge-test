@@ -1,0 +1,51 @@
+uuid: c66396fa-7bb5-4411-a9b9-9c37a836ab62
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - course_details
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: 0Q0tmTaK6rb0mXXcMa-lDzrMzHjsPis63tR5Ktn5E7Y
+id: node.field_practical_credit
+field_name: field_practical_credit
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: '0'
+    -
+      value: '1'
+      label: '1'
+    -
+      value: '2'
+      label: '2'
+    -
+      value: '3'
+      label: '3'
+    -
+      value: '4'
+      label: '4'
+    -
+      value: '5'
+      label: '5'
+    -
+      value: '6'
+      label: '6'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

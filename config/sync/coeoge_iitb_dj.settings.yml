@@ -1,0 +1,66 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://iitbongc.local/themes/custom/coeoge_iitb_dj/favicon.ico'
+  use_default: 1
+schemas:
+  bootstrap: 8000
+  iitb_dj: 8000
+  coeoge_iitb_dj: 8000
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: ''
+  url: ''
+  use_default: 1
+region_wells:
+  top_head_search: ''
+  header: ''
+  lang_switcher: ''
+  header_search: ''
+  navigation_collapsible: ''
+  slider: ''
+  highlighted: ''
+  help: ''
+  top_head: ''
+  top1: ''
+  top2: ''
+  top3: ''
+  top4: ''
+  breadcrumb: ''
+  content_top: ''
+  sidebar_first: ''
+  content: ''
+  sidebar_second: ''
+  content_bottom: ''
+  footer1: ''
+  footer2: ''
+  footer3: ''
+  footer4: ''
+  footer_bar_left: ''
+  footer_bar_right: ''
+facebook_url: 'http://facebook.com'
+google_plus_url: ''
+twitter_url: ''
+linkedin_url: ''
+faculty_header_bg_file: ''
+event_header_bg_file: ''
+news_header_bg_file: ''
+cdn_provider: ''
+cdn_cache_ttl_versions: 0
+cdn_cache_ttl_themes: 0
+cdn_cache_ttl_assets: 0
+cdn_cache_ttl_library: 0
+reset_http_request_cache: ''
+table: ''
+show_social_icon: 1
+show_heading_branding: 1
+heading_branding_text: 'Indian Institute of Technology Bombay'
+heading_branding_url: 'http://www.iitb.ac.in/'
+heading_branding_title: 'IIT Bombay Home'
+faculty_header_bg: ''
+event_header_bg: ''
+news_header_bg: ''

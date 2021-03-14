@@ -1,0 +1,28 @@
+uuid: 2488af27-2dd0-4415-b955-12aa5953b357
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_public_profile_url
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+  module:
+    - link
+_core:
+  default_config_hash: aSjArI7SXP76xRNGwG3Tx81VNULLOPIOsyE6h3KZ9hU
+id: node.student_page.field_student_public_profile_url
+field_name: field_student_public_profile_url
+entity_type: node
+bundle: student_page
+label: 'Public Profile URL'
+description: 'Enter a URL  to  public profiles, as in LinkedIn, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

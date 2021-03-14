@@ -1,0 +1,23 @@
+uuid: 057fb3f1-5ac2-422f-b2c8-a20b22f6963f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: '-lb5LVctmYQNCG1Plyb2swHBr3Klglnkve7y62NYOP4'
+name: 'Staff Page'
+type: staff_page
+description: 'Create an opening web page for staff containing personal information, phone nos, etc.'
+help: "<p>\r\nPlease enter the staff details below. \r\n</p>\r\n<ul>\r\n\t<li>In the title field enter the name, as you wish it should appear in the title. </li>\r\n\t<li>Fields marked with a red star, are required. </li>\r\n\t<li>Photo image has a size limitation of 300x300.</li>\r\n\t<li>You can attach a CV (use PDF only), to the file attachment section.</li>\r\n</ul>"
+new_revision: false
+preview_mode: 1
+display_submitted: false

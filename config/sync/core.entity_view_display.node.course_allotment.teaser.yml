@@ -1,0 +1,48 @@
+uuid: 6e3944cc-8881-4395-ace9-b99b33ce435a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.course_allotment.body
+    - field.field.node.course_allotment.field_acad_year
+    - field.field.node.course_allotment.field_course_code_ref
+    - field.field.node.course_allotment.field_course_slot
+    - field.field.node.course_allotment.field_course_url
+    - field.field.node.course_allotment.field_facultynode
+    - field.field.node.course_allotment.field_semester
+    - field.field.node.course_allotment.field_staff_noderef
+    - node.type.course_allotment
+  enforced:
+    module:
+      - course_allotment
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: 4oEELDI7VzePD06xeSinMB4r82REzm1O5oM3y5UQ9yc
+id: node.course_allotment.teaser
+targetEntityType: node
+bundle: course_allotment
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_acad_year: true
+  field_course_code_ref: true
+  field_course_slot: true
+  field_course_url: true
+  field_facultynode: true
+  field_semester: true
+  field_staff_noderef: true
+  langcode: true

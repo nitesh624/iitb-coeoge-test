@@ -1,0 +1,25 @@
+uuid: fb58d0c1-02da-43d8-b107-475c0faff3b1
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_news
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: c0QGzvKWJQSbEApTwzp_sDb817NSWUPIel6NtuZrE9A
+id: node.field_news_type
+field_name: field_news_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

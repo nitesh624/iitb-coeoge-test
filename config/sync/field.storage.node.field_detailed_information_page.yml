@@ -1,0 +1,24 @@
+uuid: 9f542a56-3a3f-417d-8a7b-524deb4c1806
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: BIGIJm07kR8QukQgH-vyNyykOgSGev6mi-eB0Zma2hc
+id: node.field_detailed_information_page
+field_name: field_detailed_information_page
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

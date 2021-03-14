@@ -1,0 +1,24 @@
+uuid: 61db1ed8-1903-48cf-8845-c976caeddded
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost_of_purchase
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+_core:
+  default_config_hash: k4kck2HbaRtNo0-CeeqRTLeTh44v7vf3Tq7uflwgt1E
+id: node.laboratory_facility.field_cost_of_purchase
+field_name: field_cost_of_purchase
+entity_type: node
+bundle: laboratory_facility
+label: 'Cost of Purchase'
+description: 'Enter the approximate cost of purchase.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,13 @@
+uuid: 0879089c-7b67-473c-aa99-73f5fa79fc71
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_event
+_core:
+  default_config_hash: GcsHjQMFuywrkBaVkehObKOSuvuwb0MhzSgbEv46KtM
+name: 'Event Type'
+vid: event_type_
+description: 'It describe the types of Events'
+weight: 0

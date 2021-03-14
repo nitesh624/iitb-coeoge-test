@@ -1,0 +1,26 @@
+uuid: 88b0f794-afc1-4d74-a65e-f187102e343a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - node
+_core:
+  default_config_hash: VNevItPdotSr8nh0hCyYYTMHVcFe94giH87n2o4yoYs
+id: node.field_google_scholar_id
+field_name: field_google_scholar_id
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

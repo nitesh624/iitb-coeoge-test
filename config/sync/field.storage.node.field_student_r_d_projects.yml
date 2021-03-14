@@ -1,0 +1,25 @@
+uuid: 665a0fd0-d2f4-493b-ad33-d085ee96bc32
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: qicA-Q6JhI4w1EvBUTOJLh6Rf6LmY59O_WmeiuP46Dk
+id: node.field_student_r_d_projects
+field_name: field_student_r_d_projects
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

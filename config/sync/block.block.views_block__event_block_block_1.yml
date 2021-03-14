@@ -1,0 +1,32 @@
+uuid: 31708dcf-c7ac-4094-889c-fc64344b3759
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_block
+  module:
+    - system
+    - views
+  theme:
+    - iitb_dj
+_core:
+  default_config_hash: dGwn8CON8zLsVFmsIdvinyf6cmzTVYaEUz7sOo2jXvI
+id: views_block__event_block_block_1
+theme: iitb_dj
+region: top1
+weight: -9
+provider: null
+plugin: 'views_block:event_block-block_1'
+settings:
+  id: 'views_block:event_block-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,31 @@
+uuid: 1ab418ed-c630-4586-85b3-d01e8ad01109
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dept_staff
+  module:
+    - system
+    - views
+  theme:
+    - iitb_dj
+_core:
+  default_config_hash: Lpyz0xlxXsqppgWFn1R9eVthfIUmEYnIWUt6cOeZHp4
+id: exposedformdept_staffpage_1
+theme: iitb_dj
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:dept_staff-page_1'
+settings:
+  id: 'views_exposed_filter_block:dept_staff-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /staff-directory
+    negate: false
+    context_mapping: {  }

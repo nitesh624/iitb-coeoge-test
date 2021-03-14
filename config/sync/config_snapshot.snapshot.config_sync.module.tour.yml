@@ -1,0 +1,11 @@
+uuid: 62771233-53e3-4382-b5fc-410627c91bdc
+langcode: en
+status: true
+dependencies:
+  module:
+    - tour
+id: config_sync.module.tour
+snapshotSet: config_sync
+extensionType: module
+extensionName: tour
+items: {  }

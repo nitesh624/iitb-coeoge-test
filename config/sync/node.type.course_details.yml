@@ -1,0 +1,23 @@
+uuid: 33d1dee1-ad05-4dd8-aff3-bb58a1273eee
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - course_details
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: LCh-e4oSWZVMQ8BWoP0u6u-3p8cZPSxfmHAHiH23pSE
+name: 'Course Details'
+type: course_details
+description: 'Create a new course, providing details of code, credit structure, course outline, and reading materials.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

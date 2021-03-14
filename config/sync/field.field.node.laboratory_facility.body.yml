@@ -1,0 +1,28 @@
+uuid: 55b953cf-6b9f-45ee-b629-2b973de3c839
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - text
+_core:
+  default_config_hash: 2rvWp6G0nphnvddgzJx6KZmMRpacMkrJwsu9CK7zBaQ
+id: node.laboratory_facility.body
+field_name: body
+entity_type: node
+bundle: laboratory_facility
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

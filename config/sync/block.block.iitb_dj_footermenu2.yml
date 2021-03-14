@@ -1,0 +1,27 @@
+uuid: 972cae1b-ce91-4e6c-beca-995d3b17cde8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-2
+  module:
+    - system
+  theme:
+    - iitb_dj
+_core:
+  default_config_hash: BbY7sXOH-UW-z7ewn-vllDQR6pkIxr5IiqqMrwdkwrI
+id: iitb_dj_footermenu2
+theme: iitb_dj
+region: footer3
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu-2'
+settings:
+  id: 'system_menu_block:footer-menu-2'
+  label: 'Footer menu 2'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

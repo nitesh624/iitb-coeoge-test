@@ -1,0 +1,26 @@
+uuid: 57c48790-e24f-4e82-b90a-c22fd4663012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status_of_facility
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - options
+_core:
+  default_config_hash: w8iqP1-OD3tvh7xUPtJYbeLCOCjq7_Mz7qSaQjqpqLM
+id: node.laboratory_facility.field_status_of_facility
+field_name: field_status_of_facility
+entity_type: node
+bundle: laboratory_facility
+label: 'Status of Facility'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

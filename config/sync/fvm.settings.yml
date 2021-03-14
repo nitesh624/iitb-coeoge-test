@@ -1,0 +1,79 @@
+hide_layout_builder_field: 0
+media__audio: 0
+media__audio__view_modes:
+  media_library: 0
+media__document: 0
+media__document__view_modes:
+  media_library: 0
+media__image: 0
+media__image__view_modes:
+  card_list: 0
+  colorbox: 0
+  media_library: 0
+media__remote_video: 0
+media__remote_video__view_modes:
+  media_library: 0
+media__video: 0
+media__video__view_modes:
+  media_library: 0
+node__article: 0
+node__article__view_modes:
+  rss: 0
+  teaser: 0
+node__course_allotment: 0
+node__course_allotment__view_modes:
+  teaser: 0
+node__course_details: 0
+node__course_details__view_modes:
+  teaser: 0
+node__event: 0
+node__event__view_modes:
+  full: 0
+  teaser: 0
+node__fac_page: 0
+node__fac_page__view_modes:
+  full: 0
+  teaser: 0
+node__laboratory_facility: 0
+node__laboratory_facility__view_modes:
+  teaser: 0
+node__landing_page_paragraphs: 0
+node__landing_page_paragraphs__view_modes:
+  teaser: 0
+node__main_slider: 0
+node__main_slider__view_modes:
+  teaser: 0
+node__news_item: 0
+node__news_item__view_modes:
+  full: 0
+  teaser: 0
+node__page: 0
+node__page__view_modes:
+  teaser: 0
+node__research_glimpses: 0
+node__research_glimpses__view_modes:
+  teaser: 0
+node__staff_page: 0
+node__staff_page__view_modes:
+  teaser: 0
+node__student_page: 0
+node__student_page__view_modes:
+  teaser: 0
+taxonomy_term__research_area: 0
+taxonomy_term__research_area__view_modes:
+  full: 0
+user__user: 0
+user__user__view_modes:
+  compact: 0
+paragraph__card_list: 1
+paragraph__card_list__view_modes:
+  cards_grid: cards_grid
+paragraph__gallery: 1
+paragraph__gallery__view_modes:
+  gallery: gallery
+  gallery_carousel: 0
+  preview: 0
+paragraph__card: 0
+paragraph__card__view_modes:
+  cards_grid: 0
+  preview: 0

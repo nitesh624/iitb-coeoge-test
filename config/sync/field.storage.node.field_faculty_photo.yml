@@ -1,0 +1,35 @@
+uuid: 7d5cbc83-0d17-450a-a26a-cd16e05a60de
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: iPfW9_EnBa_lmDmKfDE83LxZOEwb6ggSSeZpn0kVOJk
+id: node.field_faculty_photo
+field_name: field_faculty_photo
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

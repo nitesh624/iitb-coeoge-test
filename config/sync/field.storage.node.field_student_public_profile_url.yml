@@ -1,0 +1,24 @@
+uuid: eed515f8-a7b4-4db7-9e5f-d4946dc8c2ca
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: PIEx2vo4WhtmVXOtHKwwdY_h6I8VTLujH8BV44thYZk
+id: node.field_student_public_profile_url
+field_name: field_student_public_profile_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

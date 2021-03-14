@@ -1,0 +1,28 @@
+uuid: 3c4e0c43-1bdc-4277-a877-2dd97625a540
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.course_allotment
+  enforced:
+    module:
+      - course_allotment
+  module:
+    - text
+_core:
+  default_config_hash: 0TzVqbWMWjmD0i4Wjn2WPmChlmgsaCstz_PrZ6-JI2g
+id: node.course_allotment.body
+field_name: body
+entity_type: node
+bundle: course_allotment
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

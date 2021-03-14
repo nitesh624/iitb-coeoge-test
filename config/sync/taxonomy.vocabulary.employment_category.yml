@@ -1,0 +1,13 @@
+uuid: 978335eb-8714-4ca1-b188-1b39d3027492
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: r0SU6izUbpSAk_pWkCjaiXOFXC9WkeCMJXrTDpkCs84
+name: 'Employment Category'
+vid: employment_category
+description: 'Contains the Faculty Employment Category'
+weight: 0

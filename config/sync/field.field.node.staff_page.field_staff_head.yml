@@ -1,0 +1,28 @@
+uuid: c1912593-5e7a-4e9f-973a-2ed4ac0e3f52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_head
+    - node.type.staff_page
+  enforced:
+    module:
+      - staff_page
+_core:
+  default_config_hash: 0JEFMKK57poksjP78DiRmaiLAgI5MxBHz89Ll1ZGxOY
+id: node.staff_page.field_staff_head
+field_name: field_staff_head
+entity_type: node
+bundle: staff_page
+label: 'Staff Head'
+description: 'Please check this option if the staff is to be visible as head'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

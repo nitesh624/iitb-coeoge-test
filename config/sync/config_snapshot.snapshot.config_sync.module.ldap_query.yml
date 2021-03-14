@@ -1,0 +1,11 @@
+uuid: bf9cfffb-42c5-4ec2-9c8a-b3c59f7ca52f
+langcode: en
+status: true
+dependencies:
+  module:
+    - ldap_query
+id: config_sync.module.ldap_query
+snapshotSet: config_sync
+extensionType: module
+extensionName: ldap_query
+items: {  }

@@ -1,0 +1,2489 @@
+uuid: 4365e70b-6d13-4413-8d12-0889b76128b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - staff_page
+id: config_sync.module.staff_page
+snapshotSet: config_sync
+extensionType: module
+extensionName: staff_page
+items:
+  -
+    collection: ''
+    name: core.base_field_override.node.staff_page.promote
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+      id: node.staff_page.promote
+      field_name: promote
+      entity_type: node
+      bundle: staff_page
+      label: 'Promoted to front page'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: 0
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+  -
+    collection: ''
+    name: core.entity_form_display.node.staff_page.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.staff_page.body
+          - field.field.node.staff_page.field_awards_and_fellowships
+          - field.field.node.staff_page.field_building
+          - field.field.node.staff_page.field_email
+          - field.field.node.staff_page.field_lab_room_number
+          - field.field.node.staff_page.field_mobile_number
+          - field.field.node.staff_page.field_phone_no
+          - field.field.node.staff_page.field_r_d_projects
+          - field.field.node.staff_page.field_staff_category
+          - field.field.node.staff_page.field_staff_designation
+          - field.field.node.staff_page.field_staff_full_name
+          - field.field.node.staff_page.field_staff_head
+          - field.field.node.staff_page.field_staff_photo
+          - image.style.iitb_staff_thumbnail_100_100_
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - image
+          - name
+          - path
+          - text
+      id: node.staff_page.default
+      targetEntityType: node
+      bundle: staff_page
+      mode: default
+      content:
+        body:
+          type: text_textarea_with_summary
+          weight: 18
+          settings:
+            rows: 9
+            summary_rows: 3
+            placeholder: ''
+          third_party_settings: {  }
+          region: content
+        created:
+          type: datetime_timestamp
+          weight: 3
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_awards_and_fellowships:
+          weight: 19
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_building:
+          weight: 14
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_email:
+          weight: 11
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: email_default
+          region: content
+        field_lab_room_number:
+          weight: 15
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_mobile_number:
+          weight: 13
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_phone_no:
+          weight: 12
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_r_d_projects:
+          weight: 20
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_staff_category:
+          weight: 16
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_staff_designation:
+          weight: 10
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_staff_full_name:
+          weight: 8
+          settings: {  }
+          third_party_settings: {  }
+          type: name_default
+          region: content
+        field_staff_head:
+          weight: 9
+          settings:
+            display_label: true
+          third_party_settings: {  }
+          type: boolean_checkbox
+          region: content
+        field_staff_photo:
+          weight: 17
+          settings:
+            preview_image_style: iitb_staff_thumbnail_100_100_
+            progress_indicator: throbber
+          third_party_settings: {  }
+          type: image_image
+          region: content
+        langcode:
+          type: language_select
+          weight: 2
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        path:
+          type: path
+          weight: 6
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        promote:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 4
+          region: content
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 7
+          region: content
+          third_party_settings: {  }
+        sticky:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 5
+          region: content
+          third_party_settings: {  }
+        title:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        uid:
+          type: entity_reference_autocomplete
+          weight: 1
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          region: content
+          third_party_settings: {  }
+      hidden: {  }
+  -
+    collection: ''
+    name: core.entity_view_display.node.staff_page.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.staff_page.body
+          - field.field.node.staff_page.field_awards_and_fellowships
+          - field.field.node.staff_page.field_building
+          - field.field.node.staff_page.field_email
+          - field.field.node.staff_page.field_lab_room_number
+          - field.field.node.staff_page.field_mobile_number
+          - field.field.node.staff_page.field_phone_no
+          - field.field.node.staff_page.field_r_d_projects
+          - field.field.node.staff_page.field_staff_category
+          - field.field.node.staff_page.field_staff_designation
+          - field.field.node.staff_page.field_staff_full_name
+          - field.field.node.staff_page.field_staff_head
+          - field.field.node.staff_page.field_staff_photo
+          - image.style.iitb_staff_max_325x325
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - ds
+          - image
+          - name
+          - options
+          - spamspan
+          - text
+          - user
+      third_party_settings:
+        ds:
+          layout:
+            id: ds_1col
+            library: null
+            disable_css: false
+            entity_classes: all_classes
+            settings:
+              wrappers:
+                ds_content: div
+              outer_wrapper: div
+              attributes: ''
+              link_attribute: ''
+              link_custom: ''
+              classes:
+                layout_class: {  }
+                ds_content: {  }
+          regions:
+            ds_content:
+              - links
+              - field_staff_photo
+              - field_staff_full_name
+              - field_staff_designation
+              - field_email
+              - field_phone_no
+              - field_mobile_number
+              - field_lab_room_number
+              - field_building
+              - field_staff_category
+              - body
+              - field_r_d_projects
+              - field_awards_and_fellowships
+              - field_staff_head
+      id: node.staff_page.default
+      targetEntityType: node
+      bundle: staff_page
+      mode: default
+      content:
+        body:
+          label: hidden
+          type: text_default
+          weight: 10
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          region: ds_content
+        field_awards_and_fellowships:
+          weight: 12
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: text_default
+          region: ds_content
+        field_building:
+          weight: 8
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: string
+          region: ds_content
+        field_email:
+          weight: 4
+          label: above
+          settings:
+            spamspan_at: ' [at] '
+            spamspan_dot_enable: '1'
+            spamspan_dot: ' [dot] '
+            spamspan_use_graphic: 0
+            spamspan_use_form: 0
+            spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+            spamspan_form_default_url: contact
+            spamspan_form_default_displaytext: 'contact form'
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: email_spamspan
+          region: ds_content
+        field_lab_room_number:
+          weight: 7
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: 'div '
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: string
+          region: ds_content
+        field_mobile_number:
+          weight: 6
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: string
+          region: ds_content
+        field_phone_no:
+          weight: 5
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: 'col-sm-9 list-unstyled'
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: string
+          region: ds_content
+        field_r_d_projects:
+          weight: 11
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: col-sm-9
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: text_default
+          region: ds_content
+        field_staff_category:
+          weight: 9
+          label: above
+          settings:
+            link: true
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: entity_reference_label
+          region: ds_content
+        field_staff_designation:
+          weight: 3
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: list_default
+          region: ds_content
+        field_staff_full_name:
+          weight: 2
+          label: above
+          settings:
+            format: default
+            output: default
+            multiple: default
+            multiple_delimiter: ', '
+            multiple_and: text
+            multiple_delimiter_precedes_last: never
+            multiple_el_al_min: '3'
+            multiple_el_al_first: '1'
+            markup: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: name_default
+          region: ds_content
+        field_staff_head:
+          weight: 13
+          label: above
+          settings:
+            format: default
+            format_custom_true: ''
+            format_custom_false: ''
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: boolean
+          region: ds_content
+        field_staff_photo:
+          weight: 1
+          label: hidden
+          settings:
+            image_style: iitb_staff_max_325x325
+            image_link: ''
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+          type: image
+          region: ds_content
+        links:
+          weight: 0
+          region: ds_content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: core.entity_view_display.node.staff_page.teaser
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.teaser
+          - field.field.node.staff_page.body
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - text
+          - user
+      id: node.staff_page.teaser
+      targetEntityType: node
+      bundle: staff_page
+      mode: teaser
+      content:
+        body:
+          label: hidden
+          type: text_summary_or_trimmed
+          weight: 101
+          settings:
+            trim_length: 600
+          third_party_settings: {  }
+          region: content
+        links:
+          weight: 100
+          region: content
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: field.field.node.staff_page.body
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.body
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - text
+      id: node.staff_page.body
+      field_name: body
+      entity_type: node
+      bundle: staff_page
+      label: 'Work Involved in'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        display_summary: true
+      field_type: text_with_summary
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_awards_and_fellowships
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_awards_and_fellowships
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - text
+      id: node.staff_page.field_awards_and_fellowships
+      field_name: field_awards_and_fellowships
+      entity_type: node
+      bundle: staff_page
+      label: 'Awards and Fellowships'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_building
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_building
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+      id: node.staff_page.field_building
+      field_name: field_building
+      entity_type: node
+      bundle: staff_page
+      label: Building
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_email
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_email
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+      id: node.staff_page.field_email
+      field_name: field_email
+      entity_type: node
+      bundle: staff_page
+      label: Email
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: email
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_lab_room_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_lab_room_number
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+      id: node.staff_page.field_lab_room_number
+      field_name: field_lab_room_number
+      entity_type: node
+      bundle: staff_page
+      label: 'Lab Room Number'
+      description: 'Enter the room number of the Laboratory/Office space you work in.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_mobile_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_mobile_number
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+      id: node.staff_page.field_mobile_number
+      field_name: field_mobile_number
+      entity_type: node
+      bundle: staff_page
+      label: 'Mobile Number'
+      description: 'The mobile phone number you enter here will be visible only to faculty of our department.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_phone_no
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_phone_no
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+      id: node.staff_page.field_phone_no
+      field_name: field_phone_no
+      entity_type: node
+      bundle: staff_page
+      label: 'Phone No'
+      description: "Enter at least one contact phone number (Lab, Hostel, Mobile).  Suffix it with (O) for office, (R) for hostel, and (M) for mobile: Eg: +91 (22) 2576 42xx (O), +91 98338 xxxxx (M)\r\n\r\nIf you do not wish your mobile phone number to be shown to public, you may enter it in the \"Mobile Number\" field below, which is accessible only to faculty of this department."
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_r_d_projects
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_r_d_projects
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - text
+      id: node.staff_page.field_r_d_projects
+      field_name: field_r_d_projects
+      entity_type: node
+      bundle: staff_page
+      label: 'R&D Projects'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_staff_category
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_staff_category
+          - node.type.staff_page
+          - taxonomy.vocabulary.staff_category
+        enforced:
+          module:
+            - staff_page
+      id: node.staff_page.field_staff_category
+      field_name: field_staff_category
+      entity_type: node
+      bundle: staff_page
+      label: 'Staff Category'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            staff_category: staff_category
+          sort:
+            field: name
+            direction: asc
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_staff_designation
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_staff_designation
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - options
+      id: node.staff_page.field_staff_designation
+      field_name: field_staff_designation
+      entity_type: node
+      bundle: staff_page
+      label: 'Staff Designation'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_staff_full_name
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_staff_full_name
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - name
+      id: node.staff_page.field_staff_full_name
+      field_name: field_staff_full_name
+      entity_type: node
+      bundle: staff_page
+      label: 'Staff Full Name'
+      description: 'Notice the stars indicating what is required. If either "Legal name" or "Preferred name" have stars next to them, that means you must fill out at least the fields which have a highlighted border. If either "Legal name" or "Preferred name" do not have stars, then you only fill out the fields which have a highlighted border if you fill out ANY of the fields. If you leave all highlighted fields blank for an unstarred name, then you don''t have to fill out ANY of them. For multiple sets of names, names after the first set are always optional, but their fields will follow the same rules as optional names already explained.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        size:
+          title: 6
+          given: 20
+          middle: 20
+          family: 20
+          generational: 5
+          credentials: 35
+        title_display:
+          title: description
+          given: description
+          middle: description
+          family: description
+          generational: description
+          credentials: description
+        field_type:
+          title: select
+          given: text
+          middle: text
+          family: text
+          generational: select
+          credentials: text
+        inline_css:
+          title: ''
+          given: ''
+          middle: ''
+          family: ''
+          generational: ''
+          credentials: ''
+        component_css: ''
+        component_layout: default
+        show_component_required_marker: false
+        credentials_inline: false
+        override_format: default
+      field_type: name
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_staff_head
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_staff_head
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+      id: node.staff_page.field_staff_head
+      field_name: field_staff_head
+      entity_type: node
+      bundle: staff_page
+      label: 'Staff Head'
+      description: 'Please check this option if the staff is to be visible as head'
+      required: false
+      translatable: false
+      default_value:
+        -
+          value: 0
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+  -
+    collection: ''
+    name: field.field.node.staff_page.field_staff_photo
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_staff_photo
+          - node.type.staff_page
+        enforced:
+          module:
+            - staff_page
+        module:
+          - image
+      id: node.staff_page.field_staff_photo
+      field_name: field_staff_photo
+      entity_type: node
+      bundle: staff_page
+      label: 'Staff Photo'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        file_directory: 'staff_image/[date:custom:Y]-[date:custom:m]'
+        file_extensions: 'png gif jpg jpeg'
+        max_filesize: ''
+        max_resolution: ''
+        min_resolution: ''
+        alt_field: true
+        alt_field_required: true
+        title_field: true
+        title_field_required: false
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        handler: 'default:file'
+        handler_settings: {  }
+      field_type: image
+  -
+    collection: ''
+    name: field.storage.node.field_awards_and_fellowships
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - node
+          - text
+      id: node.field_awards_and_fellowships
+      field_name: field_awards_and_fellowships
+      entity_type: node
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_building
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - node
+      id: node.field_building
+      field_name: field_building
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_email
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - node
+      id: node.field_email
+      field_name: field_email
+      entity_type: node
+      type: email
+      settings: {  }
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_lab_room_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - node
+      id: node.field_lab_room_number
+      field_name: field_lab_room_number
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_mobile_number
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - node
+      id: node.field_mobile_number
+      field_name: field_mobile_number
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_phone_no
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - node
+      id: node.field_phone_no
+      field_name: field_phone_no
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_r_d_projects
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - node
+          - text
+      id: node.field_r_d_projects
+      field_name: field_r_d_projects
+      entity_type: node
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_staff_category
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - field_permissions
+          - node
+          - taxonomy
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_staff_category
+      field_name: field_staff_category
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_staff_designation
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - node
+          - options
+      id: node.field_staff_designation
+      field_name: field_staff_designation
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: 'Research Staff'
+            label: 'Research Staff'
+          -
+            value: 'Project Staff'
+            label: 'Project Staff'
+          -
+            value: 'Technical Staff'
+            label: 'Technical Staff'
+          -
+            value: 'Office Staff'
+            label: 'Office Staff'
+          -
+            value: 'Lab Assistant'
+            label: 'Lab Assistant'
+          -
+            value: 'Lab Attendant'
+            label: 'Lab Attendant'
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_staff_full_name
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - name
+          - node
+      id: node.field_staff_full_name
+      field_name: field_staff_full_name
+      entity_type: node
+      type: name
+      settings:
+        components:
+          title: true
+          given: true
+          middle: true
+          family: true
+          generational: false
+          credentials: false
+        minimum_components:
+          given: true
+          family: true
+          title: false
+          middle: false
+          generational: false
+          credentials: false
+        labels:
+          title: Title
+          given: 'First name'
+          middle: 'Middle name'
+          family: 'Last name'
+          generational: Generational
+          credentials: Credentials
+        max_length:
+          title: 31
+          given: 63
+          middle: 127
+          family: 63
+          generational: 15
+          credentials: 255
+        autocomplete_source:
+          title:
+            title: title
+          given: {  }
+          middle: {  }
+          family: {  }
+          generational:
+            generational: '0'
+          credentials: {  }
+        autocomplete_separator:
+          title: ' '
+          given: ' -'
+          middle: ' -'
+          family: ' -'
+          generational: ' '
+          credentials: ', '
+        allow_family_or_given: false
+        title_options:
+          - '-- --'
+          - Mr.
+          - Mrs.
+          - Miss
+          - Ms.
+          - Dr.
+          - Prof.
+        generational_options:
+          - '-- --'
+          - Jr.
+          - Sr.
+          - I
+          - II
+          - III
+          - IV
+          - V
+          - VI
+          - VII
+          - VIII
+          - IX
+          - X
+        sort_options:
+          title: false
+          generational: false
+      module: name
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_staff_head
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_staff_head
+      field_name: field_staff_head
+      entity_type: node
+      type: boolean
+      settings: {  }
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_staff_photo
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - file
+          - image
+          - node
+      id: node.field_staff_photo
+      field_name: field_staff_photo
+      entity_type: node
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: image.style.iitb_staff_max_325x325
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+      name: iitb_staff_max_325x325
+      label: 'IITB Staff Max 325x325'
+      effects:
+        018569f8-9172-4ae7-943b-51b037470e95:
+          uuid: 018569f8-9172-4ae7-943b-51b037470e95
+          id: image_scale
+          weight: 1
+          data:
+            width: 325
+            height: 325
+            upscale: false
+  -
+    collection: ''
+    name: image.style.iitb_staff_thumbnail_100_100_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+      name: iitb_staff_thumbnail_100_100_
+      label: 'IITB Staff Thumbnail (100×100)'
+      effects:
+        df01527a-ccab-48de-8427-b1f293988e9a:
+          uuid: df01527a-ccab-48de-8427-b1f293988e9a
+          id: image_scale
+          weight: 1
+          data:
+            width: 100
+            height: 100
+            upscale: false
+  -
+    collection: ''
+    name: node.type.staff_page
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+        module:
+          - menu_ui
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+      name: 'Staff Page'
+      type: staff_page
+      description: 'Create an opening web page for staff containing personal information, phone nos, etc.'
+      help: "<p>\r\nPlease enter the staff details below. \r\n</p>\r\n<ul>\r\n\t<li>In the title field enter the name, as you wish it should appear in the title. </li>\r\n\t<li>Fields marked with a red star, are required. </li>\r\n\t<li>Photo image has a size limitation of 300x300.</li>\r\n\t<li>You can attach a CV (use PDF only), to the file attachment section.</li>\r\n</ul>"
+      new_revision: false
+      preview_mode: 1
+      display_submitted: false
+  -
+    collection: ''
+    name: pathauto.pattern.department_staff_alias
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - node
+        enforced:
+          module:
+            - staff_page
+      id: department_staff_alias
+      label: 'Department staff Alias'
+      type: 'canonical_entities:node'
+      pattern: 'staff/[node:title]'
+      selection_criteria:
+        15079ae2-ae28-406c-bdb1-aa39eae76917:
+          id: node_type
+          bundles:
+            staff_page: staff_page
+          negate: false
+          context_mapping:
+            node: node
+          uuid: 15079ae2-ae28-406c-bdb1-aa39eae76917
+      selection_logic: and
+      weight: -5
+      relationships: {  }
+  -
+    collection: ''
+    name: taxonomy.vocabulary.staff_category
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - staff_page
+      name: 'Staff Category'
+      vid: staff_category
+      description: 'Contains the staff category'
+      hierarchy: 0
+      weight: 0
+  -
+    collection: ''
+    name: views.view.dept_staff
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_email
+          - field.storage.node.field_phone_no
+          - field.storage.node.field_staff_category
+          - field.storage.node.field_staff_designation
+          - field.storage.node.field_staff_photo
+          - node.type.staff_page
+          - responsive_image.styles.acad_fac_narrow
+          - taxonomy.vocabulary.staff_category
+        content:
+          - 'taxonomy_term:staff_category:55b32aa2-237f-40c0-8a21-f6d3d75273a7'
+          - 'taxonomy_term:staff_category:635ccf78-e576-452c-bfae-08caecdfdaa8'
+          - 'taxonomy_term:staff_category:92839f8b-fa8c-4895-8a1b-da3533c8f6c0'
+          - 'taxonomy_term:staff_category:f229ec84-a38a-4702-9361-6f012361782b'
+        enforced:
+          module:
+            - staff_page
+        module:
+          - better_exposed_filters
+          - node
+          - options
+          - responsive_image
+          - spamspan
+          - taxonomy
+          - user
+          - views_bootstrap
+      id: dept_staff
+      label: 'Dept Staff'
+      module: views
+      description: 'Display information of all department staffs'
+      tag: ''
+      base_table: node_field_data
+      base_field: nid
+      core: 8.x
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'access content'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: bef
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+                input_required: false
+                text_input_required: 'Select any filter and click on Apply to see results'
+                bef:
+                  general:
+                    allow_secondary: false
+                    secondary_label: 'Advanced options'
+                    autosubmit: true
+                    autosubmit_exclude_textfield: true
+                    autosubmit_hide: true
+                  term_node_tid_depth:
+                    bef_format: bef_links
+                    more_options:
+                      bef_select_all_none: false
+                      bef_collapsible: false
+                      is_secondary: false
+                      rewrite:
+                        filter_rewrite_values: ''
+                text_input_required_format: basic_html
+            pager:
+              type: none
+              options:
+                items_per_page: null
+                offset: 0
+            style:
+              type: views_bootstrap_grid
+              options:
+                grouping:
+                  -
+                    field: field_staff_category
+                    rendered: true
+                    rendered_strip: false
+                row_class: ''
+                default_row_class: true
+                alignment: horizontal
+                columns: '3'
+                col_xs: col-xs-12
+                col_sm: col-sm-6
+                col_md: col-md-4
+                col_lg: col-lg-4
+            row:
+              type: fields
+              options:
+                default_field_elements: false
+                inline: {  }
+                separator: ''
+                hide_empty: false
+            fields:
+              field_staff_photo:
+                id: field_staff_photo
+                table: node__field_staff_photo
+                field: field_staff_photo
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: target_id
+                type: responsive_image
+                settings:
+                  responsive_image_style: acad_fac_narrow
+                  image_link: ''
+                group_column: ''
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: false
+                  ellipsis: false
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: node
+                entity_field: title
+                plugin_id: field
+              field_staff_designation:
+                id: field_staff_designation
+                table: node__field_staff_designation
+                field: field_staff_designation
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: list_default
+                settings: {  }
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_email:
+                id: field_email
+                table: node__field_email
+                field: field_email
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: span
+                element_class: 'fa fa-envelope'
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: email_spamspan
+                settings:
+                  relationship: none
+                  fieldsets:
+                    - more
+                    - admin_label
+                  custom_label: 0
+                  label: ''
+                  element_label_colon: 0
+                  exclude: 0
+                  element_type_enable: 1
+                  element_type: span
+                  element_class_enable: 1
+                  element_class: 'fas fa-calendar-alt'
+                  element_label_type_enable: 0
+                  element_label_type: ''
+                  element_label_class_enable: 0
+                  element_label_class: ''
+                  element_wrapper_type_enable: 0
+                  element_wrapper_type: ''
+                  element_wrapper_class_enable: 0
+                  element_wrapper_class: ''
+                  element_default_classes: 1
+                  alter:
+                    alter_text: 0
+                    text: ''
+                    make_link: 0
+                    path: ''
+                    absolute: 0
+                    replace_spaces: 0
+                    external: 0
+                    path_case: none
+                    link_class: ''
+                    alt: ''
+                    rel: ''
+                    prefix: ''
+                    suffix: ''
+                    target: ''
+                    trim: 0
+                    max_length: '0'
+                    word_boundary: 1
+                    ellipsis: 1
+                    more_link: 0
+                    more_link_text: ''
+                    more_link_path: ''
+                    html: 0
+                    strip_tags: 0
+                    preserve_tags: ''
+                    trim_whitespace: 0
+                    nl2br: 0
+                  empty: ''
+                  empty_zero: 0
+                  hide_empty: 0
+                  hide_alter_empty: 1
+                  click_sort_column: value
+                  type: email_spamspan
+                  field_api_classes: 0
+                  spamspan_at: ' [at] '
+                  spamspan_use_graphic: 0
+                  spamspan_dot_enable: 1
+                  spamspan_dot: ' [dot] '
+                  use_form:
+                    spamspan_use_form: 0
+                    spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+                    spamspan_form_default_url: contact
+                    spamspan_form_default_displaytext: 'contact form'
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_phone_no:
+                id: field_phone_no
+                table: node__field_phone_no
+                field: field_phone_no
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: span
+                element_class: 'fa fa-phone'
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_staff_category:
+                id: field_staff_category
+                table: node__field_staff_category
+                field: field_staff_category
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: true
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: target_id
+                type: entity_reference_label
+                settings:
+                  link: false
+                group_column: target_id
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+            filters:
+              status:
+                value: '1'
+                table: node_field_data
+                field: status
+                plugin_id: boolean
+                entity_type: node
+                entity_field: status
+                id: status
+                expose:
+                  operator: ''
+                group: 1
+              type:
+                id: type
+                table: node_field_data
+                field: type
+                value:
+                  staff_page: staff_page
+                entity_type: node
+                entity_field: type
+                plugin_id: bundle
+              term_node_tid_depth:
+                id: term_node_tid_depth
+                table: node_field_data
+                field: term_node_tid_depth
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: or
+                value:
+                  78: 78
+                  79: 79
+                  85: 85
+                  84: 84
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: term_node_tid_depth_op
+                  label: Category
+                  description: ''
+                  use_operator: false
+                  operator: term_node_tid_depth_op
+                  identifier: staff-category
+                  required: true
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                    STF: '0'
+                    RS: '0'
+                  reduce: true
+                  chosen_override: 0
+                  disable_search: 0
+                  search_contains: 0
+                  placeholder_text_multiple: 'Choose some options'
+                  placeholder_text_single: 'Choose an option'
+                  no_results_text: 'No results match'
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                reduce_duplicates: false
+                type: select
+                limit: true
+                vid: staff_category
+                hierarchy: false
+                error_message: false
+                depth: 2
+                entity_type: node
+                plugin_id: taxonomy_index_tid_depth
+            sorts:
+              weight:
+                id: weight
+                table: taxonomy_term_field_data
+                field: weight
+                relationship: term_node_tid
+                group_type: group
+                admin_label: ''
+                order: ASC
+                exposed: false
+                expose:
+                  label: ''
+                entity_type: taxonomy_term
+                entity_field: weight
+                plugin_id: standard
+              weight_1:
+                id: weight_1
+                table: taxonomy_index
+                field: weight
+                relationship: none
+                group_type: group
+                admin_label: ''
+                order: ASC
+                exposed: false
+                expose:
+                  label: ''
+                plugin_id: standard
+            title: 'Department Staff'
+            header: {  }
+            footer: {  }
+            empty: {  }
+            relationships:
+              term_node_tid:
+                id: term_node_tid
+                table: node_field_data
+                field: term_node_tid
+                relationship: none
+                group_type: group
+                admin_label: term
+                required: false
+                vids:
+                  - staff_category
+                entity_type: node
+                plugin_id: node_term_data
+            arguments: {  }
+            display_extenders: {  }
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - user
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.field_email'
+              - 'config:field.storage.node.field_phone_no'
+              - 'config:field.storage.node.field_staff_category'
+              - 'config:field.storage.node.field_staff_designation'
+              - 'config:field.storage.node.field_staff_photo'
+        page_1:
+          display_plugin: page
+          id: page_1
+          display_title: Page
+          position: 1
+          display_options:
+            display_extenders: {  }
+            path: staff-directory
+            exposed_block: true
+            menu:
+              type: none
+              title: Staffs
+              description: 'View the Department staff Directory'
+              expanded: false
+              parent: ''
+              weight: 0
+              context: '0'
+              menu_name: main
+              enabled: false
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - user
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.field_email'
+              - 'config:field.storage.node.field_phone_no'
+              - 'config:field.storage.node.field_staff_category'
+              - 'config:field.storage.node.field_staff_designation'
+              - 'config:field.storage.node.field_staff_photo'

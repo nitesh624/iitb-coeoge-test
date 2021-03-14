@@ -1,0 +1,26 @@
+uuid: 611a4f87-9b26-4087-b99e-8fcbea38c6de
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+  module:
+    - node
+_core:
+  default_config_hash: T5f8TyD6eqUHG6aMDH2TfUxlOoX8YoCU2vmaNVQrKEY
+id: node.field_phone_no
+field_name: field_phone_no
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

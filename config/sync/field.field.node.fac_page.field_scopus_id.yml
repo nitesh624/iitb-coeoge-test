@@ -1,0 +1,24 @@
+uuid: 2c177b48-51c9-425a-ad08-a617214d4b87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scopus_id
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: 1jfA4dUewnmnTIZWvFzsOclkJRgvFQi0dq1hF2xVPJY
+id: node.fac_page.field_scopus_id
+field_name: field_scopus_id
+entity_type: node
+bundle: fac_page
+label: 'Scopus ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: 8789fcc7-adff-4480-b787-cd974bfff4d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_email
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+_core:
+  default_config_hash: 7Anw6lSTWSPUqSSOSqTgji1C6BG4sUyQEgVL9tOV25M
+id: node.student_page.field_student_email
+field_name: field_student_email
+entity_type: node
+bundle: student_page
+label: Email
+description: 'Enter your email address, preferably long term (Gmail, Yahoo, etc). It will not be visible to the viewers of this page. Emails will be sent to you through a contact form. The department may also use it to contact you after you have completed your stay here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

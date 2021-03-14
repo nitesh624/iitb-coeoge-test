@@ -1,0 +1,26 @@
+uuid: c6cd3bcf-1122-49cd-83f0-d9f590942211
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_designation
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - options
+_core:
+  default_config_hash: WRJwY-EGr7UIFeNXuFVB9n8jqk1mSBv59-bNDNFfTGw
+id: node.fac_page.field_faculty_designation
+field_name: field_faculty_designation
+entity_type: node
+bundle: fac_page
+label: 'Faculty Designation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

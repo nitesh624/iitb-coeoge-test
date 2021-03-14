@@ -1,0 +1,17 @@
+uuid: 6d330c61-7da8-4daa-b045-2e8c5d50f4e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_16_9
+  module:
+    - crop
+name: gallery_colorbox
+label: 'Gallery Colorbox'
+effects:
+  d0f2f52e-e8b0-416e-8552-e7b738d30033:
+    uuid: d0f2f52e-e8b0-416e-8552-e7b738d30033
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: crop_16_9

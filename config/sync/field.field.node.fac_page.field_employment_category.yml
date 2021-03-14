@@ -1,0 +1,34 @@
+uuid: 57101078-736b-4809-b394-e3993c74b208
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employment_category
+    - node.type.fac_page
+    - taxonomy.vocabulary.employment_category
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: aEqXQiLxwRU9nzHTPDXN1SogRASPxbyK8LO19OFrGII
+id: node.fac_page.field_employment_category
+field_name: field_employment_category
+entity_type: node
+bundle: fac_page
+label: 'Employment Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      employment_category: employment_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: 37040dbe-6e0e-4611-830f-c93b44901fdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_courses_taught
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - text
+_core:
+  default_config_hash: _NgZLzNKmknY2mxEZOPwsKwCOCW1E4fAm7ZW01fS8Fc
+id: node.fac_page.field_courses_taught
+field_name: field_courses_taught
+entity_type: node
+bundle: fac_page
+label: 'Courses Taught'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

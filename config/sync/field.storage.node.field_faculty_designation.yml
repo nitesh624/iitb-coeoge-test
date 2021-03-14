@@ -1,0 +1,35 @@
+uuid: 573e0aeb-4725-4a0d-8c28-0c5e41e33f76
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: 17YDHkEImDDgcJCgWk-SrbVFJxYlX18Ri7mPpg8rUNE
+id: node.field_faculty_designation
+field_name: field_faculty_designation
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Professor
+      label: Professor
+    -
+      value: 'Associate Prof.'
+      label: 'Associate Prof.'
+    -
+      value: 'Assistant Prof.'
+      label: 'Assistant Prof.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: b758396d-3d2b-40f2-9918-3c29ad0f073e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - research_glimpses
+  module:
+    - node
+_core:
+  default_config_hash: X9aOC8IGFD2scSIS-Y1ItllilJEIdV_hi-bLcgyn6iQ
+id: node.field_faculty_name_ref
+field_name: field_faculty_name_ref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

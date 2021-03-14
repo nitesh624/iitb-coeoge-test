@@ -1,0 +1,1982 @@
+uuid: 024e5edb-71f8-4e0a-9b5a-549abe36cee7
+langcode: en
+status: true
+dependencies:
+  module:
+    - laboratory_facility
+id: config_sync.module.laboratory_facility
+snapshotSet: config_sync
+extensionType: module
+extensionName: laboratory_facility
+items:
+  -
+    collection: ''
+    name: core.base_field_override.node.laboratory_facility.promote
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - node.type.laboratory_facility
+      id: node.laboratory_facility.promote
+      field_name: promote
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Promoted to front page'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: 0
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+  -
+    collection: ''
+    name: core.entity_form_display.node.laboratory_facility.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.laboratory_facility.body
+          - field.field.node.laboratory_facility.field_cost_of_purchase
+          - field.field.node.laboratory_facility.field_date_of_purchase
+          - field.field.node.laboratory_facility.field_facility_access_available_
+          - field.field.node.laboratory_facility.field_indented_by_faculty_
+          - field.field.node.laboratory_facility.field_instrument_class
+          - field.field.node.laboratory_facility.field_labfac_image
+          - field.field.node.laboratory_facility.field_purpose_of_equipment
+          - field.field.node.laboratory_facility.field_source_of_funding
+          - field.field.node.laboratory_facility.field_status_of_facility
+          - field.field.node.laboratory_facility.field_type_of_the_facility
+          - image.style.iitb_laborartory_facility_thumbnail_100_100_
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - datetime
+          - image
+          - path
+          - text
+      id: node.laboratory_facility.default
+      targetEntityType: node
+      bundle: laboratory_facility
+      mode: default
+      content:
+        body:
+          type: text_textarea_with_summary
+          weight: 121
+          settings:
+            rows: 9
+            summary_rows: 3
+            placeholder: ''
+          third_party_settings: {  }
+          region: content
+        created:
+          type: datetime_timestamp
+          weight: 10
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_cost_of_purchase:
+          weight: 128
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_date_of_purchase:
+          weight: 127
+          settings: {  }
+          third_party_settings: {  }
+          type: datetime_default
+          region: content
+        field_facility_access_available_:
+          weight: 129
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_indented_by_faculty_:
+          weight: 131
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: entity_reference_autocomplete
+          region: content
+        field_instrument_class:
+          weight: 125
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_labfac_image:
+          weight: 132
+          settings:
+            preview_image_style: iitb_laborartory_facility_thumbnail_100_100_
+            progress_indicator: throbber
+          third_party_settings: {  }
+          type: image_image
+          region: content
+        field_purpose_of_equipment:
+          weight: 123
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_source_of_funding:
+          weight: 130
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_status_of_facility:
+          weight: 126
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_type_of_the_facility:
+          weight: 124
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        langcode:
+          type: language_select
+          weight: 2
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        path:
+          type: path
+          weight: 30
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        promote:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 15
+          region: content
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 120
+          region: content
+          third_party_settings: {  }
+        sticky:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 16
+          region: content
+          third_party_settings: {  }
+        title:
+          type: string_textfield
+          weight: -5
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        uid:
+          type: entity_reference_autocomplete
+          weight: 5
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          region: content
+          third_party_settings: {  }
+      hidden: {  }
+  -
+    collection: ''
+    name: core.entity_view_display.node.laboratory_facility.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.laboratory_facility.body
+          - field.field.node.laboratory_facility.field_cost_of_purchase
+          - field.field.node.laboratory_facility.field_date_of_purchase
+          - field.field.node.laboratory_facility.field_facility_access_available_
+          - field.field.node.laboratory_facility.field_indented_by_faculty_
+          - field.field.node.laboratory_facility.field_instrument_class
+          - field.field.node.laboratory_facility.field_labfac_image
+          - field.field.node.laboratory_facility.field_purpose_of_equipment
+          - field.field.node.laboratory_facility.field_source_of_funding
+          - field.field.node.laboratory_facility.field_status_of_facility
+          - field.field.node.laboratory_facility.field_type_of_the_facility
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - datetime
+          - ds
+          - options
+          - slick
+          - text
+          - user
+      third_party_settings:
+        ds:
+          layout:
+            id: ds_1col
+            library: null
+            disable_css: false
+            entity_classes: all_classes
+            settings:
+              wrappers:
+                ds_content: div
+              outer_wrapper: div
+              attributes: ''
+              link_attribute: ''
+              link_custom: ''
+              classes:
+                layout_class:
+                  col-sm-8: col-sm-8
+                  col-sm-offset-2: col-sm-offset-2
+                ds_content: {  }
+          regions:
+            ds_content:
+              - field_labfac_image
+              - field_purpose_of_equipment
+              - field_type_of_the_facility
+              - field_instrument_class
+              - field_status_of_facility
+              - field_indented_by_faculty_
+              - field_date_of_purchase
+              - field_facility_access_available_
+              - field_source_of_funding
+              - body
+      id: node.laboratory_facility.default
+      targetEntityType: node
+      bundle: laboratory_facility
+      mode: default
+      content:
+        body:
+          label: hidden
+          type: text_default
+          weight: 9
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+          region: ds_content
+        field_date_of_purchase:
+          weight: 6
+          label: above
+          settings:
+            timezone_override: ''
+            date_format: d-m-Y
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: datetime_custom
+          region: ds_content
+        field_facility_access_available_:
+          weight: 7
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: 'Facility Access'
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: list_default
+          region: ds_content
+        field_indented_by_faculty_:
+          weight: 5
+          label: above
+          settings:
+            link: true
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: entity_reference_label
+          region: ds_content
+        field_instrument_class:
+          type: list_default
+          weight: 3
+          region: ds_content
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: 'col-sm-9 list-unstyled'
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_labfac_image:
+          weight: 0
+          label: hidden
+          settings:
+            style: ''
+            optionset: node_img_slider
+            optionset_thumbnail: ''
+            skin: default
+            skin_thumbnail: ''
+            image_style: iitb_laborartory_facility_700_300
+            thumbnail_style: ''
+            responsive_image_style: ''
+            thumbnail_effect: ''
+            thumbnail_position: ''
+            media_switch: ''
+            ratio: ''
+            grid: null
+            grid_medium: null
+            grid_small: null
+            visible_items: null
+            layout: ''
+            thumbnail_caption: ''
+            cache: 0
+            override: true
+            overridables:
+              arrows: arrows
+              autoplay: autoplay
+              dots: dots
+              draggable: draggable
+              infinite: '0'
+              mouseWheel: '0'
+              randomize: '0'
+              variableWidth: '0'
+            sizes: ''
+            breakpoints:
+              xs:
+                image_style: ''
+                width: ''
+                breakpoint: ''
+              sm:
+                image_style: ''
+                width: ''
+                breakpoint: ''
+              md:
+                image_style: ''
+                width: ''
+                breakpoint: ''
+              lg:
+                image_style: ''
+                width: ''
+                breakpoint: ''
+              xl:
+                image_style: ''
+                width: ''
+                breakpoint: ''
+            current_view_mode: default
+            background: false
+            caption:
+              title: '0'
+              alt: '0'
+            grid_header: ''
+            preserve_keys: false
+            skin_arrows: ''
+            skin_dots: ''
+            iframe_lazy: true
+            icon: ''
+            view_mode: ''
+            box_caption: ''
+            box_caption_custom: ''
+            box_style: ''
+            box_media_style: ''
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+          type: slick_image
+          region: ds_content
+        field_purpose_of_equipment:
+          weight: 1
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10 mt-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: string
+          region: ds_content
+        field_source_of_funding:
+          type: list_default
+          weight: 8
+          region: ds_content
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_status_of_facility:
+          weight: 4
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-9
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: list_default
+          region: ds_content
+        field_type_of_the_facility:
+          weight: 2
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-3 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: 'col-sm-9 list-unstyled'
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: list_default
+          region: ds_content
+      hidden:
+        field_cost_of_purchase: true
+        langcode: true
+        links: true
+  -
+    collection: ''
+    name: core.entity_view_display.node.laboratory_facility.teaser
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.teaser
+          - field.field.node.laboratory_facility.body
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - text
+          - user
+      id: node.laboratory_facility.teaser
+      targetEntityType: node
+      bundle: laboratory_facility
+      mode: teaser
+      content:
+        body:
+          label: hidden
+          type: text_summary_or_trimmed
+          weight: 101
+          settings:
+            trim_length: 600
+          third_party_settings: {  }
+          region: content
+        links:
+          weight: 100
+          region: content
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.body
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.body
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - text
+      id: node.laboratory_facility.body
+      field_name: body
+      entity_type: node
+      bundle: laboratory_facility
+      label: Body
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        display_summary: true
+      field_type: text_with_summary
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_cost_of_purchase
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_cost_of_purchase
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+      id: node.laboratory_facility.field_cost_of_purchase
+      field_name: field_cost_of_purchase
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Cost of Purchase'
+      description: 'Enter the approximate cost of purchase.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_date_of_purchase
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_date_of_purchase
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - datetime
+      id: node.laboratory_facility.field_date_of_purchase
+      field_name: field_date_of_purchase
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Date of Purchase'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: datetime
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_facility_access_available_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_facility_access_available_
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - options
+      id: node.laboratory_facility.field_facility_access_available_
+      field_name: field_facility_access_available_
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Facility Access Available For'
+      description: 'Please mention who is allowed to access the facility.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_indented_by_faculty_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_indented_by_faculty_
+          - node.type.fac_page
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+      id: node.laboratory_facility.field_indented_by_faculty_
+      field_name: field_indented_by_faculty_
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Indented by (Faculty)'
+      description: 'Select the name of the Faculty who has place this indent/request for purchase.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:node'
+        handler_settings:
+          target_bundles:
+            fac_page: fac_page
+          sort:
+            field: _none
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_instrument_class
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_instrument_class
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - options
+      id: node.laboratory_facility.field_instrument_class
+      field_name: field_instrument_class
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Instrument Class'
+      description: 'Choose the broad category of the facility. Multiple selections are allowed.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_labfac_image
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_labfac_image
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - image
+      id: node.laboratory_facility.field_labfac_image
+      field_name: field_labfac_image
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Labfac Image'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        file_directory: labfacimages
+        file_extensions: 'png gif jpg jpeg'
+        max_filesize: ''
+        max_resolution: ''
+        min_resolution: ''
+        alt_field: true
+        alt_field_required: false
+        title_field: false
+        title_field_required: false
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        handler: 'default:file'
+        handler_settings: {  }
+      field_type: image
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_purpose_of_equipment
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_purpose_of_equipment
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+      id: node.laboratory_facility.field_purpose_of_equipment
+      field_name: field_purpose_of_equipment
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Purpose of Equipment'
+      description: 'Provide a short description of the capability of the facility (A punchline of about 20 word max)'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_source_of_funding
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_source_of_funding
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - options
+      id: node.laboratory_facility.field_source_of_funding
+      field_name: field_source_of_funding
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Source of Funding'
+      description: 'Select the source of funding'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_status_of_facility
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_status_of_facility
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - options
+      id: node.laboratory_facility.field_status_of_facility
+      field_name: field_status_of_facility
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Status of Facility'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.field.node.laboratory_facility.field_type_of_the_facility
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_type_of_the_facility
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - options
+      id: node.laboratory_facility.field_type_of_the_facility
+      field_name: field_type_of_the_facility
+      entity_type: node
+      bundle: laboratory_facility
+      label: 'Type of the Facility'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.storage.node.field_cost_of_purchase
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_cost_of_purchase
+      field_name: field_cost_of_purchase
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_date_of_purchase
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - datetime
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_date_of_purchase
+      field_name: field_date_of_purchase
+      entity_type: node
+      type: datetime
+      settings:
+        datetime_type: datetime
+      module: datetime
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_facility_access_available_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - node
+          - options
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_facility_access_available_
+      field_name: field_facility_access_available_
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: 'Department Users Only'
+            label: 'Department Users Only'
+          -
+            value: 'IITB Users'
+            label: 'IITB Users'
+          -
+            value: 'All (IITB + External)'
+            label: 'All (IITB + External)'
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_indented_by_faculty_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_indented_by_faculty_
+      field_name: field_indented_by_faculty_
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: node
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_instrument_class
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - node
+          - options
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_instrument_class
+      field_name: field_instrument_class
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: Biotechnology
+            label: Biotechnology
+          -
+            value: 'Composition Analysis'
+            label: 'Composition Analysis'
+          -
+            value: Computer
+            label: Computer
+          -
+            value: 'Interfacial Analysis'
+            label: 'Interfacial Analysis'
+          -
+            value: Microscopy
+            label: Microscopy
+          -
+            value: 'Molecular Modelling (Software)'
+            label: 'Molecular Modelling (Software)'
+          -
+            value: 'Process Design (Software)'
+            label: 'Process Design (Software)'
+          -
+            value: Reactions
+            label: Reactions
+          -
+            value: Rheology
+            label: Rheology
+          -
+            value: 'Sample Preparation'
+            label: 'Sample Preparation'
+          -
+            value: 'Size Analysis'
+            label: 'Size Analysis'
+          -
+            value: Spectroscopy
+            label: Spectroscopy
+          -
+            value: 'Transport Modelling (Software)'
+            label: 'Transport Modelling (Software)'
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_labfac_image
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - file
+          - image
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_labfac_image
+      field_name: field_labfac_image
+      entity_type: node
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_purpose_of_equipment
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_purpose_of_equipment
+      field_name: field_purpose_of_equipment
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_source_of_funding
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - node
+          - options
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_source_of_funding
+      field_name: field_source_of_funding
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: 'Department Funds'
+            label: 'Department Funds'
+          -
+            value: 'Project Funds'
+            label: 'Project Funds'
+          -
+            value: DDF
+            label: DDF
+          -
+            value: 'Special Fund'
+            label: 'Special Fund'
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_status_of_facility
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - node
+          - options
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_status_of_facility
+      field_name: field_status_of_facility
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: 'Working Condition'
+            label: 'Working Condition'
+          -
+            value: Non-functional
+            label: Non-functional
+          -
+            value: 'Under Repair/Maintenance'
+            label: 'Under Repair/Maintenance'
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_type_of_the_facility
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - field_permissions
+          - node
+          - options
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_type_of_the_facility
+      field_name: field_type_of_the_facility
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: Experimental
+            label: Experimental
+          -
+            value: Computational
+            label: Computational
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: image.style.iitb_laborartory_facility_700_300
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+      name: iitb_laborartory_facility_700_300
+      label: 'IITB Laborartory Facility (700×300)'
+      effects:
+        04bc32cf-0cb8-4fee-ba19-2bbd0e62ea89:
+          uuid: 04bc32cf-0cb8-4fee-ba19-2bbd0e62ea89
+          id: image_scale
+          weight: 1
+          data:
+            width: 700
+            height: 300
+            upscale: false
+  -
+    collection: ''
+    name: image.style.iitb_laborartory_facility_thumbnail_100_100_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+      name: iitb_laborartory_facility_thumbnail_100_100_
+      label: 'IITB Laborartory Facility Thumbnail (100×100)'
+      effects:
+        f23f88af-3809-4e04-a360-a93629a47668:
+          uuid: f23f88af-3809-4e04-a360-a93629a47668
+          id: image_scale
+          weight: 1
+          data:
+            width: 100
+            height: 100
+            upscale: false
+  -
+    collection: ''
+    name: node.type.laboratory_facility
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - menu_ui
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+      name: 'Laboratory Facility'
+      type: laboratory_facility
+      description: 'Enter a new experimental or computational facility procured in a lab.'
+      help: ''
+      new_revision: false
+      preview_mode: 1
+      display_submitted: false
+  -
+    collection: ''
+    name: pathauto.pattern.laboratory_facility_type_alias
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - node
+        enforced:
+          module:
+            - laboratory_facility
+      id: laboratory_facility_type_alias
+      label: 'Laboratory Facility type alias'
+      type: 'canonical_entities:node'
+      pattern: 'laboratory-facility/[node:title]'
+      selection_criteria:
+        cc3b276a-92a7-46da-8ed0-5e040c824c5e:
+          id: node_type
+          bundles:
+            laboratory_facility: laboratory_facility
+          negate: false
+          context_mapping:
+            node: node
+          uuid: cc3b276a-92a7-46da-8ed0-5e040c824c5e
+      selection_logic: and
+      weight: -5
+      relationships: {  }
+  -
+    collection: ''
+    name: views.view.laboratory_facility
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_facility_access_available_
+          - field.storage.node.field_instrument_class
+          - field.storage.node.field_purpose_of_equipment
+          - node.type.laboratory_facility
+        enforced:
+          module:
+            - laboratory_facility
+        module:
+          - datatables
+          - node
+          - options
+          - user
+      id: laboratory_facility
+      label: 'Laboratory Facility'
+      module: views
+      description: 'List all the "Laboratory Facility" contents in tabular format'
+      tag: ''
+      base_table: node_field_data
+      base_field: nid
+      core: 8.x
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'access content'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: basic
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            pager:
+              type: none
+              options:
+                items_per_page: null
+                offset: 0
+            style:
+              type: datatables
+              options:
+                grouping: {  }
+                row_class: ''
+                default_row_class: true
+                caption: ''
+                summary: ''
+                description: ''
+                columns:
+                  title: title
+                  field_purpose_of_equipment: field_purpose_of_equipment
+                  field_instrument_class: field_instrument_class
+                  field_facility_access_available_: field_facility_access_available_
+                info:
+                  title:
+                    sortable: 0
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_purpose_of_equipment:
+                    sortable: 0
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_instrument_class:
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_facility_access_available_:
+                    sortable: 0
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                default: '-1'
+                empty_table: 0
+                elements:
+                  search_box: 1
+                  table_info: 1
+                  save_state: 1
+                  table_tools: 0
+                layout:
+                  autowidth: 1
+                  themeroller: 0
+                  sdom: '<"table-responsive"flitp>'
+                pages:
+                  pagination_style: full_numbers
+                  length_change: 1
+                  display_length: '10'
+                hidden_columns:
+                  title: '0'
+                  field_purpose_of_equipment: '0'
+                  field_instrument_class: '0'
+                  field_facility_access_available_: '0'
+            row:
+              type: fields
+            fields:
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                entity_type: node
+                entity_field: title
+                alter:
+                  alter_text: false
+                  make_link: false
+                  absolute: false
+                  trim: false
+                  word_boundary: false
+                  ellipsis: false
+                  strip_tags: false
+                  html: false
+                hide_empty: false
+                empty_zero: false
+                settings:
+                  link_to_entity: true
+                plugin_id: field
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Title
+                exclude: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+              field_purpose_of_equipment:
+                id: field_purpose_of_equipment
+                table: node__field_purpose_of_equipment
+                field: field_purpose_of_equipment
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'Purpose of Equipment'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_instrument_class:
+                id: field_instrument_class
+                table: node__field_instrument_class
+                field: field_instrument_class
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'Instrument Class'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: list_default
+                settings: {  }
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_facility_access_available_:
+                id: field_facility_access_available_
+                table: node__field_facility_access_available_
+                field: field_facility_access_available_
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'Facility Access'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: list_default
+                settings: {  }
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+            filters:
+              status:
+                value: '1'
+                table: node_field_data
+                field: status
+                plugin_id: boolean
+                entity_type: node
+                entity_field: status
+                id: status
+                expose:
+                  operator: ''
+                group: 1
+              type:
+                id: type
+                table: node_field_data
+                field: type
+                value:
+                  laboratory_facility: laboratory_facility
+                entity_type: node
+                entity_field: type
+                plugin_id: bundle
+            sorts:
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                order: ASC
+                entity_type: node
+                entity_field: title
+                plugin_id: standard
+                relationship: none
+                group_type: group
+                admin_label: ''
+                exposed: false
+                expose:
+                  label: ''
+            title: 'Laboratory Facility'
+            header: {  }
+            footer: {  }
+            empty: {  }
+            relationships: {  }
+            arguments: {  }
+            display_extenders: {  }
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.field_facility_access_available_'
+              - 'config:field.storage.node.field_instrument_class'
+              - 'config:field.storage.node.field_purpose_of_equipment'
+        page_1:
+          display_plugin: page
+          id: page_1
+          display_title: Page
+          position: 1
+          display_options:
+            display_extenders: {  }
+            path: laboratory-facility
+            menu:
+              type: none
+              title: Laboratories
+              description: ''
+              expanded: false
+              parent: ''
+              weight: 0
+              context: '0'
+              menu_name: main
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.field_facility_access_available_'
+              - 'config:field.storage.node.field_instrument_class'
+              - 'config:field.storage.node.field_purpose_of_equipment'

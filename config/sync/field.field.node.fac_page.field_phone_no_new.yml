@@ -1,0 +1,26 @@
+uuid: 03ce0274-ba5b-4832-a105-a7fbc1780823
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone_no_new
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - text
+_core:
+  default_config_hash: dreJpkDicJkMJx9p6xc_3QR1f0f-zFudgEeorUhDGyk
+id: node.fac_page.field_phone_no_new
+field_name: field_phone_no_new
+entity_type: node
+bundle: fac_page
+label: 'Phone No'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

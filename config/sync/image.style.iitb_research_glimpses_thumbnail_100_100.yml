@@ -1,0 +1,20 @@
+uuid: 13e6a013-72f1-4746-a6dd-0ab103ba741e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - research_glimpses
+_core:
+  default_config_hash: Iz_bwgVeGZiBIScek1yf4iC6PkH6n37Si-sZFDo9Jk4
+name: iitb_research_glimpses_thumbnail_100_100
+label: 'IITB Research Glimpses Thumbnail (100×100)'
+effects:
+  3522a62d-0ff5-4d3c-b650-e06a732fff02:
+    uuid: 3522a62d-0ff5-4d3c-b650-e06a732fff02
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      upscale: false

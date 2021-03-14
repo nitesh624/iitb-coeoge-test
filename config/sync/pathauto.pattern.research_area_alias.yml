@@ -1,0 +1,28 @@
+uuid: 3540ec98-c6ff-4d50-89f2-8e9090b61ee5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - ctools
+    - taxonomy
+_core:
+  default_config_hash: SyJulXV-GNbreptyRKQj5zwbje-96SO2Ce6B7ktfqmA
+id: research_area_alias
+label: 'Research Area alias'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'research-area/[term:name]'
+selection_criteria:
+  aa9ede94-50d6-4d99-936f-9bd7c335e747:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      research_area: research_area
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: aa9ede94-50d6-4d99-936f-9bd7c335e747
+selection_logic: and
+weight: -5
+relationships: {  }

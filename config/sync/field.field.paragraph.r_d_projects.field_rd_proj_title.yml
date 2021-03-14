@@ -1,0 +1,24 @@
+uuid: c318ceef-5028-41eb-9840-e3c6234424b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rd_proj_title
+    - paragraphs.paragraphs_type.r_d_projects
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: _Lq86tkYE-O1O9GIOqOPAaZ8pV_3ejF0ONQ2tx1X_9g
+id: paragraph.r_d_projects.field_rd_proj_title
+field_name: field_rd_proj_title
+entity_type: paragraph
+bundle: r_d_projects
+label: 'R&D Project Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

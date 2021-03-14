@@ -1,0 +1,27 @@
+uuid: 143784cd-a99f-46cf-91a4-d93453901d76
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_event
+  module:
+    - node
+_core:
+  default_config_hash: c7_K7wwxQLZD6mut0DBk_QzqaZpk-zaTg6JmmPO3tdY
+id: event_type_alias
+label: 'Event type alias'
+type: 'canonical_entities:node'
+pattern: 'event/[node:title]'
+selection_criteria:
+  68c470f4-95b6-4c96-a4cf-d6da03d48dec:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 68c470f4-95b6-4c96-a4cf-d6da03d48dec
+selection_logic: and
+weight: -5
+relationships: {  }

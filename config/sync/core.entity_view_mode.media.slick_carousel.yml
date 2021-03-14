@@ -1,0 +1,10 @@
+uuid: de933a2a-b8ea-4313-80aa-6095f6be32f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.slick_carousel
+label: 'Slick carousel'
+targetEntityType: media
+cache: true

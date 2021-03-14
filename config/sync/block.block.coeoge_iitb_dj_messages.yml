@@ -1,0 +1,22 @@
+uuid: b2d5ca1a-8b2d-4a56-8547-e5d01eb2ca48
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - coeoge_iitb_dj
+_core:
+  default_config_hash: 6KPjS238bx_8p7FkYnY7zCRrLbrBR5lrRK2zuR533zE
+id: coeoge_iitb_dj_messages
+theme: coeoge_iitb_dj
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

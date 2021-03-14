@@ -1,0 +1,11 @@
+uuid: 8f24b58e-6758-4574-8230-fb90d7a77d66
+langcode: en
+status: true
+dependencies:
+  module:
+    - migrate_source_csv
+id: config_sync.module.migrate_source_csv
+snapshotSet: config_sync
+extensionType: module
+extensionName: migrate_source_csv
+items: {  }

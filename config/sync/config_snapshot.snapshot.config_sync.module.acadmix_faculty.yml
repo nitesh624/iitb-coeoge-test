@@ -1,0 +1,5604 @@
+uuid: a1c5125d-3aa8-48bd-9c61-14c45e2b159e
+langcode: en
+status: true
+dependencies:
+  module:
+    - acadmix_faculty
+id: config_sync.module.acadmix_faculty
+snapshotSet: config_sync
+extensionType: module
+extensionName: acadmix_faculty
+items:
+  -
+    collection: ''
+    name: core.base_field_override.node.fac_page.promote
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.promote
+      field_name: promote
+      entity_type: node
+      bundle: fac_page
+      label: 'Promoted to front page'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: 0
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+  -
+    collection: ''
+    name: core.entity_form_display.node.fac_page.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.fac_page.body
+          - field.field.node.fac_page.field_affiliations
+          - field.field.node.fac_page.field_awards_and_fellowship
+          - field.field.node.fac_page.field_background
+          - field.field.node.fac_page.field_building_new
+          - field.field.node.fac_page.field_courses_taught
+          - field.field.node.fac_page.field_detailed_information_page
+          - field.field.node.fac_page.field_email_new
+          - field.field.node.fac_page.field_employment_category
+          - field.field.node.fac_page.field_faculty_cv
+          - field.field.node.fac_page.field_faculty_designation
+          - field.field.node.fac_page.field_faculty_photo
+          - field.field.node.fac_page.field_faculty_rd_proj
+          - field.field.node.fac_page.field_full_name
+          - field.field.node.fac_page.field_google_scholar_id
+          - field.field.node.fac_page.field_mobile_number_new
+          - field.field.node.fac_page.field_orcid
+          - field.field.node.fac_page.field_phone_no_new
+          - field.field.node.fac_page.field_research_area
+          - field.field.node.fac_page.field_room_no
+          - field.field.node.fac_page.field_scopus_id
+          - image.style.acad_fac_thumbnail_100_100_
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - field_group
+          - file
+          - image
+          - link
+          - name
+          - paragraphs
+          - path
+          - shs
+          - text
+      third_party_settings:
+        field_group:
+          group_personal_information:
+            children:
+              - field_full_name
+              - field_faculty_designation
+              - field_employment_category
+              - field_faculty_photo
+              - field_faculty_cv
+            parent_name: ''
+            weight: 8
+            format_type: tab
+            format_settings:
+              id: ''
+              classes: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+            label: 'Personal Information'
+            region: content
+          group_external_id:
+            children:
+              - field_google_scholar_id
+              - field_scopus_id
+              - field_orcid
+            parent_name: ''
+            weight: 10
+            format_type: tab
+            format_settings:
+              id: ''
+              classes: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+            label: 'External Id'
+            region: content
+          group_contact_information:
+            children:
+              - field_building_new
+              - field_room_no
+              - field_email_new
+              - field_phone_no_new
+              - field_mobile_number_new
+              - field_detailed_information_page
+            parent_name: ''
+            weight: 11
+            format_type: tab
+            format_settings:
+              id: ''
+              classes: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+            label: 'Contact Information'
+            region: content
+          group_research_data:
+            children:
+              - field_research_area
+              - field_faculty_rd_proj
+            parent_name: ''
+            weight: 12
+            format_type: tab
+            format_settings:
+              id: ''
+              classes: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+            label: 'Research data'
+            region: content
+          group_teaching_and_professional_:
+            children:
+              - field_background
+              - field_affiliations
+              - field_awards_and_fellowship
+              - field_courses_taught
+            parent_name: ''
+            weight: 9
+            format_type: tab
+            format_settings:
+              id: ''
+              classes: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+            label: 'Teaching and professional backgrounds'
+            region: content
+      id: node.fac_page.default
+      targetEntityType: node
+      bundle: fac_page
+      mode: default
+      content:
+        created:
+          type: datetime_timestamp
+          weight: 3
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_affiliations:
+          weight: 25
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textarea
+          region: content
+        field_awards_and_fellowship:
+          weight: 26
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_background:
+          weight: 24
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_building_new:
+          weight: 14
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_courses_taught:
+          weight: 27
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea
+          region: content
+        field_detailed_information_page:
+          weight: 20
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+          third_party_settings: {  }
+          type: link_default
+          region: content
+        field_email_new:
+          weight: 16
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: email_default
+          region: content
+        field_employment_category:
+          weight: 21
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: entity_reference_autocomplete
+          region: content
+        field_faculty_cv:
+          weight: 23
+          settings:
+            progress_indicator: throbber
+          third_party_settings: {  }
+          type: file_generic
+          region: content
+        field_faculty_designation:
+          weight: 20
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_faculty_photo:
+          weight: 22
+          settings:
+            progress_indicator: throbber
+            preview_image_style: acad_fac_thumbnail_100_100_
+          third_party_settings: {  }
+          type: image_image
+          region: content
+        field_faculty_rd_proj:
+          type: entity_reference_paragraphs
+          weight: 29
+          settings:
+            title: Paragraph
+            title_plural: Paragraphs
+            edit_mode: open
+            add_mode: dropdown
+            form_display_mode: default
+            default_paragraph_type: ''
+          third_party_settings: {  }
+          region: content
+        field_full_name:
+          weight: 19
+          settings: {  }
+          third_party_settings: {  }
+          type: name_default
+          region: content
+        field_google_scholar_id:
+          weight: 20
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_mobile_number_new:
+          weight: 19
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_orcid:
+          weight: 22
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        field_phone_no_new:
+          weight: 18
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textfield
+          region: content
+        field_research_area:
+          weight: 28
+          settings:
+            force_deepest: true
+            create_new_items: false
+            create_new_levels: false
+            display_node_count: false
+          third_party_settings: {  }
+          type: options_shs
+          region: content
+        field_room_no:
+          weight: 15
+          settings:
+            placeholder: ''
+          third_party_settings: {  }
+          type: number
+          region: content
+        field_scopus_id:
+          weight: 21
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+        langcode:
+          type: language_select
+          weight: 1
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        path:
+          type: path
+          weight: 6
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        promote:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 4
+          region: content
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 7
+          region: content
+          third_party_settings: {  }
+        sticky:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 5
+          region: content
+          third_party_settings: {  }
+        title:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        uid:
+          type: entity_reference_autocomplete
+          weight: 2
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          region: content
+          third_party_settings: {  }
+      hidden:
+        body: true
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.r_d_projects.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.r_d_projects.field_rd_proj_details
+          - field.field.paragraph.r_d_projects.field_rd_proj_image
+          - field.field.paragraph.r_d_projects.field_rd_proj_title
+          - image.style.thumbnail
+          - paragraphs.paragraphs_type.r_d_projects
+        module:
+          - image
+          - text
+        enforced:
+          module:
+            - acadmix_faculty
+      id: paragraph.r_d_projects.default
+      targetEntityType: paragraph
+      bundle: r_d_projects
+      mode: default
+      content:
+        field_rd_proj_details:
+          weight: 1
+          settings:
+            rows: 9
+            summary_rows: 3
+            placeholder: ''
+          third_party_settings: {  }
+          type: text_textarea_with_summary
+          region: content
+        field_rd_proj_image:
+          weight: 2
+          settings:
+            progress_indicator: throbber
+            preview_image_style: thumbnail
+          third_party_settings: {  }
+          type: image_image
+          region: content
+        field_rd_proj_title:
+          weight: 0
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: string_textfield
+          region: content
+      hidden:
+        created: true
+        status: true
+        uid: true
+  -
+    collection: ''
+    name: core.entity_form_display.taxonomy_term.research_area.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.taxonomy_term.research_area.field_research_areas_image
+          - image.style.thumbnail
+          - taxonomy.vocabulary.research_area
+        module:
+          - image
+          - path
+          - text
+        enforced:
+          module:
+            - acadmix_faculty
+      id: taxonomy_term.research_area.default
+      targetEntityType: taxonomy_term
+      bundle: research_area
+      mode: default
+      content:
+        description:
+          type: text_textarea
+          weight: 1
+          region: content
+          settings:
+            placeholder: ''
+            rows: 5
+          third_party_settings: {  }
+        field_research_areas_image:
+          type: image_image
+          weight: 3
+          region: content
+          settings:
+            progress_indicator: throbber
+            preview_image_style: thumbnail
+          third_party_settings: {  }
+        langcode:
+          type: language_select
+          weight: 2
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        name:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        path:
+          type: path
+          weight: 4
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden: {  }
+  -
+    collection: ''
+    name: core.entity_view_display.node.fac_page.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.fac_page.body
+          - field.field.node.fac_page.field_affiliations
+          - field.field.node.fac_page.field_awards_and_fellowship
+          - field.field.node.fac_page.field_background
+          - field.field.node.fac_page.field_building_new
+          - field.field.node.fac_page.field_courses_taught
+          - field.field.node.fac_page.field_detailed_information_page
+          - field.field.node.fac_page.field_email_new
+          - field.field.node.fac_page.field_employment_category
+          - field.field.node.fac_page.field_faculty_cv
+          - field.field.node.fac_page.field_faculty_designation
+          - field.field.node.fac_page.field_faculty_photo
+          - field.field.node.fac_page.field_faculty_rd_proj
+          - field.field.node.fac_page.field_full_name
+          - field.field.node.fac_page.field_google_scholar_id
+          - field.field.node.fac_page.field_mobile_number_new
+          - field.field.node.fac_page.field_orcid
+          - field.field.node.fac_page.field_phone_no_new
+          - field.field.node.fac_page.field_research_area
+          - field.field.node.fac_page.field_room_no
+          - field.field.node.fac_page.field_scopus_id
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - entity_reference_revisions
+          - file
+          - image
+          - link
+          - name
+          - options
+          - text
+          - user
+      id: node.fac_page.default
+      targetEntityType: node
+      bundle: fac_page
+      mode: default
+      content:
+        body:
+          label: hidden
+          type: text_default
+          weight: 1
+          settings: {  }
+          third_party_settings: {  }
+          region: content
+        field_affiliations:
+          weight: 19
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: basic_string
+          region: content
+        field_awards_and_fellowship:
+          weight: 20
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_background:
+          weight: 21
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_building_new:
+          weight: 22
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_courses_taught:
+          weight: 23
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_detailed_information_page:
+          weight: 37
+          label: above
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          type: link
+          region: content
+        field_email_new:
+          weight: 25
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: basic_string
+          region: content
+        field_employment_category:
+          weight: 26
+          label: above
+          settings:
+            link: true
+          third_party_settings: {  }
+          type: entity_reference_label
+          region: content
+        field_faculty_cv:
+          weight: 27
+          label: above
+          settings:
+            use_description_as_link_text: true
+          third_party_settings: {  }
+          type: file_default
+          region: content
+        field_faculty_designation:
+          weight: 14
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: list_default
+          region: content
+        field_faculty_photo:
+          weight: 2
+          label: above
+          settings:
+            image_style: ''
+            image_link: ''
+          third_party_settings: {  }
+          type: image
+          region: content
+        field_faculty_rd_proj:
+          type: entity_reference_revisions_entity_view
+          weight: 38
+          label: above
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          region: content
+        field_full_name:
+          weight: 29
+          label: above
+          settings:
+            format: default
+            markup: false
+            output: default
+            multiple: default
+            multiple_delimiter: ', '
+            multiple_and: text
+            multiple_delimiter_precedes_last: never
+            multiple_el_al_min: '3'
+            multiple_el_al_first: '1'
+          third_party_settings: {  }
+          type: name_default
+          region: content
+        field_google_scholar_id:
+          weight: 30
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_mobile_number_new:
+          weight: 31
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_orcid:
+          weight: 32
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        field_phone_no_new:
+          weight: 33
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          type: text_default
+          region: content
+        field_research_area:
+          weight: 18
+          label: above
+          settings:
+            link: true
+          third_party_settings: {  }
+          type: entity_reference_label
+          region: content
+        field_room_no:
+          weight: 35
+          label: above
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          third_party_settings: {  }
+          type: number_integer
+          region: content
+        field_scopus_id:
+          weight: 36
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          region: content
+        links:
+          weight: 0
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: core.entity_view_display.node.fac_page.full
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.full
+          - field.field.node.fac_page.body
+          - field.field.node.fac_page.field_affiliations
+          - field.field.node.fac_page.field_awards_and_fellowship
+          - field.field.node.fac_page.field_background
+          - field.field.node.fac_page.field_building_new
+          - field.field.node.fac_page.field_courses_taught
+          - field.field.node.fac_page.field_detailed_information_page
+          - field.field.node.fac_page.field_email_new
+          - field.field.node.fac_page.field_employment_category
+          - field.field.node.fac_page.field_faculty_cv
+          - field.field.node.fac_page.field_faculty_designation
+          - field.field.node.fac_page.field_faculty_photo
+          - field.field.node.fac_page.field_faculty_rd_proj
+          - field.field.node.fac_page.field_full_name
+          - field.field.node.fac_page.field_google_scholar_id
+          - field.field.node.fac_page.field_mobile_number_new
+          - field.field.node.fac_page.field_orcid
+          - field.field.node.fac_page.field_phone_no_new
+          - field.field.node.fac_page.field_research_area
+          - field.field.node.fac_page.field_room_no
+          - field.field.node.fac_page.field_scopus_id
+          - node.type.fac_page
+          - responsive_image.styles.acad_fac_narrow
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - ds
+          - entity_reference_revisions
+          - file
+          - link
+          - linked_field
+          - name
+          - options
+          - responsive_image
+          - spamspan
+          - text
+          - user
+      third_party_settings:
+        ds:
+          layout:
+            id: ds_1col
+            library: null
+            disable_css: false
+            entity_classes: all_classes
+            settings:
+              wrappers:
+                ds_content: div
+              outer_wrapper: div
+              attributes: ''
+              link_attribute: ''
+              link_custom: ''
+              classes:
+                layout_class: {  }
+                ds_content: {  }
+          regions:
+            ds_content:
+              - field_mobile_number_new
+              - field_background
+              - field_full_name
+              - field_faculty_designation
+              - field_faculty_photo
+              - links
+              - field_google_scholar_id
+              - field_orcid
+              - field_scopus_id
+              - field_room_no
+              - field_affiliations
+              - field_awards_and_fellowship
+              - field_employment_category
+              - field_phone_no_new
+              - field_building_new
+              - field_detailed_information_page
+              - field_email_new
+              - field_faculty_rd_proj
+              - field_faculty_cv
+              - field_research_area
+              - field_courses_taught
+      id: node.fac_page.full
+      targetEntityType: node
+      bundle: fac_page
+      mode: full
+      content:
+        field_affiliations:
+          type: basic_string
+          weight: 10
+          region: ds_content
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: 'Professional Appointments'
+                  prefix: ''
+                  lbw: true
+                  lbw-el: h3
+                  lbw-cl: gimps-title
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis: true
+                  fis-el: ol
+                  fis-cl: 'appoint-timeline list-unstyled'
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_awards_and_fellowship:
+          type: text_default
+          weight: 11
+          region: ds_content
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: 'Awards & Fellowships'
+                  prefix: ''
+                  lbw: true
+                  lbw-el: h3
+                  lbw-cl: gimps-title
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: list-unstyled
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: mb-15
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_background:
+          type: text_default
+          weight: 1
+          region: ds_content
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: Background
+                  prefix: ''
+                  lbw: true
+                  lbw-el: h3
+                  lbw-cl: gimps-title
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis: true
+                  fis-el: ol
+                  fis-cl: ol-timeline
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: 'tl-item with-icon'
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_building_new:
+          type: string
+          weight: 14
+          region: ds_content
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+        field_courses_taught:
+          type: text_default
+          weight: 20
+          region: ds_content
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+        field_detailed_information_page:
+          type: link
+          weight: 15
+          region: ds_content
+          label: hidden
+          settings:
+            trim_length: 80
+            rel: nofollow
+            target: _blank
+            url_only: false
+            url_plain: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: ''
+                  fi-cl: 'btn btn-primary'
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_email_new:
+          type: email_spamspan
+          weight: 16
+          region: ds_content
+          label: inline
+          settings:
+            spamspan_at: ' [at] '
+            spamspan_dot_enable: '1'
+            spamspan_dot: ' [dot] '
+            spamspan_use_graphic: 0
+            spamspan_use_form: 0
+            spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+            spamspan_form_default_url: contact
+            spamspan_form_default_displaytext: 'contact form'
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: strong
+                  lbw-cl: inline
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: 'list-unstyled grid-inline '
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_employment_category:
+          type: entity_reference_label
+          weight: 12
+          region: ds_content
+          label: hidden
+          settings:
+            link: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+        field_faculty_cv:
+          type: file_url_plain
+          weight: 18
+          region: ds_content
+          label: hidden
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+            linked_field:
+              linked: '1'
+              type: custom
+              destination: '[node:field_faculty_cv:entity:url]'
+              advanced:
+                title: 'Curriculum Vitae (CV)'
+                target: _blank
+                href: '[node:field_faculty_cv:entity:url]'
+                text: 'Download Curriculum Vitae (CV) PDF'
+        field_faculty_designation:
+          type: list_default
+          weight: 3
+          region: ds_content
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+        field_faculty_photo:
+          type: responsive_image
+          weight: 4
+          region: ds_content
+          label: hidden
+          settings:
+            responsive_image_style: acad_fac_narrow
+            image_link: ''
+          third_party_settings:
+            ds:
+              ds_limit: ''
+        field_faculty_rd_proj:
+          type: entity_reference_revisions_entity_view
+          weight: 17
+          region: ds_content
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: div
+                  ow-cl: mb-30
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: mb-30
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_full_name:
+          type: name_default
+          weight: 2
+          region: ds_content
+          label: hidden
+          settings:
+            format: default
+            output: default
+            multiple: default
+            multiple_delimiter: ', '
+            multiple_and: text
+            multiple_delimiter_precedes_last: never
+            multiple_el_al_min: '3'
+            multiple_el_al_first: '1'
+            markup: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+        field_google_scholar_id:
+          type: string
+          weight: 6
+          region: ds_content
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: span
+                  ow-cl: inline
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+            linked_field:
+              linked: '1'
+              type: custom
+              destination: 'https://scholar.google.co.in/citations?user=[node:field_google_scholar_id:value]'
+              advanced:
+                title: 'Google Scholar Profile'
+                target: _blank
+                class: ' btn scholar_icon'
+                href: ' https://scholar.google.co.in/citations?user=[node:field_google_scholar_id:value]'
+                text: 'Google Scholar Profile'
+        field_mobile_number_new:
+          type: string
+          weight: 0
+          region: ds_content
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+        field_orcid:
+          type: string
+          weight: 7
+          region: ds_content
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: span
+                  ow-cl: inline
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+            linked_field:
+              linked: '1'
+              type: custom
+              destination: 'https://orcid.org/[node:field_orcid:value]'
+              advanced:
+                title: 'ORCID Page'
+                target: orcid.widget
+                class: 'btn orcid_icon'
+                rel: 'noopener noreferrer'
+                href: 'https://orcid.org/[node:field_orcid:value]'
+                text: 'ORCID Page'
+        field_phone_no_new:
+          type: text_default
+          weight: 13
+          region: ds_content
+          label: inline
+          settings: {  }
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: call
+                  prefix: ''
+                  lbw: true
+                  lbw-el: strong
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: 'list-unstyled grid-inline'
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_research_area:
+          type: entity_reference_label
+          weight: 19
+          region: ds_content
+          label: hidden
+          settings:
+            link: true
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+        field_room_no:
+          type: number_integer
+          weight: 9
+          region: ds_content
+          label: hidden
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+        field_scopus_id:
+          type: string
+          weight: 8
+          region: ds_content
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: span
+                  ow-cl: inline
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+            linked_field:
+              linked: '1'
+              type: custom
+              destination: 'https://www.scopus.com/authid/detail.uri?authorId=[node:field_scopus_id:value]'
+              advanced:
+                title: 'Scopus Author Profile'
+                target: _blank
+                class: 'btn scopus_icon'
+                href: 'https://www.scopus.com/authid/detail.uri?authorId=[node:field_scopus_id:value]'
+                text: 'Scopus Author Profile'
+        links:
+          weight: 5
+          region: ds_content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        body: true
+        langcode: true
+  -
+    collection: ''
+    name: core.entity_view_display.node.fac_page.teaser
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.teaser
+          - field.field.node.fac_page.body
+          - field.field.node.fac_page.field_affiliations
+          - field.field.node.fac_page.field_awards_and_fellowship
+          - field.field.node.fac_page.field_background
+          - field.field.node.fac_page.field_building_new
+          - field.field.node.fac_page.field_courses_taught
+          - field.field.node.fac_page.field_detailed_information_page
+          - field.field.node.fac_page.field_email_new
+          - field.field.node.fac_page.field_employment_category
+          - field.field.node.fac_page.field_faculty_cv
+          - field.field.node.fac_page.field_faculty_designation
+          - field.field.node.fac_page.field_faculty_photo
+          - field.field.node.fac_page.field_faculty_rd_proj
+          - field.field.node.fac_page.field_full_name
+          - field.field.node.fac_page.field_google_scholar_id
+          - field.field.node.fac_page.field_mobile_number_new
+          - field.field.node.fac_page.field_orcid
+          - field.field.node.fac_page.field_phone_no_new
+          - field.field.node.fac_page.field_research_area
+          - field.field.node.fac_page.field_room_no
+          - field.field.node.fac_page.field_scopus_id
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - text
+          - user
+      id: node.fac_page.teaser
+      targetEntityType: node
+      bundle: fac_page
+      mode: teaser
+      content:
+        body:
+          label: hidden
+          type: text_summary_or_trimmed
+          weight: 101
+          settings:
+            trim_length: 600
+          third_party_settings: {  }
+          region: content
+        links:
+          weight: 100
+          region: content
+      hidden:
+        field_affiliations: true
+        field_awards_and_fellowship: true
+        field_background: true
+        field_building_new: true
+        field_courses_taught: true
+        field_detailed_information_page: true
+        field_email_new: true
+        field_employment_category: true
+        field_faculty_cv: true
+        field_faculty_designation: true
+        field_faculty_photo: true
+        field_faculty_rd_proj: true
+        field_full_name: true
+        field_google_scholar_id: true
+        field_mobile_number_new: true
+        field_orcid: true
+        field_phone_no_new: true
+        field_research_area: true
+        field_room_no: true
+        field_scopus_id: true
+        langcode: true
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.r_d_projects.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.r_d_projects.field_rd_proj_details
+          - field.field.paragraph.r_d_projects.field_rd_proj_image
+          - field.field.paragraph.r_d_projects.field_rd_proj_title
+          - image.style.r_d_projects_image
+          - paragraphs.paragraphs_type.r_d_projects
+        module:
+          - ds
+          - image
+          - text
+        enforced:
+          module:
+            - acadmix_faculty
+      third_party_settings:
+        ds:
+          layout:
+            id: ds_1col
+            library: null
+            disable_css: false
+            entity_classes: all_classes
+            settings:
+              wrappers:
+                ds_content: div
+              outer_wrapper: div
+              attributes: ''
+              link_attribute: ''
+              link_custom: ''
+              classes:
+                layout_class: {  }
+          regions:
+            ds_content:
+              - field_rd_proj_image
+              - field_rd_proj_details
+              - field_rd_proj_title
+      id: paragraph.r_d_projects.default
+      targetEntityType: paragraph
+      bundle: r_d_projects
+      mode: default
+      content:
+        field_rd_proj_details:
+          weight: 1
+          label: hidden
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+          type: text_default
+          region: ds_content
+        field_rd_proj_image:
+          weight: 0
+          label: hidden
+          settings:
+            image_style: r_d_projects_image
+            image_link: ''
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+          type: image
+          region: ds_content
+        field_rd_proj_title:
+          weight: 2
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+          type: string
+          region: ds_content
+      hidden: {  }
+  -
+    collection: ''
+    name: core.entity_view_display.taxonomy_term.research_area.full
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.taxonomy_term.full
+          - field.field.taxonomy_term.research_area.field_research_areas_image
+          - image.style.acad_fac_max_650x650
+          - taxonomy.vocabulary.research_area
+        module:
+          - ds
+          - field_group
+          - image
+          - text
+      third_party_settings:
+        ds:
+          layout:
+            id: bs_2col
+            library: null
+            disable_css: false
+            entity_classes: all_classes
+            settings:
+              layout:
+                wrapper: div
+                classes:
+                  row: row
+                add_layout_class: 1
+                attributes: ''
+              regions:
+                left:
+                  wrapper: div
+                  classes:
+                    col-sm-6: col-sm-6
+                  add_region_classes: 1
+                  attributes: ''
+                right:
+                  wrapper: div
+                  classes:
+                    col-sm-6: col-sm-6
+                  add_region_classes: 1
+                  attributes: ''
+          regions:
+            left:
+              - field_research_areas_image
+              - 'dynamic_block_field:taxonomy_term-sub_research_area'
+            right:
+              - description
+              - 'dynamic_block_field:taxonomy_term-research_group'
+          fields:
+            'dynamic_block_field:taxonomy_term-research_group':
+              plugin_id: 'dynamic_block_field:taxonomy_term-research_group'
+              weight: 3
+              label: above
+              formatter: default
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: h4
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+            'dynamic_block_field:taxonomy_term-sub_research_area':
+              plugin_id: 'dynamic_block_field:taxonomy_term-sub_research_area'
+              weight: 1
+              label: above
+              formatter: default
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: h4
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+        field_group:
+          group_test_group:
+            children: {  }
+            parent_name: ''
+            weight: 8
+            format_type: tabs
+            format_settings:
+              id: ''
+              classes: ''
+              direction: horizontal
+            label: 'test group'
+            region: hidden
+      id: taxonomy_term.research_area.full
+      targetEntityType: taxonomy_term
+      bundle: research_area
+      mode: full
+      content:
+        description:
+          label: hidden
+          type: text_default
+          weight: 2
+          region: right
+          settings: {  }
+          third_party_settings: {  }
+        field_research_areas_image:
+          weight: 0
+          label: hidden
+          settings:
+            image_style: acad_fac_max_650x650
+            image_link: ''
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw-el: ''
+                  lbw-cl: ''
+                  lbw-at: ''
+                  ow-el: ''
+                  ow-cl: ''
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi-el: ''
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lbw: false
+                  lb-col: false
+                  ow: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi: false
+                  fi-def-at: false
+          type: image
+          region: left
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: ds.field.research_group
+    data:
+      id: research_group
+      label: 'Research groups'
+      ui_limit: ''
+      properties:
+        block: 'views_block:related_faculty_research_area-block_1'
+        use_block_title: false
+        add_block_wrappers: false
+        config:
+          id: 'views_block:related_faculty_research_area-block_1'
+          label: ''
+          provider: views
+          label_display: visible
+          views_label: ''
+          items_per_page: '40'
+      type: block
+      type_label: 'Block field'
+      entities:
+        taxonomy_term: taxonomy_term
+  -
+    collection: ''
+    name: ds.field.sub_research_area
+    data:
+      id: sub_research_area
+      label: 'Sub Research areas'
+      ui_limit: ''
+      properties:
+        block: 'views_block:related_faculty_sub_research_area-block_1'
+        use_block_title: false
+        add_block_wrappers: false
+        config:
+          id: 'views_block:related_faculty_sub_research_area-block_1'
+          label: ''
+          provider: views
+          label_display: visible
+          views_label: ''
+          items_per_page: none
+          context_mapping: {  }
+      type: block
+      type_label: 'Block field'
+      entities:
+        taxonomy_term: taxonomy_term
+  -
+    collection: ''
+    name: field.field.node.fac_page.body
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.body
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - text
+      id: node.fac_page.body
+      field_name: body
+      entity_type: node
+      bundle: fac_page
+      label: Body
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        display_summary: true
+      field_type: text_with_summary
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_affiliations
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_affiliations
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_affiliations
+      field_name: field_affiliations
+      entity_type: node
+      bundle: fac_page
+      label: Affiliations
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string_long
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_awards_and_fellowship
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_awards_and_fellowship
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - text
+      id: node.fac_page.field_awards_and_fellowship
+      field_name: field_awards_and_fellowship
+      entity_type: node
+      bundle: fac_page
+      label: 'Awards and Fellowship'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_background
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_background
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - text
+      id: node.fac_page.field_background
+      field_name: field_background
+      entity_type: node
+      bundle: fac_page
+      label: Background
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_building_new
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_building_new
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_building_new
+      field_name: field_building_new
+      entity_type: node
+      bundle: fac_page
+      label: Building
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_courses_taught
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_courses_taught
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - text
+      id: node.fac_page.field_courses_taught
+      field_name: field_courses_taught
+      entity_type: node
+      bundle: fac_page
+      label: 'Courses Taught'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text_long
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_detailed_information_page
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_detailed_information_page
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - link
+      id: node.fac_page.field_detailed_information_page
+      field_name: field_detailed_information_page
+      entity_type: node
+      bundle: fac_page
+      label: 'Detailed Information Page'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 1
+      field_type: link
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_email_new
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_email_new
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_email_new
+      field_name: field_email_new
+      entity_type: node
+      bundle: fac_page
+      label: Email
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: email
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_employment_category
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_employment_category
+          - node.type.fac_page
+          - taxonomy.vocabulary.employment_category
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_employment_category
+      field_name: field_employment_category
+      entity_type: node
+      bundle: fac_page
+      label: 'Employment Category'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            employment_category: employment_category
+          sort:
+            field: name
+            direction: asc
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_faculty_cv
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_faculty_cv
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - file
+      id: node.fac_page.field_faculty_cv
+      field_name: field_faculty_cv
+      entity_type: node
+      bundle: fac_page
+      label: 'Faculty CV'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        file_directory: 'faculty-cv/[date:custom:Y]-[date:custom:m]'
+        file_extensions: 'txt pdf doc docx'
+        max_filesize: ''
+        description_field: true
+        handler: 'default:file'
+        handler_settings: {  }
+      field_type: file
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_faculty_designation
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_faculty_designation
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - options
+      id: node.fac_page.field_faculty_designation
+      field_name: field_faculty_designation
+      entity_type: node
+      bundle: fac_page
+      label: 'Faculty Designation'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_faculty_photo
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_faculty_photo
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - image
+      id: node.fac_page.field_faculty_photo
+      field_name: field_faculty_photo
+      entity_type: node
+      bundle: fac_page
+      label: 'Faculty Photo'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        file_directory: fac_images
+        file_extensions: 'png gif jpg jpeg'
+        max_filesize: ''
+        max_resolution: 400x600
+        min_resolution: ''
+        alt_field: true
+        alt_field_required: false
+        title_field: false
+        title_field_required: false
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: 325
+          height: 325
+        handler: 'default:file'
+        handler_settings: {  }
+      field_type: image
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_faculty_rd_proj
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_faculty_rd_proj
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - entity_reference_revisions
+      id: node.fac_page.field_faculty_rd_proj
+      field_name: field_faculty_rd_proj
+      entity_type: node
+      bundle: fac_page
+      label: 'Faculty R&D Projects'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:paragraph'
+        handler_settings:
+          negate: 0
+          target_bundles: null
+      field_type: entity_reference_revisions
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_full_name
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_full_name
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - name
+      id: node.fac_page.field_full_name
+      field_name: field_full_name
+      entity_type: node
+      bundle: fac_page
+      label: 'Full Name'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        size:
+          title: 6
+          given: 20
+          middle: 20
+          family: 20
+          generational: 5
+          credentials: 35
+        title_display:
+          title: description
+          given: description
+          middle: description
+          family: description
+          generational: description
+          credentials: description
+        field_type:
+          title: select
+          given: text
+          middle: text
+          family: text
+          generational: select
+          credentials: text
+        inline_css:
+          title: ''
+          given: ''
+          middle: ''
+          family: ''
+          generational: ''
+          credentials: ''
+        component_css: ''
+        component_layout: default
+        show_component_required_marker: false
+        credentials_inline: false
+        override_format: default
+      field_type: name
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_google_scholar_id
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_google_scholar_id
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_google_scholar_id
+      field_name: field_google_scholar_id
+      entity_type: node
+      bundle: fac_page
+      label: 'Google Scholar ID'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_mobile_number_new
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_mobile_number_new
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_mobile_number_new
+      field_name: field_mobile_number_new
+      entity_type: node
+      bundle: fac_page
+      label: 'Mobile Number'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_orcid
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_orcid
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_orcid
+      field_name: field_orcid
+      entity_type: node
+      bundle: fac_page
+      label: ORCID
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_phone_no_new
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_phone_no_new
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - text
+      id: node.fac_page.field_phone_no_new
+      field_name: field_phone_no_new
+      entity_type: node
+      bundle: fac_page
+      label: 'Phone No'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: text
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_research_area
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_research_area
+          - node.type.fac_page
+          - taxonomy.vocabulary.research_area
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_research_area
+      field_name: field_research_area
+      entity_type: node
+      bundle: fac_page
+      label: 'Research Area'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            research_area: research_area
+          sort:
+            field: name
+            direction: asc
+          auto_create: true
+          auto_create_bundle: ''
+      field_type: entity_reference
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_room_no
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_room_no
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_room_no
+      field_name: field_room_no
+      entity_type: node
+      bundle: fac_page
+      label: 'Room No'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        min: null
+        max: null
+        prefix: ''
+        suffix: ''
+      field_type: integer
+  -
+    collection: ''
+    name: field.field.node.fac_page.field_scopus_id
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_scopus_id
+          - node.type.fac_page
+        enforced:
+          module:
+            - acadmix_faculty
+      id: node.fac_page.field_scopus_id
+      field_name: field_scopus_id
+      entity_type: node
+      bundle: fac_page
+      label: 'Scopus ID'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.paragraph.r_d_projects.field_rd_proj_details
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_rd_proj_details
+          - paragraphs.paragraphs_type.r_d_projects
+        module:
+          - text
+        enforced:
+          module:
+            - acadmix_faculty
+      id: paragraph.r_d_projects.field_rd_proj_details
+      field_name: field_rd_proj_details
+      entity_type: paragraph
+      bundle: r_d_projects
+      label: 'R&D Project Details'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        display_summary: true
+      field_type: text_with_summary
+  -
+    collection: ''
+    name: field.field.paragraph.r_d_projects.field_rd_proj_image
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_rd_proj_image
+          - paragraphs.paragraphs_type.r_d_projects
+        module:
+          - image
+        enforced:
+          module:
+            - acadmix_faculty
+      id: paragraph.r_d_projects.field_rd_proj_image
+      field_name: field_rd_proj_image
+      entity_type: paragraph
+      bundle: r_d_projects
+      label: 'R&D Project Image'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        file_directory: 'faculty_rd_proj_image/[date:custom:Y]-[date:custom:m]'
+        file_extensions: 'png gif jpg jpeg'
+        max_filesize: ''
+        max_resolution: ''
+        min_resolution: ''
+        alt_field: true
+        alt_field_required: true
+        title_field: true
+        title_field_required: false
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        handler: 'default:file'
+        handler_settings: {  }
+      field_type: image
+  -
+    collection: ''
+    name: field.field.paragraph.r_d_projects.field_rd_proj_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_rd_proj_title
+          - paragraphs.paragraphs_type.r_d_projects
+        enforced:
+          module:
+            - acadmix_faculty
+      id: paragraph.r_d_projects.field_rd_proj_title
+      field_name: field_rd_proj_title
+      entity_type: paragraph
+      bundle: r_d_projects
+      label: 'R&D Project Title'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+  -
+    collection: ''
+    name: field.field.taxonomy_term.research_area.field_research_areas_image
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.taxonomy_term.field_research_areas_image
+          - taxonomy.vocabulary.research_area
+        module:
+          - image
+      id: taxonomy_term.research_area.field_research_areas_image
+      field_name: field_research_areas_image
+      entity_type: taxonomy_term
+      bundle: research_area
+      label: 'Research areas image'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        file_directory: 'research-areas-taxonomy/[date:custom:Y]-[date:custom:m]'
+        file_extensions: 'png gif jpg jpeg'
+        max_filesize: ''
+        max_resolution: ''
+        min_resolution: ''
+        alt_field: true
+        alt_field_required: true
+        title_field: true
+        title_field_required: false
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        handler: 'default:file'
+        handler_settings: {  }
+      field_type: image
+  -
+    collection: ''
+    name: field.storage.node.field_affiliations
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+      id: node.field_affiliations
+      field_name: field_affiliations
+      entity_type: node
+      type: string_long
+      settings:
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_awards_and_fellowship
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+          - text
+      id: node.field_awards_and_fellowship
+      field_name: field_awards_and_fellowship
+      entity_type: node
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_background
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+          - text
+      id: node.field_background
+      field_name: field_background
+      entity_type: node
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_building_new
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+      id: node.field_building_new
+      field_name: field_building_new
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_courses_taught
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+          - text
+      id: node.field_courses_taught
+      field_name: field_courses_taught
+      entity_type: node
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_detailed_information_page
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - link
+          - node
+      id: node.field_detailed_information_page
+      field_name: field_detailed_information_page
+      entity_type: node
+      type: link
+      settings: {  }
+      module: link
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_email_new
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+      id: node.field_email_new
+      field_name: field_email_new
+      entity_type: node
+      type: email
+      settings: {  }
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_employment_category
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+          - taxonomy
+      id: node.field_employment_category
+      field_name: field_employment_category
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_faculty_cv
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - file
+          - node
+      id: node.field_faculty_cv
+      field_name: field_faculty_cv
+      entity_type: node
+      type: file
+      settings:
+        display_field: false
+        display_default: false
+        uri_scheme: public
+        target_type: file
+      module: file
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_faculty_designation
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+          - options
+      id: node.field_faculty_designation
+      field_name: field_faculty_designation
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: Professor
+            label: Professor
+          -
+            value: 'Associate Prof.'
+            label: 'Associate Prof.'
+          -
+            value: 'Assistant Prof.'
+            label: 'Assistant Prof.'
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_faculty_photo
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - file
+          - image
+          - node
+      id: node.field_faculty_photo
+      field_name: field_faculty_photo
+      entity_type: node
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_faculty_rd_proj
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - entity_reference_revisions
+          - node
+          - paragraphs
+      id: node.field_faculty_rd_proj
+      field_name: field_faculty_rd_proj
+      entity_type: node
+      type: entity_reference_revisions
+      settings:
+        target_type: paragraph
+      module: entity_reference_revisions
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_full_name
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - name
+          - node
+      id: node.field_full_name
+      field_name: field_full_name
+      entity_type: node
+      type: name
+      settings:
+        components:
+          title: true
+          given: true
+          middle: true
+          family: true
+          generational: false
+          credentials: false
+        minimum_components:
+          given: true
+          family: true
+          title: false
+          middle: false
+          generational: false
+          credentials: false
+        labels:
+          title: Title
+          given: 'First name'
+          middle: 'Middle name'
+          family: 'Last name'
+          generational: Generational
+          credentials: Credentials
+        max_length:
+          title: 31
+          given: 63
+          middle: 127
+          family: 63
+          generational: 15
+          credentials: 255
+        autocomplete_source:
+          title:
+            title: title
+          given: {  }
+          middle: {  }
+          family: {  }
+          generational:
+            generational: '0'
+          credentials: {  }
+        autocomplete_separator:
+          title: ' '
+          given: ' -'
+          middle: ' -'
+          family: ' -'
+          generational: ' '
+          credentials: ', '
+        allow_family_or_given: false
+        title_options:
+          - '-- --'
+          - Mr.
+          - Mrs.
+          - Miss
+          - Ms.
+          - Dr.
+          - Prof.
+        generational_options:
+          - '-- --'
+          - Jr.
+          - Sr.
+          - I
+          - II
+          - III
+          - IV
+          - V
+          - VI
+          - VII
+          - VIII
+          - IX
+          - X
+        sort_options:
+          title: false
+          generational: false
+      module: name
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_google_scholar_id
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+      id: node.field_google_scholar_id
+      field_name: field_google_scholar_id
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_mobile_number_new
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+      id: node.field_mobile_number_new
+      field_name: field_mobile_number_new
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_orcid
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+      id: node.field_orcid
+      field_name: field_orcid
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_phone_no_new
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+          - text
+      id: node.field_phone_no_new
+      field_name: field_phone_no_new
+      entity_type: node
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_research_area
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+          - taxonomy
+      id: node.field_research_area
+      field_name: field_research_area
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_room_no
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+      id: node.field_room_no
+      field_name: field_room_no
+      entity_type: node
+      type: integer
+      settings:
+        unsigned: false
+        size: normal
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_scopus_id
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - node
+      id: node.field_scopus_id
+      field_name: field_scopus_id
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.paragraph.field_rd_proj_details
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+        enforced:
+          module:
+            - acadmix_faculty
+      id: paragraph.field_rd_proj_details
+      field_name: field_rd_proj_details
+      entity_type: paragraph
+      type: text_with_summary
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.paragraph.field_rd_proj_image
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - file
+          - image
+          - paragraphs
+        enforced:
+          module:
+            - acadmix_faculty
+      id: paragraph.field_rd_proj_image
+      field_name: field_rd_proj_image
+      entity_type: paragraph
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.paragraph.field_rd_proj_title
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+        enforced:
+          module:
+            - acadmix_faculty
+      id: paragraph.field_rd_proj_title
+      field_name: field_rd_proj_title
+      entity_type: paragraph
+      type: string
+      settings:
+        max_length: 255
+        is_ascii: false
+        case_sensitive: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.taxonomy_term.field_research_areas_image
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - file
+          - image
+          - taxonomy
+        enforced:
+          module:
+            - acadmix_faculty
+      id: taxonomy_term.field_research_areas_image
+      field_name: field_research_areas_image
+      entity_type: taxonomy_term
+      type: image
+      settings:
+        uri_scheme: public
+        default_image:
+          uuid: ''
+          alt: ''
+          title: ''
+          width: null
+          height: null
+        target_type: file
+        display_field: false
+        display_default: false
+      module: image
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: image.style.acad_fac_max_1300x1300
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      name: acad_fac_max_1300x1300
+      label: 'Acad Fac Max 1300x1300'
+      effects:
+        f46291b0-7206-4d2a-bb6e-293883ce389a:
+          uuid: f46291b0-7206-4d2a-bb6e-293883ce389a
+          id: image_scale
+          weight: 1
+          data:
+            width: 1300
+            height: 1300
+            upscale: false
+  -
+    collection: ''
+    name: image.style.acad_fac_max_325x325
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      name: acad_fac_max_325x325
+      label: 'Acad Fac Max 325x325'
+      effects:
+        08d20fa0-9e4e-404a-9766-1877a5f5ee3c:
+          uuid: 08d20fa0-9e4e-404a-9766-1877a5f5ee3c
+          id: image_scale
+          weight: 1
+          data:
+            width: 325
+            height: 325
+            upscale: false
+  -
+    collection: ''
+    name: image.style.acad_fac_max_650x650
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      name: acad_fac_max_650x650
+      label: 'Acad Fac Max 650x650'
+      effects:
+        be55fe87-1729-4cc8-bb03-300ce55e0edf:
+          uuid: be55fe87-1729-4cc8-bb03-300ce55e0edf
+          id: image_scale
+          weight: 1
+          data:
+            width: 650
+            height: 650
+            upscale: false
+  -
+    collection: ''
+    name: image.style.acad_fac_thumbnail_100_100_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      name: acad_fac_thumbnail_100_100_
+      label: 'Acad Fac Thumbnail (100×100)'
+      effects:
+        1ec55067-0450-47fd-bd92-779adb0a348b:
+          uuid: 1ec55067-0450-47fd-bd92-779adb0a348b
+          id: image_scale
+          weight: 1
+          data:
+            width: 100
+            height: 100
+            upscale: false
+  -
+    collection: ''
+    name: image.style.acad_fac_thumbnail_400_300_
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      name: acad_fac_thumbnail_400_300_
+      label: 'Acad Fac Thumbnail (400×300)'
+      effects:
+        4b4423ca-bdf9-403c-80bc-171eb78024ac:
+          uuid: 4b4423ca-bdf9-403c-80bc-171eb78024ac
+          id: image_scale_and_crop
+          weight: 1
+          data:
+            width: 400
+            height: 300
+  -
+    collection: ''
+    name: image.style.r_d_projects_image
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      name: r_d_projects_image
+      label: 'R&D Projects Image'
+      effects:
+        8a453494-6853-4114-84a8-8a8178e23ec6:
+          uuid: 8a453494-6853-4114-84a8-8a8178e23ec6
+          id: image_scale_and_crop
+          weight: 1
+          data:
+            width: 400
+            height: 300
+  -
+    collection: ''
+    name: node.type.fac_page
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - menu_ui
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+      name: 'Faculty Page'
+      type: fac_page
+      description: 'Content template for opening Faculty Page'
+      help: ''
+      new_revision: true
+      preview_mode: 1
+      display_submitted: false
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.r_d_projects
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      id: r_d_projects
+      label: 'R&D Projects'
+      icon_uuid: null
+      description: ''
+      behavior_plugins: {  }
+  -
+    collection: ''
+    name: pathauto.pattern.faculty
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - node
+        enforced:
+          module:
+            - acadmix_faculty
+      id: faculty
+      label: Faculty
+      type: 'canonical_entities:node'
+      pattern: 'faculty/[node:title]'
+      selection_criteria:
+        cfa5c08a-fad1-4b4e-a0c3-d1ccddecf49e:
+          id: node_type
+          bundles:
+            fac_page: fac_page
+          negate: false
+          context_mapping:
+            node: node
+          uuid: cfa5c08a-fad1-4b4e-a0c3-d1ccddecf49e
+      selection_logic: and
+      weight: -5
+      relationships: {  }
+  -
+    collection: ''
+    name: pathauto.pattern.research_area_alias
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - ctools
+          - taxonomy
+        enforced:
+          module:
+            - acadmix_faculty
+      id: research_area_alias
+      label: 'Research Area alias'
+      type: 'canonical_entities:taxonomy_term'
+      pattern: 'research-area/[term:name]'
+      selection_criteria:
+        aa9ede94-50d6-4d99-936f-9bd7c335e747:
+          id: 'entity_bundle:taxonomy_term'
+          bundles:
+            research_area: research_area
+          negate: false
+          context_mapping:
+            taxonomy_term: taxonomy_term
+          uuid: aa9ede94-50d6-4d99-936f-9bd7c335e747
+      selection_logic: and
+      weight: -5
+      relationships: {  }
+  -
+    collection: ''
+    name: responsive_image.styles.acad_fac_narrow
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - image.style.acad_fac_max_1300x1300
+          - image.style.acad_fac_max_325x325
+          - image.style.acad_fac_max_650x650
+        enforced:
+          module:
+            - acadmix_faculty
+      id: acad_fac_narrow
+      label: 'Acad Fac Narrow'
+      image_style_mappings:
+        -
+          breakpoint_id: responsive_image.viewport_sizing
+          multiplier: 1x
+          image_mapping_type: sizes
+          image_mapping:
+            sizes: '(min-width: 1290px) 325px, (min-width: 851px) 25vw, (min-width: 560px) 50vw, 100vw'
+            sizes_image_styles:
+              - acad_fac_max_1300x1300
+              - acad_fac_max_325x325
+              - acad_fac_max_650x650
+      breakpoint_group: responsive_image
+      fallback_image_style: acad_fac_max_325x325
+  -
+    collection: ''
+    name: taxonomy.vocabulary.employment_category
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      name: 'Employment Category'
+      vid: employment_category
+      description: 'Contains the Faculty Employment Category'
+      hierarchy: 0
+      weight: 0
+  -
+    collection: ''
+    name: taxonomy.vocabulary.research_area
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - acadmix_faculty
+      name: 'Research Area'
+      vid: research_area
+      description: 'Research Area terms'
+      hierarchy: 0
+      weight: 0
+  -
+    collection: ''
+    name: views.view.faculty_directory
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_building_new
+          - field.storage.node.field_email_new
+          - field.storage.node.field_employment_category
+          - field.storage.node.field_faculty_designation
+          - field.storage.node.field_faculty_photo
+          - field.storage.node.field_phone_no_new
+          - field.storage.node.field_room_no
+          - image.style.acad_fac_thumbnail_100_100_
+          - node.type.fac_page
+          - taxonomy.vocabulary.employment_category
+        content:
+          - 'taxonomy_term:employment_category:38cd40c4-beec-447c-ba54-9686853b366f'
+          - 'taxonomy_term:employment_category:5e0ee390-c34f-4665-ba22-249c1963afda'
+          - 'taxonomy_term:employment_category:773ac71d-4a37-4db4-8a93-bf84cc8c7b56'
+          - 'taxonomy_term:employment_category:8ca5375d-d847-4165-bd54-947909c42bf0'
+          - 'taxonomy_term:employment_category:e03dfb55-3445-498c-aadb-92e676a6cb89'
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - better_exposed_filters
+          - datatables
+          - image
+          - node
+          - options
+          - spamspan
+          - taxonomy
+          - text
+          - user
+      id: faculty_directory
+      label: 'Faculty Directory'
+      module: views
+      description: ''
+      tag: ''
+      base_table: node_field_data
+      base_field: nid
+      core: 8.x
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'access content'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: bef
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+                input_required: false
+                text_input_required: 'Select any filter and click on Apply to see results'
+                bef:
+                  general:
+                    allow_secondary: false
+                    secondary_label: 'Advanced options'
+                    autosubmit: true
+                    autosubmit_exclude_textfield: true
+                    autosubmit_hide: true
+                  field_employment_category_target_id:
+                    bef_format: default
+                    more_options:
+                      bef_select_all_none: false
+                      bef_collapsible: false
+                      is_secondary: false
+                      rewrite:
+                        filter_rewrite_values: ''
+                text_input_required_format: basic_html
+            pager:
+              type: none
+              options:
+                offset: 0
+            style:
+              type: datatables
+              options:
+                grouping: {  }
+                row_class: ''
+                default_row_class: true
+                caption: ''
+                summary: ''
+                description: ''
+                columns:
+                  field_faculty_photo: field_faculty_photo
+                  title: title
+                  field_faculty_designation_1: field_faculty_designation_1
+                  field_employment_category: field_employment_category
+                  field_building_new: field_building_new
+                  field_room_no: field_room_no
+                  field_phone_no_new: field_phone_no_new
+                  field_email_new: field_email_new
+                info:
+                  field_faculty_photo:
+                    sortable: 0
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  title:
+                    sortable: 1
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_faculty_designation_1:
+                    sortable: 0
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_employment_category:
+                    sortable: 0
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_building_new:
+                    sortable: 0
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_room_no:
+                    sortable: 0
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_phone_no_new:
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                  field_email_new:
+                    align: ''
+                    separator: ''
+                    empty_column: 0
+                    responsive: ''
+                default: '-1'
+                empty_table: 0
+                elements:
+                  search_box: 1
+                  table_info: 1
+                  save_state: 0
+                  table_tools: 0
+                layout:
+                  autowidth: 1
+                  themeroller: 0
+                  sdom: ''
+                pages:
+                  pagination_style: no_pagination
+                  length_change: 0
+                  display_length: ''
+                hidden_columns:
+                  field_faculty_photo: '0'
+                  title: '0'
+                  field_faculty_designation_1: '0'
+                  field_employment_category: '0'
+                  field_building_new: '0'
+                  field_room_no: '0'
+                  field_phone_no_new: '0'
+                  field_email_new: '0'
+            row:
+              type: fields
+            fields:
+              field_faculty_photo:
+                id: field_faculty_photo
+                table: node__field_faculty_photo
+                field: field_faculty_photo
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: target_id
+                type: image
+                settings:
+                  image_style: acad_fac_thumbnail_100_100_
+                  image_link: content
+                group_column: ''
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Name
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: false
+                  ellipsis: false
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: node
+                entity_field: title
+                plugin_id: field
+              field_faculty_designation_1:
+                id: field_faculty_designation_1
+                table: node__field_faculty_designation
+                field: field_faculty_designation
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Designation
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: list_default
+                settings: {  }
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_employment_category:
+                id: field_employment_category
+                table: node__field_employment_category
+                field: field_employment_category
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Appointment
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: target_id
+                type: entity_reference_label
+                settings:
+                  link: false
+                group_column: target_id
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_building_new:
+                id: field_building_new
+                table: node__field_building_new
+                field: field_building_new
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Building
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_room_no:
+                id: field_room_no
+                table: node__field_room_no
+                field: field_room_no
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Room_no.
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: false
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: number_unformatted
+                settings: {  }
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_phone_no_new:
+                id: field_phone_no_new
+                table: node__field_phone_no_new
+                field: field_phone_no_new
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'Phone Nos.'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: text_default
+                settings: {  }
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              field_email_new:
+                id: field_email_new
+                table: node__field_email_new
+                field: field_email_new
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Email
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: email_spamspan
+                settings:
+                  relationship: none
+                  fieldsets:
+                    - more
+                    - admin_label
+                  custom_label: 1
+                  label: Email
+                  element_label_colon: 1
+                  exclude: 0
+                  element_type_enable: 0
+                  element_type: ''
+                  element_class_enable: 0
+                  element_class: ''
+                  element_label_type_enable: 0
+                  element_label_type: ''
+                  element_label_class_enable: 0
+                  element_label_class: ''
+                  element_wrapper_type_enable: 0
+                  element_wrapper_type: ''
+                  element_wrapper_class_enable: 0
+                  element_wrapper_class: ''
+                  element_default_classes: 1
+                  alter:
+                    alter_text: 0
+                    text: ''
+                    make_link: 0
+                    path: ''
+                    absolute: 0
+                    replace_spaces: 0
+                    external: 0
+                    path_case: none
+                    link_class: ''
+                    alt: ''
+                    rel: ''
+                    prefix: ''
+                    suffix: ''
+                    target: ''
+                    trim: 0
+                    max_length: '0'
+                    word_boundary: 1
+                    ellipsis: 1
+                    more_link: 0
+                    more_link_text: ''
+                    more_link_path: ''
+                    html: 0
+                    strip_tags: 0
+                    preserve_tags: ''
+                    trim_whitespace: 0
+                    nl2br: 0
+                  empty: ''
+                  empty_zero: 0
+                  hide_empty: 0
+                  hide_alter_empty: 1
+                  group_rows: 1
+                  multi_type: separator
+                  separator: ', '
+                  delta_limit: '0'
+                  delta_offset: '0'
+                  delta_reversed: 0
+                  delta_first_last: 0
+                  click_sort_column: value
+                  type: email_spamspan
+                  field_api_classes: 0
+                  spamspan_at: ' [at] '
+                  spamspan_use_graphic: 0
+                  spamspan_dot_enable: 0
+                  spamspan_dot: ' [dot] '
+                  use_form:
+                    spamspan_use_form: 0
+                    spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+                    spamspan_form_default_url: contact
+                    spamspan_form_default_displaytext: 'contact form'
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+            filters:
+              status:
+                value: '1'
+                table: node_field_data
+                field: status
+                plugin_id: boolean
+                entity_type: node
+                entity_field: status
+                id: status
+                expose:
+                  operator: ''
+                group: 1
+              type:
+                id: type
+                table: node_field_data
+                field: type
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: in
+                value:
+                  fac_page: fac_page
+                group: 1
+                exposed: false
+                expose:
+                  operator_id: ''
+                  label: ''
+                  description: ''
+                  use_operator: false
+                  operator: ''
+                  identifier: ''
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: node
+                entity_field: type
+                plugin_id: bundle
+              field_employment_category_target_id:
+                id: field_employment_category_target_id
+                table: node__field_employment_category
+                field: field_employment_category_target_id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: or
+                value:
+                  7: 7
+                  6: 6
+                  11: 11
+                  10: 10
+                  9: 9
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: field_employment_category_target_id_op
+                  label: Appointment
+                  description: ''
+                  use_operator: false
+                  operator: field_employment_category_target_id_op
+                  identifier: appointment
+                  required: true
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                  reduce: true
+                  chosen_override: 0
+                  disable_search: 0
+                  search_contains: 0
+                  placeholder_text_multiple: 'Choose some options'
+                  placeholder_text_single: 'Choose an option'
+                  no_results_text: 'No results match'
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                reduce_duplicates: false
+                type: select
+                limit: true
+                vid: employment_category
+                hierarchy: false
+                error_message: false
+                plugin_id: taxonomy_index_tid
+            sorts:
+              field_full_name_family:
+                id: field_full_name_family
+                table: node__field_full_name
+                field: field_full_name_family
+                relationship: none
+                group_type: group
+                admin_label: ''
+                order: ASC
+                exposed: false
+                expose:
+                  label: ''
+                plugin_id: standard
+            title: 'Faculty Directory'
+            header:
+              area_text_custom:
+                id: area_text_custom
+                table: views
+                field: area_text_custom
+                relationship: none
+                group_type: group
+                admin_label: ''
+                empty: false
+                tokenize: true
+                content: ''
+                plugin_id: text_custom
+            footer: {  }
+            empty: {  }
+            relationships: {  }
+            arguments: {  }
+            display_extenders: {  }
+            use_ajax: true
+            css_class: ''
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.field_building_new'
+              - 'config:field.storage.node.field_email_new'
+              - 'config:field.storage.node.field_employment_category'
+              - 'config:field.storage.node.field_faculty_designation'
+              - 'config:field.storage.node.field_faculty_photo'
+              - 'config:field.storage.node.field_phone_no_new'
+              - 'config:field.storage.node.field_room_no'
+        page_1:
+          display_plugin: page
+          id: page_1
+          display_title: Page
+          position: 1
+          display_options:
+            display_extenders: {  }
+            path: faculty-directory
+            menu:
+              type: none
+              title: Faculty
+              description: ''
+              expanded: false
+              parent: ''
+              weight: 0
+              context: '0'
+              menu_name: main
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user
+              - 'user.node_grants:view'
+              - user.permissions
+            tags:
+              - 'config:field.storage.node.field_building_new'
+              - 'config:field.storage.node.field_email_new'
+              - 'config:field.storage.node.field_employment_category'
+              - 'config:field.storage.node.field_faculty_designation'
+              - 'config:field.storage.node.field_faculty_photo'
+              - 'config:field.storage.node.field_phone_no_new'
+              - 'config:field.storage.node.field_room_no'
+  -
+    collection: ''
+    name: views.view.related_faculty_research_area
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - node.type.fac_page
+        module:
+          - node
+          - taxonomy
+          - user
+        enforced:
+          module:
+            - acadmix_faculty
+      id: related_faculty_research_area
+      label: 'Related Faculty Research Area'
+      module: views
+      description: ''
+      tag: ''
+      base_table: node_field_data
+      base_field: nid
+      core: 8.x
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'access content'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: basic
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            pager:
+              type: full
+              options:
+                items_per_page: 5
+                offset: 0
+                id: 0
+                total_pages: null
+                tags:
+                  previous: '‹ Previous'
+                  next: 'Next ›'
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page: false
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options: '5, 10, 25, 50'
+                  items_per_page_options_all: false
+                  items_per_page_options_all_label: '- All -'
+                  offset: false
+                  offset_label: Offset
+                quantity: 9
+            style:
+              type: default
+            row:
+              type: fields
+            fields:
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                settings:
+                  link_to_entity: true
+                plugin_id: field
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+            filters:
+              status:
+                value: '1'
+                table: node_field_data
+                field: status
+                plugin_id: boolean
+                entity_type: node
+                entity_field: status
+                id: status
+                expose:
+                  operator: ''
+                group: 1
+              type:
+                id: type
+                table: node_field_data
+                field: type
+                value:
+                  fac_page: fac_page
+                entity_type: node
+                entity_field: type
+                plugin_id: bundle
+            sorts:
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                relationship: none
+                group_type: group
+                admin_label: ''
+                order: ASC
+                exposed: false
+                expose:
+                  label: ''
+                entity_type: node
+                entity_field: title
+                plugin_id: standard
+            title: 'Related Faculty Research Area'
+            header: {  }
+            footer: {  }
+            empty: {  }
+            relationships: {  }
+            arguments:
+              term_node_tid_depth:
+                id: term_node_tid_depth
+                table: node_field_data
+                field: term_node_tid_depth
+                relationship: none
+                group_type: group
+                admin_label: ''
+                default_action: default
+                exception:
+                  value: all
+                  title_enable: false
+                  title: All
+                title_enable: false
+                title: ''
+                default_argument_type: taxonomy_tid
+                default_argument_options:
+                  term_page: '1'
+                  node: true
+                  anyall: ','
+                  limit: false
+                  vids: {  }
+                default_argument_skip_url: false
+                summary_options:
+                  base_path: ''
+                  count: true
+                  items_per_page: 25
+                  override: false
+                summary:
+                  sort_order: asc
+                  number_of_records: 0
+                  format: default_summary
+                specify_validation: false
+                validate:
+                  type: none
+                  fail: 'not found'
+                validate_options: {  }
+                depth: 2
+                break_phrase: false
+                use_taxonomy_term_path: false
+                entity_type: node
+                plugin_id: taxonomy_index_tid_depth
+            display_extenders: {  }
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - 'user.node_grants:view'
+              - user.permissions
+            tags: {  }
+        block_1:
+          display_plugin: block
+          id: block_1
+          display_title: Block
+          position: 1
+          display_options:
+            display_extenders: {  }
+            block_hide_empty: true
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - 'user.node_grants:view'
+              - user.permissions
+            tags: {  }
+  -
+    collection: ''
+    name: views.view.related_faculty_sub_research_area
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.research_area
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - taxonomy
+          - user
+      id: related_faculty_sub_research_area
+      label: 'Related Faculty Sub Research area'
+      module: views
+      description: ''
+      tag: ''
+      base_table: taxonomy_term_field_data
+      base_field: tid
+      core: 8.x
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'access content'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: basic
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            pager:
+              type: full
+              options:
+                items_per_page: 40
+                offset: 0
+                id: 0
+                total_pages: null
+                expose:
+                  items_per_page: false
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options: '5, 10, 25, 50'
+                  items_per_page_options_all: false
+                  items_per_page_options_all_label: '- All -'
+                  offset: false
+                  offset_label: Offset
+                tags:
+                  previous: '‹ Previous'
+                  next: 'Next ›'
+                  first: '« First'
+                  last: 'Last »'
+                quantity: 9
+            style:
+              type: default
+            row:
+              type: fields
+            fields:
+              name:
+                id: name
+                table: taxonomy_term_field_data
+                field: name
+                entity_type: taxonomy_term
+                entity_field: name
+                label: ''
+                alter:
+                  alter_text: false
+                  make_link: false
+                  absolute: false
+                  trim: false
+                  word_boundary: false
+                  ellipsis: false
+                  strip_tags: false
+                  html: false
+                hide_empty: false
+                empty_zero: false
+                type: string
+                settings:
+                  link_to_entity: true
+                plugin_id: term_name
+                relationship: none
+                group_type: group
+                admin_label: ''
+                exclude: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_alter_empty: true
+                click_sort_column: value
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                convert_spaces: false
+            filters:
+              vid:
+                id: vid
+                table: taxonomy_term_field_data
+                field: vid
+                value:
+                  research_area: research_area
+                entity_type: taxonomy_term
+                entity_field: vid
+                plugin_id: bundle
+            sorts: {  }
+            title: 'Related Faculty Sub Research area'
+            header: {  }
+            footer: {  }
+            empty: {  }
+            relationships: {  }
+            arguments:
+              parent_target_id:
+                id: parent_target_id
+                table: taxonomy_term__parent
+                field: parent_target_id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                default_action: default
+                exception:
+                  value: all
+                  title_enable: false
+                  title: All
+                title_enable: false
+                title: ''
+                default_argument_type: taxonomy_tid
+                default_argument_options:
+                  term_page: '1'
+                  node: true
+                  anyall: ','
+                  limit: false
+                  vids: {  }
+                default_argument_skip_url: false
+                summary_options:
+                  base_path: ''
+                  count: true
+                  items_per_page: 25
+                  override: false
+                summary:
+                  sort_order: asc
+                  number_of_records: 0
+                  format: default_summary
+                specify_validation: false
+                validate:
+                  type: none
+                  fail: 'not found'
+                validate_options: {  }
+                break_phrase: false
+                not: false
+                entity_type: taxonomy_term
+                entity_field: parent
+                plugin_id: taxonomy
+            display_extenders: {  }
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user.permissions
+            tags: {  }
+        block_1:
+          display_plugin: block
+          id: block_1
+          display_title: Block
+          position: 1
+          display_options:
+            display_extenders: {  }
+            block_hide_empty: true
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user.permissions
+            tags: {  }
+  -
+    collection: ''
+    name: views.view.research_areas
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.taxonomy_term.field_research_areas_image
+          - image.style.acad_fac_thumbnail_400_300_
+          - taxonomy.vocabulary.research_area
+        enforced:
+          module:
+            - acadmix_faculty
+        module:
+          - image
+          - taxonomy
+          - user
+          - views_bootstrap
+      id: research_areas
+      label: 'Research Areas'
+      module: views
+      description: ''
+      tag: ''
+      base_table: taxonomy_term_field_data
+      base_field: tid
+      core: 8.x
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: perm
+              options:
+                perm: 'access content'
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: basic
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            pager:
+              type: full
+              options:
+                items_per_page: 10
+                offset: 0
+                id: 0
+                total_pages: null
+                tags:
+                  previous: ‹‹
+                  next: ››
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page: false
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options: '5, 10, 25, 50'
+                  items_per_page_options_all: false
+                  items_per_page_options_all_label: '- All -'
+                  offset: false
+                  offset_label: Offset
+                quantity: 9
+            style:
+              type: views_bootstrap_grid
+              options:
+                grouping: {  }
+                row_class: mb-30
+                default_row_class: true
+                alignment: horizontal
+                columns: '4'
+                col_xs: col-xs-12
+                col_sm: col-sm-6
+                col_md: col-md-3
+                col_lg: col-lg-3
+            row:
+              type: fields
+              options:
+                default_field_elements: true
+                inline: {  }
+                separator: ''
+                hide_empty: false
+            fields:
+              name:
+                id: name
+                table: taxonomy_term_field_data
+                field: name
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: true
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: false
+                  ellipsis: false
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                convert_spaces: false
+                entity_type: taxonomy_term
+                entity_field: name
+                plugin_id: term_name
+              field_research_areas_image:
+                id: field_research_areas_image
+                table: taxonomy_term__field_research_areas_image
+                field: field_research_areas_image
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: true
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: target_id
+                type: image
+                settings:
+                  image_style: acad_fac_thumbnail_400_300_
+                  image_link: content
+                group_column: ''
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                plugin_id: field
+              nothing:
+                id: nothing
+                table: views
+                field: nothing
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: ''
+                exclude: false
+                alter:
+                  alter_text: true
+                  text: "<div class =\"card\">\n<div class=\"card-content\">\n{{ field_research_areas_image }}\n <h4>{{ name }}</h4>\n{{ description__value }}\n</div>\n</div>"
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: false
+                plugin_id: custom
+            filters:
+              vid:
+                id: vid
+                table: taxonomy_term_field_data
+                field: vid
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: in
+                value:
+                  research_area: research_area
+                group: 1
+                exposed: false
+                expose:
+                  operator_id: ''
+                  label: ''
+                  description: ''
+                  use_operator: false
+                  operator: ''
+                  identifier: ''
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: taxonomy_term
+                entity_field: vid
+                plugin_id: bundle
+              tid_raw:
+                id: tid_raw
+                table: taxonomy_term_field_data
+                field: tid_raw
+                relationship: parent_target_id
+                group_type: group
+                admin_label: ''
+                operator: empty
+                value:
+                  min: ''
+                  max: ''
+                  value: ''
+                group: 1
+                exposed: false
+                expose:
+                  operator_id: ''
+                  label: ''
+                  description: ''
+                  use_operator: false
+                  operator: ''
+                  identifier: ''
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                  placeholder: ''
+                  min_placeholder: ''
+                  max_placeholder: ''
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: taxonomy_term
+                plugin_id: numeric
+            sorts: {  }
+            title: 'Research areas'
+            header: {  }
+            footer: {  }
+            empty: {  }
+            relationships:
+              parent_target_id:
+                id: parent_target_id
+                table: taxonomy_term__parent
+                field: parent_target_id
+                relationship: none
+                group_type: group
+                admin_label: Parent
+                required: false
+                entity_type: taxonomy_term
+                entity_field: parent
+                plugin_id: standard
+            arguments: {  }
+            display_extenders: {  }
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url.query_args
+              - user.permissions
+            tags:
+              - 'config:field.storage.taxonomy_term.field_research_areas_image'
+        page_1:
+          display_plugin: page
+          id: page_1
+          display_title: Page
+          position: 1
+          display_options:
+            display_extenders: {  }
+            path: research-areas
+            menu:
+              type: none
+              title: 'Research areas'
+              description: 'View all major Research Areas'
+              expanded: false
+              parent: ''
+              weight: 0
+              context: '0'
+              menu_name: main
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url.query_args
+              - user.permissions
+            tags:
+              - 'config:field.storage.taxonomy_term.field_research_areas_image'

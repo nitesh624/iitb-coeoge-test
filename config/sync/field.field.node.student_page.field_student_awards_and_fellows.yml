@@ -1,0 +1,26 @@
+uuid: 40b43da7-f57f-4625-a5ee-9318a87a5d56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_awards_and_fellows
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+  module:
+    - text
+_core:
+  default_config_hash: z5nzKUSQmPXUpwo9bqauKpWMDoFs-9tfmYdI-TDwThg
+id: node.student_page.field_student_awards_and_fellows
+field_name: field_student_awards_and_fellows
+entity_type: node
+bundle: student_page
+label: 'Awards and Fellowships'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

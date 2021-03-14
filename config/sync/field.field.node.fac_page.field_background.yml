@@ -1,0 +1,26 @@
+uuid: 8fa8934a-55b4-4bef-9dd3-4bc5db4e4de7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - text
+_core:
+  default_config_hash: '-y3HYOvGFcue9Kq75TRaaO6WCwenwltAUxosBuZXH3Y'
+id: node.fac_page.field_background
+field_name: field_background
+entity_type: node
+bundle: fac_page
+label: Background
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

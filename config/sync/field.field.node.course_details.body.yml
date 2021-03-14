@@ -1,0 +1,28 @@
+uuid: 6e08a85d-2a74-4624-b73f-701468f24e44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.course_details
+  enforced:
+    module:
+      - course_details
+  module:
+    - text
+_core:
+  default_config_hash: zWQnijDwfwNnZo8ME47GHZe0nIHYSfe8puqUtKhdgF8
+id: node.course_details.body
+field_name: body
+entity_type: node
+bundle: course_details
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,27 @@
+uuid: 83c73d84-a4c2-4c24-a83a-dd3f2f0042c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-1
+  module:
+    - system
+  theme:
+    - coeoge_iitb_dj
+_core:
+  default_config_hash: r_-WdRqV843RvmBFC44FSHX3GPx4vBY17FCS6hUXvfI
+id: coeoge_iitb_dj_footermenu1
+theme: coeoge_iitb_dj
+region: footer2
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu-1'
+settings:
+  id: 'system_menu_block:footer-menu-1'
+  label: 'Footer menu 1'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

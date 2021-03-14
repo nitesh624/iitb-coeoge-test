@@ -1,0 +1,39 @@
+uuid: aa5d05bf-6739-4bb5-b9ab-84aef126cdd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - ds
+id: config_sync.module.ds
+snapshotSet: config_sync
+extensionType: module
+extensionName: ds
+items:
+  -
+    collection: ''
+    name: ds.settings
+    data:
+      disabled: false
+      field_template: true
+      ft-default: expert
+      ft-show-colon: false
+      classes:
+        region:
+          - card
+          - row
+          - col-md-2
+          - col-md-3
+          - col-md-4
+          - col-md-6
+          - col-md-8
+          - col-md-12
+          - col-sm-2
+          - col-sm-3
+          - col-sm-4
+          - col-sm-6
+          - col-sm-8
+          - col-sm-12
+          - col-sm-offset-2
+          - col-md-offset-2
+        field: {  }
+      use_field_names: true

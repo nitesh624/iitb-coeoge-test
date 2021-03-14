@@ -1,0 +1,28 @@
+uuid: f54a9abc-eaea-4ea7-910d-a47124732f6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_no
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: fUlw8joZATJI7RCGMpUkX1qnYtQ_lcykI2LlquhFqMI
+id: node.fac_page.field_room_no
+field_name: field_room_no
+entity_type: node
+bundle: fac_page
+label: 'Room No'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

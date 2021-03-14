@@ -1,0 +1,35 @@
+uuid: 465801fe-075a-4977-a672-3aefaad5fcf1
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: b80nt3raOEaXh3ysLjn_CPW2_wTdxPBc6uAx3VQCV30
+id: node.field_staff_photo
+field_name: field_staff_photo
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

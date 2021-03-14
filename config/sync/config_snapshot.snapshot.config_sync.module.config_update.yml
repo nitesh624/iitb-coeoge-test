@@ -1,0 +1,11 @@
+uuid: 370e5828-bfc5-4784-9298-a11b936384f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_update
+id: config_sync.module.config_update
+snapshotSet: config_sync
+extensionType: module
+extensionName: config_update
+items: {  }

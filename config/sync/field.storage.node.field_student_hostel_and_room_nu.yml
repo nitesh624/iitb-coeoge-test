@@ -1,0 +1,26 @@
+uuid: c4748d79-9f16-4af5-9a6d-6f753ea3c879
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+_core:
+  default_config_hash: QpMmFd4kD1laRlaZUmDFKl0U5nZpt441rckAGe7wLWU
+id: node.field_student_hostel_and_room_nu
+field_name: field_student_hostel_and_room_nu
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

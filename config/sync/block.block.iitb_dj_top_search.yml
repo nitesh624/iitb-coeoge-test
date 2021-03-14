@@ -1,0 +1,23 @@
+uuid: ff4176d0-bf6c-4342-abea-d0553561e14e
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - iitb_dj
+_core:
+  default_config_hash: NZoVu0qMyU6-KqoSArPrSwYIaUN3o_veZkcrH6iW6-M
+id: iitb_dj_top_search
+theme: iitb_dj
+region: top_head_search
+weight: -13
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,1117 @@
+uuid: 0f47c751-e046-4ee9-9310-f76cdbdbbd53
+langcode: en
+status: true
+dependencies:
+  module:
+    - course_allotment
+id: config_sync.module.course_allotment
+snapshotSet: config_sync
+extensionType: module
+extensionName: course_allotment
+items:
+  -
+    collection: ''
+    name: core.base_field_override.node.course_allotment.promote
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - node.type.course_allotment
+      id: node.course_allotment.promote
+      field_name: promote
+      entity_type: node
+      bundle: course_allotment
+      label: 'Promoted to front page'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: 0
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+  -
+    collection: ''
+    name: core.entity_form_display.node.course_allotment.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.course_allotment.body
+          - field.field.node.course_allotment.field_acad_year
+          - field.field.node.course_allotment.field_course_code_ref
+          - field.field.node.course_allotment.field_course_slot
+          - field.field.node.course_allotment.field_course_url
+          - field.field.node.course_allotment.field_facultynode
+          - field.field.node.course_allotment.field_semester
+          - field.field.node.course_allotment.field_staff_noderef
+          - node.type.course_allotment
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - datetime
+          - link
+          - path
+          - text
+      id: node.course_allotment.default
+      targetEntityType: node
+      bundle: course_allotment
+      mode: default
+      content:
+        body:
+          type: text_textarea_with_summary
+          weight: 121
+          settings:
+            rows: 9
+            summary_rows: 3
+            placeholder: ''
+          third_party_settings: {  }
+          region: content
+        created:
+          type: datetime_timestamp
+          weight: 10
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_acad_year:
+          weight: 122
+          settings: {  }
+          third_party_settings: {  }
+          type: datetime_default
+          region: content
+        field_course_code_ref:
+          weight: 124
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: entity_reference_autocomplete
+          region: content
+        field_course_slot:
+          weight: 125
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_course_url:
+          weight: 126
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+          third_party_settings: {  }
+          type: link_default
+          region: content
+        field_facultynode:
+          weight: 127
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: entity_reference_autocomplete
+          region: content
+        field_semester:
+          weight: 123
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          region: content
+        field_staff_noderef:
+          weight: 129
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+          type: entity_reference_autocomplete
+          region: content
+        langcode:
+          type: language_select
+          weight: 2
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        path:
+          type: path
+          weight: 30
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        promote:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 15
+          region: content
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 120
+          region: content
+          third_party_settings: {  }
+        sticky:
+          type: boolean_checkbox
+          settings:
+            display_label: true
+          weight: 16
+          region: content
+          third_party_settings: {  }
+        title:
+          type: string_textfield
+          weight: -5
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        uid:
+          type: entity_reference_autocomplete
+          weight: 5
+          settings:
+            match_operator: CONTAINS
+            size: 60
+            placeholder: ''
+          region: content
+          third_party_settings: {  }
+      hidden: {  }
+  -
+    collection: ''
+    name: core.entity_view_display.node.course_allotment.default
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.node.course_allotment.body
+          - field.field.node.course_allotment.field_acad_year
+          - field.field.node.course_allotment.field_course_code_ref
+          - field.field.node.course_allotment.field_course_slot
+          - field.field.node.course_allotment.field_course_url
+          - field.field.node.course_allotment.field_facultynode
+          - field.field.node.course_allotment.field_semester
+          - field.field.node.course_allotment.field_staff_noderef
+          - node.type.course_allotment
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - datetime
+          - ds
+          - link
+          - options
+          - text
+          - user
+      third_party_settings:
+        ds:
+          layout:
+            id: ds_1col
+            library: null
+            disable_css: false
+            entity_classes: all_classes
+            settings:
+              wrappers:
+                ds_content: div
+              outer_wrapper: div
+              attributes: ''
+              link_attribute: ''
+              link_custom: ''
+              classes:
+                layout_class: {  }
+                ds_content: {  }
+          regions:
+            ds_content:
+              - links
+              - body
+              - field_acad_year
+              - field_semester
+              - field_course_code_ref
+              - field_course_slot
+              - field_course_url
+              - field_facultynode
+              - field_staff_noderef
+      id: node.course_allotment.default
+      targetEntityType: node
+      bundle: course_allotment
+      mode: default
+      content:
+        body:
+          label: hidden
+          type: text_default
+          weight: 1
+          settings: {  }
+          third_party_settings: {  }
+          region: ds_content
+        field_acad_year:
+          weight: 2
+          label: above
+          settings:
+            timezone_override: ''
+            date_format: 'Y'
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: datetime_custom
+          region: ds_content
+        field_course_code_ref:
+          weight: 4
+          label: above
+          settings:
+            link: true
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: entity_reference_label
+          region: ds_content
+        field_course_slot:
+          weight: 5
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: list_default
+          region: ds_content
+        field_course_url:
+          weight: 6
+          label: above
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: '0'
+            target: '0'
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: link
+          region: ds_content
+        field_facultynode:
+          weight: 7
+          label: above
+          settings:
+            link: true
+          third_party_settings:
+            ds:
+              ds_limit: ''
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis: true
+                  fis-el: ul
+                  fis-cl: 'col-sm-10 list-unstyled'
+                  fis-at: ''
+                  fi: true
+                  fi-el: li
+                  fi-cl: ''
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: entity_reference_label
+          region: ds_content
+        field_semester:
+          weight: 3
+          label: above
+          settings: {  }
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: list_default
+          region: ds_content
+        field_staff_noderef:
+          weight: 8
+          label: above
+          settings:
+            link: true
+          third_party_settings:
+            ds:
+              ft:
+                id: expert
+                settings:
+                  lb: ''
+                  prefix: ''
+                  lbw: true
+                  lbw-el: div
+                  lbw-cl: 'col-sm-2 fw-bold'
+                  lbw-at: ''
+                  ow: true
+                  ow-el: div
+                  ow-cl: 'row mb-10'
+                  ow-at: ''
+                  fis-el: ''
+                  fis-cl: ''
+                  fis-at: ''
+                  fi: true
+                  fi-el: div
+                  fi-cl: col-sm-10
+                  fi-at: ''
+                  suffix: ''
+                  lb-col: false
+                  ow-def-at: false
+                  ow-def-cl: false
+                  fis: false
+                  fis-def-at: false
+                  fi-def-at: false
+          type: entity_reference_label
+          region: ds_content
+        links:
+          weight: 0
+          region: ds_content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: core.entity_view_display.node.course_allotment.teaser
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.teaser
+          - field.field.node.course_allotment.body
+          - node.type.course_allotment
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - text
+          - user
+      id: node.course_allotment.teaser
+      targetEntityType: node
+      bundle: course_allotment
+      mode: teaser
+      content:
+        body:
+          label: hidden
+          type: text_summary_or_trimmed
+          weight: 101
+          settings:
+            trim_length: 600
+          third_party_settings: {  }
+          region: content
+        links:
+          weight: 100
+          region: content
+      hidden:
+        langcode: true
+  -
+    collection: ''
+    name: field.field.node.course_allotment.body
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.body
+          - node.type.course_allotment
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - text
+      id: node.course_allotment.body
+      field_name: body
+      entity_type: node
+      bundle: course_allotment
+      label: Body
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        display_summary: true
+      field_type: text_with_summary
+  -
+    collection: ''
+    name: field.field.node.course_allotment.field_acad_year
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_acad_year
+          - node.type.course_allotment
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - datetime
+      id: node.course_allotment.field_acad_year
+      field_name: field_acad_year
+      entity_type: node
+      bundle: course_allotment
+      label: 'Academic Year'
+      description: 'Choose Beginning Year. Example for Academic Year 2011-12, Choose 2011'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: datetime
+  -
+    collection: ''
+    name: field.field.node.course_allotment.field_course_code_ref
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_course_code_ref
+          - node.type.course_allotment
+          - node.type.course_details
+        enforced:
+          module:
+            - course_allotment
+      id: node.course_allotment.field_course_code_ref
+      field_name: field_course_code_ref
+      entity_type: node
+      bundle: course_allotment
+      label: 'Course Name'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:node'
+        handler_settings:
+          target_bundles:
+            course_details: course_details
+          sort:
+            field: _none
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+  -
+    collection: ''
+    name: field.field.node.course_allotment.field_course_slot
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_course_slot
+          - node.type.course_allotment
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - options
+      id: node.course_allotment.field_course_slot
+      field_name: field_course_slot
+      entity_type: node
+      bundle: course_allotment
+      label: 'Course Slot'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+  -
+    collection: ''
+    name: field.field.node.course_allotment.field_course_url
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_course_url
+          - node.type.course_allotment
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - link
+      id: node.course_allotment.field_course_url
+      field_name: field_course_url
+      entity_type: node
+      bundle: course_allotment
+      label: 'Course URL'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        link_type: 17
+        title: 1
+      field_type: link
+  -
+    collection: ''
+    name: field.field.node.course_allotment.field_facultynode
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_facultynode
+          - node.type.course_allotment
+          - node.type.fac_page
+        enforced:
+          module:
+            - course_allotment
+      id: node.course_allotment.field_facultynode
+      field_name: field_facultynode
+      entity_type: node
+      bundle: course_allotment
+      label: Instructor(s)
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:node'
+        handler_settings:
+          target_bundles:
+            fac_page: fac_page
+          sort:
+            field: _none
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+  -
+    collection: ''
+    name: field.field.node.course_allotment.field_semester
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_semester
+          - node.type.course_allotment
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - options
+      id: node.course_allotment.field_semester
+      field_name: field_semester
+      entity_type: node
+      bundle: course_allotment
+      label: Semester
+      description: ''
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_integer
+  -
+    collection: ''
+    name: field.field.node.course_allotment.field_staff_noderef
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_staff_noderef
+          - node.type.course_allotment
+          - node.type.staff_page
+        enforced:
+          module:
+            - course_allotment
+      id: node.course_allotment.field_staff_noderef
+      field_name: field_staff_noderef
+      entity_type: node
+      bundle: course_allotment
+      label: 'Staff Associated'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:node'
+        handler_settings:
+          target_bundles:
+            staff_page: staff_page
+          sort:
+            field: _none
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+  -
+    collection: ''
+    name: field.storage.node.field_acad_year
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - datetime
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_acad_year
+      field_name: field_acad_year
+      entity_type: node
+      type: datetime
+      settings:
+        datetime_type: datetime
+      module: datetime
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_course_code_ref
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_course_code_ref
+      field_name: field_course_code_ref
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: node
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_course_slot
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - field_permissions
+          - node
+          - options
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_course_slot
+      field_name: field_course_slot
+      entity_type: node
+      type: list_string
+      settings:
+        allowed_values:
+          -
+            value: '1'
+            label: '1'
+          -
+            value: '2'
+            label: '2'
+          -
+            value: '3'
+            label: '3'
+          -
+            value: '4'
+            label: '4'
+          -
+            value: '5'
+            label: '5'
+          -
+            value: '6'
+            label: '6'
+          -
+            value: '7'
+            label: '7'
+          -
+            value: '8'
+            label: '8'
+          -
+            value: '9'
+            label: '9'
+          -
+            value: '10'
+            label: '10'
+          -
+            value: '11'
+            label: '11'
+          -
+            value: '12'
+            label: '12'
+          -
+            value: '13'
+            label: '13'
+          -
+            value: '14'
+            label: '14'
+          -
+            value: '15'
+            label: '15'
+          -
+            value: L1
+            label: L1
+          -
+            value: L2
+            label: L2
+          -
+            value: L3
+            label: L3
+          -
+            value: L4
+            label: L4
+          -
+            value: LX
+            label: LX
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_course_url
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - field_permissions
+          - link
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_course_url
+      field_name: field_course_url
+      entity_type: node
+      type: link
+      settings: {  }
+      module: link
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_facultynode
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_facultynode
+      field_name: field_facultynode
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: node
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_semester
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - field_permissions
+          - node
+          - options
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_semester
+      field_name: field_semester
+      entity_type: node
+      type: list_integer
+      settings:
+        allowed_values:
+          -
+            value: 1
+            label: 'Jul-Dec (Autumn)'
+          -
+            value: 2
+            label: 'Jan-Jun (Spring)'
+        allowed_values_function: ''
+      module: options
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: field.storage.node.field_staff_noderef
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - field_permissions
+          - node
+      third_party_settings:
+        field_permissions:
+          permission_type: public
+      id: node.field_staff_noderef
+      field_name: field_staff_noderef
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: node
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+  -
+    collection: ''
+    name: node.type.course_allotment
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - course_allotment
+        module:
+          - menu_ui
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+      name: 'Course Allotment'
+      type: course_allotment
+      description: 'Allot a course schedule: with details of  semester, Instructor,  TAs, slot etc.'
+      help: ''
+      new_revision: false
+      preview_mode: 1
+      display_submitted: false
+  -
+    collection: ''
+    name: pathauto.pattern.course_allotment_alias
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - node
+        enforced:
+          module:
+            - course_allotment
+      id: course_allotment_alias
+      label: 'Course Allotment Alias'
+      type: 'canonical_entities:node'
+      pattern: 'course-allotment/[node:title]'
+      selection_criteria:
+        0d6a1a0b-bdde-4b2c-9a1c-8a30b6430ea1:
+          id: node_type
+          bundles:
+            course_allotment: course_allotment
+          negate: false
+          context_mapping:
+            node: node
+          uuid: 0d6a1a0b-bdde-4b2c-9a1c-8a30b6430ea1
+      selection_logic: and
+      weight: -5
+      relationships: {  }

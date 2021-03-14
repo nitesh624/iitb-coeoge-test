@@ -1,0 +1,11 @@
+uuid: 88911bb3-6020-462b-847c-8e82b93aa295
+langcode: en
+status: true
+dependencies:
+  module:
+    - migrate
+id: config_sync.module.migrate
+snapshotSet: config_sync
+extensionType: module
+extensionName: migrate
+items: {  }

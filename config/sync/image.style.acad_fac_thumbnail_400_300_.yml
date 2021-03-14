@@ -1,0 +1,20 @@
+uuid: 2038adb4-f634-4888-8c64-7b9f59dcec08
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: vTQ3KFtARHINrXzhlak3bFr3Whu0C_ObPH1nZ9_U2Vw
+name: acad_fac_thumbnail_400_300_
+label: 'Acad Fac Thumbnail (400×300)'
+effects:
+  4b4423ca-bdf9-403c-80bc-171eb78024ac:
+    uuid: 4b4423ca-bdf9-403c-80bc-171eb78024ac
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

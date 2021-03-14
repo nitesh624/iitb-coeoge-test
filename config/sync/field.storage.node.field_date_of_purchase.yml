@@ -1,0 +1,29 @@
+uuid: 44d421ab-5ceb-40b8-9f82-47c2e6683c5c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - datetime
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: YNNEysLdY1ViYWt_TBzRdp0T18UHgZdZJ7tt8gIcWEI
+id: node.field_date_of_purchase
+field_name: field_date_of_purchase
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

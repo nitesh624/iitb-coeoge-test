@@ -1,0 +1,20 @@
+uuid: 6691b2be-ce1a-4190-84d8-a172c4c06ba7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+_core:
+  default_config_hash: _-CfoC0eD0AOEneRcVpfjDUfJKANsWoohLXU1kC_Sz4
+name: iitb_staff_thumbnail_100_100_
+label: 'IITB Staff Thumbnail (100×100)'
+effects:
+  df01527a-ccab-48de-8427-b1f293988e9a:
+    uuid: df01527a-ccab-48de-8427-b1f293988e9a
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      upscale: false

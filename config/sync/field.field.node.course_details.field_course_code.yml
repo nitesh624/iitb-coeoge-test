@@ -1,0 +1,26 @@
+uuid: 6044578c-47a2-44c7-b0e4-b7d1e8c3435b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_code
+    - node.type.course_details
+  enforced:
+    module:
+      - course_details
+  module:
+    - text
+_core:
+  default_config_hash: SY3C7bEeoXPTq659dE1JSev0aIZ746l9W0OXi4MaPsw
+id: node.course_details.field_course_code
+field_name: field_course_code
+entity_type: node
+bundle: course_details
+label: 'Course Code'
+description: 'A space is a must between the dept code "CL" and number "256". '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

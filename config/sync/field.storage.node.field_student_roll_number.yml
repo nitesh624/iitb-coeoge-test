@@ -1,0 +1,26 @@
+uuid: 7eec4be7-9bab-40f1-a15e-3b8a84c8ca92
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+_core:
+  default_config_hash: fE0meAX34pn4t7vroqocpDsLMmT-ltw5BYIjNxpYL5I
+id: node.field_student_roll_number
+field_name: field_student_roll_number
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: edab3334-08a1-476c-a5a9-10649cdf2514
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_detailed_information_page
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - link
+_core:
+  default_config_hash: Qh5scouvrKivBkyKs_GM_HBEu9-EMfrc3oN7wrYbw_U
+id: node.fac_page.field_detailed_information_page
+field_name: field_detailed_information_page
+entity_type: node
+bundle: fac_page
+label: 'Detailed Information Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

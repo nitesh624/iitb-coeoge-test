@@ -1,0 +1,351 @@
+uuid: 657a88b6-9105-4381-8ad5-40ffeec0352a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.event.body
+    - field.field.node.event.field_end_date_and_time
+    - field.field.node.event.field_event_name_of_speaker_and_
+    - field.field.node.event.field_event_title_of_seminar_con
+    - field.field.node.event.field_event_types
+    - field.field.node.event.field_event_venue
+    - field.field.node.event.field_start_date_and_time
+    - node.type.event
+  enforced:
+    module:
+      - acadmix_event
+  module:
+    - datetime
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_start_date_and_time
+        - field_end_date_and_time
+        - field_event_venue
+        - field_event_types
+        - field_event_name_of_speaker_and_
+        - field_event_title_of_seminar_con
+        - body
+        - links
+_core:
+  default_config_hash: WjB3CwcVY9AYQ9vqR1CAI5-Ro9xDySgUKHv1qJOH9oY
+id: node.event.full
+targetEntityType: node
+bundle: event
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 6
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Details
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-12
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    region: ds_content
+  field_end_date_and_time:
+    weight: 1
+    label: above
+    settings:
+      timezone_override: Asia/Kolkata
+      date_format: 'M d, Y - H:i'
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: End
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-2 fw-bold event-date-label'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-10
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: datetime_custom
+    region: ds_content
+  field_event_file:
+    type: file_default
+    weight: 7
+    region: ds_content
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: 'Related files'
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-2 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-10
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  field_event_name_of_speaker_and_:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Speaker
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-2 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-10
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: text_default
+    region: ds_content
+  field_event_title_of_seminar_con:
+    type: string
+    weight: 5
+    region: ds_content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Title
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-2 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: 'col-sm-10 fw-bold'
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  field_event_types:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: 'Event Type'
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-2 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-10
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: entity_reference_label
+    region: ds_content
+  field_event_venue:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Venue
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-2 fw-bold event-venue-label'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-10
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: text_default
+    region: ds_content
+  field_start_date_and_time:
+    weight: 0
+    label: above
+    settings:
+      timezone_override: Asia/Kolkata
+      date_format: 'M d, Y - H:i'
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Start
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-2 fw-bold event-date-label'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-10
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: datetime_custom
+    region: ds_content
+  links:
+    weight: 8
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

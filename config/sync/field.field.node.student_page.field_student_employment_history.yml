@@ -1,0 +1,26 @@
+uuid: 567c11d2-254c-4a20-aefe-b6b26e07fb4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_employment_history
+    - node.type.student_page
+  enforced:
+    module:
+      - student_page
+  module:
+    - text
+_core:
+  default_config_hash: p6gP2PfYZ3ia7mBGnqxG6YZFq8Q80lnUpMiHy0oN7Bg
+id: node.student_page.field_student_employment_history
+field_name: field_student_employment_history
+entity_type: node
+bundle: student_page
+label: 'Employment History'
+description: 'Enter your past employments'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

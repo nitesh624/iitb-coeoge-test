@@ -1,0 +1,23 @@
+uuid: 6ed7a8d1-f6d0-4cd9-bd73-c1d69639ead5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_slider
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: 7QXYj49cCbJO_E3Z2BCjKj2VN6I-6e4sNCVJ9iUJLvw
+name: 'Main Slider'
+type: main_slider
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

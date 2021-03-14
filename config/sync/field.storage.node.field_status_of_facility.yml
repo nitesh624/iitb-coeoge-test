@@ -1,0 +1,39 @@
+uuid: 055a8bc1-fc5b-4d44-b919-0aa80a5dabd4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: 6VQi9x-5tYy1diZGioqG2_V1nETjcl_chvuBzNPjATI
+id: node.field_status_of_facility
+field_name: field_status_of_facility
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Working Condition'
+      label: 'Working Condition'
+    -
+      value: Non-functional
+      label: Non-functional
+    -
+      value: 'Under Repair/Maintenance'
+      label: 'Under Repair/Maintenance'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

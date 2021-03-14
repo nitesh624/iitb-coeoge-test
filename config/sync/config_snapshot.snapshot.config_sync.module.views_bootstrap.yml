@@ -1,0 +1,11 @@
+uuid: 67c0da77-d035-46a0-8103-5d4979caf917
+langcode: en
+status: true
+dependencies:
+  module:
+    - views_bootstrap
+id: config_sync.module.views_bootstrap
+snapshotSet: config_sync
+extensionType: module
+extensionName: views_bootstrap
+items: {  }

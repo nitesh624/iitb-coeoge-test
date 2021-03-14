@@ -1,0 +1,29 @@
+uuid: fa3de940-372d-4352-8eef-82dff356edb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_summary
+    - paragraphs.paragraphs_type.card
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    plain_format: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: paragraph.card.field_summary
+field_name: field_summary
+entity_type: paragraph
+bundle: card
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

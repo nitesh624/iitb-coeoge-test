@@ -1,0 +1,963 @@
+uuid: bd4d5e85-dccb-400a-b30e-6a7614223b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_building_new
+    - field.storage.node.field_email_new
+    - field.storage.node.field_employment_category
+    - field.storage.node.field_faculty_designation
+    - field.storage.node.field_faculty_photo
+    - field.storage.node.field_phone_no_new
+    - field.storage.node.field_room_no
+    - image.style.acad_fac_thumbnail_100_100_
+    - node.type.fac_page
+    - taxonomy.vocabulary.employment_category
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - better_exposed_filters
+    - datatables
+    - image
+    - node
+    - options
+    - spamspan
+    - taxonomy
+    - text
+    - user
+_core:
+  default_config_hash: p0I6309lSLHy2qTq0m2PrWb4yqFPmLelt7fgVMNgLwY
+id: faculty_directory
+label: 'Faculty Directory'
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          input_required: false
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_hide: true
+            field_employment_category_target_id:
+              bef_format: default
+              more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+          text_input_required_format: basic_html
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: datatables
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_faculty_photo: field_faculty_photo
+            title: title
+            field_faculty_designation_1: field_faculty_designation_1
+            field_employment_category: field_employment_category
+            field_building_new: field_building_new
+            field_room_no: field_room_no
+            field_phone_no_new: field_phone_no_new
+            field_email_new: field_email_new
+          info:
+            field_faculty_photo:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            title:
+              sortable: 1
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_faculty_designation_1:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_employment_category:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_building_new:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_room_no:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_phone_no_new:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_email_new:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+          default: '-1'
+          empty_table: 0
+          elements:
+            search_box: 1
+            table_info: 1
+            save_state: 0
+            table_tools: 0
+          layout:
+            autowidth: 1
+            themeroller: 0
+            sdom: ''
+          pages:
+            pagination_style: no_pagination
+            length_change: 0
+            display_length: ''
+          hidden_columns:
+            field_faculty_photo: '0'
+            title: '0'
+            field_faculty_designation_1: '0'
+            field_employment_category: '0'
+            field_building_new: '0'
+            field_room_no: '0'
+            field_phone_no_new: '0'
+            field_email_new: '0'
+      row:
+        type: fields
+      fields:
+        field_faculty_photo:
+          id: field_faculty_photo
+          table: node__field_faculty_photo
+          field: field_faculty_photo
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: acad_fac_thumbnail_100_100_
+            image_link: content
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Name
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        field_faculty_designation_1:
+          id: field_faculty_designation_1
+          table: node__field_faculty_designation
+          field: field_faculty_designation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Designation
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_employment_category:
+          id: field_employment_category
+          table: node__field_employment_category
+          field: field_employment_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Appointment
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_building_new:
+          id: field_building_new
+          table: node__field_building_new
+          field: field_building_new
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Building
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_room_no:
+          id: field_room_no
+          table: node__field_room_no
+          field: field_room_no
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Room_no.
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_unformatted
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_phone_no_new:
+          id: field_phone_no_new
+          table: node__field_phone_no_new
+          field: field_phone_no_new
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Phone Nos.'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_email_new:
+          id: field_email_new
+          table: node__field_email_new
+          field: field_email_new
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Email
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: email_spamspan
+          settings:
+            relationship: none
+            fieldsets:
+              - more
+              - admin_label
+            custom_label: 1
+            label: Email
+            element_label_colon: 1
+            exclude: 0
+            element_type_enable: 0
+            element_type: ''
+            element_class_enable: 0
+            element_class: ''
+            element_label_type_enable: 0
+            element_label_type: ''
+            element_label_class_enable: 0
+            element_label_class: ''
+            element_wrapper_type_enable: 0
+            element_wrapper_type: ''
+            element_wrapper_class_enable: 0
+            element_wrapper_class: ''
+            element_default_classes: 1
+            alter:
+              alter_text: 0
+              text: ''
+              make_link: 0
+              path: ''
+              absolute: 0
+              replace_spaces: 0
+              external: 0
+              path_case: none
+              link_class: ''
+              alt: ''
+              rel: ''
+              prefix: ''
+              suffix: ''
+              target: ''
+              trim: 0
+              max_length: '0'
+              word_boundary: 1
+              ellipsis: 1
+              more_link: 0
+              more_link_text: ''
+              more_link_path: ''
+              html: 0
+              strip_tags: 0
+              preserve_tags: ''
+              trim_whitespace: 0
+              nl2br: 0
+            empty: ''
+            empty_zero: 0
+            hide_empty: 0
+            hide_alter_empty: 1
+            group_rows: 1
+            multi_type: separator
+            separator: ', '
+            delta_limit: '0'
+            delta_offset: '0'
+            delta_reversed: 0
+            delta_first_last: 0
+            click_sort_column: value
+            type: email_spamspan
+            field_api_classes: 0
+            spamspan_at: ' [at] '
+            spamspan_use_graphic: 0
+            spamspan_dot_enable: 0
+            spamspan_dot: ' [dot] '
+            use_form:
+              spamspan_use_form: 0
+              spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+              spamspan_form_default_url: contact
+              spamspan_form_default_displaytext: 'contact form'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            fac_page: fac_page
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_employment_category_target_id:
+          id: field_employment_category_target_id
+          table: node__field_employment_category
+          field: field_employment_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            7: 7
+            6: 6
+            11: 11
+            10: 10
+            9: 9
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_employment_category_target_id_op
+            label: Appointment
+            description: ''
+            use_operator: false
+            operator: field_employment_category_target_id_op
+            identifier: appointment
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+            chosen_override: 0
+            disable_search: 0
+            search_contains: 0
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: employment_category
+          hierarchy: false
+          error_message: false
+          plugin_id: taxonomy_index_tid
+      sorts:
+        field_full_name_family:
+          id: field_full_name_family
+          table: node__field_full_name
+          field: field_full_name_family
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      title: 'Faculty Directory'
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content: ''
+          plugin_id: text_custom
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+      use_ajax: true
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_building_new'
+        - 'config:field.storage.node.field_email_new'
+        - 'config:field.storage.node.field_employment_category'
+        - 'config:field.storage.node.field_faculty_designation'
+        - 'config:field.storage.node.field_faculty_photo'
+        - 'config:field.storage.node.field_phone_no_new'
+        - 'config:field.storage.node.field_room_no'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: faculty-directory
+      menu:
+        type: none
+        title: Faculty
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_building_new'
+        - 'config:field.storage.node.field_email_new'
+        - 'config:field.storage.node.field_employment_category'
+        - 'config:field.storage.node.field_faculty_designation'
+        - 'config:field.storage.node.field_faculty_photo'
+        - 'config:field.storage.node.field_phone_no_new'
+        - 'config:field.storage.node.field_room_no'

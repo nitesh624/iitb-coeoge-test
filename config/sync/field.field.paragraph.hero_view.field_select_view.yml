@@ -1,0 +1,58 @@
+uuid: 41ae27be-e410-4b2a-833f-f15f04fad402
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_select_view
+    - paragraphs.paragraphs_type.hero_view
+  module:
+    - viewsreference
+id: paragraph.hero_view.field_select_view
+field_name: field_select_view
+entity_type: paragraph
+bundle: hero_view
+label: 'Select View'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    entity_browser: 0
+  preselect_views:
+    event_block: event_block
+    main_slider: main_slider
+    news_block: news_block
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    dept_staff: 0
+    events_page: 0
+    faculty_directory: 0
+    files: 0
+    frontpage: 0
+    laboratory_facility: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    news_all: 0
+    related_faculty_research_area: 0
+    related_faculty_sub_research_area: 0
+    research_areas: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

@@ -1,0 +1,75 @@
+uuid: f704c8af-78a0-43e8-8101-6c91cfa986ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.colorbox
+    - field.field.media.image.field_description
+    - field.field.media.image.field_media_image
+    - image.style.gallery
+    - image.style.gallery_colorbox
+    - media.type.image
+  module:
+    - colorbox
+    - ds
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.colorbox
+targetEntityType: media
+bundle: image
+mode: colorbox
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      colorbox_node_style: gallery
+      colorbox_node_style_first: gallery
+      colorbox_image_style: gallery_colorbox
+      colorbox_gallery: field_page
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: colorbox
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_description: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

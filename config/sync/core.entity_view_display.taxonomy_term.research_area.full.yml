@@ -1,0 +1,178 @@
+uuid: 9886e2c8-069d-4629-8662-9b1ce8ef66df
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.research_area.field_research_areas_image
+    - image.style.acad_fac_max_650x650
+    - taxonomy.vocabulary.research_area
+  module:
+    - ds
+    - field_group
+    - image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_research_areas_image
+        - 'dynamic_block_field:taxonomy_term-sub_research_area'
+      right:
+        - description
+        - 'dynamic_block_field:taxonomy_term-research_group'
+    fields:
+      'dynamic_block_field:taxonomy_term-research_group':
+        plugin_id: 'dynamic_block_field:taxonomy_term-research_group'
+        weight: 3
+        label: above
+        formatter: default
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+      'dynamic_block_field:taxonomy_term-sub_research_area':
+        plugin_id: 'dynamic_block_field:taxonomy_term-sub_research_area'
+        weight: 1
+        label: above
+        formatter: default
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_group:
+    group_test_group:
+      children: {  }
+      parent_name: ''
+      weight: 8
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'test group'
+      region: hidden
+_core:
+  default_config_hash: JvpJ3qLQ90I1RORhX-WlZaBzbJnN-0br4JJp1Eto8B4
+id: taxonomy_term.research_area.full
+targetEntityType: taxonomy_term
+bundle: research_area
+mode: full
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 2
+    region: right
+    settings: {  }
+    third_party_settings: {  }
+  field_research_areas_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: acad_fac_max_650x650
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: image
+    region: left
+hidden:
+  langcode: true

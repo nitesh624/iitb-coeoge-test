@@ -1,0 +1,16 @@
+uuid: a43b4f44-eaa5-4158-95dc-80e1b845b01a
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorization
+id: config_sync.module.authorization
+snapshotSet: config_sync
+extensionType: module
+extensionName: authorization
+items:
+  -
+    collection: ''
+    name: authorization.settings
+    data:
+      authorization_message: false

@@ -1,0 +1,27 @@
+uuid: 1c211828-65ea-4021-8dbf-1de019d25318
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iitb_dj
+_core:
+  default_config_hash: aBlp2pZpBGIUcZfwSgKfiKiz3Avj1jKdnEckBHIf8R0
+id: iitb_dj_page_title
+theme: iitb_dj
+region: content_top
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/event/*\r\n/news/*\r\n/faculty/*"
+    negate: true
+    context_mapping: {  }

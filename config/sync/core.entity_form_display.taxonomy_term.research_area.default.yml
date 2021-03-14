@@ -1,0 +1,67 @@
+uuid: f7db5b08-ded6-4c51-9ec9-a9ed0c173b5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.research_area.field_research_areas_image
+    - image.style.thumbnail
+    - taxonomy.vocabulary.research_area
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - image
+    - path
+    - text
+_core:
+  default_config_hash: P69Bst_7fFWkvEttbJ0-mqfTK1hBa00-DqU19iahENc
+id: taxonomy_term.research_area.default
+targetEntityType: taxonomy_term
+bundle: research_area
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_research_areas_image:
+    type: image_image
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }

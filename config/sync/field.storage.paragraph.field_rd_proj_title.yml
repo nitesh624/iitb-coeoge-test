@@ -1,0 +1,26 @@
+uuid: cd529d2b-b005-4eb5-8348-e44f6d8bfde3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - paragraphs
+_core:
+  default_config_hash: _QVbFC8g4B5JFnH23BC_NNVYvAs1MnOA81rIe3v2eGA
+id: paragraph.field_rd_proj_title
+field_name: field_rd_proj_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

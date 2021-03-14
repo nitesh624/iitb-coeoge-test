@@ -1,0 +1,11 @@
+uuid: bf5f43c9-c3ae-4c89-bab8-fee27536d67c
+langcode: en
+status: true
+dependencies:
+  module:
+    - spamspan
+id: config_sync.module.spamspan
+snapshotSet: config_sync
+extensionType: module
+extensionName: spamspan
+items: {  }

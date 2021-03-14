@@ -1,0 +1,26 @@
+uuid: dbddb8af-e3c9-484c-9b59-9ad839e6109c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_subtitle
+    - node.type.main_slider
+  enforced:
+    module:
+      - acadmix_slider
+  module:
+    - text
+_core:
+  default_config_hash: B-X__Z6NP9ebF_76SNtquMskseYCUMJ2sPz1kgCWMNc
+id: node.main_slider.field_slider_subtitle
+field_name: field_slider_subtitle
+entity_type: node
+bundle: main_slider
+label: 'Slider Subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

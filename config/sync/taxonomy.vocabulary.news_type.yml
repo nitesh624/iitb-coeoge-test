@@ -1,0 +1,13 @@
+uuid: 8fac2ed7-5939-4857-a2f0-fcee40020f86
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_news
+_core:
+  default_config_hash: BUZDGRYo8W5OUBbxBxJ_d4oS55vgG1_-p_VbAOcxo98
+name: 'News Type'
+vid: news_type
+description: 'Types of News will be listed'
+weight: 0

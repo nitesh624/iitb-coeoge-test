@@ -1,0 +1,11 @@
+uuid: 5b766d12-8fbc-414e-829e-98abc8eb82a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - config
+id: config_sync.module.config
+snapshotSet: config_sync
+extensionType: module
+extensionName: config
+items: {  }

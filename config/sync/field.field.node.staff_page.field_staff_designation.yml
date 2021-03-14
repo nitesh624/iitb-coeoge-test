@@ -1,0 +1,26 @@
+uuid: 48078dea-b5ea-4134-8daa-271b3de5c1ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_designation
+    - node.type.staff_page
+  enforced:
+    module:
+      - staff_page
+  module:
+    - options
+_core:
+  default_config_hash: fC0ibG0tvDgDAkEqVzbW7srXFefpBGZwj0mSnDUQ428
+id: node.staff_page.field_staff_designation
+field_name: field_staff_designation
+entity_type: node
+bundle: staff_page
+label: 'Staff Designation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

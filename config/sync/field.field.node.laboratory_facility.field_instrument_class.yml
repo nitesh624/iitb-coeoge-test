@@ -1,0 +1,26 @@
+uuid: bb1e4cb7-e351-415b-8df0-c5e23e3069e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instrument_class
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - options
+_core:
+  default_config_hash: 1GP1ECFJ7trC4adQ9rfcSuxtxEhHwU127XvulCbuGf0
+id: node.laboratory_facility.field_instrument_class
+field_name: field_instrument_class
+entity_type: node
+bundle: laboratory_facility
+label: 'Instrument Class'
+description: 'Choose the broad category of the facility. Multiple selections are allowed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

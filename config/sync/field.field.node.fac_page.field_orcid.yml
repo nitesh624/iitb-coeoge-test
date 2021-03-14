@@ -1,0 +1,24 @@
+uuid: 058737c2-bf2d-4e22-bf78-a9fde271ce50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orcid
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+_core:
+  default_config_hash: 9PEXDM0Y2xOQ6UVnNZOXQ3peqcpmraChxHvCfYWiQnQ
+id: node.fac_page.field_orcid
+field_name: field_orcid
+entity_type: node
+bundle: fac_page
+label: ORCID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

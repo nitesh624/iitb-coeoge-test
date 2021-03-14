@@ -1,0 +1,44 @@
+uuid: 97b25dae-1689-4652-b127-4fbd58bdfa0e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: EL8RQ-jinFM61TFXcyWSGQabCT0fz3WZtpz8ozBC9-k
+id: node.field_staff_designation
+field_name: field_staff_designation
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Research Staff'
+      label: 'Research Staff'
+    -
+      value: 'Project Staff'
+      label: 'Project Staff'
+    -
+      value: 'Technical Staff'
+      label: 'Technical Staff'
+    -
+      value: 'Office Staff'
+      label: 'Office Staff'
+    -
+      value: 'Lab Assistant'
+      label: 'Lab Assistant'
+    -
+      value: 'Lab Attendant'
+      label: 'Lab Attendant'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

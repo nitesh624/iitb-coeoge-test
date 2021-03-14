@@ -1,0 +1,26 @@
+uuid: 3d8e0332-3baa-4d46-859b-facf09a89591
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_slot
+    - node.type.course_allotment
+  enforced:
+    module:
+      - course_allotment
+  module:
+    - options
+_core:
+  default_config_hash: dbHzhQLBYbS5Tq_2f20ZT-xThmA8dvX0tZR_kRpv3pk
+id: node.course_allotment.field_course_slot
+field_name: field_course_slot
+entity_type: node
+bundle: course_allotment
+label: 'Course Slot'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 4ed99dff-32ef-4360-b33d-5c0761bc77b2
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - course_allotment
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: qxApsxqgHRYopkheR7QD0ELNX8coDkwMYCXK5a29ml8
+name: 'Course Allotment'
+type: course_allotment
+description: 'Allot a course schedule: with details of  semester, Instructor,  TAs, slot etc.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

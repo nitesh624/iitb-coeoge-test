@@ -1,0 +1,16 @@
+uuid: 16c0823e-37a0-43f5-94d6-8459a2d54b5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+id: config_sync.module.crop
+snapshotSet: config_sync
+extensionType: module
+extensionName: crop
+items:
+  -
+    collection: ''
+    name: crop.settings
+    data:
+      flush_derivative_images: true

@@ -1,0 +1,11 @@
+uuid: 03251a21-7c73-4711-842a-7e5526836a72
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorization_drupal_roles
+id: config_sync.module.authorization_drupal_roles
+snapshotSet: config_sync
+extensionType: module
+extensionName: authorization_drupal_roles
+items: {  }

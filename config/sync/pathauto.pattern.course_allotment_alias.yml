@@ -1,0 +1,27 @@
+uuid: 960e64ad-9cc9-4567-a422-345190c27f3c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - course_allotment
+  module:
+    - node
+_core:
+  default_config_hash: KPyATPpGjh2_AnCVOEDjhRr_FUib6Ec-af1SpjEnaEk
+id: course_allotment_alias
+label: 'Course Allotment Alias'
+type: 'canonical_entities:node'
+pattern: 'course-allotment/[node:title]'
+selection_criteria:
+  0d6a1a0b-bdde-4b2c-9a1c-8a30b6430ea1:
+    id: node_type
+    bundles:
+      course_allotment: course_allotment
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0d6a1a0b-bdde-4b2c-9a1c-8a30b6430ea1
+selection_logic: and
+weight: -5
+relationships: {  }

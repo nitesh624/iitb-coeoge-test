@@ -1,0 +1,11 @@
+uuid: 2b7be0ac-ff6c-47fa-8aa1-fa6c2323929a
+langcode: en
+status: true
+dependencies:
+  module:
+    - color
+id: config_sync.module.color
+snapshotSet: config_sync
+extensionType: module
+extensionName: color
+items: {  }

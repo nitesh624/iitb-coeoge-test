@@ -1,0 +1,23 @@
+uuid: 9d96e449-961c-4e75-a58e-3507b750f056
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: yZnGgm-oTEuH3Qz8VcW49f94qFn-pYOYZdrX601an0U
+name: 'Faculty Page'
+type: fac_page
+description: 'Content template for opening Faculty Page'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

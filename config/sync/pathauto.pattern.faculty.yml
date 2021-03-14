@@ -1,0 +1,27 @@
+uuid: c0cd765a-5c6d-4422-b96b-40ca49d48f8c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - node
+_core:
+  default_config_hash: vAAmj4t0rCVJIZXyz6HvOGihYRiMWF2K5IaXS5HfymI
+id: faculty
+label: Faculty
+type: 'canonical_entities:node'
+pattern: 'faculty/[node:title]'
+selection_criteria:
+  cfa5c08a-fad1-4b4e-a0c3-d1ccddecf49e:
+    id: node_type
+    bundles:
+      fac_page: fac_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cfa5c08a-fad1-4b4e-a0c3-d1ccddecf49e
+selection_logic: and
+weight: -5
+relationships: {  }

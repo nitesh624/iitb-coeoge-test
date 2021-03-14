@@ -1,0 +1,23 @@
+uuid: cffa173f-d3ce-41f3-8910-be1f45580b2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_view.field_select_view
+    - paragraphs.paragraphs_type.hero_view
+  module:
+    - viewsreference
+id: paragraph.hero_view.default
+targetEntityType: paragraph
+bundle: hero_view
+mode: default
+content:
+  field_select_view:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true

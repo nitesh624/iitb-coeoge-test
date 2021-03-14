@@ -1,0 +1,58 @@
+uuid: 9f22109a-0ade-4c4b-8b0b-ca189c0fc9fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_ref
+    - paragraphs.paragraphs_type.list_view
+  module:
+    - viewsreference
+id: paragraph.list_view.field_view_ref
+field_name: field_view_ref
+entity_type: paragraph
+bundle: list_view
+label: 'List View'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    entity_browser: 0
+  preselect_views:
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    dept_staff: 0
+    events_page: 0
+    event_block: 0
+    faculty_directory: 0
+    files: 0
+    frontpage: 0
+    laboratory_facility: 0
+    main_slider: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    news_all: 0
+    news_block: 0
+    related_faculty_research_area: 0
+    related_faculty_sub_research_area: 0
+    research_areas: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

@@ -1,0 +1,33 @@
+uuid: 45a4cdee-b160-4d99-bd1e-0243b31eb89d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner.field_background_image
+    - field.field.paragraph.banner.field_title
+    - paragraphs.paragraphs_type.banner
+  module:
+    - media_library
+id: paragraph.banner.default
+targetEntityType: paragraph
+bundle: banner
+mode: default
+content:
+  field_background_image:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

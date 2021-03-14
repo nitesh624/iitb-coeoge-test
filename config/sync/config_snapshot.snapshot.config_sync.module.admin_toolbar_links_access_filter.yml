@@ -1,0 +1,11 @@
+uuid: 19897837-bbe3-4b7b-b407-defcfc0996a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - admin_toolbar_links_access_filter
+id: config_sync.module.admin_toolbar_links_access_filter
+snapshotSet: config_sync
+extensionType: module
+extensionName: admin_toolbar_links_access_filter
+items: {  }

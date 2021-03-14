@@ -1,0 +1,27 @@
+uuid: 1a7a57f5-2aa0-4179-8ec4-115b66058b54
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - coeoge_iitb_dj
+_core:
+  default_config_hash: aBlp2pZpBGIUcZfwSgKfiKiz3Avj1jKdnEckBHIf8R0
+id: coeoge_iitb_dj_page_title
+theme: coeoge_iitb_dj
+region: content_top
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/event/*\r\n/news/*\r\n/faculty/*"
+    negate: true
+    context_mapping: {  }

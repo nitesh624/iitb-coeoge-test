@@ -1,0 +1,12 @@
+uuid: 51063c04-7ba4-4ae1-a20c-93207e6faa6d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xFHYTK-stVQucUkrhS8IV1N_4g2-9uLMYxhqOHM7qAA
+id: acadmixmigration
+label: 'Acadmix Migration'
+description: 'Acadmix data migrations for department distribution.'
+source_type: 'CSV files'
+module: null
+shared_configuration: null

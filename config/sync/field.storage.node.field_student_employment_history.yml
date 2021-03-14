@@ -1,0 +1,25 @@
+uuid: 9a9bafba-9049-4c6a-aec4-893b95ee3a8a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: JezPJpGEdW43vswO-Z4koWj7UQUbaR1jON8JO4EmC88
+id: node.field_student_employment_history
+field_name: field_student_employment_history
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

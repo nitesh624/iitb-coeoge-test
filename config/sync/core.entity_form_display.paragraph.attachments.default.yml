@@ -1,0 +1,33 @@
+uuid: 5b3acc7e-603f-4514-84f7-815cf9cbd33d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attachments.field_file
+    - field.field.paragraph.attachments.field_title
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - media_library
+id: paragraph.attachments.default
+targetEntityType: paragraph
+bundle: attachments
+mode: default
+content:
+  field_file:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

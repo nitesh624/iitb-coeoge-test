@@ -1,0 +1,71 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://iitbongc.local/profiles/contrib/iitbdeptweb/themes/iitb_dj/favicon.ico'
+  use_default: true
+schemas:
+  bootstrap: 8000
+  iibt_dj: 8000
+  iitb_dj: 8000
+region_wells:
+  top_head_search: ''
+  header: ''
+  lang_switcher: ''
+  header_search: ''
+  navigation_collapsible: ''
+  slider: ''
+  highlighted: ''
+  help: ''
+  top_head: ''
+  top1: ''
+  top2: ''
+  top3: ''
+  top4: ''
+  content_top: ''
+  breadcrumb: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer1: ''
+  footer2: ''
+  footer3: ''
+  footer4: ''
+  footer_bar_left: ''
+  footer_bar_right: ''
+table_bordered: 1
+table_responsive: '-1'
+cdn_provider_import_data: ''
+table: ''
+navbar_position: fixed-top
+show_social_icon: 1
+facebook_url: 'https://www.facebook.com/iitbombay'
+twitter_url: 'https://twitter.com/iitbombay'
+google_plus_url: 'https://plus.google.com/+iitbombay'
+linkedin_url: 'https://www.linkedin.com/edu/school?id=13496&trk=edu-cp-title'
+show_heading_branding: 1
+heading_branding_text: 'Indian Institute of Technology Bombay'
+heading_branding_url: 'http://www.iitb.ac.in/'
+heading_branding_title: 'IIT Bombay Home'
+faculty_header_bg_file: profiles/contrib/iitbdeptweb/themes/iitb_dj/img/research1.jpg
+event_header_bg_file: profiles/contrib/iitbdeptweb/themes/iitb_dj/img/seats.jpg
+news_header_bg_file: profiles/contrib/iitbdeptweb/themes/iitb_dj/img/news.jpg
+_core:
+  default_config_hash: VirVxO0an_Rp-dsUjSqxKsjM5FZtKT8c-IkCAt5yFdM
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: ''
+  url: ''
+  use_default: true
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+faculty_header_bg: ''
+event_header_bg: ''
+news_header_bg: ''

@@ -1,0 +1,16 @@
+uuid: 52e240a1-3344-4b54-a25e-5f3c20e3ccb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+id: config_sync.module.text
+snapshotSet: config_sync
+extensionType: module
+extensionName: text
+items:
+  -
+    collection: ''
+    name: text.settings
+    data:
+      default_summary_length: 600

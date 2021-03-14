@@ -1,0 +1,26 @@
+uuid: cdb1f83f-4c9c-4c0f-bb9c-e7e01ffae5f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facility_access_available_
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - options
+_core:
+  default_config_hash: 5p4tKXeAUhz-spMmR7U2YsnUv-DdAyNYh7qXPSCretw
+id: node.laboratory_facility.field_facility_access_available_
+field_name: field_facility_access_available_
+entity_type: node
+bundle: laboratory_facility
+label: 'Facility Access Available For'
+description: 'Please mention who is allowed to access the facility.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

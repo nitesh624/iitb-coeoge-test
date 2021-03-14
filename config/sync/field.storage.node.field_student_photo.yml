@@ -1,0 +1,35 @@
+uuid: 69322df7-e3bf-4c49-80f5-7280083a2e68
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - student_page
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: RK1A96Xde_2tpqbtO11zFhvbGzo9RQlfN7VfJUrKWPs
+id: node.field_student_photo
+field_name: field_student_photo
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

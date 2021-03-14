@@ -1,0 +1,28 @@
+uuid: df375a9a-9198-4c2b-ae2c-1a7729146df1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_url
+    - node.type.course_allotment
+  enforced:
+    module:
+      - course_allotment
+  module:
+    - link
+_core:
+  default_config_hash: 9WakH_hFLNSar5UWC7Q6OO_74k_O20N4UpprpoHE4CA
+id: node.course_allotment.field_course_url
+field_name: field_course_url
+entity_type: node
+bundle: course_allotment
+label: 'Course URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

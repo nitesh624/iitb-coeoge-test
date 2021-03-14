@@ -1,0 +1,24 @@
+uuid: 5947fe20-d6ad-4d6d-a4c9-f74a6cfd1e64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_purpose_of_equipment
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+_core:
+  default_config_hash: DA0fLoJKhiE0i09hnTyN8R5v1A5SVe3H-ax-9W6m-9Q
+id: node.laboratory_facility.field_purpose_of_equipment
+field_name: field_purpose_of_equipment
+entity_type: node
+bundle: laboratory_facility
+label: 'Purpose of Equipment'
+description: 'Provide a short description of the capability of the facility (A punchline of about 20 word max)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

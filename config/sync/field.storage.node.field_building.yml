@@ -1,0 +1,26 @@
+uuid: 38eca886-7b75-44ab-9434-6a1687a6256e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - staff_page
+  module:
+    - node
+_core:
+  default_config_hash: hnf6DpSWvGwkLPlC9Msz_rYCUO2-TtuOrl5cI1SccAg
+id: node.field_building
+field_name: field_building
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

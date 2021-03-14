@@ -1,0 +1,23 @@
+uuid: 9cee8310-38c0-4b87-984b-0741a9efbab7
+langcode: en
+status: true
+dependencies:
+  module:
+    - libraries
+id: config_sync.module.libraries
+snapshotSet: config_sync
+extensionType: module
+extensionName: libraries
+items:
+  -
+    collection: ''
+    name: libraries.settings
+    data:
+      definition:
+        local:
+          path: 'public://library-definitions'
+        remote:
+          enable: true
+          urls:
+            - 'http://cgit.drupalcode.org/libraries_registry/plain/registry/8'
+      global_locators: {  }

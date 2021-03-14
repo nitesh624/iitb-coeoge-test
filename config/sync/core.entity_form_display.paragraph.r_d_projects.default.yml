@@ -1,0 +1,52 @@
+uuid: 969c5a38-db45-4a30-ad97-98d38aa7d96f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.r_d_projects.field_rd_proj_details
+    - field.field.paragraph.r_d_projects.field_rd_proj_image
+    - field.field.paragraph.r_d_projects.field_rd_proj_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.r_d_projects
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - image
+    - text
+_core:
+  default_config_hash: nZNtLtNhezJ_-onlTAcGeYGEJYSHa2lgaEnG9SZKgdE
+id: paragraph.r_d_projects.default
+targetEntityType: paragraph
+bundle: r_d_projects
+mode: default
+content:
+  field_rd_proj_details:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_rd_proj_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_rd_proj_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

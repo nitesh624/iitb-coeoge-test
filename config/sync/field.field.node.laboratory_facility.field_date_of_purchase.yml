@@ -1,0 +1,26 @@
+uuid: ef476a8c-271f-4c18-af9c-ca9c5cfa8b90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_purchase
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - datetime
+_core:
+  default_config_hash: YWdJwgiBqKC0QSQa3WZeH1XsL7IYLGXxuHDmiC3xjx0
+id: node.laboratory_facility.field_date_of_purchase
+field_name: field_date_of_purchase
+entity_type: node
+bundle: laboratory_facility
+label: 'Date of Purchase'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

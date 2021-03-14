@@ -1,0 +1,42 @@
+uuid: 84f5bf87-2f70-403a-8b9a-5ac4efca4d1a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: ncaiB20wLqlyyEPY21IuipCZCQrxDme7DLaSDE6Q_x4
+id: node.field_source_of_funding
+field_name: field_source_of_funding
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Department Funds'
+      label: 'Department Funds'
+    -
+      value: 'Project Funds'
+      label: 'Project Funds'
+    -
+      value: DDF
+      label: DDF
+    -
+      value: 'Special Fund'
+      label: 'Special Fund'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

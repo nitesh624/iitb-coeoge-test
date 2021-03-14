@@ -1,0 +1,27 @@
+uuid: 0d1e0639-9490-413c-a6a5-e57e959b8900
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - node
+_core:
+  default_config_hash: MZGDIG5zyhsLpbWAjEwcwTrk9Pdhljx9NCiREglN0w8
+id: laboratory_facility_type_alias
+label: 'Laboratory Facility type alias'
+type: 'canonical_entities:node'
+pattern: 'laboratory-facility/[node:title]'
+selection_criteria:
+  cc3b276a-92a7-46da-8ed0-5e040c824c5e:
+    id: node_type
+    bundles:
+      laboratory_facility: laboratory_facility
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cc3b276a-92a7-46da-8ed0-5e040c824c5e
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: ff5ce2aa-ceb8-482c-a140-716a75869519
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - coeoge_iitb_dj
+_core:
+  default_config_hash: NZoVu0qMyU6-KqoSArPrSwYIaUN3o_veZkcrH6iW6-M
+id: coeoge_iitb_dj_top_search
+theme: coeoge_iitb_dj
+region: top_head_search
+weight: -13
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

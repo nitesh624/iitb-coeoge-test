@@ -1,0 +1,18 @@
+uuid: 647ab682-dab6-4f0c-8ec2-38c2911815ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - upgrade_status
+id: config_sync.module.upgrade_status
+snapshotSet: config_sync
+extensionType: module
+extensionName: upgrade_status
+items:
+  -
+    collection: ''
+    name: upgrade_status.settings
+    data:
+      paths_per_scan: 30
+      _core:
+        default_config_hash: BqkUHiXXGvu2L7NR_nblxtP6f03MdD16XSMWwVM0QEc

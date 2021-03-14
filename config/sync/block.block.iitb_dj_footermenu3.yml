@@ -1,0 +1,27 @@
+uuid: d6d3039a-f4b3-4900-97c9-462db00b0fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-3
+  module:
+    - system
+  theme:
+    - iitb_dj
+_core:
+  default_config_hash: ORAHMYY_uAfSYRPR6obMEVACAr1t5ejfd04B3exFvYg
+id: iitb_dj_footermenu3
+theme: iitb_dj
+region: footer4
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu-3'
+settings:
+  id: 'system_menu_block:footer-menu-3'
+  label: 'Footer menu 3'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

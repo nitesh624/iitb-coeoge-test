@@ -1,0 +1,28 @@
+uuid: eaefa52d-4568-4e35-9530-e275bbeafc8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - linked_field
+id: config_sync.module.linked_field
+snapshotSet: config_sync
+extensionType: module
+extensionName: linked_field
+items:
+  -
+    collection: ''
+    name: linked_field.config
+    data:
+      attributes:
+        title:
+          label: ''
+          description: ''
+        target:
+          label: ''
+          description: ''
+        class:
+          label: ''
+          description: ''
+        rel:
+          label: Relationship
+          description: ''

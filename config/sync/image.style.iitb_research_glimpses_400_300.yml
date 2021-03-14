@@ -1,0 +1,20 @@
+uuid: 1de6c1cd-ec68-46e0-ba4e-8b6088e47112
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - research_glimpses
+_core:
+  default_config_hash: K8gJTsA-N85_gV5sFuMEy3bdr6OyaJJ0OBtLifNBc0g
+name: iitb_research_glimpses_400_300
+label: 'IITB Research Glimpses (400×300)'
+effects:
+  a708ce91-4ee6-4ba1-a195-ce71dc157912:
+    uuid: a708ce91-4ee6-4ba1-a195-ce71dc157912
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

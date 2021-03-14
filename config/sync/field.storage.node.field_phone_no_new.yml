@@ -1,0 +1,25 @@
+uuid: dbb06931-9e9d-4a79-a6c9-81e0f63f6d7b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: ZK7uwxG0_z1tTD5q0QUyNzDy2cXVyJtj0fugjSAyX6I
+id: node.field_phone_no_new
+field_name: field_phone_no_new
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

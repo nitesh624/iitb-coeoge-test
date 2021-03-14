@@ -1,0 +1,32 @@
+uuid: 6fb2359c-2a0a-4620-991a-3e2b4447c26e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_cv
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - file
+_core:
+  default_config_hash: Ln8Lubgjmmt8KsxPj6eu_qVXK_8BNaQMRdOw5N-0KhA
+id: node.fac_page.field_faculty_cv
+field_name: field_faculty_cv
+entity_type: node
+bundle: fac_page
+label: 'Faculty CV'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'faculty-cv/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc docx'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

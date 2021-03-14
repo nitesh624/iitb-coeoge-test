@@ -1,0 +1,33 @@
+uuid: d7424a67-aff1-476e-8470-59c526fd0ddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_code_ref
+    - node.type.course_allotment
+    - node.type.course_details
+  enforced:
+    module:
+      - course_allotment
+_core:
+  default_config_hash: zjAeCSsgNvvGSXC0SLyazOKTydoIK-p6TrPM5w2d6Fc
+id: node.course_allotment.field_course_code_ref
+field_name: field_course_code_ref
+entity_type: node
+bundle: course_allotment
+label: 'Course Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      course_details: course_details
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

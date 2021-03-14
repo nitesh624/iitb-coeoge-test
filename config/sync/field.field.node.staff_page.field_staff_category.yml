@@ -1,0 +1,34 @@
+uuid: 92387e5a-11b9-45bc-a7af-b776d77c1aa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_category
+    - node.type.staff_page
+    - taxonomy.vocabulary.staff_category
+  enforced:
+    module:
+      - staff_page
+_core:
+  default_config_hash: JHbfPiIOc7_JVvEXspyi_dieLgHQxCq4AdORx06c1Dc
+id: node.staff_page.field_staff_category
+field_name: field_staff_category
+entity_type: node
+bundle: staff_page
+label: 'Staff Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      staff_category: staff_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,25 @@
+uuid: 3b33cce1-d79c-4292-97fe-565eb6c00bbb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acadmix_news
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: moqzT6ZEo8yeHlMNhdNcd8Kh1nDMYVBd_Gw331jWTHM
+id: node.field_news_date
+field_name: field_news_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

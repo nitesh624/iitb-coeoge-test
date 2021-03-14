@@ -1,0 +1,27 @@
+uuid: 3827158d-b3dd-469a-8ce7-629042d45b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+  enforced:
+    module:
+      - acadmix_event
+_core:
+  default_config_hash: NEsWV3H37-wEMdQGhaqucex30LbGc0ZM1umAshsmTUo
+id: node.event.promote
+field_name: promote
+entity_type: node
+bundle: event
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,29 @@
+uuid: a0947f99-a0de-47b5-8863-2194125fa003
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - course_allotment
+  module:
+    - datetime
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: MDrQUsho54n0hfT5gfYGx26mxMPQft2F0xnCWxYWYkY
+id: node.field_acad_year
+field_name: field_acad_year
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
