@@ -1,85 +1,107 @@
 {
-    "name": "iitbombayweb/iitbdeptwebproject",
-    "description": "IIT Bombay Department Website Distribution Project",
-    "type": "project",
-    "license": "GPL-2.0-or-later",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=7.3.0",
-        "drupal/core": "~8.8.0",
-        "drupal-composer/drupal-scaffold": "~2.4.0",
-        "szeidler/composer-patches-cli": "~1.0.0",
-        "oomphinc/composer-installers-extender": "^1.1",
-        "wikimedia/composer-merge-plugin": "^1.4",
-        "drupal/console": "~1.0",
-        "drush/drush": "^8.0",
-        "solarium/solarium": "~4.2",
-        "iitbombayweb/iitbdeptweb": "dev-dev#aabc8c4d3946bd5635fe1a1411f028391a20d65d",
-        "iitbombayweb/iitbcommon": "dev-dev#0fe8db9bfa5d6745d747652bd39a7c9ce1e8c7c8",
-        "iitbombayweb/iitbextra": "dev-dev#0b75bbc2aef69da709c5523ef222b1ea01c218ee",
-        "iitbombayweb/acadcommon": "dev-dev#cbcf92daeb004610b48e5f408b0a7cb84bced2a0",
-        "drupal/bootstrap4": "^2.1"
+  "name": "iitbombayweb/iitbdeptwebproject",
+  "description": "IIT Bombay Department Website Distribution Project",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.3.0",
+    "szeidler/composer-patches-cli": "~1.0.0",
+    "oomphinc/composer-installers-extender": "^1.1",
+    "wikimedia/composer-merge-plugin": "^1.4",
+    "drupal/console": "^1.9",
+    "drush/drush": "^9.0",
+    "solarium/solarium": "~4.2",
+    "iitbombayweb/iitbdeptweb": "dev-dev#aabc8c4d3946bd5635fe1a1411f028391a20d65d",
+    "iitbombayweb/iitbcommon": "dev-dev#0fe8db9bfa5d6745d747652bd39a7c9ce1e8c7c8",
+    "iitbombayweb/iitbextra": "dev-dev#0b75bbc2aef69da709c5523ef222b1ea01c218ee",
+    "iitbombayweb/acadcommon": "dev-dev#cbcf92daeb004610b48e5f408b0a7cb84bced2a0",
+    "drupal/bootstrap4": "^2.1",
+    "composer/installers": "^1.7",
+    "drupal/core-recommended": "^8.8",
+    "drupal/fvm": "^2.0",
+    "drupal/upgrade_status": "^3.4",
+    "drupal-composer/drupal-scaffold": "^2.6"
+  },
+  "conflict": {
+    "symfony/http-foundation": "3.4.24"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     },
-    "conflict": {
-        "symfony/http-foundation": "3.4.24"
+    "asset": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     },
-    "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "asset": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        "acadmixdist": {
-            "type": "github",
-            "url": "https://github.com/iitbombayweb/iitbdeptweb",
-            "no-api": true
-        },
-        "iitbcommonmodules": {
-            "type": "github",
-            "url": "https://github.com/iitbombayweb/iitbcommon",
-            "no-api": true
-        },
-        "iitbextramodules": {
-            "type": "github",
-            "url": "https://github.com/iitbombayweb/iitbextra",
-            "no-api": true
-        },
-        "acadcommonmodules": {
-            "type": "github",
-            "url": "https://github.com/iitbombayweb/acadcommon",
-            "no-api": true
-        }
+    "acadmixdist": {
+      "type": "github",
+      "url": "https://github.com/iitbombayweb/iitbdeptweb",
+      "no-api": true
     },
-    "config": {
-        "process-timeout": 0
+    "iitbcommonmodules": {
+      "type": "github",
+      "url": "https://github.com/iitbombayweb/iitbcommon",
+      "no-api": true
     },
-    "extra": {
-        "merge-plugin": {
-            "include": ["docroot/profiles/contrib/iitbdeptweb/composer.json"],
-            "recurse": true,
-            "replace": false,
-            "merge-extra": true,
-            "merge-extra-deep": true,
-            "merge-scripts": true
-        },
-        "installer-types": ["bower-asset", "npm-asset"],
-        "installer-paths": {
-            "docroot/core": ["type:drupal-core"],
-            "docroot/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
-            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-            "patch/{$name}": ["type:drupal-patch"]
-        },
-        "enable-patching": true,
-        "patches-file": "composer.patches.json"
+    "iitbextramodules": {
+      "type": "github",
+      "url": "https://github.com/iitbombayweb/iitbextra",
+      "no-api": true
     },
-    "scripts": {
-        "post-create-project-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "post-update-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    "acadcommonmodules": {
+      "type": "github",
+      "url": "https://github.com/iitbombayweb/acadcommon",
+      "no-api": true
     }
+  },
+  "config": {
+    "process-timeout": 0
+  },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+        "docroot/profiles/contrib/iitbdeptweb/composer.json"
+      ],
+      "recurse": true,
+      "replace": false,
+      "merge-extra": true,
+      "merge-extra-deep": true,
+      "merge-scripts": true
+    },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "installer-paths": {
+      "docroot/core": [
+        "type:drupal-core"
+      ],
+      "docroot/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "docroot/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "docroot/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "docroot/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "patch/{$name}": [
+        "type:drupal-patch"
+      ]
+    },
+    "enable-patching": true,
+    "patches-file": "composer.patches.json"
+  },
+  "scripts": {
+    "post-create-project-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "post-update-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+  }
 }

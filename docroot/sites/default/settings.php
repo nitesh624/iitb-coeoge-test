@@ -755,14 +755,3 @@ $settings['entity_update_backup'] = TRUE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
-  'database' => 'iitbongc',
-  'username' => 'nitesh',
-  'password' => 'nitesh@123',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = 'sites/default/files/config_hBweWr3eMII6rNdUQTBDHR9_gYYA62-IODqhma_RMh1lLryPw6NnSYIDdHJC1N4-hiFCclJ4Dg/sync';
