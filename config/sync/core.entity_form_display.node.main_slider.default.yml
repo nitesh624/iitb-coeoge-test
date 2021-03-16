@@ -5,15 +5,14 @@ dependencies:
   config:
     - field.field.node.main_slider.body
     - field.field.node.main_slider.field_faculty_name_ref_slider
-    - field.field.node.main_slider.field_slider_image
+    - field.field.node.main_slider.field_slider_media
     - field.field.node.main_slider.field_slider_subtitle
-    - image.style.thumbnail
     - node.type.main_slider
   enforced:
     module:
       - acadmix_slider
   module:
-    - image
+    - media_library
     - path
     - text
 _core:
@@ -48,13 +47,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_slider_image:
-    weight: 11
+  field_slider_media:
+    type: media_library_widget
+    weight: 121
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_slider_subtitle:
     weight: 8

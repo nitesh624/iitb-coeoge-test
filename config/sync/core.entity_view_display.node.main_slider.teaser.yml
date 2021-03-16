@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.main_slider.body
     - field.field.node.main_slider.field_faculty_name_ref_slider
-    - field.field.node.main_slider.field_slider_image
+    - field.field.node.main_slider.field_slider_media
     - field.field.node.main_slider.field_slider_subtitle
     - node.type.main_slider
   enforced:
@@ -35,6 +35,6 @@ content:
     region: content
 hidden:
   field_faculty_name_ref_slider: true
-  field_slider_image: true
+  field_slider_media: true
   field_slider_subtitle: true
   langcode: true

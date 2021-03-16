@@ -1,34 +1,32 @@
-uuid: 70ec5ee3-ec2b-4bbb-b200-33d7c405830b
+uuid: 43c2de06-21b5-4b69-9268-5aa5e36369af
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.home_slider
     - field.field.media.image.field_description
     - field.field.media.image.field_media_image
-    - image.style.gallery
+    - image.style.home_slider
     - media.type.image
   module:
     - ds
     - image
-    - text
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 _core:
   default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
-id: media.image.default
+id: media.image.home_slider
 targetEntityType: media
 bundle: image
-mode: default
+mode: home_slider
 content:
-  field_description:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_media_image:
-    label: visually_hidden
+    label: hidden
     settings:
-      image_style: gallery
+      image_style: home_slider
       image_link: ''
     third_party_settings:
       ds:
@@ -60,10 +58,11 @@ content:
             fi: false
             fi-def-at: false
     type: image
-    weight: 1
+    weight: 0
     region: content
 hidden:
   created: true
+  field_description: true
   langcode: true
   name: true
   thumbnail: true

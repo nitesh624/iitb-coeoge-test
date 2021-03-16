@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.gallery.field_body
+    - field.field.paragraph.gallery.field_link
     - field.field.paragraph.gallery.field_media_items
     - field.field.paragraph.gallery.field_title
     - field.field.paragraph.gallery.view_mode_selection
     - paragraphs.paragraphs_type.gallery
   module:
     - ds
+    - link
     - text
 id: paragraph.gallery.default
 targetEntityType: paragraph
@@ -22,6 +24,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_media_items:
     type: entity_reference_entity_view

@@ -22,7 +22,16 @@
     "drupal/core-recommended": "^8.8",
     "drupal/fvm": "^2.0",
     "drupal/upgrade_status": "^3.4",
-    "drupal-composer/drupal-scaffold": "^2.6"
+    "drupal-composer/drupal-scaffold": "^2.6",
+    "ckeditor/liststyle": "4.8.0",
+    "ckeditor/tabletoolstoolbar": "^0.0.1",
+    "ckeditor/tableselection": "^4.7",
+    "ckeditor/tableresize": "^4.7",
+    "drupal/ckeditor_liststyle": "^1.4",
+    "drupal/ckeditor_tabletoolstoolbar": "^1.0",
+    "drupal/ckeditor_tableselection": "^1.0",
+    "drupal/ckeditor_tableresize": "^1.0",
+    "drupal/color_field": "^2.4"
   },
   "conflict": {
     "symfony/http-foundation": "3.4.24"
@@ -55,6 +64,57 @@
       "type": "github",
       "url": "https://github.com/iitbombayweb/acadcommon",
       "no-api": true
+    },
+    "ckeditor-tableselection": {
+      "type": "package",
+      "package": {
+        "name": "ckeditor/tableselection",
+        "version": "4.7.2",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://download.ckeditor.com/tableselection/releases/tableselection_4.7.2.zip",
+          "type": "zip"
+        }
+      }
+    },
+    "ckeditor-tabletoolstoolbar": {
+      "type": "package",
+      "package": {
+        "name": "ckeditor/tabletoolstoolbar",
+        "version": "0.0.1",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://download.ckeditor.com/tabletoolstoolbar/releases/tabletoolstoolbar_0.0.1.zip",
+          "type": "zip"
+        }
+      }
+    },
+    "ckeditor-liststyle": {
+      "type": "package",
+      "package": {
+        "name": "ckeditor/liststyle",
+        "version": "4.8.0",
+        "type": "drupal-library",
+        "extra": {
+          "installer-name": "ckeditor/plugins/liststyle"
+        },
+        "dist": {
+          "url": "https://download.ckeditor.com/liststyle/releases/liststyle_4.8.0.zip",
+          "type": "zip"
+        }
+      }
+    },
+    "ckeditor-tableresize": {
+      "type": "package",
+      "package": {
+        "name": "ckeditor/tableresize",
+        "version": "4.7.2",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://download.ckeditor.com/tableresize/releases/tableresize_4.7.2.zip",
+          "type": "zip"
+        }
+      }
     }
   },
   "config": {

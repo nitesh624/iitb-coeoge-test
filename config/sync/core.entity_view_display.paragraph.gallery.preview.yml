@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.gallery.field_body
+    - field.field.paragraph.gallery.field_link
     - field.field.paragraph.gallery.field_media_items
     - field.field.paragraph.gallery.field_title
     - field.field.paragraph.gallery.view_mode_selection
@@ -46,4 +47,5 @@ content:
     type: string
     region: content
 hidden:
+  field_link: true
   view_mode_selection: true

@@ -18,7 +18,12 @@ module:
   bootstrap_layouts: 0
   breakpoint: 0
   ckeditor: 0
+  ckeditor_liststyle: 0
+  ckeditor_tableresize: 0
+  ckeditor_tableselection: 0
+  ckeditor_tabletoolstoolbar: 0
   color: 0
+  color_field: 0
   colorbox: 0
   comment: 0
   config: 0

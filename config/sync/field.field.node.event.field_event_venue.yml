@@ -9,7 +9,15 @@ dependencies:
     module:
       - acadmix_event
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    plain_format: '0'
+    restricted_html: '0'
+    full_html: '0'
 _core:
   default_config_hash: CBwCi72v75rFLfdA2O7t0NxsUAJ-4jaiit1W64kZ4go
 id: node.event.field_event_venue

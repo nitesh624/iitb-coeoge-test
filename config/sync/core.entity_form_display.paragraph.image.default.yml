@@ -1,0 +1,14 @@
+uuid: dcec8771-839c-4f88-a6b9-5592dfe98458
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.default
+targetEntityType: paragraph
+bundle: image
+mode: default
+content: {  }
+hidden:
+  created: true
+  status: true

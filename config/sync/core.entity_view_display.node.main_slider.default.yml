@@ -5,16 +5,14 @@ dependencies:
   config:
     - field.field.node.main_slider.body
     - field.field.node.main_slider.field_faculty_name_ref_slider
-    - field.field.node.main_slider.field_slider_image
+    - field.field.node.main_slider.field_slider_media
     - field.field.node.main_slider.field_slider_subtitle
-    - image.style.slider_inner_image
     - node.type.main_slider
   enforced:
     module:
       - acadmix_slider
   module:
     - ds
-    - image
     - text
     - user
 third_party_settings:
@@ -91,43 +89,15 @@ content:
             fi-def-at: false
     type: entity_reference_label
     region: ds_content
-  field_slider_image:
-    weight: 1
-    label: hidden
+  field_slider_media:
+    type: entity_reference_entity_view
+    weight: 5
+    label: above
     settings:
-      image_style: slider_inner_image
-      image_link: ''
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
-    type: image
-    region: ds_content
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   field_slider_subtitle:
     weight: 2
     label: hidden

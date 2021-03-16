@@ -1,0 +1,10 @@
+uuid: 90c431e1-1733-4e93-b138-c53e1f538d91
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.home_slider
+label: 'Home slider'
+targetEntityType: media
+cache: true
