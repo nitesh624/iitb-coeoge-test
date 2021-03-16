@@ -1,0 +1,321 @@
+/*------------start_header_section------------------*/
+.top-nav,
+.top-head-def {
+  background-color: #444444;
+}
+
+.top-nav *,
+.top-head-def *,
+.top-nav a:hover,
+.top-head-def a:hover {
+  color: #ffffff;
+}
+
+/* navbar normal background color and text color */
+.navbar-default .navbar-brand {
+  color: #444444;
+}
+
+/* navbar shrink background color and text color */
+.navbar-is-shrink .navbar-brand,
+.navbar-is-shrink .navbar-text,
+.navbar-is-shrink a,
+.navbar-is-shrink a:hover {
+  color: #ffffff !important;
+}
+
+.navbar-is-shrink {
+  background-color: #444444;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/*--------------End_header_section-------------------*/
+
+/*start_footer_section*/
+.section-footer {
+  background-color: #414141;
+}
+
+.section-footer *,
+.section-footer a:hover {
+  color: #ffffff !important;
+}
+/*End_footer_section*/
+
+.profile-nav > li.active > a,
+.profile-nav > li.active > a:hover,
+.profile-nav > li.active > a:focus {
+  color: #ffffff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.profile-nav > li.active > a,
+.profile-nav > li.active > a:hover,
+.profile-nav > li.active > a:focus {
+  background-color: #444444;
+  border-color: #444444;
+}
+
+body {
+  color: #343536;
+}
+
+a {
+  color: #337ab7;
+}
+
+a:focus {
+  color: #337ab7;
+}
+
+a:hover,
+.news-card .lst_news_item a:hover {
+  color: #337ab7;
+}
+.news-card .lst_news_list .views-field-nothing a {
+  color: #337ab7;
+}
+a.views-more-link {
+  color: #337ab7 !important;
+}
+.language-switcher-language-url ul.lang-links li a {
+  color: #337ab7;
+}
+.language-switcher-language-url ul.lang-links li a:hover {
+  color: #337ab7;
+}
+
+.language-switcher-language-url ul.lang-links li.is-active a {
+  color: #ffffff;
+}
+.language-switcher-language-url ul.lang-links li.is-active a:hover {
+  color: #ffffff;
+}
+
+h2.page-header {
+  color: #343536;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  color: #337ab7;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #337ab7;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+li.node-readmore {
+  background-color: #337ab7;
+}
+
+.menu-base-theme li a:hover,
+.menu-base-theme li a:focus,
+.menu-base-theme li a:active,
+.menu-base-theme li a.highlighted {
+  border-bottom-color: #337ab7;
+}
+
+.btn-primary {
+  background-color: #337ab7 !important;
+  border-color: #337ab7 !important;
+  background-image: none;
+}
+
+.btn-primary a,
+.btn-primary a:hover,
+.btn-primary a:focus,
+.btn-primary a:active {
+  color: #ffffff;
+}
+
+.file > span {
+  color: #337ab7;
+}
+
+.file-icon .text-primary {
+  color: #337ab7;
+}
+
+@media (max-width: 767px) {
+  .menu-base-theme {
+    background: #ffffff;
+  }
+
+  .menu-base-theme li a {
+    color: #337ab7;
+  }
+
+  .menu-base-theme li a:active,
+  .menu-base-theme li a.highlighted,
+  .menu-base-theme li a:hover,
+  .menu-base-theme li a:focus {
+    background-color: #337ab7;
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .region-navigation-collapsible li.active a,
+  .region-navigation-collapsible li a.is-active {
+    border-bottom-color: #337ab7;
+  }
+  .region-navigation-collapsible li a.is-active.has-submenu:hover {
+    border-bottom-color: #337ab7;
+  }
+}
+
+/*color values in staff view*/
+
+.form-item-field_staff_category-target-id label.control-label {
+  color: #337ab7 !important;
+}
+
+.form-item-field_staff_category-target-id
+  label.control-label
+  input[name='field_chem_staff_category_target_id'] {
+  display: none;
+}
+
+.form-item-field_staff_category-target-id
+  label.control-label
+  input[checked='checked']
+  + label.control-label {
+  background-color: #337ab7 !important;
+}
+
+.form-item-dept-staff label.control-label {
+  color: #337ab7 !important;
+}
+
+.form-item-dept-staff
+  label.control-label
+  input[checked='checked']
+  + label.control-label {
+  background-color: #337ab7 !important;
+}
+
+/* ircc staff */
+#edit-staff-category .form-group {
+  display: block;
+}
+
+#edit-staff-category .form-group {
+  color: #337ab7 !important;
+}
+
+/*#edit-staff-category .form-group a:hover{
+color: #337ab7!important;
+}
+*/
+#edit-staff-category .form-group:hover {
+  background-color: #f0f8ff;
+}
+
+#edit-staff-category div.bef-link-active,
+#edit-staff-category div.bef-link-active:hover,
+#edit-staff-category div.bef-link-active:focus {
+  background-color: #337ab7 !important;
+}
+
+/*button*/
+.btn-trans a {
+  color: #337ab7;
+  background-color: rgba(0, 255, 255, 0);
+  border: 1px solid #337ab7;
+}
+
+.btn-trans a:hover {
+  color: #ffffff;
+  background-color: #337ab7;
+}
+/*button*/
+
+/*research group member filters start*/
+#filters li span {
+  border: 1px solid #444444;
+  color: #444444;
+}
+#filters li span.active,
+#filters li span:hover {
+  background: #444444;
+}
+
+.portfolio .label-text a,
+.portfolio .label-text a:hover {
+  background: #444444;
+}
+.portfolio .read-more a {
+  background: #444444;
+}
+/*research group member filters end*/
+
+/*research group menu start*/
+div.sf-accordion-toggle.sf-style-none a {
+  background: #444444;
+  border: 1px solid #444444;
+}
+
+@media only screen and (max-width: 767px) {
+  ul.sf-menu.sf-style-none li,
+  ul.sf-menu.sf-style-none.sf-navbar {
+    background: #444444;
+  }
+  ul.sf-menu.sf-style-none li li,
+  ul.sf-menu.sf-style-none.sf-navbar > li > ul {
+    background: #444444;
+  }
+  div.sf-accordion-toggle.sf-style-none a.sf-expanded,
+  ul.sf-menu.sf-style-none.sf-accordion li.sf-expanded {
+    background: #444444;
+    opacity: 0.9;
+  }
+}
+/*research group menu end*/
+
+/* PPHD TA topics grouping faculty styles start*/
+.phd-ta-topics-block table caption,
+.mtech-project-topics-block table caption,
+.undergraduate-projects-block table caption {
+  text-align: center;
+  background-color: #444444;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.phd-ta-topics-block table caption a,
+.phd-ta-topics-block table caption a:hover,
+.mtech-project-topics-block table caption a,
+.mtech-project-topics-block table caption a:hover,
+.undergraduate-projects-block table caption a,
+.undergraduate-projects-block table caption a:hover {
+  color: #ffffff;
+  font-weight: normal;
+}
+/* PPHD TA topics grouping faculty styles end*/
+
+/* card paragraph link btn color */
+.paragraph--type--card .field--name-field-link a,
+.paragraph--type--gallery .field--name-field-link a {
+  background: #337ab7;
+}

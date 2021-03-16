@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the THEMETITLE theme.
+
+che_iitb_dj.settings:
+  type: theme_settings
+  label: 'che_iitb_dj settings'

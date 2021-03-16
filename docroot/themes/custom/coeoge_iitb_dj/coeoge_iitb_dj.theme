@@ -1,0 +1,95 @@
+<?php
+/**
+ * @file
+ * Contains theme override functions and preprocess functions
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ */
+function coeoge_iitb_dj_theme_suggestions_block_alter(&$suggestions, $variables) {
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('coeoge_iitb_dj_', 'iitb_dj_', $suggestion);
+  }
+}
+
+function coeoge_iitb_dj_preprocess_ds_1col(&$variables){
+  $active_theme = \Drupal::theme()->getActiveTheme()->getName();
+  $variables['faculty_header_style'] = '';
+  $faculty_header_bg_file =  theme_get_setting('faculty_header_bg_file', $active_theme);
+  if ($faculty_header_bg_file) {
+    $variables['faculty_header_style'] .= 'background: url(' . $faculty_header_bg_file . '); background-size: cover; background-color: #e4e6fd;';
+  }
+
+  $variables['event_header_style'] = '';
+  $event_header_bg_file = theme_get_setting('event_header_bg_file', $active_theme);
+  if ($event_header_bg_file) {
+    $variables['event_header_style'] .= 'background: url(' . $event_header_bg_file . '); background-size: cover; background-color: #e4e6fd;';
+  }
+
+  $variables['news_header_style'] = '';
+  $news_header_bg_file = theme_get_setting('news_header_bg_file', $active_theme);  
+  if ($news_header_bg_file) {
+    $variables['news_header_style'] .= 'background: url(' . $news_header_bg_file . '); background-size: cover; background-color: #e4e6fd;';
+  }
+}
+
+
+function coeoge_iitb_dj_preprocess_page(&$variables) {
+  // Social media global variable.
+  $variables['show_social_icon'] = theme_get_setting('show_social_icon');
+  $variables['facebook_url'] = theme_get_setting('facebook_url');
+  $variables['google_plus_url'] = theme_get_setting('google_plus_url');
+  $variables['twitter_url'] = theme_get_setting('twitter_url');
+  $variables['linkedin_url'] = theme_get_setting('linkedin_url');
+
+  $variables['show_heading_branding'] = theme_get_setting('show_heading_branding');
+  $variables['heading_branding_text'] = theme_get_setting('heading_branding_text');
+  $variables['heading_branding_url'] = theme_get_setting('heading_branding_url');
+  $variables['heading_branding_title'] = theme_get_setting('heading_branding_title');
+
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+}
+
+function coeoge_iitb_dj_preprocess_block(&$variables) {
+  switch ($variables['base_plugin_id']) {
+    case 'system_branding_block':
+      $variables['site_logo'] = '';
+      if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+        $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function coeoge_iitb_dj_preprocess_field(&$variables) {
+  if (($variables['element']['#field_name'] == 'field_card' && $variables['element']['#entity_type'] == 'block_content')) {
+    $variables['card_block_view_mode'] = $variables['element']['#view_mode'];
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function coeoge_iitb_dj_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Get Request Object.
+  $request = \Drupal::request();
+  // If there is HTTP Exception..
+  if ($exception = $request->attributes->get('exception')) {
+    // Get the status code.
+    $status_code = $exception->getStatusCode();
+    if (in_array($status_code, array(401, 403, 404))) {
+      $suggestions[] = 'page__' . $status_code;
+    }
+  }
+  
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__' . $node->bundle();
+  }
+}

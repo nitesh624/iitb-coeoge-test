@@ -1,0 +1,62 @@
+name: 'Coeoge iitb dj'
+description: 'A sub-theme of iitb_dj'
+core: 8.x
+core_version_requirement: ^8 || ^9
+type: theme
+base theme: iitb_dj
+package: 'Custom'
+
+regions:
+  top_head_search: 'Top Head Search'
+  header: 'Header'
+  lang_switcher: 'language Switcher'
+  header_search: 'Header Search box'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  slider: 'slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  top_head: 'Top Head region'
+  top1: 'Top1'
+  top2: 'Top2'
+  top3: 'Top3'
+  top4: 'Top4'
+  breadcrumb: 'Breadcrumb'
+  content_top: 'Content Top'
+  sidebar_first: 'Sidebar first'
+  content: 'Content'
+  sidebar_second: 'Sidebar Second'
+  content_bottom: 'Content Bottom'
+  footer1: 'Footer1'
+  footer2: 'Footer2'
+  footer3: 'Footer3'
+  footer4: 'Footer4'
+  footer_bar_left: 'Footer bar Left'
+  footer_bar_right: 'Footer bar Right'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - coeoge_iitb_dj/global-styling
+  - coeoge_iitb_dj/js-mixitup
+
+libraries-override:
+  # Replace an entire library.
+  # core/drupal.collapse: mytheme/collapse
+
+  # Replace an asset with another.
+  # subtheme/library:
+  #   css:
+  #     theme:
+  #       css/layout.css: css/my-layout.css
+
+  # Remove an asset.
+
+  # iitb_dj/iitb_dj-lib:
+  #   css:
+  #     theme:
+  #       includes/others/bootstrap-dropdownhover.min.css: false
+  #   js:
+  #     includes/others/bootstrap-dropdownhover.min.js: false
+
+  # Remove an entire library.
+  iitb_dj/bootstrap: coeoge_iitb_dj/bootstrap
