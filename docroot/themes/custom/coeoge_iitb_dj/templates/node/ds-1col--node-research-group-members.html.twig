@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+
+
+<{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+
+	<div class="container page-academix site-padding-single">
+		<div class="row">
+			<div class="col-sm-3 col-md-3">
+			 {{ ds_content.field_image_rg_member }}
+				<article class="profile-glimps">
+					<h2 class="entry-title">{{ ds_content.title }}</h2>
+					 <p class="text-foc-md"></p>
+					 <p class="text-foc-md">{{ ds_content.field_address }}</p>
+					 <p class="text-foc-md">{{ ds_content.field_designation_rg_member	}}</p>
+				</article>
+				<div class="addr_future_memb">
+				{% if ds_content.field_email_rg_member|render %}
+					<footer class="contact-info">
+						<h4 class="entry-title">Contact Information</h4>
+						<p class="__ci_num inline"><span>{{ ds_content.field_email_rg_member }}</span></p>
+				  </footer>
+				{% endif %}
+				</div>
+				
+			</div>
+
+			<div class="col-sm-9 col-md-9">
+				{{ ds_content|without('title', 'field_image_rg_member', 'field_address', 'field_designation_rg_member', 'ds_content.field_email_rg_member') }}
+		  </div><!-- #main col-sm-8 -->
+	   </div> <!-- row -->
+	</div> <!-- container -->
+
+
+</{{ ds_content_wrapper }}>

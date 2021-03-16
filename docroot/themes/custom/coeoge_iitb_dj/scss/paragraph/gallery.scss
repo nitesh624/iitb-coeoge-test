@@ -1,0 +1,150 @@
+//import
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.paragraph--type--gallery {
+  @include clearfix;
+  margin-bottom: 30px;
+  padding: 0;
+  position: relative;
+
+  .field {
+    &--name-field-title {
+      @extend %h2;
+      font-family: $heading-font;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #5a5a5a;
+      @include respond(phone-min) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &--name-field-body {
+      display: block;
+      font-size: 16px;
+    }
+
+    &--name-field-media-items {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      > .field--item {
+        display: inline-block;
+        padding: 2px;
+      }
+    }
+
+    &--name-field-media-image {
+      align-items: center;
+      display: flex;
+      margin: 0 auto;
+      overflow: hidden;
+
+      img {
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+        height: auto;
+      }
+    }
+
+    &--name-field-link {
+      text-align: right;
+
+      a {
+        @include btnstyle;
+      }
+    }
+  }
+
+  .slick--thumbnail {
+    .slick__slide {
+      &.slick-current {
+        transform: scale(1);
+      }
+    }
+
+    .slick-track {
+      padding: 10px 0;
+    }
+  }
+
+  .slick-arrow {
+    &::before {
+      color: $color-primary;
+      opacity: 1;
+    }
+
+    &:hover::before {
+      color: $color-primary;
+    }
+
+    &.slick-prev {
+      left: 0;
+    }
+
+    &.slick-next {
+      right: 0;
+    }
+  }
+
+  .blazy__caption {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: $color-white;
+    display: none;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .slick-wrapper {
+    margin-bottom: 0;
+  }
+
+  .slick-dotted {
+    .slick__slide {
+      height: 11px;
+      width: 11px !important;
+      display: inline-block;
+      background: $color-grey-light-4;
+      margin-right: 8px !important;
+      margin-left: 0 !important;
+      cursor: pointer;
+
+      &:before {
+        display: none !important;
+      }
+
+      &.slick-current {
+        background: $color-primary;
+        box-shadow: none !important;
+        img {
+          border-color: $color-primary;
+        }
+      }
+    }
+
+    .slick-list {
+      padding-top: 5px !important;
+      padding-bottom: 0;
+
+      .slick-track {
+        left: 0 !important;
+        width: auto !important;
+        text-align: left;
+      }
+    }
+  }
+}
