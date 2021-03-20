@@ -1,0 +1,30 @@
+uuid: 04dfc728-b907-45a5-8e52-d21bc6db75ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_block
+  module:
+    - system
+    - views
+  theme:
+    - coeoge_iitb_dj
+id: views_block__event_block_block_1_2
+theme: coeoge_iitb_dj
+region: header_top_left
+weight: 0
+provider: null
+plugin: 'views_block:event_block-block_1'
+settings:
+  id: 'views_block:event_block-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

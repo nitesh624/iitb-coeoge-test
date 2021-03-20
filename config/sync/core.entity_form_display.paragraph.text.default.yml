@@ -3,16 +3,47 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text.field_bg_color
     - field.field.paragraph.text.field_body
+    - field.field.paragraph.text.field_padding_top_bottom
+    - field.field.paragraph.text.field_section_title_alignment
+    - field.field.paragraph.text.field_section_title_style
     - field.field.paragraph.text.field_title
     - paragraphs.paragraphs_type.text
   module:
+    - color_field
+    - field_group
     - text
+third_party_settings:
+  field_group:
+    group_section_style_setting:
+      children:
+        - field_section_title_style
+        - field_section_title_alignment
+        - field_bg_color
+        - field_padding_top_bottom
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+      label: 'Section style setting'
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
+  field_bg_color:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
   field_body:
     weight: 1
     settings:
@@ -22,6 +53,24 @@ content:
       show_summary: false
     third_party_settings: {  }
     type: text_textarea_with_summary
+    region: content
+  field_padding_top_bottom:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_title_alignment:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_title_style:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_title:
     weight: 0

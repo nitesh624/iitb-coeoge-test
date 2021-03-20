@@ -1,0 +1,21 @@
+uuid: c89a4420-a212-4220-82ce-6747b0490205
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title_style
+    - paragraphs.paragraphs_type.list_view
+  module:
+    - options
+id: paragraph.list_view.field_section_title_style
+field_name: field_section_title_style
+entity_type: paragraph
+bundle: list_view
+label: 'Section title style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -3,21 +3,52 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.gallery.field_bg_color
     - field.field.paragraph.gallery.field_body
     - field.field.paragraph.gallery.field_link
     - field.field.paragraph.gallery.field_media_items
+    - field.field.paragraph.gallery.field_padding_top_bottom
+    - field.field.paragraph.gallery.field_section_title_alignment
+    - field.field.paragraph.gallery.field_section_title_style
     - field.field.paragraph.gallery.field_title
     - field.field.paragraph.gallery.view_mode_selection
     - paragraphs.paragraphs_type.gallery
   module:
+    - color_field
+    - field_group
     - link
     - media_library
     - text
+third_party_settings:
+  field_group:
+    group_section_style_setting:
+      children:
+        - field_section_title_style
+        - field_section_title_alignment
+        - field_padding_top_bottom
+        - field_bg_color
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Section style setting'
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery
 mode: default
 content:
+  field_bg_color:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
   field_body:
     weight: 1
     settings:
@@ -42,6 +73,24 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_padding_top_bottom:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_title_alignment:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_title_style:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_title:
     weight: 0

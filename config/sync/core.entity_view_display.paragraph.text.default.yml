@@ -3,22 +3,58 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text.field_bg_color
     - field.field.paragraph.text.field_body
+    - field.field.paragraph.text.field_padding_top_bottom
+    - field.field.paragraph.text.field_section_title_alignment
+    - field.field.paragraph.text.field_section_title_style
     - field.field.paragraph.text.field_title
     - paragraphs.paragraphs_type.text
   module:
+    - color_field
+    - options
     - text
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
+  field_bg_color:
+    weight: 2
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_body:
     weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_padding_top_bottom:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_alignment:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_style:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_title:
     weight: 0

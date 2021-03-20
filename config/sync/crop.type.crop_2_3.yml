@@ -1,0 +1,12 @@
+uuid: a31d6fff-7e82-41b5-ade5-ed9133b51b12
+langcode: en
+status: true
+dependencies: {  }
+id: crop_2_3
+label: 'Crop 2:3'
+description: ''
+aspect_ratio: '2:3'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

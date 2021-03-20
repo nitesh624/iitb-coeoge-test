@@ -4,9 +4,13 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.gallery.field_bg_color
     - field.field.paragraph.gallery.field_body
     - field.field.paragraph.gallery.field_link
     - field.field.paragraph.gallery.field_media_items
+    - field.field.paragraph.gallery.field_padding_top_bottom
+    - field.field.paragraph.gallery.field_section_title_alignment
+    - field.field.paragraph.gallery.field_section_title_style
     - field.field.paragraph.gallery.field_title
     - field.field.paragraph.gallery.view_mode_selection
     - paragraphs.paragraphs_type.gallery
@@ -47,5 +51,9 @@ content:
     type: string
     region: content
 hidden:
+  field_bg_color: true
   field_link: true
+  field_padding_top_bottom: true
+  field_section_title_alignment: true
+  field_section_title_style: true
   view_mode_selection: true

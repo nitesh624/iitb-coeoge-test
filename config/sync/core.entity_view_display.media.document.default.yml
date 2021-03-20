@@ -47,7 +47,7 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
-    type: file_table
+    type: file_default
     region: content
 hidden:
   created: true

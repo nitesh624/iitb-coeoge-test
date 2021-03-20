@@ -54,6 +54,7 @@
       font-size: 16px;
       margin-top: 20px;
       margin-bottom: 15px;
+      text-align: center;
       @include respond(phone-min) {
         font-size: 20px;
       }
@@ -62,6 +63,7 @@
     &--name-field-short-title {
       font-size: 14px;
       margin-bottom: 8px;
+      text-align: center;
     }
 
     &--name-field-subhead {

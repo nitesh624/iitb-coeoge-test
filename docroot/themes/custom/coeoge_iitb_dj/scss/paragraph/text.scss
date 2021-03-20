@@ -6,13 +6,7 @@
   > .field {
     &--name-field-title {
       @extend %h2;
-      margin-bottom: 20px;
       font-family: $heading-font;
-      text-align: center;
-      color: #5a5a5a;
-      @include respond(phone-min) {
-        margin-bottom: 30px;
-      }
     }
     &--name-field-body {
       @include respond(phone-min) {

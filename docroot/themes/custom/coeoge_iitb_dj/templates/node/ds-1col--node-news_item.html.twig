@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+{{ attach_library("coeoge_iitb_dj/page-title-hero") }}
+
+<{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+  <section class="section page-title bg-fixed bg-cover" {% if news_header_style %} style = "{{ news_header_style }}" {% endif %}>
+    <div class="container">
+      <div class="row flex align-items-center justify-content-center">
+        <div class="col-md-6">
+          <div class="service-banner">
+            <h1>{{title}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sabbi-section stage_events_post stage_events_post-single">
+    	<div class="container">
+        <div class="events_post_single-sagment">
+          <div class="row">
+            <div class="col-sm-12">
+              <article class="sabbi-events-item">
+                <div class="events-item-meta">
+                    {{ ds_content|without('title') }}
+                </div>
+              </article><!-- /.sabbi-events-item -->
+            </div>
+          </div>
+        </div><!-- /.events_post_single-sagment -->
+    </div>
+</section>
+</{{ ds_content_wrapper }}>

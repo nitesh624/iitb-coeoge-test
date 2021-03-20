@@ -9,6 +9,7 @@ media__image: 0
 media__image__view_modes:
   card_list: 0
   colorbox: 0
+  home_slider: 0
   media_library: 0
 media__remote_video: 0
 media__remote_video__view_modes:
@@ -68,6 +69,7 @@ user__user__view_modes:
 paragraph__card_list: 1
 paragraph__card_list__view_modes:
   cards_grid: cards_grid
+  cards_grid_4: cards_grid_4
 paragraph__gallery: 1
 paragraph__gallery__view_modes:
   gallery: gallery
@@ -76,4 +78,5 @@ paragraph__gallery__view_modes:
 paragraph__card: 0
 paragraph__card__view_modes:
   cards_grid: 0
+  cards_grid_4: 0
   preview: 0

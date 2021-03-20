@@ -44,13 +44,11 @@
   white-space: nowrap;
 
   &:hover {
-    background: $color-primary-hover;
     color: $color-white;
     text-decoration: none;
   }
 
   &:focus {
-    background: $color-primary-hover;
     color: $color-white;
     text-decoration: none;
   }

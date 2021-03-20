@@ -39,8 +39,11 @@
  */
 #}
 {{ attach_library("coeoge_iitb_dj/paragraph-base") }}
-
 {{ attach_library("coeoge_iitb_dj/paragraph-type-card") }}
+{% set bg_color = content.field_bg_color['#items'].getValue()[0]['color'] %}
+{% set padding_class = content.field_padding_top_bottom['#items'].getString()	%}
+{% set title_alignment = content.field_section_title_alignment['#items'].getString() %}
+{% set title_style = content.field_section_title_style['#items'].getString()|default(2) %}
 
 {%
   set classes = [
@@ -51,11 +54,12 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-<section class="paragraph-section-p-tb-sm">
+<section class="{{padding_class}}" style="background-color:{{bg_color}};">
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
       {% block content %}
-        {{ content }}
+        <h{{title_style}} class="{{title_alignment}}">{{ content.field_title }}</h{{title_style}}>
+        {{ content|without('field_title', 'field_section_title_style', 'field_section_title_alignment', 'field_bg_color', 'field_padding_top_bottom') }}
       {% endblock %}
     </div>
   {% endblock paragraph %}

@@ -1,0 +1,10 @@
+uuid: b353ef18-27ff-4dc3-9ee7-4cc232e1ae5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.cards_grid_4
+label: 'Cards Grid (4xn)'
+targetEntityType: paragraph
+cache: true

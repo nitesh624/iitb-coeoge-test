@@ -1,0 +1,22 @@
+uuid: 34a19ba0-2652-4bd0-95ad-cc1f2a03f43f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card.field_link
+    - field.field.paragraph.card.field_media
+    - field.field.paragraph.card.field_short_title
+    - field.field.paragraph.card.field_summary
+    - field.field.paragraph.card.field_title
+    - paragraphs.paragraphs_type.card
+id: paragraph.card.default
+targetEntityType: paragraph
+bundle: card
+mode: default
+content: {  }
+hidden:
+  field_link: true
+  field_media: true
+  field_short_title: true
+  field_summary: true
+  field_title: true

@@ -1,0 +1,15 @@
+uuid: 74dfbbfb-a7de-4297-bb91-59882a8a2699
+langcode: en
+status: true
+dependencies: {  }
+name: card_list_400x400
+label: 'Card list 400X400'
+effects:
+  11a9079c-73fb-45cb-84b1-b21d87514d6a:
+    uuid: 11a9079c-73fb-45cb-84b1-b21d87514d6a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      anchor: center-center

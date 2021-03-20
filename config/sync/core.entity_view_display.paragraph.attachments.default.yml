@@ -3,14 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.attachments.field_bg_color
     - field.field.paragraph.attachments.field_file
+    - field.field.paragraph.attachments.field_padding_top_bottom
+    - field.field.paragraph.attachments.field_section_title_alignment
+    - field.field.paragraph.attachments.field_section_title_style
     - field.field.paragraph.attachments.field_title
     - paragraphs.paragraphs_type.attachments
+  module:
+    - color_field
+    - options
 id: paragraph.attachments.default
 targetEntityType: paragraph
 bundle: attachments
 mode: default
 content:
+  field_bg_color:
+    weight: 5
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_file:
     type: entity_reference_entity_view
     weight: 1
@@ -19,6 +35,27 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_padding_top_bottom:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_alignment:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_style:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_title:
     weight: 0

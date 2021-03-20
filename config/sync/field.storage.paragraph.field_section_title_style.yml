@@ -1,0 +1,43 @@
+uuid: 0e3a715c-a12c-4f5f-95ef-689b42cdf3ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_section_title_style
+field_name: field_section_title_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: H1
+    -
+      value: '2'
+      label: H2
+    -
+      value: '3'
+      label: H3
+    -
+      value: '4'
+      label: H4
+    -
+      value: '5'
+      label: H5
+    -
+      value: '6'
+      label: H6
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

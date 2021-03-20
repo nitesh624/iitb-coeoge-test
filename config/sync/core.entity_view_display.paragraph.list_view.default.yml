@@ -3,16 +3,41 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.list_view.field_padding_top_bottom
+    - field.field.paragraph.list_view.field_section_title_alignment
+    - field.field.paragraph.list_view.field_section_title_style
     - field.field.paragraph.list_view.field_title
     - field.field.paragraph.list_view.field_view_ref
     - paragraphs.paragraphs_type.list_view
   module:
+    - options
     - viewsreference
 id: paragraph.list_view.default
 targetEntityType: paragraph
 bundle: list_view
 mode: default
 content:
+  field_padding_top_bottom:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_alignment:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_style:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_title:
     weight: 0
     label: hidden

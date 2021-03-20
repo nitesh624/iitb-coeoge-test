@@ -4,15 +4,21 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.cards_grid
+    - field.field.paragraph.card_list.field_bg_color
     - field.field.paragraph.card_list.field_card
     - field.field.paragraph.card_list.field_description
+    - field.field.paragraph.card_list.field_padding_top_bottom
+    - field.field.paragraph.card_list.field_section_title_alignment
+    - field.field.paragraph.card_list.field_section_title_style
     - field.field.paragraph.card_list.field_title
     - field.field.paragraph.card_list.view_mode_selection
     - paragraphs.paragraphs_type.card_list
   module:
+    - color_field
     - ds
     - entity_reference_revisions
     - layout_builder
+    - options
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -22,6 +28,43 @@ targetEntityType: paragraph
 bundle: card_list
 mode: cards_grid
 content:
+  field_bg_color:
+    type: color_field_formatter_text
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
   field_card:
     type: entity_reference_revisions_entity_view
     weight: 2
@@ -67,6 +110,27 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_padding_top_bottom:
+    type: list_key
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title_alignment:
+    type: list_key
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title_style:
+    type: list_key
+    weight: 6
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_title:
     weight: 0
     label: hidden

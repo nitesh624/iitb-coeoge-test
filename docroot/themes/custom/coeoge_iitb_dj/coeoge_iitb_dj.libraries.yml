@@ -11,6 +11,8 @@ bootstrap:
 global-styling:
   css:
     theme:
+      css/main.css: {}
+      css/custom.css: {}
       css/style.css: {}
       css/colors.css: {}
   js:
@@ -35,6 +37,11 @@ js-mixitup:
     js/custom_mixitup.js: {}
   dependencies:
     - core/jquery
+
+page-title-hero:
+  css:
+    theme:
+      css/node-page/page-title-hero.css: {}
 
 paragraph-base:
   css:

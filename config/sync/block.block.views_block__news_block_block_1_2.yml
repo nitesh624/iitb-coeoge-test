@@ -1,0 +1,30 @@
+uuid: 5d1c478d-e182-4031-8ed6-071989d5da1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_block
+  module:
+    - system
+    - views
+  theme:
+    - coeoge_iitb_dj
+id: views_block__news_block_block_1_2
+theme: coeoge_iitb_dj
+region: header_top_right
+weight: 0
+provider: null
+plugin: 'views_block:news_block-block_1'
+settings:
+  id: 'views_block:news_block-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

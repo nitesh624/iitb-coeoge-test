@@ -4,17 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.news_item.body
+    - field.field.node.news_item.field_content
     - field.field.node.news_item.field_news_date
-    - field.field.node.news_item.field_news_images
     - field.field.node.news_item.field_news_type
-    - image.style.acad_news_thumbnail_400_300_
     - node.type.news_item
   enforced:
     module:
       - acadmix_news
   module:
     - datetime
-    - image
+    - paragraphs
     - path
     - text
 _core:
@@ -40,19 +39,30 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_content:
+    weight: 125
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
   field_news_date:
     weight: 122
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_news_images:
-    weight: 123
-    settings:
-      progress_indicator: throbber
-      preview_image_style: acad_news_thumbnail_400_300_
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_news_type:
     weight: 124

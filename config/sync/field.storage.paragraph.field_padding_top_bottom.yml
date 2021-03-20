@@ -1,0 +1,52 @@
+uuid: cc815d67-ecbb-439e-9d3f-98f596677b74
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_padding_top_bottom
+field_name: field_padding_top_bottom
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: p-tb-lg
+      label: 'Padding top-bottom-wide'
+    -
+      value: p-tb-md
+      label: 'Padding top-bottom-medium'
+    -
+      value: p-tb-sm
+      label: 'Padding top-bottom-narrow'
+    -
+      value: p-t-lg
+      label: 'Padding top wide'
+    -
+      value: p-t-md
+      label: 'Padding top medium'
+    -
+      value: p-t-sm
+      label: 'Padding top narrow'
+    -
+      value: p-b-lg
+      label: 'Padding bottom wide'
+    -
+      value: p-b-md
+      label: 'Padding bottom medium'
+    -
+      value: p-b-sm
+      label: 'Padding bottom narrow'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

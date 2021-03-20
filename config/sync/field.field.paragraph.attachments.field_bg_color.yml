@@ -1,0 +1,22 @@
+uuid: dda6d768-32d5-4505-a2e1-755274fe39cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bg_color
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - color_field
+id: paragraph.attachments.field_bg_color
+field_name: field_bg_color
+entity_type: paragraph
+bundle: attachments
+label: 'Background color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

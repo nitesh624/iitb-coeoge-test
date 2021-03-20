@@ -3,10 +3,9 @@
 @import '../abstracts/variables';
 
 .paragraph--type--card-list {
-  margin-bottom: 30px;
   padding: 0;
   .paragraph--type--card {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     @include respond(phone-min) {
       margin-bottom: 40px;
     }

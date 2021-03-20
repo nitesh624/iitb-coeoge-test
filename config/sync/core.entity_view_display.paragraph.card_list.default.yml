@@ -3,19 +3,62 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.card_list.field_bg_color
     - field.field.paragraph.card_list.field_card
     - field.field.paragraph.card_list.field_description
+    - field.field.paragraph.card_list.field_padding_top_bottom
+    - field.field.paragraph.card_list.field_section_title_alignment
+    - field.field.paragraph.card_list.field_section_title_style
     - field.field.paragraph.card_list.field_title
     - field.field.paragraph.card_list.view_mode_selection
     - paragraphs.paragraphs_type.card_list
   module:
+    - color_field
     - ds
     - entity_reference_revisions
+    - options
 id: paragraph.card_list.default
 targetEntityType: paragraph
 bundle: card_list
 mode: default
 content:
+  field_bg_color:
+    weight: 3
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: color_field_formatter_text
+    region: content
   field_card:
     type: entity_reference_revisions_entity_view
     weight: 2
@@ -60,6 +103,55 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_padding_top_bottom:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: list_key
+    region: content
+  field_section_title_alignment:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_style:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_title:
     weight: 0

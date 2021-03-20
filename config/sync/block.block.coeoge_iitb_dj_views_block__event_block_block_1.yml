@@ -1,6 +1,6 @@
 uuid: 83221a23-2311-42b8-b8a5-fdab6c040a04
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.event_block
@@ -13,7 +13,7 @@ _core:
   default_config_hash: dGwn8CON8zLsVFmsIdvinyf6cmzTVYaEUz7sOo2jXvI
 id: coeoge_iitb_dj_views_block__event_block_block_1
 theme: coeoge_iitb_dj
-region: top1
+region: top_head_search
 weight: -9
 provider: null
 plugin: 'views_block:event_block-block_1'

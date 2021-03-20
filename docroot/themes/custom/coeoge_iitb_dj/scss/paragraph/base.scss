@@ -1,27 +1,53 @@
-.paragraph-section-p-tb-lg {
-	padding: 80px 0;
+//import
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.p-tb-lg {
+  padding: 80px 0;
 }
-.paragraph-section-p-tb-md {
-	padding: 70px 0;
+.p-tb-md {
+  padding: 70px 0;
 }
-.paragraph-section-p-tb-sm {
-	padding: 50px 0;
+.p-tb-sm {
+  padding: 50px 0;
 }
+.p-t-lg {
+  padding-top: 80px;
+}
+.p-t-md {
+  padding-top: 70px;
+}
+.p-t-sm {
+  padding-top: 50px;
+}
+.p-b-lg {
+  padding-bottom: 80px;
+}
+.p-b-md {
+  padding-bottom: 70px;
+}
+.p-b-sm {
+  padding-bottom: 50px;
+}
+.py-none {
+  padding: 0;
+}
+
 .bg-grey-light {
-	background: #f7fafc;
+  background: #f7fafc;
 }
 .bg-grey-light-1 {
-	background: #f2f2f2;
+  background: #f2f2f2;
 }
 .bg-grey-light-2 {
-	background: #ddd;
+  background: #ddd;
 }
 .bg-grey-light-3 {
-	background: #5a5a5a;
+  background: #5a5a5a;
 }
 .bg-grey-light-4 {
-	background: #6c6d74;
+  background: #6c6d74;
 }
 .bg-grey-light-5 {
-	background: #e5e5e5;
+  background: #e5e5e5;
 }

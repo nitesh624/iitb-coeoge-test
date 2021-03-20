@@ -1,0 +1,21 @@
+uuid: b066045c-45e7-42b9-a7ad-df9a9b0149b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title_style
+    - paragraphs.paragraphs_type.text
+  module:
+    - options
+id: paragraph.text.field_section_title_style
+field_name: field_section_title_style
+entity_type: paragraph
+bundle: text
+label: 'Section title style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 5f5ae40c-1b29-4f95-b021-ac25aa80b354
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title_style
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - options
+id: paragraph.attachments.field_section_title_style
+field_name: field_section_title_style
+entity_type: paragraph
+bundle: attachments
+label: 'Section title style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

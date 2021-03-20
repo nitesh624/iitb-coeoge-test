@@ -3,18 +3,50 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.card_list.field_bg_color
     - field.field.paragraph.card_list.field_card
     - field.field.paragraph.card_list.field_description
+    - field.field.paragraph.card_list.field_padding_top_bottom
+    - field.field.paragraph.card_list.field_section_title_alignment
+    - field.field.paragraph.card_list.field_section_title_style
     - field.field.paragraph.card_list.field_title
     - field.field.paragraph.card_list.view_mode_selection
     - paragraphs.paragraphs_type.card_list
   module:
+    - color_field
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_style_setting:
+      children:
+        - view_mode_selection
+        - field_section_title_style
+        - field_section_title_alignment
+        - field_bg_color
+        - field_padding_top_bottom
+      parent_name: ''
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Section style setting'
 id: paragraph.card_list.default
 targetEntityType: paragraph
 bundle: card_list
 mode: default
 content:
+  field_bg_color:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
   field_card:
     type: paragraphs
     weight: 2
@@ -42,6 +74,24 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_padding_top_bottom:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_title_alignment:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_title_style:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_title:
     weight: 0
     settings:
@@ -53,7 +103,7 @@ content:
   view_mode_selection:
     type: options_select
     region: content
-    weight: 3
+    weight: 11
     settings: {  }
     third_party_settings: {  }
 hidden:

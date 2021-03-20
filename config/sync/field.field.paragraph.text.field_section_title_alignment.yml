@@ -1,0 +1,21 @@
+uuid: d79d3f77-c06f-47ca-9f31-18f8a7dcd445
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title_alignment
+    - paragraphs.paragraphs_type.text
+  module:
+    - options
+id: paragraph.text.field_section_title_alignment
+field_name: field_section_title_alignment
+entity_type: paragraph
+bundle: text
+label: 'Section title alignment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

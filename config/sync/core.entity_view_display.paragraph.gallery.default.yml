@@ -3,21 +3,64 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.gallery.field_bg_color
     - field.field.paragraph.gallery.field_body
     - field.field.paragraph.gallery.field_link
     - field.field.paragraph.gallery.field_media_items
+    - field.field.paragraph.gallery.field_padding_top_bottom
+    - field.field.paragraph.gallery.field_section_title_alignment
+    - field.field.paragraph.gallery.field_section_title_style
     - field.field.paragraph.gallery.field_title
     - field.field.paragraph.gallery.view_mode_selection
     - paragraphs.paragraphs_type.gallery
   module:
+    - color_field
     - ds
     - link
+    - options
     - text
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery
 mode: default
 content:
+  field_bg_color:
+    weight: 4
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: color_field_formatter_text
+    region: content
   field_body:
     weight: 2
     label: hidden
@@ -74,6 +117,27 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
+    region: content
+  field_padding_top_bottom:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_section_title_alignment:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_style:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_title:
     weight: 0

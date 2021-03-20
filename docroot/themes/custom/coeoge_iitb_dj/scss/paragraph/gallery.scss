@@ -4,7 +4,6 @@
 
 .paragraph--type--gallery {
   @include clearfix;
-  margin-bottom: 30px;
   padding: 0;
   position: relative;
 
@@ -12,12 +11,6 @@
     &--name-field-title {
       @extend %h2;
       font-family: $heading-font;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #5a5a5a;
-      @include respond(phone-min) {
-        margin-bottom: 30px;
-      }
     }
 
     &--name-field-body {
