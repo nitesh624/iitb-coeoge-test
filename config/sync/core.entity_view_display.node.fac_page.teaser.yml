@@ -8,20 +8,20 @@ dependencies:
     - field.field.node.fac_page.field_affiliations
     - field.field.node.fac_page.field_awards_and_fellowship
     - field.field.node.fac_page.field_background
-    - field.field.node.fac_page.field_building_new
+    - field.field.node.fac_page.field_building
     - field.field.node.fac_page.field_courses_taught
     - field.field.node.fac_page.field_detailed_information_page
-    - field.field.node.fac_page.field_email_new
+    - field.field.node.fac_page.field_email
     - field.field.node.fac_page.field_employment_category
-    - field.field.node.fac_page.field_faculty_cv
+    - field.field.node.fac_page.field_faculty_attachments
     - field.field.node.fac_page.field_faculty_designation
     - field.field.node.fac_page.field_faculty_photo
     - field.field.node.fac_page.field_faculty_rd_proj
     - field.field.node.fac_page.field_full_name
     - field.field.node.fac_page.field_google_scholar_id
-    - field.field.node.fac_page.field_mobile_number_new
+    - field.field.node.fac_page.field_mobile_number
     - field.field.node.fac_page.field_orcid
-    - field.field.node.fac_page.field_phone_no_new
+    - field.field.node.fac_page.field_phone_no
     - field.field.node.fac_page.field_research_area
     - field.field.node.fac_page.field_room_no
     - field.field.node.fac_page.field_scopus_id
@@ -54,20 +54,20 @@ hidden:
   field_affiliations: true
   field_awards_and_fellowship: true
   field_background: true
-  field_building_new: true
+  field_building: true
   field_courses_taught: true
   field_detailed_information_page: true
-  field_email_new: true
+  field_email: true
   field_employment_category: true
-  field_faculty_cv: true
+  field_faculty_attachments: true
   field_faculty_designation: true
   field_faculty_photo: true
   field_faculty_rd_proj: true
   field_full_name: true
   field_google_scholar_id: true
-  field_mobile_number_new: true
+  field_mobile_number: true
   field_orcid: true
-  field_phone_no_new: true
+  field_phone_no: true
   field_research_area: true
   field_room_no: true
   field_scopus_id: true

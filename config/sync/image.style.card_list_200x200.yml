@@ -1,0 +1,15 @@
+uuid: 3c49f8fe-5d23-4c01-9dc3-578f59debf80
+langcode: en
+status: true
+dependencies: {  }
+name: card_list_200x200
+label: 'Card list 200X200'
+effects:
+  1709be11-61c4-48cf-af67-8aa986a47b03:
+    uuid: 1709be11-61c4-48cf-af67-8aa986a47b03
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      anchor: center-center

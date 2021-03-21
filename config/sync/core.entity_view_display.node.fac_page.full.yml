@@ -8,37 +8,33 @@ dependencies:
     - field.field.node.fac_page.field_affiliations
     - field.field.node.fac_page.field_awards_and_fellowship
     - field.field.node.fac_page.field_background
-    - field.field.node.fac_page.field_building_new
+    - field.field.node.fac_page.field_building
     - field.field.node.fac_page.field_courses_taught
     - field.field.node.fac_page.field_detailed_information_page
-    - field.field.node.fac_page.field_email_new
+    - field.field.node.fac_page.field_email
     - field.field.node.fac_page.field_employment_category
-    - field.field.node.fac_page.field_faculty_cv
+    - field.field.node.fac_page.field_faculty_attachments
     - field.field.node.fac_page.field_faculty_designation
     - field.field.node.fac_page.field_faculty_photo
     - field.field.node.fac_page.field_faculty_rd_proj
     - field.field.node.fac_page.field_full_name
     - field.field.node.fac_page.field_google_scholar_id
-    - field.field.node.fac_page.field_mobile_number_new
+    - field.field.node.fac_page.field_mobile_number
     - field.field.node.fac_page.field_orcid
-    - field.field.node.fac_page.field_phone_no_new
+    - field.field.node.fac_page.field_phone_no
     - field.field.node.fac_page.field_research_area
     - field.field.node.fac_page.field_room_no
     - field.field.node.fac_page.field_scopus_id
     - node.type.fac_page
-    - responsive_image.styles.acad_fac_narrow
   enforced:
     module:
       - acadmix_faculty
   module:
     - ds
     - entity_reference_revisions
-    - file
     - link
-    - linked_field
     - name
     - options
-    - responsive_image
     - spamspan
     - text
     - user
@@ -50,6 +46,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -61,11 +58,10 @@ third_party_settings:
           ds_content: {  }
     regions:
       ds_content:
-        - field_mobile_number_new
+        - field_faculty_photo
         - field_background
         - field_full_name
         - field_faculty_designation
-        - field_faculty_photo
         - links
         - field_google_scholar_id
         - field_orcid
@@ -74,14 +70,15 @@ third_party_settings:
         - field_affiliations
         - field_awards_and_fellowship
         - field_employment_category
-        - field_phone_no_new
-        - field_building_new
         - field_detailed_information_page
-        - field_email_new
         - field_faculty_rd_proj
-        - field_faculty_cv
         - field_research_area
         - field_courses_taught
+        - field_building
+        - field_email
+        - field_mobile_number
+        - field_phone_no
+        - field_faculty_attachments
 _core:
   default_config_hash: 9lkd5o7F3QrNoJiLP08rqs8DjOKElRUQiyhSirX69oY
 id: node.fac_page.full
@@ -91,7 +88,7 @@ mode: full
 content:
   field_affiliations:
     type: basic_string
-    weight: 10
+    weight: 9
     region: ds_content
     label: above
     settings: {  }
@@ -127,7 +124,7 @@ content:
             fi-def-at: false
   field_awards_and_fellowship:
     type: text_default
-    weight: 11
+    weight: 10
     region: ds_content
     label: above
     settings: {  }
@@ -197,24 +194,24 @@ content:
             ow-def-cl: false
             fis-def-at: false
             fi-def-at: false
-  field_building_new:
+  field_building:
     type: string
-    weight: 14
+    weight: 16
     region: ds_content
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_courses_taught:
     type: text_default
-    weight: 20
+    weight: 15
     region: ds_content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_detailed_information_page:
     type: link
-    weight: 15
+    weight: 12
     region: ds_content
     label: hidden
     settings:
@@ -252,44 +249,43 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
-  field_email_new:
+  field_email:
     type: email_spamspan
-    weight: 16
+    weight: 17
     region: ds_content
     label: inline
     settings:
       spamspan_at: ' [at] '
+      spamspan_use_graphic: '1'
       spamspan_dot_enable: '1'
       spamspan_dot: ' [dot] '
-      spamspan_use_graphic: 0
       spamspan_use_form: 0
       spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
       spamspan_form_default_url: contact
       spamspan_form_default_displaytext: 'contact form'
     third_party_settings:
       ds:
-        ds_limit: ''
         ft:
           id: expert
           settings:
             lb: ''
             prefix: ''
+            lbw: true
             lbw-el: strong
-            lbw-cl: inline
+            lbw-cl: ''
             lbw-at: ''
             ow-el: ''
             ow-cl: ''
             ow-at: ''
             fis: true
             fis-el: ul
-            fis-cl: 'list-unstyled grid-inline '
+            fis-cl: 'list-unstyled grid-inline'
             fis-at: ''
             fi: true
             fi-el: li
             fi-cl: ''
             fi-at: ''
             suffix: ''
-            lbw: false
             lb-col: false
             ow: false
             ow-def-at: false
@@ -298,7 +294,7 @@ content:
             fi-def-at: false
   field_employment_category:
     type: entity_reference_label
-    weight: 12
+    weight: 11
     region: ds_content
     label: hidden
     settings:
@@ -332,14 +328,17 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
-  field_faculty_cv:
-    type: file_url_plain
-    weight: 18
+  field_faculty_attachments:
+    type: entity_reference_entity_view
+    weight: 20
     region: ds_content
     label: hidden
-    settings: {  }
+    settings:
+      view_mode: default
+      link: false
     third_party_settings:
       ds:
+        ds_limit: ''
         ft:
           id: expert
           settings:
@@ -367,15 +366,6 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
-      linked_field:
-        linked: '1'
-        type: custom
-        destination: '[node:field_faculty_cv:entity:url]'
-        advanced:
-          title: 'Curriculum Vitae (CV)'
-          target: _blank
-          href: '[node:field_faculty_cv:entity:url]'
-          text: 'Download Curriculum Vitae (CV) PDF'
   field_faculty_designation:
     type: list_default
     weight: 3
@@ -412,19 +402,45 @@ content:
             fi: false
             fi-def-at: false
   field_faculty_photo:
-    type: responsive_image
-    weight: 4
+    type: entity_reference_entity_view
+    weight: 0
     region: ds_content
     label: hidden
     settings:
-      responsive_image_style: acad_fac_narrow
-      image_link: ''
+      view_mode: card_list
+      link: false
     third_party_settings:
       ds:
-        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
   field_faculty_rd_proj:
     type: entity_reference_revisions_entity_view
-    weight: 17
+    weight: 13
     region: ds_content
     label: hidden
     settings:
@@ -467,14 +483,13 @@ content:
     label: hidden
     settings:
       format: default
-      output: default
-      multiple: default
-      multiple_delimiter: ', '
-      multiple_and: text
-      multiple_delimiter_precedes_last: never
-      multiple_el_al_min: '3'
-      multiple_el_al_first: '1'
-      markup: false
+      markup: ''
+      list_format: ''
+      link_target: ''
+      preferred_field_reference: ''
+      preferred_field_reference_separator: ', '
+      alternative_field_reference: ''
+      alternative_field_reference_separator: ', '
     third_party_settings:
       ds:
         ft:
@@ -506,7 +521,7 @@ content:
             fi-def-at: false
   field_google_scholar_id:
     type: string
-    weight: 6
+    weight: 5
     region: ds_content
     label: hidden
     settings:
@@ -550,9 +565,9 @@ content:
           class: ' btn scholar_icon'
           href: ' https://scholar.google.co.in/citations?user=[node:field_google_scholar_id:value]'
           text: 'Google Scholar Profile'
-  field_mobile_number_new:
+  field_mobile_number:
     type: string
-    weight: 0
+    weight: 18
     region: ds_content
     label: above
     settings:
@@ -560,7 +575,7 @@ content:
     third_party_settings: {  }
   field_orcid:
     type: string
-    weight: 7
+    weight: 6
     region: ds_content
     label: hidden
     settings:
@@ -605,19 +620,20 @@ content:
           rel: 'noopener noreferrer'
           href: 'https://orcid.org/[node:field_orcid:value]'
           text: 'ORCID Page'
-  field_phone_no_new:
-    type: text_default
-    weight: 13
+  field_phone_no:
+    type: string
+    weight: 19
     region: ds_content
     label: inline
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings:
       ds:
         ds_limit: ''
         ft:
           id: expert
           settings:
-            lb: call
+            lb: ''
             prefix: ''
             lbw: true
             lbw-el: strong
@@ -643,7 +659,7 @@ content:
             fi-def-at: false
   field_research_area:
     type: entity_reference_label
-    weight: 19
+    weight: 14
     region: ds_content
     label: hidden
     settings:
@@ -680,7 +696,7 @@ content:
             fi-def-at: false
   field_room_no:
     type: number_integer
-    weight: 9
+    weight: 8
     region: ds_content
     label: hidden
     settings:
@@ -717,7 +733,7 @@ content:
             fi-def-at: false
   field_scopus_id:
     type: string
-    weight: 8
+    weight: 7
     region: ds_content
     label: hidden
     settings:
@@ -762,7 +778,7 @@ content:
           href: 'https://www.scopus.com/authid/detail.uri?authorId=[node:field_scopus_id:value]'
           text: 'Scopus Author Profile'
   links:
-    weight: 5
+    weight: 4
     region: ds_content
     settings: {  }
     third_party_settings: {  }

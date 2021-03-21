@@ -1,9 +1,9 @@
-uuid: 5791a9be-a3a7-42fb-8fc1-f16a847040f3
+uuid: 5e721658-6c71-423b-8a78-6a8006ea33dd
 langcode: en
-status: true
+status: false
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.cards_grid_4
+    - core.entity_view_mode.paragraph.card_list
     - field.field.paragraph.card_list.field_bg_color
     - field.field.paragraph.card_list.field_card
     - field.field.paragraph.card_list.field_description
@@ -23,10 +23,10 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-id: paragraph.card_list.cards_grid_4
+id: paragraph.card_list.card_list
 targetEntityType: paragraph
 bundle: card_list
-mode: cards_grid_4
+mode: card_list
 content:
   field_bg_color:
     weight: 3
@@ -70,7 +70,7 @@ content:
     weight: 2
     label: hidden
     settings:
-      view_mode: cards_grid_4
+      view_mode: cards_grid
       link: ''
     third_party_settings:
       ds:
@@ -111,26 +111,54 @@ content:
     type: basic_string
     region: content
   field_padding_top_bottom:
-    type: list_key
     weight: 4
-    region: content
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: list_key
+    region: content
   field_section_title_alignment:
-    type: list_key
     weight: 5
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_section_title_style:
     type: list_key
-    weight: 6
     region: content
+  field_section_title_style:
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    type: list_key
+    region: content
   field_title:
     weight: 0
     label: hidden

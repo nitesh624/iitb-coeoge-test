@@ -20,13 +20,12 @@ third_party_settings:
   field_group:
     group_style_setting:
       children:
-        - view_mode_selection
         - field_section_title_style
         - field_section_title_alignment
         - field_bg_color
         - field_padding_top_bottom
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: details
       region: content
       format_settings:
@@ -55,7 +54,7 @@ content:
       title_plural: Paragraphs
       edit_mode: closed
       closed_mode: summary
-      autocollapse: none
+      autocollapse: all
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
@@ -100,12 +99,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  view_mode_selection:
-    type: options_select
-    region: content
-    weight: 11
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   created: true
   status: true
+  view_mode_selection: true

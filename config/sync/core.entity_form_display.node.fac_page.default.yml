@@ -7,33 +7,31 @@ dependencies:
     - field.field.node.fac_page.field_affiliations
     - field.field.node.fac_page.field_awards_and_fellowship
     - field.field.node.fac_page.field_background
-    - field.field.node.fac_page.field_building_new
+    - field.field.node.fac_page.field_building
     - field.field.node.fac_page.field_courses_taught
     - field.field.node.fac_page.field_detailed_information_page
-    - field.field.node.fac_page.field_email_new
+    - field.field.node.fac_page.field_email
     - field.field.node.fac_page.field_employment_category
-    - field.field.node.fac_page.field_faculty_cv
+    - field.field.node.fac_page.field_faculty_attachments
     - field.field.node.fac_page.field_faculty_designation
     - field.field.node.fac_page.field_faculty_photo
     - field.field.node.fac_page.field_faculty_rd_proj
     - field.field.node.fac_page.field_full_name
     - field.field.node.fac_page.field_google_scholar_id
-    - field.field.node.fac_page.field_mobile_number_new
+    - field.field.node.fac_page.field_mobile_number
     - field.field.node.fac_page.field_orcid
-    - field.field.node.fac_page.field_phone_no_new
+    - field.field.node.fac_page.field_phone_no
     - field.field.node.fac_page.field_research_area
     - field.field.node.fac_page.field_room_no
     - field.field.node.fac_page.field_scopus_id
-    - image.style.acad_fac_thumbnail_100_100_
     - node.type.fac_page
   enforced:
     module:
       - acadmix_faculty
   module:
     - field_group
-    - file
-    - image
     - link
+    - media_library
     - name
     - paragraphs
     - path
@@ -47,7 +45,7 @@ third_party_settings:
         - field_faculty_designation
         - field_employment_category
         - field_faculty_photo
-        - field_faculty_cv
+        - field_faculty_attachments
       parent_name: ''
       weight: 8
       format_type: tab
@@ -77,11 +75,11 @@ third_party_settings:
       region: content
     group_contact_information:
       children:
-        - field_building_new
         - field_room_no
-        - field_email_new
-        - field_phone_no_new
-        - field_mobile_number_new
+        - field_building
+        - field_email
+        - field_mobile_number
+        - field_phone_no
         - field_detailed_information_page
       parent_name: ''
       weight: 11
@@ -163,8 +161,8 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_building_new:
-    weight: 14
+  field_building:
+    weight: 16
     settings:
       size: 60
       placeholder: ''
@@ -187,8 +185,8 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_email_new:
-    weight: 16
+  field_email:
+    weight: 17
     settings:
       size: 60
       placeholder: ''
@@ -205,12 +203,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_faculty_cv:
+  field_faculty_attachments:
+    type: media_library_widget
     weight: 23
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
-    type: file_generic
     region: content
   field_faculty_designation:
     weight: 20
@@ -219,12 +217,11 @@ content:
     type: options_select
     region: content
   field_faculty_photo:
+    type: media_library_widget
     weight: 22
     settings:
-      progress_indicator: throbber
-      preview_image_style: acad_fac_thumbnail_100_100_
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_faculty_rd_proj:
     type: entity_reference_paragraphs
@@ -240,7 +237,32 @@ content:
     region: content
   field_full_name:
     weight: 19
-    settings: {  }
+    settings:
+      widget_layout: stacked
+      labels:
+        title: Title
+        given: Given
+        middle: 'Middle name(s)'
+        family: Family
+        generational: Generational
+        credentials: Credentials
+      title_display:
+        title: description
+        given: description
+        middle: description
+        family: description
+        generational: description
+        credentials: description
+      size:
+        title: 6
+        given: 20
+        middle: 20
+        family: 20
+        generational: 5
+        credentials: 35
+      override_field_settings: false
+      show_component_required_marker: false
+      credentials_inline: false
     third_party_settings: {  }
     type: name_default
     region: content
@@ -252,8 +274,8 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_mobile_number_new:
-    weight: 19
+  field_mobile_number:
+    weight: 18
     settings:
       size: 60
       placeholder: ''
@@ -268,21 +290,21 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_phone_no_new:
-    weight: 18
+  field_phone_no:
+    weight: 19
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+    type: string_textfield
     region: content
   field_research_area:
     weight: 28
     settings:
-      force_deepest: true
+      display_node_count: false
       create_new_items: false
       create_new_levels: false
-      display_node_count: false
+      force_deepest: false
     third_party_settings: {  }
     type: options_shs
     region: content

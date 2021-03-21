@@ -26,6 +26,7 @@ settings:
             - '-'
             - SpecialChar
             - RemoveFormat
+            - Styles
         -
           name: Linking
           items:
@@ -41,7 +42,6 @@ settings:
           items:
             - Blockquote
             - DrupalMediaLibrary
-            - DrupalImage
             - Table
             - HorizontalRule
         -
@@ -54,6 +54,11 @@ settings:
             - Outdent
             - Indent
             - Format
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - Copy
+            - Language
         -
           name: Tools
           items:

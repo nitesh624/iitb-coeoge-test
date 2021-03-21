@@ -18,7 +18,14 @@ settings:
           name: Formatting
           items:
             - Bold
+            - Underline
+            - Strike
+            - RemoveFormat
             - Italic
+            - Subscript
+            - Superscript
+            - SpecialChar
+            - HorizontalRule
         -
           name: Linking
           items:
@@ -33,23 +40,60 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
+            - DrupalMediaLibrary
         -
           name: 'Block Formatting'
           items:
             - Format
+            - Language
+            - ShowBlocks
+            - Outdent
+            - Indent
+            - JustifyRight
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyBlock
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - Copy
+            - Maximize
         -
           name: Tools
           items:
             - Source
+        -
+          name: Tables
+          items:
+            - Table
+            - tableinsert
+            - tabledelete
+            - tableproperties
+            - tablerowinsertbefore
+            - tablerowinsertafter
+            - tablerowdelete
+            - tablecolumninsertbefore
+            - tablecolumninsertafter
+            - tablecolumndelete
+            - tablecellinsertbefore
+            - tablecellinsertafter
+            - tablecelldelete
+            - tablecellproperties
+            - tablecellsmerge
+            - tablecellmergeright
+            - tablecellmergedown
+            - tablecellsplitvertical
+            - tablecellsplithorizontal
   plugins:
     stylescombo:
       styles: ''
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

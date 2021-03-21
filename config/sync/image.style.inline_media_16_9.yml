@@ -1,0 +1,17 @@
+uuid: de2ca187-ba06-46c8-88ad-10c074ee8f50
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_16_9
+  module:
+    - crop
+name: inline_media_16_9
+label: 'Inline media (16:9)'
+effects:
+  22d5bb61-2b3a-4bda-896b-9e09cd9bb3fe:
+    uuid: 22d5bb61-2b3a-4bda-896b-9e09cd9bb3fe
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: crop_16_9

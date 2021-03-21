@@ -1,0 +1,19 @@
+uuid: 1381070e-f732-4dc5-a966-0a399d7eb30f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_building
+    - node.type.fac_page
+id: node.fac_page.field_building
+field_name: field_building
+entity_type: node
+bundle: fac_page
+label: Building
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

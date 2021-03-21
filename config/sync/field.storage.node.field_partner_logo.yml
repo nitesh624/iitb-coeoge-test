@@ -1,23 +1,20 @@
-uuid: 5082e2f1-89d1-4cc7-915c-bec4e708bc41
+uuid: 66dd9442-afe5-4694-b299-80fa71ba95bc
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - staff_page
   module:
     - field_permissions
+    - media
     - node
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: SuIVkbY4hRd9r8n-ZaqarW0JDqbDLOxUHltR9QY53sg
-id: node.field_email
-field_name: field_email
+id: node.field_partner_logo
+field_name: field_partner_logo
 entity_type: node
-type: email
-settings: {  }
+type: entity_reference
+settings:
+  target_type: media
 module: core
 locked: false
 cardinality: 1

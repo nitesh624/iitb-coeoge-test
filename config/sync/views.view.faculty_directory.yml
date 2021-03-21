@@ -1,30 +1,28 @@
 uuid: bd4d5e85-dccb-400a-b30e-6a7614223b4d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
-    - field.storage.node.field_building_new
-    - field.storage.node.field_email_new
     - field.storage.node.field_employment_category
     - field.storage.node.field_faculty_designation
-    - field.storage.node.field_faculty_photo
-    - field.storage.node.field_phone_no_new
     - field.storage.node.field_room_no
-    - image.style.acad_fac_thumbnail_100_100_
     - node.type.fac_page
     - taxonomy.vocabulary.employment_category
+  content:
+    - 'taxonomy_term:employment_category:12a74ec6-a690-41ea-b4a0-808132d89e90'
+    - 'taxonomy_term:employment_category:17255933-4a6c-4292-a318-0adb1a8c796e'
+    - 'taxonomy_term:employment_category:1b5b9d54-4219-4ed5-9869-2ec0ad85c133'
+    - 'taxonomy_term:employment_category:351c9e26-f2bb-4044-b8c9-2482921eb54d'
+    - 'taxonomy_term:employment_category:464a92f6-efb2-4004-b776-3640f9839e86'
   enforced:
     module:
       - acadmix_faculty
   module:
     - better_exposed_filters
     - datatables
-    - image
     - node
     - options
-    - spamspan
     - taxonomy
-    - text
     - user
 _core:
   default_config_hash: p0I6309lSLHy2qTq0m2PrWb4yqFPmLelt7fgVMNgLwY
@@ -187,70 +185,6 @@ display:
       row:
         type: fields
       fields:
-        field_faculty_photo:
-          id: field_faculty_photo
-          table: node__field_faculty_photo
-          field: field_faculty_photo
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: acad_fac_thumbnail_100_100_
-            image_link: content
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -441,69 +375,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_building_new:
-          id: field_building_new
-          table: node__field_building_new
-          field: field_building_new
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Building
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_room_no:
           id: field_room_no
           table: node__field_room_no
@@ -555,201 +426,6 @@ display:
           click_sort_column: value
           type: number_unformatted
           settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_phone_no_new:
-          id: field_phone_no_new
-          table: node__field_phone_no_new
-          field: field_phone_no_new
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Phone Nos.'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_email_new:
-          id: field_email_new
-          table: node__field_email_new
-          field: field_email_new
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Email
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: email_spamspan
-          settings:
-            relationship: none
-            fieldsets:
-              - more
-              - admin_label
-            custom_label: 1
-            label: Email
-            element_label_colon: 1
-            exclude: 0
-            element_type_enable: 0
-            element_type: ''
-            element_class_enable: 0
-            element_class: ''
-            element_label_type_enable: 0
-            element_label_type: ''
-            element_label_class_enable: 0
-            element_label_class: ''
-            element_wrapper_type_enable: 0
-            element_wrapper_type: ''
-            element_wrapper_class_enable: 0
-            element_wrapper_class: ''
-            element_default_classes: 1
-            alter:
-              alter_text: 0
-              text: ''
-              make_link: 0
-              path: ''
-              absolute: 0
-              replace_spaces: 0
-              external: 0
-              path_case: none
-              link_class: ''
-              alt: ''
-              rel: ''
-              prefix: ''
-              suffix: ''
-              target: ''
-              trim: 0
-              max_length: '0'
-              word_boundary: 1
-              ellipsis: 1
-              more_link: 0
-              more_link_text: ''
-              more_link_path: ''
-              html: 0
-              strip_tags: 0
-              preserve_tags: ''
-              trim_whitespace: 0
-              nl2br: 0
-            empty: ''
-            empty_zero: 0
-            hide_empty: 0
-            hide_alter_empty: 1
-            group_rows: 1
-            multi_type: separator
-            separator: ', '
-            delta_limit: '0'
-            delta_offset: '0'
-            delta_reversed: 0
-            delta_first_last: 0
-            click_sort_column: value
-            type: email_spamspan
-            field_api_classes: 0
-            spamspan_at: ' [at] '
-            spamspan_use_graphic: 0
-            spamspan_dot_enable: 0
-            spamspan_dot: ' [dot] '
-            use_form:
-              spamspan_use_form: 0
-              spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
-              spamspan_form_default_url: contact
-              spamspan_form_default_displaytext: 'contact form'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -919,12 +595,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_building_new'
-        - 'config:field.storage.node.field_email_new'
         - 'config:field.storage.node.field_employment_category'
         - 'config:field.storage.node.field_faculty_designation'
-        - 'config:field.storage.node.field_faculty_photo'
-        - 'config:field.storage.node.field_phone_no_new'
         - 'config:field.storage.node.field_room_no'
   page_1:
     display_plugin: page
@@ -954,10 +626,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_building_new'
-        - 'config:field.storage.node.field_email_new'
         - 'config:field.storage.node.field_employment_category'
         - 'config:field.storage.node.field_faculty_designation'
-        - 'config:field.storage.node.field_faculty_photo'
-        - 'config:field.storage.node.field_phone_no_new'
         - 'config:field.storage.node.field_room_no'

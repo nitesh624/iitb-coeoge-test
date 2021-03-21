@@ -1,26 +1,20 @@
-uuid: 611a4f87-9b26-4087-b99e-8fcbea38c6de
+uuid: 9140f151-a48d-4ea6-b664-e7492f559603
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - staff_page
   module:
     - field_permissions
+    - media
     - node
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: T5f8TyD6eqUHG6aMDH2TfUxlOoX8YoCU2vmaNVQrKEY
-id: node.field_phone_no
-field_name: field_phone_no
+id: node.field_faculty_attachments
+field_name: field_faculty_attachments
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: media
 module: core
 locked: false
 cardinality: -1

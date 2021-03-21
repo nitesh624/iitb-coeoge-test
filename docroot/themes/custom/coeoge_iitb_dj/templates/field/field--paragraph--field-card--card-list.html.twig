@@ -60,8 +60,6 @@
       {% for item in items %}
         {% set layoutClassC = item.content['#paragraph'].layout_selection.target_id %}
         {% if layoutClassC == '' and item.content['#view_mode'] == 'cards_grid' %}
-          {% set layoutClass = 'col-12 col-sm-12 col-md-4' %}
-        {% elseif layoutClassC == '' and item.content['#view_mode'] == 'cards_grid_4' %}
           {% set layoutClass = 'col-12 col-sm-12 col-md-3' %}
         {% else %}
           {% set layoutClass = 'col-12 col-sm-12' %}

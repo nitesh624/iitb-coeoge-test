@@ -1,0 +1,30 @@
+uuid: 3766c10a-0eab-4959-97ca-8fe9fc00aa4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.industrial_partner
+  module:
+    - system
+    - views
+  theme:
+    - coeoge_iitb_dj
+id: views_block__industrial_partner_block_1
+theme: coeoge_iitb_dj
+region: content_bottom
+weight: -11
+provider: null
+plugin: 'views_block:industrial_partner-block_1'
+settings:
+  id: 'views_block:industrial_partner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,11 @@
+uuid: 5bf97368-e25b-4a57-95ef-840ee25fc991
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.industrial_partner
+id: node.industrial_partner
+target_entity_type_id: node
+target_bundle: industrial_partner
+default_langcode: site_default
+language_alterable: false

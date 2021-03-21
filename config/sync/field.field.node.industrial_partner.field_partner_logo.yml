@@ -1,16 +1,16 @@
-uuid: b30e232c-99f0-4d88-9703-85ce22af330f
+uuid: 237b3af2-bddf-4f87-8f30-ee2327374828
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_faculty_photo
+    - field.storage.node.field_partner_logo
     - media.type.image
-    - node.type.fac_page
-id: node.fac_page.field_faculty_photo
-field_name: field_faculty_photo
+    - node.type.industrial_partner
+id: node.industrial_partner.field_partner_logo
+field_name: field_partner_logo
 entity_type: node
-bundle: fac_page
-label: 'Faculty photo'
+bundle: industrial_partner
+label: 'Partner logo'
 description: ''
 required: false
 translatable: false

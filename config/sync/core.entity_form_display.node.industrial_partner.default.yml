@@ -1,65 +1,31 @@
-uuid: 775a0fa9-2d16-4a5d-9822-bf0cc5641d93
+uuid: bfb2afd4-2a3d-4713-95d1-83407139ae6e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
-    - image.style.thumbnail
-    - node.type.article
+    - field.field.node.industrial_partner.field_partner_logo
+    - node.type.industrial_partner
   module:
-    - comment
-    - image
+    - media_library
     - path
-    - text
-_core:
-  default_config_hash: vPb_yvhA-xuNoV_yOmOwYxGuHNRIH1CoMK2qi7BSga0
-id: node.article.default
+id: node.industrial_partner.default
 targetEntityType: node
-bundle: article
+bundle: industrial_partner
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 1
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 4
-    region: content
+  field_partner_logo:
+    type: media_library_widget
+    weight: 122
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
     region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -96,7 +62,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -105,11 +71,11 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
-    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
       match_limit: 10
+    region: content
     third_party_settings: {  }
 hidden: {  }

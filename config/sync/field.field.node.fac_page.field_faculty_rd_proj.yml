@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_faculty_rd_proj
     - node.type.fac_page
+    - paragraphs.paragraphs_type.r_d_projects
   enforced:
     module:
       - acadmix_faculty
@@ -26,5 +27,37 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles: null
+    target_bundles:
+      r_d_projects: r_d_projects
+    target_bundles_drag_drop:
+      attachments:
+        weight: 11
+        enabled: false
+      banner:
+        weight: 12
+        enabled: false
+      card:
+        weight: 13
+        enabled: false
+      card_list:
+        weight: 14
+        enabled: false
+      gallery:
+        weight: 15
+        enabled: false
+      hero_view:
+        weight: 16
+        enabled: false
+      image:
+        weight: 17
+        enabled: false
+      list_view:
+        weight: 18
+        enabled: false
+      r_d_projects:
+        enabled: true
+        weight: 19
+      text:
+        weight: 20
+        enabled: false
 field_type: entity_reference_revisions
