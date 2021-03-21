@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'view',
+    'view-' ~ id|clean_class,
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }}>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        {% if rows %}
+          {{rows}}
+        {% endif %}
+      </div>
+        {% if pager %}
+          {{ pager }}
+        {% endif %}
+    </div>
+</section>

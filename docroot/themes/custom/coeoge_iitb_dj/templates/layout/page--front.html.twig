@@ -150,7 +150,7 @@
 
 {# Main #}
 {% block main %}
-  <main id="main-content" class="main-content" role="main"  style="margin-bottom: 353px;">
+  <main id="main-content" class="main-content" role="main" >
     {% if page.slider %}
       {# <div class="{{ slider_wrapper }}"> #}
       <div class="{{ container }} mb-15">
@@ -158,7 +158,7 @@
       </div>
       {# </div> #}
     {% endif %}
-      <div role="main" class="{{ main_container_class }} container js-quickedit-main-content">
+      <div role="main" class="{{ main_container_class }} js-quickedit-main-content">
         {% if page.top_head %}
           <div class="row clearfix">
             <div class="col-md-12 top-head animated fadeInDown delay-03s">
@@ -168,44 +168,46 @@
         {% endif %}
 
         {% if page.header_top_left or page.header_top_right %}
-          <div class="row clearfix">
-            {% if page.header_top_left %}
-              <div class="{{header_top_left_grid_class}}">
-                <div id="header-top-left">
-                  {{ page.header_top_left }}
+          <div class="container">
+            <div class="row clearfix">
+              {% if page.header_top_left %}
+                <div class="{{header_top_left_grid_class}}">
+                  <div id="header-top-left">
+                    {{ page.header_top_left }}
+                  </div>
+                </div>
+              {% endif %}
+              
+              {% if page.header_top_right %}
+              <div class="{{header_top_right_grid_class}}">
+                <div id="header-top-right">
+                  {{ page.header_top_right }}
                 </div>
               </div>
-            {% endif %}
-            
-            {% if page.header_top_right %}
-            <div class="{{header_top_right_grid_class}}">
-              <div id="header-top-right">
-                {{ page.header_top_right }}
-              </div>
+              {% endif %}
             </div>
-            {% endif %}
           </div>
         {% endif %}
 
         {% if page.breadcrumb %}
-          <div class="row clearfix">
-            <div class="col-md-12">
-              {{ page.breadcrumb }}
+          <div class="container">
+            <div class="row clearfix">
+              <div class="col-md-12">
+                {{ page.breadcrumb }}
+              </div>
             </div>
           </div>
         {% endif %}
         {# content top #}
         {% if page.content_top or page.highlighted %}
-          {% block content_top %}
             <div class="container">
               <div class="row clearfix">
                 <div class="col-sm-12" role="heading">
                   {{ page.highlighted }}
-                  {{ page.content_top }}
                 </div>
               </div>
             </div>
-          {% endblock %}
+          {{ page.content_top }}
         {% endif %}
 
         {# Sidebar First #}
@@ -251,13 +253,7 @@
         {% endif %}
 
         {% if page.content_bottom %}
-          {% block content_bottom %}
-            <div class="row clearfix">
-              <div class="col-sm-12">
-                {{ page.content_bottom }}
-              </div>
-            </div>
-          {% endblock %}
+          {{ page.content_bottom }}
         {% endif %}
 
     </div>

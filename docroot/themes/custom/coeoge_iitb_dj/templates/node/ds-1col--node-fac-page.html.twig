@@ -28,15 +28,15 @@
 				{% if ds_content.field_room_no|render or ds_content.field_building_new|render %}
 					<h4 class="entry-title">Location</h4>
 					<div class="address-entry">
-						<p class="__adtext">{{ ds_content.field_room_no.0 }}{% if ds_content.field_room_no|render and ds_content.field_building_new|render %}, {% endif %}{{ ds_content.field_building_new.0 }}</p>
+						<p class="__adtext">{{ ds_content.field_room_no.0 }}{% if ds_content.field_room_no|render and ds_content.field_building|render %}, {% endif %}{{ ds_content.field_building.0 }}</p>
 					</div>
 				{% endif %}
-				{% if ds_content.field_phone_no_new|render or ds_content.field_email_new|render or ds_content.field_mobile_number_new|render %}
+				{% if ds_content.field_phone_no|render or ds_content.field_email|render or ds_content.field_mobile_number|render %}
 					<footer class="contact-info">
 						<h4 class="entry-title">Contact Information</h4>
-						<p class="__ci_num inline"><span>{{ ds_content.field_phone_no_new }}</span></p>
-						 <p class="__ci_num inline"><span>{{ ds_content.field_mobile_number_new	}}</span></p>
-						<p class="__ci_num inline"> <span>{{ ds_content.field_email_new }}</span></p>
+						<p class="__ci_num inline"><span>{{ ds_content.field_phone_no }}</span></p>
+						 <p class="__ci_num inline"><span>{{ ds_content.field_mobile_number	}}</span></p>
+						<p class="__ci_num inline"> <span>{{ ds_content.field_email }}</span></p>
 				  </footer>
 				{% endif %}
 				</div>
@@ -59,7 +59,7 @@
 					 <p class="text-foc-md">{{ ds_content.field_faculty_designation.0 }}</p>
 				</article>
 						<ul class="nav nav-pills profile-nav">
-							{% if ds_content.field_faculty_cv|render or ds_content.field_background|render or ds_content.field_affiliations|render or field_awards_and_fellowship|render %}
+							{% if ds_content.field_faculty_attachments|render or ds_content.field_background|render or ds_content.field_affiliations|render or field_awards_and_fellowship|render %}
 								<li class="active"><a data-toggle="pill" href="#personal"><i class="fa fa-user" aria-hidden="true"></i> Personal Information</a></li>
 							{% endif %}
 							
@@ -82,7 +82,7 @@
 							  <section class="gimps-container">
 									<div class="row">
 										<div class="col-md-8 col-sm-10">
-											{{ ds_content.field_faculty_cv }}
+											{{ ds_content.field_faculty_attachments }}
 											{{ ds_content.field_background }}
 										</div>
 									</div>
@@ -121,15 +121,12 @@
 
 							<div class="research-area tab-pane fade stage-content-biog" id="research-area">
 								{{ ds_content.field_research_area }}
-							{{ ds_content|without('title', 'field_full_name', 'field_faculty_photo', 'field_room_no', 'field_building_new', 'field_phone_no_new', 'field_mobile_number_new', 'field_email_new', 'field_google_scholar_id', 'field_scopus_id', 'field_orcid', 'field_full_name', 'field_employment_category', 'field_faculty_designation', 'field_faculty_cv', 'field_background', 'field_affiliations', 'field_awards_and_fellowship', 'field_faculty_rd_proj', 'field_courses_taught', 'field_research_area','field_publications_link', 'field_detailed_information_page') }}
 							</div>
+							{{ ds_content|without('title', 'field_full_name', 'field_faculty_photo', 'field_room_no', 'field_building', 'field_phone_no', 'field_mobile_number', 'field_email', 'field_google_scholar_id', 'field_scopus_id', 'field_orcid', 'field_full_name', 'field_employment_category', 'field_faculty_designation', 'field_faculty_attachments', 'field_background', 'field_affiliations', 'field_awards_and_fellowship', 'field_faculty_rd_proj', 'field_courses_taught', 'field_research_area','field_publications_link', 'field_detailed_information_page') }}
+
 						</div>
 		  </div><!-- #main col-sm-8 -->
 
-{# 
-{{ ds_content|without('title', 'field_full_name', 'field_faculty_photo', 'field_room_no', 'field_building_new', 'field_phone_no_new', 'field_mobile_number_new', 'field_email_new', 'field_google_scholar_id', 'field_scopus_id', 'field_orcid', 'field_full_name', 'field_employment_category', 'field_faculty_designation', 'field_faculty_cv', 'field_background', 'field_affiliations', 'field_awards_and_fellowship', 'field_faculty_rd_proj', 'field_courses_taught', 'field_research_area','field_publications_link', 'field_detailed_information_page', 'dynamic-block-fieldnode-faculty-research-areas') }}
-
- #}
 	   </div> <!-- row -->
 	</div> <!-- container -->
 

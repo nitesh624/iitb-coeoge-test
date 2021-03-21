@@ -2,7 +2,6 @@ html {
   font-size: 100%;
   position: initial;
   overflow-x: hidden;
-  font-family: 'COOP-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   min-height: 100%;
   background-color: #fff;
   line-height: 1.5;
@@ -16,10 +15,10 @@ body {
   font-size: 100%;
   position: initial;
   overflow-x: hidden;
-  font-family: 'COOP-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   min-height: 100%;
   background-color: #fff;
-  line-height: 1.5;
+  line-height: 1.8;
   font-size: 1rem;
   font-weight: 400;
   text-rendering: optimizelegibility;
@@ -189,7 +188,33 @@ h6 {
 .bg-cover {
   background-size: cover;
 }
-
+.grid-inline {
+  display: inline-grid;
+}
+.block-inline {
+  display: inline-block;
+}
+.flex {
+  display: flex;
+}
+.flex-inline {
+  display: inline-flex;
+}
+.table-inline {
+  display: inline-table;
+}
+.inline {
+  display: inline;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
 .align-items-center {
   -ms-flex-align: center !important;
   align-items: center !important;
@@ -198,7 +223,11 @@ h6 {
   -ms-flex-pack: center !important;
   justify-content: center !important;
 }
-
+.align-center {
+  display: flex;
+  -webkit-box-pack: center !important;
+  justify-content: center !important;
+}
 select {
   &:focus {
     outline: none;
@@ -289,33 +318,7 @@ img.grayscale {
 .img-bit-round {
   border-radius: 6px;
 }
-.grid-inline {
-  display: inline-grid;
-}
-.block-inline {
-  display: inline-block;
-}
-.flex {
-  display: flex;
-}
-.flex-inline {
-  display: inline-flex;
-}
-.table-inline {
-  display: inline-table;
-}
-.inline {
-  display: inline;
-}
-.text-right {
-  text-align: right;
-}
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
-}
+
 .stage_image {
   background-repeat: no-repeat;
   background-size: cover;
@@ -3432,7 +3435,6 @@ p.form-submit {
 }
 @media screen and (min-width: 767px) {
   .section-footer {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
