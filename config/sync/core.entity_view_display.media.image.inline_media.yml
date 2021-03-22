@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.inline_media
-    - field.field.media.image.field_description
     - field.field.media.image.field_media_image
     - image.style.inline_media_16_9
     - media.type.image
@@ -62,7 +61,6 @@ content:
     region: content
 hidden:
   created: true
-  field_description: true
   langcode: true
   name: true
   thumbnail: true

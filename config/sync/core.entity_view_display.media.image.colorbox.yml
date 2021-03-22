@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.colorbox
-    - field.field.media.image.field_description
     - field.field.media.image.field_media_image
     - image.style.gallery
     - image.style.gallery_colorbox
@@ -68,7 +67,6 @@ content:
     region: content
 hidden:
   created: true
-  field_description: true
   langcode: true
   name: true
   thumbnail: true

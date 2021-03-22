@@ -1,0 +1,21 @@
+uuid: 0bb69f2a-eb85-4726-977d-85707288065c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top_bottom
+    - paragraphs.paragraphs_type.image
+  module:
+    - options
+id: paragraph.image.field_padding_top_bottom
+field_name: field_padding_top_bottom
+entity_type: paragraph
+bundle: image
+label: 'Padding top and bottom'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

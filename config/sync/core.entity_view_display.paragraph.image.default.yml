@@ -3,10 +3,69 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.image.field_image_caption
+    - field.field.paragraph.image.field_media
+    - field.field.paragraph.image.field_padding_top_bottom
+    - image.style.card_list
     - paragraphs.paragraphs_type.image
+  module:
+    - ds
+    - media
+    - options
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
 mode: default
-content: {  }
+content:
+  field_image_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_media:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: card_list
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: media_thumbnail
+    region: content
+  field_padding_top_bottom:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
 hidden: {  }

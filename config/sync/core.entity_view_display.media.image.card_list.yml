@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.card_list
-    - field.field.media.image.field_description
     - field.field.media.image.field_media_image
     - image.style.card_list_400x400
     - media.type.image
@@ -62,7 +61,6 @@ content:
             fi-def-at: false
 hidden:
   created: true
-  field_description: true
   langcode: true
   name: true
   thumbnail: true

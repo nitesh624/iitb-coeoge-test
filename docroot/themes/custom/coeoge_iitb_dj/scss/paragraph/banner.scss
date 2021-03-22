@@ -1,5 +1,9 @@
+//import
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
 .page-title {
-  padding: 100px 0 100px 0;
+  padding: 150px 0 150px 0;
   position: relative;
   z-index: 1;
 }

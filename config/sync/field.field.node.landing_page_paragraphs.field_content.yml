@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.card_list
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.hero_view
+    - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_view
     - paragraphs.paragraphs_type.text
   module:
@@ -35,6 +36,7 @@ settings:
       gallery: gallery
       hero_view: hero_view
       list_view: list_view
+      image: image
       text: text
     target_bundles_drag_drop:
       attachments:
@@ -55,6 +57,9 @@ settings:
       hero_view:
         enabled: true
         weight: 14
+      image:
+        enabled: true
+        weight: 17
       list_view:
         enabled: true
         weight: 16

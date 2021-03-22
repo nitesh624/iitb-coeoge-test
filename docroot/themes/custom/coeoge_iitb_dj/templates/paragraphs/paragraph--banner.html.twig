@@ -1,0 +1,14 @@
+{{ attach_library("coeoge_iitb_dj/paragraph-base") }}
+{{ attach_library("coeoge_iitb_dj/paragraph-type-banner") }}
+
+<section class="section page-title bg-fixed bg-cover" style="background-image: url({{file_url(content.field_background_image[0]['#media'].field_media_image.entity.uri.value)}});">
+  <div class="container">
+    <div class="row flex align-items-center justify-content-center">
+      <div class="col-md-6">
+        <div class="service-banner">
+          <h1>{{content.field_title.0}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

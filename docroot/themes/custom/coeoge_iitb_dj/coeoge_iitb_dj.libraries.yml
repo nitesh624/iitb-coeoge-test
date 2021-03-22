@@ -55,6 +55,11 @@ paragraph-type-attachments:
     theme:
       css/paragraph/attachments.css: {}
 
+paragraph-type-banner:
+  css:
+    theme:
+      css/paragraph/banner.css: {}
+
 paragraph-type-card:
   css:
     theme:
