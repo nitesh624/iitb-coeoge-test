@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.event.body
+    - field.field.node.event.field_content
     - field.field.node.event.field_end_date_and_time
     - field.field.node.event.field_event_name_of_speaker_and_
     - field.field.node.event.field_event_title_of_seminar_con
@@ -18,6 +19,7 @@ dependencies:
   module:
     - datetime
     - ds
+    - entity_reference_revisions
     - text
     - user
 third_party_settings:
@@ -28,6 +30,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -47,6 +50,7 @@ third_party_settings:
         - field_event_title_of_seminar_con
         - body
         - links
+        - field_content
 _core:
   default_config_hash: WjB3CwcVY9AYQ9vqR1CAI5-Ro9xDySgUKHv1qJOH9oY
 id: node.event.full
@@ -89,6 +93,44 @@ content:
             fis-def-at: false
             fi-def-at: false
     region: ds_content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
   field_end_date_and_time:
     weight: 1
     label: above
@@ -343,7 +385,7 @@ content:
     type: datetime_custom
     region: ds_content
   links:
-    weight: 8
+    weight: 7
     region: ds_content
     settings: {  }
     third_party_settings: {  }

@@ -19,7 +19,7 @@
   <div class="row">
     <div class="col-md-8 col-sm-8 col-xs-9">
       {% if site_logo %}
-        <a class="logo navbar-btn pull-left" href="http://www.iitb.ac.in/" title="{{ 'IIT Bombay Home'|t }}" rel="home">
+        <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
           <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" class="img-responsive" /> 
         </a>
       {% endif %}

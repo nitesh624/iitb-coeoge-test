@@ -317,7 +317,7 @@ display:
           type: media_thumbnail
           settings:
             image_style: card_list_200x200
-            image_link: content
+            image_link: ''
           group_column: target_id
           group_columns: {  }
           group_rows: true

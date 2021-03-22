@@ -1,0 +1,64 @@
+uuid: 61058305-4c10-447e-907c-112852d36bba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.research_glimpses
+    - paragraphs.paragraphs_type.attachments
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.research_glimpses.field_content
+field_name: field_content
+entity_type: node
+bundle: research_glimpses
+label: 'Additional Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attachments: attachments
+      gallery: gallery
+      image: image
+      text: text
+    target_bundles_drag_drop:
+      attachments:
+        enabled: true
+        weight: 11
+      banner:
+        weight: 12
+        enabled: false
+      card:
+        weight: 13
+        enabled: false
+      card_list:
+        weight: 14
+        enabled: false
+      gallery:
+        enabled: true
+        weight: 15
+      hero_view:
+        weight: 16
+        enabled: false
+      image:
+        enabled: true
+        weight: 17
+      list_view:
+        weight: 18
+        enabled: false
+      r_d_projects:
+        weight: 19
+        enabled: false
+      text:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

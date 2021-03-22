@@ -9,7 +9,15 @@ dependencies:
     module:
       - student_page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    plain_format: '0'
+    restricted_html: '0'
+    full_html: '0'
 _core:
   default_config_hash: p6gP2PfYZ3ia7mBGnqxG6YZFq8Q80lnUpMiHy0oN7Bg
 id: node.student_page.field_student_employment_history

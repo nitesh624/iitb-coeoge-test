@@ -9,9 +9,11 @@
  * - ds_content: content region
  */
 #}
-<{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix', 'col-sm-8','col-sm-offset-2') }}>
+<{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix', 'container') }}>
   {{ title_suffix.contextual_links }}
-
- 	{{ ds_content }}
-
+  <div class="row">
+    <div class="col-md-12">
+ 	    {{ ds_content }}
+    </div>
+  </div>
 </{{ ds_content_wrapper }}>

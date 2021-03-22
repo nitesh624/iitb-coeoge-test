@@ -1,0 +1,23 @@
+uuid: a94d7379-5588-4090-8c78-20896a0a04ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_of_admission
+    - node.type.student_page
+  module:
+    - yearonly
+id: node.student_page.field_year_of_admission
+field_name: field_year_of_admission
+entity_type: node
+bundle: student_page
+label: 'Year of admission'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1900'
+  yearonly_to: now
+field_type: yearonly

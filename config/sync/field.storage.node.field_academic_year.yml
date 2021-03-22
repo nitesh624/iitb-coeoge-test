@@ -1,25 +1,20 @@
-uuid: d86d56d3-8d82-49ac-b610-c69355a989c3
+uuid: a2254cb1-ab85-49a1-bc45-5e55b165de42
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - student_page
   module:
     - field_permissions
-    - name
     - node
+    - yearonly
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: O16xWbdC737sQlW4faoPn4a_1j1NbnBWr0HVDMHw_3c
-id: node.field_student_full_name
-field_name: field_student_full_name
+id: node.field_academic_year
+field_name: field_academic_year
 entity_type: node
-type: name
+type: yearonly
 settings: {  }
-module: name
+module: yearonly
 locked: false
 cardinality: 1
 translatable: true

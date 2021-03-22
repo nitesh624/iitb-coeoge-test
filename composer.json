@@ -32,7 +32,9 @@
     "drupal/ckeditor_tableselection": "^1.0",
     "drupal/ckeditor_tableresize": "^1.0",
     "drupal/color_field": "^2.4",
-    "drupal/editor_advanced_link": "^1.8"
+    "drupal/editor_advanced_link": "^1.8",
+    "drupal/yearonly": "^9.0",
+    "drupal/datetimehideseconds": "^1.1"
   },
   "conflict": {
     "symfony/http-foundation": "3.4.24"

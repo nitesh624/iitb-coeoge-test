@@ -1,16 +1,16 @@
-uuid: 7a09731f-7735-44c1-a606-095dc78e7a68
+uuid: 3642c442-33c0-4f18-8d37-3b7bd0543107
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_staff_photo
+    - field.storage.node.field_student_photo_
     - media.type.image
-    - node.type.staff_page
-id: node.staff_page.field_staff_photo
-field_name: field_staff_photo
+    - node.type.student_page
+id: node.student_page.field_student_photo_
+field_name: field_student_photo_
 entity_type: node
-bundle: staff_page
-label: 'Staff Photo'
+bundle: student_page
+label: "Student photo\t"
 description: ''
 required: false
 translatable: false

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_content
     - field.field.node.event.field_end_date_and_time
     - field.field.node.event.field_event_name_of_speaker_and_
     - field.field.node.event.field_event_title_of_seminar_con
@@ -16,7 +17,8 @@ dependencies:
       - acadmix_event
   module:
     - datetime
-    - options
+    - ds
+    - entity_reference_revisions
     - text
     - user
 _core:
@@ -32,6 +34,44 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_content:
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_revisions_entity_view
     region: content
   field_end_date_and_time:
     weight: 8
@@ -52,9 +92,10 @@ content:
   field_event_title_of_seminar_con:
     weight: 6
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: list_default
+    type: string
     region: content
   field_event_types:
     weight: 3

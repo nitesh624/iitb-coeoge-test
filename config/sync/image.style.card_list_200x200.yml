@@ -1,14 +1,24 @@
-uuid: 3c49f8fe-5d23-4c01-9dc3-578f59debf80
+uuid: 152ef384-3e77-4400-9ba1-f904e561e19a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - crop.type.crop_1_1
+  module:
+    - crop
 name: card_list_200x200
-label: 'Card list 200X200'
+label: 'Card List 200X200'
 effects:
-  1709be11-61c4-48cf-af67-8aa986a47b03:
-    uuid: 1709be11-61c4-48cf-af67-8aa986a47b03
-    id: image_scale_and_crop
+  c258c132-cf55-4b6f-af36-1950d65d26aa:
+    uuid: c258c132-cf55-4b6f-af36-1950d65d26aa
+    id: crop_crop
     weight: 1
+    data:
+      crop_type: crop_1_1
+  94556f05-7a5e-4fce-99c4-b3f6adc70d82:
+    uuid: 94556f05-7a5e-4fce-99c4-b3f6adc70d82
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 200
       height: 200

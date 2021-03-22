@@ -6,8 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.research_glimpses.body
     - field.field.node.research_glimpses.field_category_glimpse
+    - field.field.node.research_glimpses.field_content
     - field.field.node.research_glimpses.field_faculty_name_ref
-    - field.field.node.research_glimpses.field_image_glimpse
     - node.type.research_glimpses
   enforced:
     module:
@@ -35,6 +35,6 @@ content:
     region: content
 hidden:
   field_category_glimpse: true
+  field_content: true
   field_faculty_name_ref: true
-  field_image_glimpse: true
   langcode: true

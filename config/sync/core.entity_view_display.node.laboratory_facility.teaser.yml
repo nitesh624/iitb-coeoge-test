@@ -5,12 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.laboratory_facility.body
+    - field.field.node.laboratory_facility.field_content
     - field.field.node.laboratory_facility.field_cost_of_purchase
     - field.field.node.laboratory_facility.field_date_of_purchase
     - field.field.node.laboratory_facility.field_facility_access_available_
     - field.field.node.laboratory_facility.field_indented_by_faculty_
     - field.field.node.laboratory_facility.field_instrument_class
-    - field.field.node.laboratory_facility.field_labfac_image
     - field.field.node.laboratory_facility.field_purpose_of_equipment
     - field.field.node.laboratory_facility.field_source_of_funding
     - field.field.node.laboratory_facility.field_status_of_facility
@@ -41,12 +41,12 @@ content:
     weight: 100
     region: content
 hidden:
+  field_content: true
   field_cost_of_purchase: true
   field_date_of_purchase: true
   field_facility_access_available_: true
   field_indented_by_faculty_: true
   field_instrument_class: true
-  field_labfac_image: true
   field_purpose_of_equipment: true
   field_source_of_funding: true
   field_status_of_facility: true

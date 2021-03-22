@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.course_allotment.body
-    - field.field.node.course_allotment.field_acad_year
+    - field.field.node.course_allotment.field_academic_year
     - field.field.node.course_allotment.field_course_code_ref
     - field.field.node.course_allotment.field_course_slot
     - field.field.node.course_allotment.field_course_url
@@ -16,12 +16,12 @@ dependencies:
     module:
       - course_allotment
   module:
-    - datetime
     - ds
     - link
     - options
     - text
     - user
+    - yearonly
 third_party_settings:
   ds:
     layout:
@@ -30,6 +30,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -43,7 +44,7 @@ third_party_settings:
       ds_content:
         - links
         - body
-        - field_acad_year
+        - field_academic_year
         - field_semester
         - field_course_code_ref
         - field_course_slot
@@ -64,12 +65,10 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: ds_content
-  field_acad_year:
+  field_academic_year:
     weight: 2
     label: above
-    settings:
-      timezone_override: ''
-      date_format: 'Y'
+    settings: {  }
     third_party_settings:
       ds:
         ft:
@@ -99,7 +98,7 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
-    type: datetime_custom
+    type: yearonly_default
     region: ds_content
   field_course_code_ref:
     weight: 4

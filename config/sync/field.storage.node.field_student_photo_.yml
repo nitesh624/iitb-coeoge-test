@@ -1,26 +1,21 @@
-uuid: a0947f99-a0de-47b5-8863-2194125fa003
+uuid: 87cfb663-919f-41ae-8e95-3bbcd842b750
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - course_allotment
   module:
-    - datetime
     - field_permissions
+    - media
     - node
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: MDrQUsho54n0hfT5gfYGx26mxMPQft2F0xnCWxYWYkY
-id: node.field_acad_year
-field_name: field_acad_year
+id: node.field_student_photo_
+field_name: field_student_photo_
 entity_type: node
-type: datetime
+type: entity_reference
 settings:
-  datetime_type: datetime
-module: datetime
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

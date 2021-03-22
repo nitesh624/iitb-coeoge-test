@@ -17,22 +17,23 @@ dependencies:
     - field.field.node.student_page.field_student_lab_room_number
     - field.field.node.student_page.field_student_mobile_number
     - field.field.node.student_page.field_student_phone_no
-    - field.field.node.student_page.field_student_photo
+    - field.field.node.student_page.field_student_photo_
     - field.field.node.student_page.field_student_public_profile_url
     - field.field.node.student_page.field_student_r_d_projects
     - field.field.node.student_page.field_student_roll_number
-    - field.field.node.student_page.field_student_year_of_admission
-    - image.style.thumbnail
+    - field.field.node.student_page.field_year_of_admission
     - node.type.student_page
   enforced:
     module:
       - student_page
   module:
-    - image
+    - allowed_formats
     - link
+    - media_library
     - name
     - path
     - text
+    - yearonly
 _core:
   default_config_hash: dHj8nh0PNexlIyuqUptphrFD2Nuy-XuH-YZPvCRVauM
 id: node.student_page.default
@@ -42,43 +43,50 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 25
+    weight: 26
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_student_admission_status:
-    weight: 11
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_student_awards_and_fellows:
-    weight: 21
+    weight: 23
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textfield
     region: content
   field_student_background:
-    weight: 18
+    weight: 20
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textfield
     region: content
   field_student_building:
-    weight: 16
+    weight: 18
     settings:
       size: 60
       placeholder: ''
@@ -86,21 +94,24 @@ content:
     type: string_textfield
     region: content
   field_student_current_employment:
-    weight: 19
+    weight: 21
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textfield
     region: content
   field_student_degree_programme:
-    weight: 8
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_student_email:
-    weight: 12
+    weight: 14
     settings:
       size: 60
       placeholder: ''
@@ -108,28 +119,48 @@ content:
     type: email_default
     region: content
   field_student_employment_history:
-    weight: 20
+    weight: 22
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textfield
     region: content
   field_student_full_name:
-    weight: 7
-    settings: {  }
+    weight: 8
+    settings:
+      labels:
+        title: Title
+        given: Given
+        middle: 'Middle name(s)'
+        family: Family
+        generational: Generational
+        credentials: Credentials
+      size:
+        title: 6
+        given: 20
+        middle: 20
+        family: 20
+        generational: 5
+        credentials: 35
+      title_display:
+        title: description
+        given: description
+        middle: description
+        family: description
+        generational: description
+        credentials: description
+      widget_layout: stacked
+      show_component_required_marker: false
+      credentials_inline: false
+      override_field_settings: false
     third_party_settings: {  }
     type: name_default
     region: content
   field_student_hostel_and_room_nu:
-    weight: 15
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_student_lab_room_number:
     weight: 17
     settings:
       size: 60
@@ -137,8 +168,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_student_lab_room_number:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_student_mobile_number:
-    weight: 14
+    weight: 16
     settings:
       size: 60
       placeholder: ''
@@ -146,23 +185,22 @@ content:
     type: string_textfield
     region: content
   field_student_phone_no:
-    weight: 13
+    weight: 15
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_student_photo:
-    weight: 24
+  field_student_photo_:
+    type: media_library_widget
+    weight: 9
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_student_public_profile_url:
-    weight: 23
+    weight: 25
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -170,27 +208,29 @@ content:
     type: link_default
     region: content
   field_student_r_d_projects:
-    weight: 22
+    weight: 24
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textfield
     region: content
   field_student_roll_number:
-    weight: 9
+    weight: 11
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_student_year_of_admission:
-    weight: 10
-    settings:
-      placeholder: ''
+  field_year_of_admission:
+    weight: 27
+    settings: {  }
     third_party_settings: {  }
-    type: number
+    type: yearonly_default
     region: content
   langcode:
     type: language_select
@@ -201,7 +241,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -209,21 +249,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   title:

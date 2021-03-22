@@ -6,8 +6,12 @@ dependencies:
     module:
       - staff_page
   module:
+    - field_permissions
     - name
     - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
 _core:
   default_config_hash: 9ZlmUqc9wE0pAXRCgJzO2_N9NIta8aOMM3Zze8onGxY
 id: node.field_staff_full_name

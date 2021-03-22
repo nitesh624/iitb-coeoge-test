@@ -4,24 +4,24 @@ status: true
 dependencies:
   config:
     - field.field.node.laboratory_facility.body
+    - field.field.node.laboratory_facility.field_content
     - field.field.node.laboratory_facility.field_cost_of_purchase
     - field.field.node.laboratory_facility.field_date_of_purchase
     - field.field.node.laboratory_facility.field_facility_access_available_
     - field.field.node.laboratory_facility.field_indented_by_faculty_
     - field.field.node.laboratory_facility.field_instrument_class
-    - field.field.node.laboratory_facility.field_labfac_image
     - field.field.node.laboratory_facility.field_purpose_of_equipment
     - field.field.node.laboratory_facility.field_source_of_funding
     - field.field.node.laboratory_facility.field_status_of_facility
     - field.field.node.laboratory_facility.field_type_of_the_facility
-    - image.style.iitb_laborartory_facility_thumbnail_100_100_
     - node.type.laboratory_facility
   enforced:
     module:
       - laboratory_facility
   module:
     - datetime
-    - image
+    - datetimehideseconds
+    - paragraphs
     - path
     - text
 _core:
@@ -38,6 +38,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -46,6 +47,25 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_content:
+    weight: 132
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
   field_cost_of_purchase:
     weight: 128
     settings:
@@ -57,7 +77,9 @@ content:
   field_date_of_purchase:
     weight: 127
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
     type: datetime_default
     region: content
   field_facility_access_available_:
@@ -80,15 +102,7 @@ content:
     weight: 125
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
-  field_labfac_image:
-    weight: 132
-    settings:
-      preview_image_style: iitb_laborartory_facility_thumbnail_100_100_
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: image_image
+    type: options_buttons
     region: content
   field_purpose_of_equipment:
     weight: 123
@@ -108,13 +122,13 @@ content:
     weight: 126
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_type_of_the_facility:
     weight: 124
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   langcode:
     type: language_select

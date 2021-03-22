@@ -24,7 +24,7 @@
   z-index: 1;
   background-color: #ffffff;
   position: relative;
-  margin-top: 4.5em;
+  margin-top: 6em;
 }
 .top-nav {
   padding: 10px;
@@ -117,7 +117,7 @@
   transition: all 0.5s;
 }
 a.logo {
-  width: 5em;
+  width: 6em;
 }
 .font-shrink {
   a.logo {
@@ -131,7 +131,7 @@ a.logo {
 }
 .sec-logo {
   display: inline;
-  max-width: 6em;
+  max-width: 5em;
 }
 .navbar-text {
   font-weight: 400;
@@ -957,6 +957,12 @@ body.toolbar-fixed {
   .navbar-toggle {
     margin: 0px;
     padding: 7px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar-brand {
+    max-width: 7em;
+    padding: 10px;
   }
 }
 @media (min-width: 64em) {

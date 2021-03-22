@@ -1,32 +1,21 @@
-uuid: 465801fe-075a-4977-a672-3aefaad5fcf1
+uuid: 76bd7cee-0b74-4457-9425-b0d3015e54f1
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - staff_page
   module:
-    - file
-    - image
+    - field_permissions
+    - media
     - node
-_core:
-  default_config_hash: b80nt3raOEaXh3ysLjn_CPW2_wTdxPBc6uAx3VQCV30
+third_party_settings:
+  field_permissions:
+    permission_type: public
 id: node.field_staff_photo
 field_name: field_staff_photo
 entity_type: node
-type: image
+type: entity_reference
 settings:
-  uri_scheme: public
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-  target_type: file
-  display_field: false
-  display_default: false
-module: image
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

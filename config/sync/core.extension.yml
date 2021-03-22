@@ -46,6 +46,7 @@ module:
   ctools: 0
   datatables: 0
   datetime: 0
+  datetimehideseconds: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
@@ -71,7 +72,6 @@ module:
   laboratory_facility: 0
   language: 0
   layout_builder: 0
-  layout_builder_modal: 0
   layout_discovery: 0
   ldap_authentication: 0
   ldap_authorization: 0
@@ -122,12 +122,14 @@ module:
   toolbar: 0
   tour: 0
   twig_field_value: 0
+  twig_tweak: 0
   update: 0
   upgrade_status: 0
   user: 0
   views_bootstrap: 0
   views_ui: 0
   viewsreference: 0
+  yearonly: 0
   ds: 1
   menu_link_content: 1
   pathauto: 1

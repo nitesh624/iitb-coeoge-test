@@ -16,14 +16,14 @@ dependencies:
     - field.field.node.staff_page.field_staff_full_name
     - field.field.node.staff_page.field_staff_head
     - field.field.node.staff_page.field_staff_photo
-    - image.style.iitb_staff_max_325x325
+    - image.style.acad_fac_max_650x650
     - node.type.staff_page
   enforced:
     module:
       - staff_page
   module:
     - ds
-    - image
+    - media
     - name
     - options
     - spamspan
@@ -37,6 +37,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -49,7 +50,6 @@ third_party_settings:
     regions:
       ds_content:
         - links
-        - field_staff_photo
         - field_staff_full_name
         - field_staff_designation
         - field_email
@@ -61,7 +61,7 @@ third_party_settings:
         - body
         - field_r_d_projects
         - field_awards_and_fellowships
-        - field_staff_head
+        - field_staff_photo
 _core:
   default_config_hash: 8I4YH8adUSW18MJILNaoj04-1pAzlUqYBeZejhMoubI
 id: node.staff_page.default
@@ -70,9 +70,9 @@ bundle: staff_page
 mode: default
 content:
   body:
-    label: hidden
+    label: above
     type: text_default
-    weight: 10
+    weight: 9
     settings: {  }
     third_party_settings:
       ds:
@@ -105,7 +105,7 @@ content:
             fi-def-at: false
     region: ds_content
   field_awards_and_fellowships:
-    weight: 12
+    weight: 11
     label: above
     settings: {  }
     third_party_settings:
@@ -141,7 +141,7 @@ content:
     type: text_default
     region: ds_content
   field_building:
-    weight: 8
+    weight: 7
     label: above
     settings:
       link_to_entity: false
@@ -177,7 +177,7 @@ content:
     type: string
     region: ds_content
   field_email:
-    weight: 4
+    weight: 3
     label: above
     settings:
       spamspan_at: ' [at] '
@@ -220,7 +220,7 @@ content:
     type: email_spamspan
     region: ds_content
   field_lab_room_number:
-    weight: 7
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -256,7 +256,7 @@ content:
     type: string
     region: ds_content
   field_mobile_number:
-    weight: 6
+    weight: 5
     label: above
     settings:
       link_to_entity: false
@@ -293,9 +293,10 @@ content:
     type: string
     region: ds_content
   field_phone_no:
-    weight: 5
+    weight: 4
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings:
       ds:
         ds_limit: ''
@@ -329,7 +330,7 @@ content:
     type: string
     region: ds_content
   field_r_d_projects:
-    weight: 11
+    weight: 10
     label: above
     settings: {  }
     third_party_settings:
@@ -365,7 +366,7 @@ content:
     type: text_default
     region: ds_content
   field_staff_category:
-    weight: 9
+    weight: 8
     label: above
     settings:
       link: true
@@ -402,7 +403,7 @@ content:
     type: entity_reference_label
     region: ds_content
   field_staff_designation:
-    weight: 3
+    weight: 2
     label: above
     settings: {  }
     third_party_settings:
@@ -437,18 +438,17 @@ content:
     type: list_default
     region: ds_content
   field_staff_full_name:
-    weight: 2
+    weight: 1
     label: above
     settings:
       format: default
-      output: default
-      multiple: default
-      multiple_delimiter: ', '
-      multiple_and: text
-      multiple_delimiter_precedes_last: never
-      multiple_el_al_min: '3'
-      multiple_el_al_first: '1'
-      markup: false
+      markup: ''
+      list_format: ''
+      link_target: ''
+      preferred_field_reference: ''
+      preferred_field_reference_separator: ', '
+      alternative_field_reference: ''
+      alternative_field_reference_separator: ', '
     third_party_settings:
       ds:
         ft:
@@ -480,53 +480,15 @@ content:
             fi-def-at: false
     type: name_default
     region: ds_content
-  field_staff_head:
-    weight: 13
-    label: above
-    settings:
-      format: default
-      format_custom_true: ''
-      format_custom_false: ''
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: div
-            lbw-cl: 'col-sm-3 fw-bold'
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'row mb-10'
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: col-sm-9
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: boolean
-    region: ds_content
   field_staff_photo:
-    weight: 1
+    type: media_thumbnail
+    weight: 12
     label: hidden
     settings:
-      image_style: iitb_staff_max_325x325
+      image_style: acad_fac_max_650x650
       image_link: ''
     third_party_settings:
       ds:
-        ds_limit: ''
         ft:
           id: expert
           settings:
@@ -554,7 +516,6 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
-    type: image
     region: ds_content
   links:
     weight: 0
@@ -562,4 +523,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_staff_head: true
   langcode: true

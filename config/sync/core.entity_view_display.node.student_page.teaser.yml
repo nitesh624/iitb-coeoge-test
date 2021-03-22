@@ -18,11 +18,11 @@ dependencies:
     - field.field.node.student_page.field_student_lab_room_number
     - field.field.node.student_page.field_student_mobile_number
     - field.field.node.student_page.field_student_phone_no
-    - field.field.node.student_page.field_student_photo
+    - field.field.node.student_page.field_student_photo_
     - field.field.node.student_page.field_student_public_profile_url
     - field.field.node.student_page.field_student_r_d_projects
     - field.field.node.student_page.field_student_roll_number
-    - field.field.node.student_page.field_student_year_of_admission
+    - field.field.node.student_page.field_year_of_admission
     - node.type.student_page
   enforced:
     module:
@@ -62,9 +62,9 @@ hidden:
   field_student_lab_room_number: true
   field_student_mobile_number: true
   field_student_phone_no: true
-  field_student_photo: true
+  field_student_photo_: true
   field_student_public_profile_url: true
   field_student_r_d_projects: true
   field_student_roll_number: true
-  field_student_year_of_admission: true
+  field_year_of_admission: true
   langcode: true

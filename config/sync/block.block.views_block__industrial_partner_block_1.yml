@@ -1,4 +1,4 @@
-uuid: 3766c10a-0eab-4959-97ca-8fe9fc00aa4e
+uuid: e7b86a7a-0d1d-4df7-8924-36f96939b89a
 langcode: en
 status: true
 dependencies:
@@ -12,15 +12,15 @@ dependencies:
 id: views_block__industrial_partner_block_1
 theme: coeoge_iitb_dj
 region: content_bottom
-weight: -11
+weight: 0
 provider: null
 plugin: 'views_block:industrial_partner-block_1'
 settings:
   id: 'views_block:industrial_partner-block_1'
-  label: ''
+  label: 'Industrial Partners'
   provider: views
-  label_display: '0'
-  views_label: ''
+  label_display: visible
+  views_label: 'Industrial Partners'
   items_per_page: none
 visibility:
   request_path:

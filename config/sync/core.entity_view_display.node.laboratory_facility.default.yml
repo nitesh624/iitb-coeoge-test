@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.laboratory_facility.body
+    - field.field.node.laboratory_facility.field_content
     - field.field.node.laboratory_facility.field_cost_of_purchase
     - field.field.node.laboratory_facility.field_date_of_purchase
     - field.field.node.laboratory_facility.field_facility_access_available_
     - field.field.node.laboratory_facility.field_indented_by_faculty_
     - field.field.node.laboratory_facility.field_instrument_class
-    - field.field.node.laboratory_facility.field_labfac_image
     - field.field.node.laboratory_facility.field_purpose_of_equipment
     - field.field.node.laboratory_facility.field_source_of_funding
     - field.field.node.laboratory_facility.field_status_of_facility
@@ -21,8 +21,8 @@ dependencies:
   module:
     - datetime
     - ds
+    - entity_reference_revisions
     - options
-    - slick
     - text
     - user
 third_party_settings:
@@ -33,6 +33,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -40,13 +41,10 @@ third_party_settings:
         link_attribute: ''
         link_custom: ''
         classes:
-          layout_class:
-            col-sm-8: col-sm-8
-            col-sm-offset-2: col-sm-offset-2
+          layout_class: {  }
           ds_content: {  }
     regions:
       ds_content:
-        - field_labfac_image
         - field_purpose_of_equipment
         - field_type_of_the_facility
         - field_instrument_class
@@ -56,6 +54,7 @@ third_party_settings:
         - field_facility_access_available_
         - field_source_of_funding
         - body
+        - field_content
 _core:
   default_config_hash: TNsb6oNeXgEUEbWRR2OXLMRUmdkagGMNEUYFVgAOTVw
 id: node.laboratory_facility.default
@@ -97,6 +96,15 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
+    region: ds_content
+  field_content:
+    weight: 10
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: ds_content
   field_date_of_purchase:
     weight: 6
@@ -242,109 +250,6 @@ content:
             ow-def-cl: false
             fis-def-at: false
             fi-def-at: false
-  field_labfac_image:
-    weight: 0
-    label: hidden
-    settings:
-      style: ''
-      optionset: node_img_slider
-      optionset_thumbnail: ''
-      skin: default
-      skin_thumbnail: ''
-      image_style: iitb_laborartory_facility_700_300
-      thumbnail_style: ''
-      responsive_image_style: ''
-      thumbnail_effect: ''
-      thumbnail_position: ''
-      media_switch: ''
-      ratio: ''
-      grid: null
-      grid_medium: null
-      grid_small: null
-      visible_items: null
-      layout: ''
-      thumbnail_caption: ''
-      cache: 0
-      override: true
-      overridables:
-        arrows: arrows
-        autoplay: autoplay
-        dots: dots
-        draggable: draggable
-        infinite: '0'
-        mouseWheel: '0'
-        randomize: '0'
-        variableWidth: '0'
-      sizes: ''
-      breakpoints:
-        xs:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        sm:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        md:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        lg:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        xl:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-      current_view_mode: default
-      background: false
-      caption:
-        title: '0'
-        alt: '0'
-      grid_header: ''
-      preserve_keys: false
-      skin_arrows: ''
-      skin_dots: ''
-      iframe_lazy: true
-      icon: ''
-      view_mode: ''
-      box_caption: ''
-      box_caption_custom: ''
-      box_style: ''
-      box_media_style: ''
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: div
-            ow-cl: 'row mb-10'
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
-    type: slick_image
-    region: ds_content
   field_purpose_of_equipment:
     weight: 1
     label: above

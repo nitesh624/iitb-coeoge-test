@@ -5,15 +5,14 @@ dependencies:
   config:
     - field.field.node.research_glimpses.body
     - field.field.node.research_glimpses.field_category_glimpse
+    - field.field.node.research_glimpses.field_content
     - field.field.node.research_glimpses.field_faculty_name_ref
-    - field.field.node.research_glimpses.field_image_glimpse
-    - image.style.iitb_research_glimpses_thumbnail_100_100
     - node.type.research_glimpses
   enforced:
     module:
       - research_glimpses
   module:
-    - image
+    - paragraphs
     - path
     - text
 _core:
@@ -30,6 +29,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -40,13 +40,28 @@ content:
     third_party_settings: {  }
   field_category_glimpse:
     weight: 8
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
+    region: content
+  field_content:
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    type: paragraphs
     region: content
   field_faculty_name_ref:
     weight: 9
@@ -57,14 +72,6 @@ content:
       match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_image_glimpse:
-    weight: 10
-    settings:
-      preview_image_style: iitb_research_glimpses_thumbnail_100_100
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: image_image
     region: content
   langcode:
     type: language_select

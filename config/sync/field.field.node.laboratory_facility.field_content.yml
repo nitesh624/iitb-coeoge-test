@@ -1,0 +1,60 @@
+uuid: 72135475-2523-45da-88bd-e60a24da8a2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.laboratory_facility
+    - paragraphs.paragraphs_type.attachments
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - entity_reference_revisions
+id: node.laboratory_facility.field_content
+field_name: field_content
+entity_type: node
+bundle: laboratory_facility
+label: 'Additional Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attachments: attachments
+      gallery: gallery
+    target_bundles_drag_drop:
+      attachments:
+        enabled: true
+        weight: 11
+      banner:
+        weight: 12
+        enabled: false
+      card:
+        weight: 13
+        enabled: false
+      card_list:
+        weight: 14
+        enabled: false
+      gallery:
+        enabled: true
+        weight: 15
+      hero_view:
+        weight: 16
+        enabled: false
+      image:
+        weight: 17
+        enabled: false
+      list_view:
+        weight: 18
+        enabled: false
+      r_d_projects:
+        weight: 19
+        enabled: false
+      text:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

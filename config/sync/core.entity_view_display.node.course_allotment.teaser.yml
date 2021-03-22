@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.course_allotment.body
-    - field.field.node.course_allotment.field_acad_year
+    - field.field.node.course_allotment.field_academic_year
     - field.field.node.course_allotment.field_course_code_ref
     - field.field.node.course_allotment.field_course_slot
     - field.field.node.course_allotment.field_course_url
@@ -38,7 +38,7 @@ content:
     weight: 100
     region: content
 hidden:
-  field_acad_year: true
+  field_academic_year: true
   field_course_code_ref: true
   field_course_slot: true
   field_course_url: true

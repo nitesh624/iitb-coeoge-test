@@ -1,0 +1,90 @@
+{% block navbar %}
+  {%
+    set navbar_classes = [
+      theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+    ]
+  %}
+
+  {% if show_heading_branding or page.top_head_search %}
+    <div class="top-nav top-nav-hidden">
+      <div class="container">
+        <div class="row">
+          {% if show_heading_branding %}              
+            <div class="col-md-9 col-sm-9 col-xs-12">
+              <div class="top-nav-brand">
+                <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" >{{ site_slogan }} {{ site_name }}</a>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if page.top_head_search %}
+            <div class="col-md-3 col-sm-3 col-xs-12 pull-right">
+              {{ page.top_head_search }}
+            </div>
+          {% endif %}          
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.header or page.header_search %}
+    <header {{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+      <div class="top-head-def">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-xs-8">
+              {% if show_heading_branding %}
+              <a class="top-head-def-brand "href="{{ heading_branding_url }}" target="_blank" title="{{ heading_branding_title }}" >{{ heading_branding_text }}</a>
+              {% endif %}
+                <a class="top-head-site-info" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" >{{ site_slogan }} {{ site_name }}</a>
+            </div>
+
+            <div class="col-sm-6 col-xs-4 text-right">
+              {% if page.lang_switcher %}
+                {{ page.lang_switcher }}
+              {% endif %}
+              {% if page.navigation_collapsible %}
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
+                  <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              {% endif %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-default">
+        
+        {% if not navbar_attributes.hasClass(container) %}
+          <div class="{{ container }}">
+        {% endif %}             
+          <div class="row">
+            <div class="col-sm-12">
+              {{ page.header }}
+            </div>
+          </div> 
+          <div class="row" id="nav-wrap">
+            <div class="col-md-3 col-sm-4 pull-right">
+              {% if page.header_search %}
+                {{ page.header_search }}
+              {% endif %}
+            </div>
+            <div class="navbar-header col-md-9 col-sm-8">
+              <nav class="navbar" role="navigation">
+                {% if page.navigation_collapsible %}
+                  {{ page.navigation_collapsible }}
+                {% endif %}
+              </nav>
+            </div>
+          </div>
+
+        {% if not navbar_attributes.hasClass(container) %}
+          </div>
+        {% endif %}
+      </nav>
+    </header>
+  {% endif %}
+{% endblock %}
