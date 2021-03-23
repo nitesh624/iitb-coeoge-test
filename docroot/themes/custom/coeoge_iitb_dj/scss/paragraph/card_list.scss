@@ -3,7 +3,6 @@
 @import '../abstracts/variables';
 
 .paragraph--type--card-list {
-  padding: 0;
   .paragraph--type--card {
     // margin-bottom: 30px;
     @include respond(phone-min) {

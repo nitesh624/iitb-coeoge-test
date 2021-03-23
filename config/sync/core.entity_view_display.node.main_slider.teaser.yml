@@ -8,11 +8,14 @@ dependencies:
     - field.field.node.main_slider.field_faculty_name_ref_slider
     - field.field.node.main_slider.field_slider_media
     - field.field.node.main_slider.field_slider_subtitle
+    - image.style.home_slider
     - node.type.main_slider
   enforced:
     module:
       - acadmix_slider
   module:
+    - ds
+    - media
     - text
     - user
 _core:
@@ -25,16 +28,54 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
+  field_slider_media:
+    type: media_thumbnail
+    weight: 2
     region: content
+    label: hidden
+    settings:
+      image_style: home_slider
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_faculty_name_ref_slider: true
-  field_slider_media: true
   field_slider_subtitle: true
   langcode: true

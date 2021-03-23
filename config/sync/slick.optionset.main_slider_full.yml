@@ -26,7 +26,6 @@ options:
     centerPadding: ''
     dots: true
     draggable: false
-    fade: true
     lazyLoad: ondemand
     slidesToShow: 1
     speed: 1499
@@ -59,7 +58,6 @@ options:
         settings:
           autoplay: true
           pauseOnDotsHover: true
-          draggable: false
           fade: true
           speed: 3000
           swipe: false

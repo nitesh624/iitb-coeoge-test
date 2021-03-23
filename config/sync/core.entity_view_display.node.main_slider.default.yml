@@ -7,12 +7,14 @@ dependencies:
     - field.field.node.main_slider.field_faculty_name_ref_slider
     - field.field.node.main_slider.field_slider_media
     - field.field.node.main_slider.field_slider_subtitle
+    - image.style.home_slider
     - node.type.main_slider
   enforced:
     module:
       - acadmix_slider
   module:
     - ds
+    - media
     - text
     - user
 third_party_settings:
@@ -23,6 +25,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -31,13 +34,14 @@ third_party_settings:
         link_custom: ''
         classes:
           layout_class: {  }
+          ds_content: {  }
     regions:
       ds_content:
         - links
-        - field_slider_image
         - field_slider_subtitle
         - body
         - field_faculty_name_ref_slider
+        - field_slider_media
 _core:
   default_config_hash: EF6cae2csn86dkYWnuIKKKbgPoqNADTvoQhRQpj-nAs
 id: node.main_slider.default
@@ -90,14 +94,42 @@ content:
     type: entity_reference_label
     region: ds_content
   field_slider_media:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     weight: 5
     label: above
     settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
+      image_style: home_slider
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
   field_slider_subtitle:
     weight: 2
     label: hidden

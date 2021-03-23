@@ -60,9 +60,9 @@
       {% for item in items %}
         {% set layoutClassC = item.content['#paragraph'].layout_selection.target_id %}
         {% if layoutClassC == '' and item.content['#view_mode'] == 'cards_grid' %}
-          {% set layoutClass = 'col-12 col-sm-12 col-md-3' %}
+          {% set layoutClass = 'col-sm-6 col-md-3' %}
         {% else %}
-          {% set layoutClass = 'col-12 col-sm-12' %}
+          {% set layoutClass = 'col-sm-12' %}
         {% endif %}
         <div{{ item.attributes.addClass('field--item ' ~ layoutClass) }}>{{ item.content }}</div>
       {% endfor %}
