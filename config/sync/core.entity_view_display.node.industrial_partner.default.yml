@@ -3,16 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.industrial_partner.field_link
     - field.field.node.industrial_partner.field_partner_logo
     - node.type.industrial_partner
   module:
     - ds
+    - link
     - user
 id: node.industrial_partner.default
 targetEntityType: node
 bundle: industrial_partner
 mode: default
 content:
+  field_link:
+    weight: 103
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_partner_logo:
     type: entity_reference_entity_view
     weight: 102

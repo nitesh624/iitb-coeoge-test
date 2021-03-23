@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.industrial_partner.field_link
     - field.field.node.industrial_partner.field_partner_logo
     - node.type.industrial_partner
   module:
+    - link_attributes
     - media_library
     - path
 id: node.industrial_partner.default
@@ -19,6 +21,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_link:
+    weight: 123
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
   field_partner_logo:
     type: media_library_widget
     weight: 122
