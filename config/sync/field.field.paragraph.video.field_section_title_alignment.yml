@@ -1,0 +1,21 @@
+uuid: 3a7c800b-db45-4515-8dd2-f4e6f3c9a233
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title_alignment
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+id: paragraph.video.field_section_title_alignment
+field_name: field_section_title_alignment
+entity_type: paragraph
+bundle: video
+label: 'Section title alignment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

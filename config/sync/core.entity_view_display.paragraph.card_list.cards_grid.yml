@@ -1,6 +1,6 @@
 uuid: 48c1209b-497a-4fab-845f-e7d94e75e247
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.paragraph.cards_grid

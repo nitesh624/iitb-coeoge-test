@@ -1,0 +1,21 @@
+uuid: 7e63032f-d56b-4928-909e-2000d4904501
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title_style
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+id: paragraph.video.field_section_title_style
+field_name: field_section_title_style
+entity_type: paragraph
+bundle: video
+label: 'Section title style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

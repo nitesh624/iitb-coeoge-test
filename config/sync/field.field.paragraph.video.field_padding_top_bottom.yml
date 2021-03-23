@@ -1,0 +1,21 @@
+uuid: d60a061a-008f-477b-b089-79cf7be9be7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top_bottom
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+id: paragraph.video.field_padding_top_bottom
+field_name: field_padding_top_bottom
+entity_type: paragraph
+bundle: video
+label: 'Padding top and bottom'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

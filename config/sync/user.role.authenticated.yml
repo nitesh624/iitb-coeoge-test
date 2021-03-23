@@ -12,4 +12,6 @@ permissions:
   - 'access content'
   - 'use text format basic_html'
   - 'use text format full_html'
+  - 'use text format plain_format'
+  - 'use text format restricted_html'
   - 'view media'

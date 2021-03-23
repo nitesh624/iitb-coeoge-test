@@ -16,9 +16,9 @@ weight: null
 bind_method: anon_user
 binddn: null
 bindpw: null
-basedn: 'dc=iitb,dc=ac,dc=in'
+basedn: 'ou=CHE,ou=People,dc=iitb,dc=ac,dc=in'
 user_attr: uid
-account_name_attr: ''
+account_name_attr: nitesh
 mail_attr: mail
 mail_template: ''
 picture_attr: ''

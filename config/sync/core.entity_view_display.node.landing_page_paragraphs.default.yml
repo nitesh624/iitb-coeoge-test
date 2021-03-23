@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.landing_page_paragraphs.field_content
     - node.type.landing_page_paragraphs
   module:
+    - ds
     - entity_reference_revisions
     - user
 id: node.landing_page_paragraphs.default
@@ -20,7 +21,36 @@ content:
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
     region: content
   links:
     weight: 100

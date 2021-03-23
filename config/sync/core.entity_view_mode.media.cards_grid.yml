@@ -1,0 +1,10 @@
+uuid: 7bd857fe-e871-43b7-9ee4-8d88de70bea3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.cards_grid
+label: 'Cards grid'
+targetEntityType: media
+cache: true

@@ -1,0 +1,90 @@
+uuid: 39813a63-2c8b-4ccc-af41-757e8add8ac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_bg_color
+    - field.field.paragraph.video.field_padding_top_bottom
+    - field.field.paragraph.video.field_section_title_alignment
+    - field.field.paragraph.video.field_section_title_style
+    - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_video
+    - field.field.paragraph.video.view_mode_selection
+    - paragraphs.paragraphs_type.video
+  module:
+    - color_field
+    - field_group
+    - media_library
+third_party_settings:
+  field_group:
+    group_section_style_setting:
+      children:
+        - field_section_title_style
+        - field_section_title_alignment
+        - field_padding_top_bottom
+        - field_bg_color
+        - view_mode_selection
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+      label: 'Section style setting'
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_bg_color:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_padding_top_bottom:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_title_alignment:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_title_style:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  view_mode_selection:
+    type: options_select
+    region: content
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

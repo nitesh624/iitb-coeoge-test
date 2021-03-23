@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
 id: node.event.field_content
@@ -32,6 +33,7 @@ settings:
       gallery: gallery
       image: image
       text: text
+      video: video
     target_bundles_drag_drop:
       attachments:
         enabled: true
@@ -63,4 +65,7 @@ settings:
       text:
         enabled: true
         weight: 20
+      video:
+        enabled: true
+        weight: 22
 field_type: entity_reference_revisions

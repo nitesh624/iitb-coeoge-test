@@ -1,32 +1,32 @@
-uuid: ec150812-54f7-4c61-b0b1-308722b3f759
+uuid: 662f63b4-fb14-4d42-9501-53d0a6f27cc4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_media_video_file
-    - media.type.video
+    - core.entity_view_mode.media.cards_grid
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
   module:
     - ds
-    - file
-_core:
-  default_config_hash: dQR0mYK5NNg27OigHrxZrHSsnwewnNZcPJKjKIO0cpA
-id: media.video.default
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.remote_video.cards_grid
 targetEntityType: media
-bundle: video
-mode: default
+bundle: remote_video
+mode: cards_grid
 content:
-  field_media_video_file:
-    type: file_video
+  field_media_oembed_video:
+    type: oembed
     weight: 0
+    region: content
     label: hidden
     settings:
-      controls: true
-      multiple_file_display_type: tags
-      width: 640
-      height: 480
-      autoplay: false
-      loop: false
-      muted: false
+      max_width: 400
+      max_height: 300
     third_party_settings:
       ds:
         ft:
@@ -56,7 +56,6 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
-    region: content
 hidden:
   created: true
   langcode: true

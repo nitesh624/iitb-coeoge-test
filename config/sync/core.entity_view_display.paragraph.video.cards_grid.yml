@@ -1,0 +1,106 @@
+uuid: 4b7eb67d-89c7-4ae1-9b45-61daee76089e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.cards_grid
+    - field.field.paragraph.video.field_bg_color
+    - field.field.paragraph.video.field_padding_top_bottom
+    - field.field.paragraph.video.field_section_title_alignment
+    - field.field.paragraph.video.field_section_title_style
+    - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_video
+    - field.field.paragraph.video.view_mode_selection
+    - paragraphs.paragraphs_type.video
+  module:
+    - color_field
+    - ds
+    - layout_builder
+    - options
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.video.cards_grid
+targetEntityType: paragraph
+bundle: video
+mode: cards_grid
+content:
+  field_bg_color:
+    type: color_field_formatter_text
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+  field_padding_top_bottom:
+    type: list_key
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title_alignment:
+    type: list_key
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title_style:
+    type: list_key
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_video:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: cards_grid
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: content
+hidden:
+  view_mode_selection: true

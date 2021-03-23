@@ -1,0 +1,70 @@
+uuid: a6b908fc-618f-4b2c-8af7-5c8b3c927aee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_bg_color
+    - field.field.paragraph.video.field_padding_top_bottom
+    - field.field.paragraph.video.field_section_title_alignment
+    - field.field.paragraph.video.field_section_title_style
+    - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_video
+    - field.field.paragraph.video.view_mode_selection
+    - paragraphs.paragraphs_type.video
+  module:
+    - color_field
+    - options
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_bg_color:
+    weight: 5
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_padding_top_bottom:
+    type: list_key
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title_alignment:
+    type: list_key
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title_style:
+    type: list_key
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  view_mode_selection: true

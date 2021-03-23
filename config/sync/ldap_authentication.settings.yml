@@ -1,22 +1,23 @@
-sids: {  }
+sids:
+  iitbldap: iitbldap
 authenticationMode: 1
-loginUIUsernameTxt: ''
-loginUIPasswordTxt: ''
+loginUIUsernameTxt: 'Please Enter Your IITB LDAP UserName'
+loginUIPasswordTxt: 'Please Enter Your IITB LDAP Password'
 ldapUserHelpLinkUrl: ''
 ldapUserHelpLinkText: ''
 emailOption: 3
 emailUpdate: 1
 emailTemplateHandling: none
-emailTemplate: '@username@example.com'
+emailTemplate: '@username@iitb.ac.in'
 emailTemplateUsageResolveConflict: false
 emailTemplateUsageNeverUpdate: false
 emailTemplateUsagePromptUser: false
 emailTemplateUsageRedirectOnLogin: false
-emailTemplateUsagePromptRegex: '.*@example\\.com'
-passwordOption: 3
+emailTemplateUsagePromptRegex: '.*@iitb.ac\\.in'
+passwordOption: 2
 allowOnlyIfTextInDn: {  }
 excludeIfTextInDn: {  }
-excludeIfNoAuthorizations: null
+excludeIfNoAuthorizations: 0
 langcode: en
 _core:
   default_config_hash: hSFOSjTAPcCBordJmChil6mui8q7uLwYfc5STlXL0yY

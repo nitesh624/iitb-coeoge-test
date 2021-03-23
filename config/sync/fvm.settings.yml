@@ -82,3 +82,6 @@ paragraph__card__view_modes:
 node__industrial_partner: 0
 node__industrial_partner__view_modes:
   teaser: 0
+paragraph__video: 1
+paragraph__video__view_modes:
+  cards_grid: cards_grid

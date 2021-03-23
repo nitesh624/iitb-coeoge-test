@@ -1,4 +1,4 @@
-uuid: 7d79551f-0780-41e2-bd95-402a8bb6cf61
+uuid: 810fe77e-e66c-4c20-addd-9d84db2c25e3
 langcode: en
 status: true
 dependencies:
@@ -33,3 +33,5 @@ items:
       excludeIfTextInDn: {  }
       excludeIfNoAuthorizations: null
       langcode: en
+      _core:
+        default_config_hash: hSFOSjTAPcCBordJmChil6mui8q7uLwYfc5STlXL0yY
