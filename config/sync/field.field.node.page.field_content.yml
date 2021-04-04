@@ -6,9 +6,14 @@ dependencies:
     - field.storage.node.field_content
     - node.type.page
     - paragraphs.paragraphs_type.attachments
+    - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.card_list
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_view
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_and_image
+    - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
 id: node.page.field_content
@@ -27,16 +32,21 @@ settings:
     negate: 0
     target_bundles:
       attachments: attachments
+      banner: banner
       card_list: card_list
+      gallery: gallery
       list_view: list_view
       text: text
+      image: image
+      text_and_image: text_and_image
+      video: video
     target_bundles_drag_drop:
       attachments:
         enabled: true
         weight: 10
       banner:
+        enabled: true
         weight: 11
-        enabled: false
       card:
         weight: 12
         enabled: false
@@ -44,11 +54,14 @@ settings:
         enabled: true
         weight: 13
       gallery:
+        enabled: true
         weight: 14
-        enabled: false
       hero_view:
         weight: 15
         enabled: false
+      image:
+        enabled: true
+        weight: 19
       list_view:
         enabled: true
         weight: 16
@@ -58,4 +71,10 @@ settings:
       text:
         enabled: true
         weight: 18
+      text_and_image:
+        enabled: true
+        weight: 23
+      video:
+        enabled: true
+        weight: 24
 field_type: entity_reference_revisions

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.industrial_partner.field_content
     - field.field.node.industrial_partner.field_link
     - field.field.node.industrial_partner.field_partner_logo
     - node.type.industrial_partner
@@ -20,6 +21,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_content: true
   field_link: true
   field_partner_logo: true
   langcode: true

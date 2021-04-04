@@ -14,7 +14,7 @@ _core:
 id: coeoge_iitb_dj_views_block__main_slider_block_1
 theme: coeoge_iitb_dj
 region: slider
-weight: 0
+weight: -10
 provider: null
 plugin: 'views_block:main_slider-block_1'
 settings:

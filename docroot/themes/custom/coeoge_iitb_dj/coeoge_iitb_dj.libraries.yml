@@ -80,3 +80,8 @@ paragraph-type-view:
   css:
     theme:
       css/paragraph/view.css: {}
+
+paragraph-type-text-image:
+  css:
+    theme:
+      css/paragraph/text-image.css: {}

@@ -11,8 +11,8 @@ dependencies:
     - coeoge_iitb_dj
 id: views_block__industrial_partner_block_1
 theme: coeoge_iitb_dj
-region: content_bottom
-weight: 0
+region: header_top_left
+weight: -11
 provider: null
 plugin: 'views_block:industrial_partner-block_1'
 settings:

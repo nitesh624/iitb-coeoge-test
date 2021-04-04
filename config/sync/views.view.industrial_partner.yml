@@ -3,13 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link
     - field.storage.node.field_partner_logo
     - image.style.card_list_200x200
     - image.style.card_list_400x400
     - node.type.industrial_partner
   module:
-    - link
     - media
     - node
     - user
@@ -267,10 +265,10 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        field_link:
-          id: field_link
-          table: node__field_link
-          field: field_link
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
           relationship: none
           group_type: group
           admin_label: ''
@@ -315,25 +313,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: uri
-          type: link
-          settings:
-            trim_length: 80
-            url_only: true
-            url_plain: true
-            rel: '0'
-            target: _blank
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          text: view
+          output_url_as_text: true
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
         field_partner_logo:
           id: field_partner_logo
           table: node__field_partner_logo
@@ -347,7 +331,7 @@ display:
             alter_text: false
             text: ''
             make_link: true
-            path: '{{ field_link }}'
+            path: '{{ view_node }}'
             absolute: false
             external: true
             replace_spaces: false
@@ -406,5 +390,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_link'
         - 'config:field.storage.node.field_partner_logo'

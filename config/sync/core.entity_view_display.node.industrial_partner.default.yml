@@ -3,11 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.industrial_partner.field_content
     - field.field.node.industrial_partner.field_link
     - field.field.node.industrial_partner.field_partner_logo
     - node.type.industrial_partner
   module:
-    - ds
+    - entity_reference_revisions
     - link
     - user
 id: node.industrial_partner.default
@@ -15,8 +16,17 @@ targetEntityType: node
 bundle: industrial_partner
 mode: default
 content:
+  field_content:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_link:
-    weight: 103
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
@@ -27,47 +37,11 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_partner_logo:
-    type: entity_reference_entity_view
-    weight: 102
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
-    region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_partner_logo: true
   langcode: true
