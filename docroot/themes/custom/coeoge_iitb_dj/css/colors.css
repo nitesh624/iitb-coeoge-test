@@ -318,6 +318,7 @@ div.sf-accordion-toggle.sf-style-none a {
 .paragraph--type--card .field--name-field-link a,
 .paragraph--type--gallery .field--name-field-link a,
 .paragraph--type--text-and-image .field--name-field-link a,
-.paragraph--type--cta .field--name-field-link a {
+.paragraph--type--cta .field--name-field-link a,
+.industrial-partner .industry-link .field--name-field-link a {
   background: #337ab7;
 }

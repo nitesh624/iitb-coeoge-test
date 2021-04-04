@@ -97,3 +97,8 @@ paragraph-type-cta:
   css:
     theme:
       css/paragraph/cta.css: {}
+
+node-type-industrial-partner:
+  css:
+    theme:
+      css/node-page/industrial-partner.css: {}

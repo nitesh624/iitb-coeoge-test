@@ -1,0 +1,26 @@
+//import
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.industrial-partner {
+  .industry-link {
+    .field {
+      &--name-field-link {
+        a {
+          @include btnstyle;
+          padding: 20px 50px;
+          font-weight: 600;
+          text-align: right;
+          text-transform: uppercase;
+          transition: all 0.4s ease 0s;
+          &:hover {
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+            box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+            transition: all 0.4s ease 0s;
+          }
+        }
+      }
+    }
+  }
+}
