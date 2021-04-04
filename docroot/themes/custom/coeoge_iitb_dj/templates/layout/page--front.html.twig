@@ -121,48 +121,6 @@
           {{ page.content_top }}
         {% endif %}
 
-        {# Sidebar First #}
-        {% if page.sidebar_first or page.sidebar_second or page.content %}
-          <div class="row clearfix" id="main-wrapper">
-            {% if page.sidebar_first %}
-              {% block sidebar_first %}
-                <aside class="col-sm-3" role="complementary">
-                  {{ page.sidebar_first }}
-                </aside>
-              {% endblock %}
-            {% endif %}
-            {# Content #}
-            {%
-              set content_classes = [
-                page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-                page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-                page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-                page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
-              ]
-            %}
-            <section{{ content_attributes.addClass(content_classes) }}>
-              {# Help #}
-              {% if page.help %}
-                  {{ page.help }}
-              {% endif %}
-
-              {# Content #}
-              {% block content %}
-                <a id="main-content"></a>
-                  {{ page.content }}
-              {% endblock %}
-            </section>
-            {# Sidebar Second #}
-            {% if page.sidebar_second %}
-              {% block sidebar_second %}
-                <aside class="col-sm-3" role="complementary">
-                  {{ page.sidebar_second }}
-                </aside>
-              {% endblock %}
-            {% endif %}
-          </div>
-        {% endif %}
-
         {% if page.content_bottom %}
           {{ page.content_bottom }}
         {% endif %}
