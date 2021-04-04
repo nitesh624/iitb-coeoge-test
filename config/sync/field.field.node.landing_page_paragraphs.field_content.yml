@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.attachments
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.card_list
+    - paragraphs.paragraphs_type.cta
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.hero_view
     - paragraphs.paragraphs_type.image
@@ -42,6 +43,7 @@ settings:
       list_view: list_view
       image: image
       text: text
+      cta: cta
       video: video
       text_and_image: text_and_image
     target_bundles_drag_drop:
@@ -63,6 +65,9 @@ settings:
       card_list:
         enabled: true
         weight: 12
+      cta:
+        enabled: true
+        weight: 22
       gallery:
         enabled: true
         weight: 13

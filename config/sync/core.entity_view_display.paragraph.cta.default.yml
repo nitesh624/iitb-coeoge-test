@@ -1,0 +1,47 @@
+uuid: b3d5b1f7-2f01-4eb1-8e1a-5261f9a315e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_bg_color
+    - field.field.paragraph.cta.field_link
+    - field.field.paragraph.cta.field_padding_top_bottom
+    - paragraphs.paragraphs_type.cta
+  module:
+    - color_field
+    - link
+    - options
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_bg_color:
+    weight: 2
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_padding_top_bottom:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

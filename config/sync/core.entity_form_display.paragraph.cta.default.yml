@@ -1,0 +1,58 @@
+uuid: 52b4fd41-c9b2-4503-aadb-f3fcf8378fc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_bg_color
+    - field.field.paragraph.cta.field_link
+    - field.field.paragraph.cta.field_padding_top_bottom
+    - paragraphs.paragraphs_type.cta
+  module:
+    - color_field
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_section_style:
+      children:
+        - field_padding_top_bottom
+        - field_bg_color
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Section style'
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_bg_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_padding_top_bottom:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

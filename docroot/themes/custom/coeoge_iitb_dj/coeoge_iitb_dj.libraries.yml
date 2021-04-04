@@ -92,3 +92,8 @@ paragraph-type-accordion:
   css:
     theme:
       css/paragraph/accordion.css: {}
+
+paragraph-type-cta:
+  css:
+    theme:
+      css/paragraph/cta.css: {}

@@ -1,0 +1,10 @@
+uuid: 2aceddb3-fd45-4cb8-aa36-9e613018d449
+langcode: en
+status: true
+dependencies: {  }
+id: cta
+label: CTA
+icon_uuid: null
+icon_default: null
+description: 'Use this component for Call to action button'
+behavior_plugins: {  }

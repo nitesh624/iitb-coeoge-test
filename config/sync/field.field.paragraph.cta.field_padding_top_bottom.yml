@@ -1,0 +1,21 @@
+uuid: 2ca60d3e-63a6-4bd6-8ade-bf06e94bfa80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top_bottom
+    - paragraphs.paragraphs_type.cta
+  module:
+    - options
+id: paragraph.cta.field_padding_top_bottom
+field_name: field_padding_top_bottom
+entity_type: paragraph
+bundle: cta
+label: 'Padding top and bottom'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

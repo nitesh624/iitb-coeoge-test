@@ -317,6 +317,7 @@ div.sf-accordion-toggle.sf-style-none a {
 /* card paragraph link btn color */
 .paragraph--type--card .field--name-field-link a,
 .paragraph--type--gallery .field--name-field-link a,
-.paragraph--type--text-and-image .field--name-field-link a {
+.paragraph--type--text-and-image .field--name-field-link a,
+.paragraph--type--cta .field--name-field-link a {
   background: #337ab7;
 }

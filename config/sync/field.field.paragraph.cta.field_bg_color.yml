@@ -1,0 +1,25 @@
+uuid: 4b422a7b-f3c3-4fe8-9f4e-170c2e8e06cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bg_color
+    - paragraphs.paragraphs_type.cta
+  module:
+    - color_field
+id: paragraph.cta.field_bg_color
+field_name: field_bg_color
+entity_type: paragraph
+bundle: cta
+label: 'Background color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    color: '#ffffff'
+    opacity: !!float 0
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type
