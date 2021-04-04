@@ -11,8 +11,10 @@ bootstrap:
 global-styling:
   css:
     theme:
-      'https://fonts.googleapis.com/css?family=Montserrat:400,500,700': { type: external, minified: true }
-      'https://fonts.googleapis.com/css?family=Poppins': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Montserrat:400,500,700':
+        { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Poppins':
+        { type: external, minified: true }
       css/main.css: {}
       css/custom.css: {}
       css/style.css: {}
@@ -85,3 +87,8 @@ paragraph-type-text-image:
   css:
     theme:
       css/paragraph/text-image.css: {}
+
+paragraph-type-accordion:
+  css:
+    theme:
+      css/paragraph/accordion.css: {}

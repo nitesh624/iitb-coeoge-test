@@ -1,17 +1,17 @@
-uuid: dc436e46-79b0-4ea7-ab2f-68a9c3e850bf
+uuid: 0158615d-c4a2-4c84-a6f6-e7e152d89a97
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.text_and_image
-id: paragraph.text_and_image.field_title
+    - paragraphs.paragraphs_type.accordion
+id: paragraph.accordion.field_title
 field_name: field_title
 entity_type: paragraph
-bundle: text_and_image
+bundle: accordion
 label: Title
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

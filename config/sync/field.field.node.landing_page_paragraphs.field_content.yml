@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.landing_page_paragraphs
+    - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.attachments
     - paragraphs.paragraphs_type.banner
     - paragraphs.paragraphs_type.card_list
@@ -37,12 +38,19 @@ settings:
       card_list: card_list
       gallery: gallery
       hero_view: hero_view
+      accordion: accordion
       list_view: list_view
       image: image
       text: text
       video: video
       text_and_image: text_and_image
     target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 15
+      accordion_item:
+        weight: 16
+        enabled: false
       attachments:
         enabled: true
         weight: 9

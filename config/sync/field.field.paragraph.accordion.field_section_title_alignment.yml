@@ -1,0 +1,21 @@
+uuid: c510ac32-2c4a-4c0a-931e-35fe38503295
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title_alignment
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - options
+id: paragraph.accordion.field_section_title_alignment
+field_name: field_section_title_alignment
+entity_type: paragraph
+bundle: accordion
+label: 'Section title alignment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

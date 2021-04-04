@@ -1,0 +1,21 @@
+uuid: a883c42d-725d-4989-8097-c99329705b52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top_bottom
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - options
+id: paragraph.accordion.field_padding_top_bottom
+field_name: field_padding_top_bottom
+entity_type: paragraph
+bundle: accordion
+label: 'Padding top and bottom'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

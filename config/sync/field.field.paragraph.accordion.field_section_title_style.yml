@@ -1,0 +1,21 @@
+uuid: 5ba7e724-9605-473c-acc8-5e7c7dc6bc0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title_style
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - options
+id: paragraph.accordion.field_section_title_style
+field_name: field_section_title_style
+entity_type: paragraph
+bundle: accordion
+label: 'Section title style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
