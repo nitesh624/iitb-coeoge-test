@@ -1,0 +1,33 @@
+uuid: 43beef72-1e7c-4e68-8e02-f35dc3d1801e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.department.body
+    - field.field.node.department.field_link
+    - node.type.department
+  module:
+    - text
+    - user
+id: node.department.teaser
+targetEntityType: node
+bundle: department
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  langcode: true

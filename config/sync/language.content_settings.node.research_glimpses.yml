@@ -1,0 +1,11 @@
+uuid: 53900fc5-f3fa-4b65-b759-6137cf37f63f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.research_glimpses
+id: node.research_glimpses
+target_entity_type_id: node
+target_bundle: research_glimpses
+default_langcode: site_default
+language_alterable: false

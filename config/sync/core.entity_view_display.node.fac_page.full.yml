@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.fac_page.field_background
     - field.field.node.fac_page.field_building
     - field.field.node.fac_page.field_courses_taught
+    - field.field.node.fac_page.field_department
     - field.field.node.fac_page.field_detailed_information_page
     - field.field.node.fac_page.field_email
     - field.field.node.fac_page.field_employment_category
@@ -784,4 +785,5 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_department: true
   langcode: true

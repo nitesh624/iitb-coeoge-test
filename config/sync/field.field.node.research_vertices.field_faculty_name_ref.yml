@@ -1,20 +1,15 @@
-uuid: 38028367-c323-403c-94b1-f887ab615144
+uuid: 04310859-ed31-4943-9e09-2b35e181e902
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_faculty_name_ref
     - node.type.fac_page
-    - node.type.research_glimpses
-  enforced:
-    module:
-      - research_glimpses
-_core:
-  default_config_hash: C6oPVE6jhaEG1DYWYJEaTLTD7dMtfEq4xvMnKwyJNJM
-id: node.research_glimpses.field_faculty_name_ref
+    - node.type.research_vertices
+id: node.research_vertices.field_faculty_name_ref
 field_name: field_faculty_name_ref
 entity_type: node
-bundle: research_glimpses
+bundle: research_vertices
 label: 'PI Name'
 description: ''
 required: false

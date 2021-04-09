@@ -1,0 +1,11 @@
+uuid: 066b25b6-e476-4aa0-93aa-58c84c15249e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.research_vertices
+id: node.research_vertices
+target_entity_type_id: node
+target_bundle: research_vertices
+default_langcode: site_default
+language_alterable: false

@@ -1,10 +1,7 @@
-uuid: 6277c889-e464-49c5-bd4d-a19eb648695f
+uuid: 3bd1860c-3841-4d99-9ae5-124f62d643f2
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - research_glimpses
   module:
     - menu_ui
 third_party_settings:
@@ -12,10 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-_core:
-  default_config_hash: XVuoOpw2LusiWXctyONE1cwVolcu_1MEUKg_wcdZq-M
-name: 'Research Projects'
-type: research_glimpses
+name: Department
+type: department
 description: ''
 help: ''
 new_revision: false

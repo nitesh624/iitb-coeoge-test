@@ -1,0 +1,23 @@
+uuid: 2259327d-48c0-4586-a523-d6eaf0632b39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.department
+  module:
+    - link
+id: node.department.field_link
+field_name: field_link
+entity_type: node
+bundle: department
+label: 'link to department website'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,31 @@
+uuid: 9d3bc552-c467-41f9-bcca-251828c27541
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.department
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    plain_format: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.department.body
+field_name: body
+entity_type: node
+bundle: department
+label: Details
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

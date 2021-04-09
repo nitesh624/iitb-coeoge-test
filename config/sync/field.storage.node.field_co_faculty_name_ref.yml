@@ -1,20 +1,15 @@
-uuid: b758396d-3d2b-40f2-9918-3c29ad0f073e
+uuid: 78384673-61ad-4b34-8c7c-3651e7ae0ad0
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - research_glimpses
   module:
     - field_permissions
     - node
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: X9aOC8IGFD2scSIS-Y1ItllilJEIdV_hi-bLcgyn6iQ
-id: node.field_faculty_name_ref
-field_name: field_faculty_name_ref
+id: node.field_co_faculty_name_ref
+field_name: field_co_faculty_name_ref
 entity_type: node
 type: entity_reference
 settings:

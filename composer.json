@@ -35,7 +35,9 @@
     "drupal/editor_advanced_link": "^1.8",
     "drupal/yearonly": "^9.0",
     "drupal/datetimehideseconds": "^1.1",
-    "drupal/paragraphs_jquery_ui_accordion": "^1.4"
+    "drupal/paragraphs_jquery_ui_accordion": "^1.4",
+    "drupal/entity_usage": "^2.0@beta",
+    "drupal/draggableviews": "^2.0"
   },
   "conflict": {
     "symfony/http-foundation": "3.4.24"
