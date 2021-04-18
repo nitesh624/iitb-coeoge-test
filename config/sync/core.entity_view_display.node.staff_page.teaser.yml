@@ -5,17 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.staff_page.body
-    - field.field.node.staff_page.field_awards_and_fellowships
-    - field.field.node.staff_page.field_building
     - field.field.node.staff_page.field_email
-    - field.field.node.staff_page.field_lab_room_number
-    - field.field.node.staff_page.field_mobile_number
     - field.field.node.staff_page.field_phone_no
-    - field.field.node.staff_page.field_r_d_projects
     - field.field.node.staff_page.field_staff_category
     - field.field.node.staff_page.field_staff_designation
     - field.field.node.staff_page.field_staff_full_name
-    - field.field.node.staff_page.field_staff_head
     - field.field.node.staff_page.field_staff_photo
     - node.type.staff_page
   enforced:
@@ -43,16 +37,10 @@ content:
     weight: 100
     region: content
 hidden:
-  field_awards_and_fellowships: true
-  field_building: true
   field_email: true
-  field_lab_room_number: true
-  field_mobile_number: true
   field_phone_no: true
-  field_r_d_projects: true
   field_staff_category: true
   field_staff_designation: true
   field_staff_full_name: true
-  field_staff_head: true
   field_staff_photo: true
   langcode: true

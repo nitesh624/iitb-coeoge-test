@@ -4,17 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.staff_page.body
-    - field.field.node.staff_page.field_awards_and_fellowships
-    - field.field.node.staff_page.field_building
     - field.field.node.staff_page.field_email
-    - field.field.node.staff_page.field_lab_room_number
-    - field.field.node.staff_page.field_mobile_number
     - field.field.node.staff_page.field_phone_no
-    - field.field.node.staff_page.field_r_d_projects
     - field.field.node.staff_page.field_staff_category
     - field.field.node.staff_page.field_staff_designation
     - field.field.node.staff_page.field_staff_full_name
-    - field.field.node.staff_page.field_staff_head
     - field.field.node.staff_page.field_staff_photo
     - image.style.acad_fac_max_650x650
     - node.type.staff_page
@@ -104,78 +98,6 @@ content:
             fis-def-at: false
             fi-def-at: false
     region: ds_content
-  field_awards_and_fellowships:
-    weight: 11
-    label: above
-    settings: {  }
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: div
-            lbw-cl: 'col-sm-3 fw-bold'
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'row mb-10'
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: col-sm-9
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: text_default
-    region: ds_content
-  field_building:
-    weight: 7
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: div
-            lbw-cl: 'col-sm-3 fw-bold'
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'row mb-10'
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: col-sm-9
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: string
-    region: ds_content
   field_email:
     weight: 3
     label: above
@@ -219,79 +141,6 @@ content:
             fi-def-at: false
     type: email_spamspan
     region: ds_content
-  field_lab_room_number:
-    weight: 6
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: div
-            lbw-cl: 'col-sm-3 fw-bold'
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'row mb-10'
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: 'div '
-            fi-cl: col-sm-9
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: string
-    region: ds_content
-  field_mobile_number:
-    weight: 5
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: div
-            lbw-cl: 'col-sm-3 fw-bold'
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'row mb-10'
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: col-sm-9
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: string
-    region: ds_content
   field_phone_no:
     weight: 4
     label: above
@@ -328,42 +177,6 @@ content:
             fis-def-at: false
             fi-def-at: false
     type: string
-    region: ds_content
-  field_r_d_projects:
-    weight: 10
-    label: above
-    settings: {  }
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: div
-            lbw-cl: 'col-sm-3 fw-bold'
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'row mb-10'
-            ow-at: ''
-            fis: true
-            fis-el: ul
-            fis-cl: col-sm-9
-            fis-at: ''
-            fi: true
-            fi-el: li
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi-def-at: false
-    type: text_default
     region: ds_content
   field_staff_category:
     weight: 8
@@ -523,5 +336,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_staff_head: true
   langcode: true
