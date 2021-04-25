@@ -7,7 +7,7 @@ dependencies:
       - research_glimpses
 _core:
   default_config_hash: Wf5Gji1iSefUWCUkVJ14kguYdlMr-Lezgn2Y3KslkmE
-name: 'Research Glimpse Category'
+name: 'Research Projects Category'
 vid: research_glimpse_category
 description: 'Categorization of Research Glimpse '
 weight: 0

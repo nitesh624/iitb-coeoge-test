@@ -1,0 +1,88 @@
+uuid: 5a66f86f-6f4d-4f16-90b4-48639b750386
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.phd_fellowship_.body
+    - field.field.node.phd_fellowship_.field_co_faculty_name_ref
+    - field.field.node.phd_fellowship_.field_content
+    - field.field.node.phd_fellowship_.field_faculty_name_ref
+    - node.type.phd_fellowship_
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+    - user
+id: node.phd_fellowship_.default
+targetEntityType: node
+bundle: phd_fellowship_
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_co_faculty_name_ref:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_content:
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_faculty_name_ref:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,37 @@
+uuid: 9aa18978-03d9-47bf-949e-a180f461993a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.phd_fellowship_.body
+    - field.field.node.phd_fellowship_.field_co_faculty_name_ref
+    - field.field.node.phd_fellowship_.field_content
+    - field.field.node.phd_fellowship_.field_faculty_name_ref
+    - node.type.phd_fellowship_
+  module:
+    - text
+    - user
+id: node.phd_fellowship_.teaser
+targetEntityType: node
+bundle: phd_fellowship_
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_co_faculty_name_ref: true
+  field_content: true
+  field_faculty_name_ref: true
+  langcode: true

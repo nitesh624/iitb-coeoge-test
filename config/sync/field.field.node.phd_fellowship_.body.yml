@@ -1,0 +1,31 @@
+uuid: 236aeeab-c37e-4b95-a495-65b13b0d0b1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.phd_fellowship_
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    plain_format: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.phd_fellowship_.body
+field_name: body
+entity_type: node
+bundle: phd_fellowship_
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

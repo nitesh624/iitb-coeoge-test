@@ -102,3 +102,8 @@ node-type-industrial-partner:
   css:
     theme:
       css/node-page/industrial-partner.css: {}
+
+staff-mixitup:
+  css:
+    theme:
+      css/view/staff.css: {}

@@ -1,0 +1,92 @@
+uuid: 5a4b1d69-74cb-43f3-b42b-622f38b42c2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.phd_fellowship_
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.attachments
+    - paragraphs.paragraphs_type.card_list
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_and_image
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.phd_fellowship_.field_content
+field_name: field_content
+entity_type: node
+bundle: phd_fellowship_
+label: 'Additional content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      attachments: attachments
+      card_list: card_list
+      cta: cta
+      gallery: gallery
+      image: image
+      text: text
+      text_and_image: text_and_image
+      video: video
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 17
+      accordion_item:
+        weight: 18
+        enabled: false
+      attachments:
+        enabled: true
+        weight: 19
+      banner:
+        weight: 20
+        enabled: false
+      card:
+        weight: 21
+        enabled: false
+      card_list:
+        enabled: true
+        weight: 22
+      cta:
+        enabled: true
+        weight: 23
+      from_library:
+        weight: 24
+        enabled: false
+      gallery:
+        enabled: true
+        weight: 25
+      hero_view:
+        weight: 26
+        enabled: false
+      image:
+        enabled: true
+        weight: 27
+      list_view:
+        weight: 28
+        enabled: false
+      r_d_projects:
+        weight: 29
+        enabled: false
+      text:
+        enabled: true
+        weight: 30
+      text_and_image:
+        enabled: true
+        weight: 31
+      video:
+        enabled: true
+        weight: 32
+field_type: entity_reference_revisions

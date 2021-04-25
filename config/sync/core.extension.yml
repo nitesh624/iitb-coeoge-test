@@ -92,6 +92,7 @@ module:
   migrate_plus: 0
   migrate_source_csv: 0
   migrate_tools: 0
+  mixitup_views: 0
   name: 0
   node: 0
   options: 0
@@ -124,6 +125,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  transliterate_filenames: 0
   twig_field_value: 0
   twig_tweak: 0
   update: 0

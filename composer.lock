@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4ba90eb267ad245c2d3ab00d35f8aa9",
+    "content-hash": "5c0179bddce350a6a11bb42a8d665db6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -127,7 +127,7 @@
             "version": "3.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
             },
             "dist": {
@@ -6935,6 +6935,73 @@
             }
         },
         {
+            "name": "drupal/mixitup_views",
+            "version": "1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/mixitup_views.git",
+                "reference": "8.x-1.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mixitup_views-8.x-1.12.zip",
+                "reference": "8.x-1.12",
+                "shasum": "638f0133131218761c93a658dc09287a76c41961"
+            },
+            "require": {
+                "composer/installers": "^1.2",
+                "drupal/core": "^8 || ^9",
+                "oomphinc/composer-installers-extender": "^1.1",
+                "patrickkunka/mixitup": "v3.3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.12",
+                    "datestamp": "1583422460",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "installer-types": [
+                    "library"
+                ],
+                "installer-paths": {
+                    "libraries/{$name}": [
+                        "type:drupal-library",
+                        "patrickkunka/mixitup"
+                    ]
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Oleksander Ivanchenko (oleksandr-ivanchenko)",
+                    "homepage": "https://www.drupal.org/u/oleksandr-ivanchenko",
+                    "role": "Author"
+                },
+                {
+                    "name": "jadhavdevendra",
+                    "homepage": "https://www.drupal.org/user/485984"
+                },
+                {
+                    "name": "ysamoylenko",
+                    "homepage": "https://www.drupal.org/user/3554629"
+                }
+            ],
+            "description": "Creates Mixitup style plugin for Views",
+            "homepage": "https://drupal.org/project/mixitup_views",
+            "support": {
+                "source": "https://cgit.drupalcode.org/mixitup_views",
+                "issues": "https://drupal.org/project/issues/mixitup_views",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/name",
             "version": "1.0.0-rc3",
             "source": {
@@ -8032,6 +8099,61 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/transliterate_filenames",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/transliterate_filenames.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/transliterate_filenames-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "c2f103a188b8ea19f380fae29434e1064c40dd55"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1606460881",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Dubovskoy",
+                    "homepage": "https://www.drupal.org/u/adubovskoy",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Andrei Ivnitskii",
+                    "homepage": "https://www.drupal.org/u/ivnish",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "ivnish",
+                    "homepage": "https://www.drupal.org/user/3547706"
+                }
+            ],
+            "description": "Transliteration for all uploading files (includes fields and ckeditor inline upload)",
+            "homepage": "https://www.drupal.org/project/transliterate_filenames",
+            "support": {
+                "source": "https://git.drupalcode.org/project/transliterate_filenames",
+                "issues": "https://www.drupal.org/project/issues/transliterate_filenames"
             }
         },
         {
@@ -10325,6 +10447,42 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "patrickkunka/mixitup",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/patrickkunka/mixitup.git",
+                "reference": "a4c474ead1f4332d3f3b2f997a891ab416dfbf66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/patrickkunka/mixitup/zipball/a4c474ead1f4332d3f3b2f997a891ab416dfbf66",
+                "reference": "a4c474ead1f4332d3f3b2f997a891ab416dfbf66",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "KunkaLabs Limited",
+                    "homepage": "https://www.kunkalabs.com/"
+                }
+            ],
+            "description": "A high-performance, dependency-free library for animated filtering, sorting and more",
+            "homepage": "https://www.kunkalabs.com/mixitup/",
+            "keywords": [
+                "animate",
+                "filtering",
+                "javascript",
+                "sorting"
+            ],
+            "abandoned": true,
+            "time": "2018-02-12T21:05:20+00:00"
         },
         {
             "name": "pear/archive_tar",

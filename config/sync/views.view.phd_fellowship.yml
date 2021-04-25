@@ -1,33 +1,16 @@
-uuid: bd4d5e85-dccb-400a-b30e-6a7614223b4d
+uuid: 4b6b0b06-a781-40df-be2e-281dadc580ef
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - field.storage.node.field_employment_category
-    - field.storage.node.field_faculty_designation
-    - field.storage.node.field_room_no
-    - node.type.fac_page
-    - taxonomy.vocabulary.employment_category
-  content:
-    - 'taxonomy_term:employment_category:12a74ec6-a690-41ea-b4a0-808132d89e90'
-    - 'taxonomy_term:employment_category:17255933-4a6c-4292-a318-0adb1a8c796e'
-    - 'taxonomy_term:employment_category:1b5b9d54-4219-4ed5-9869-2ec0ad85c133'
-    - 'taxonomy_term:employment_category:351c9e26-f2bb-4044-b8c9-2482921eb54d'
-    - 'taxonomy_term:employment_category:464a92f6-efb2-4004-b776-3640f9839e86'
-  enforced:
-    module:
-      - acadmix_faculty
+    - field.storage.node.field_co_faculty_name_ref
+    - field.storage.node.field_faculty_name_ref
+    - node.type.phd_fellowship_
   module:
-    - better_exposed_filters
-    - datatables
     - node
-    - options
-    - taxonomy
     - user
-_core:
-  default_config_hash: p0I6309lSLHy2qTq0m2PrWb4yqFPmLelt7fgVMNgLwY
-id: faculty_directory
-label: 'Faculty Directory'
+id: phd_fellowship
+label: 'Phd fellowship'
 module: views
 description: ''
 tag: ''
@@ -56,7 +39,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: bef
+        type: basic
         options:
           submit_button: Apply
           reset_button: false
@@ -65,134 +48,45 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          input_required: false
-          text_input_required: 'Select any filter and click on Apply to see results'
-          bef:
-            general:
-              allow_secondary: false
-              secondary_label: 'Advanced options'
-              autosubmit: true
-              autosubmit_exclude_textfield: true
-              autosubmit_hide: true
-            field_employment_category_target_id:
-              bef_format: default
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-          text_input_required_format: basic_html
       pager:
-        type: none
+        type: some
         options:
+          items_per_page: 20
           offset: 0
       style:
-        type: datatables
+        type: table
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
+          override: true
+          sticky: false
           caption: ''
           summary: ''
           description: ''
           columns:
-            field_faculty_photo: field_faculty_photo
             title: title
-            field_faculty_designation_1: field_faculty_designation_1
-            field_employment_category: field_employment_category
-            field_building_new: field_building_new
-            field_room_no: field_room_no
-            field_phone_no_new: field_phone_no_new
-            field_email_new: field_email_new
           info:
-            field_faculty_photo:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
             title:
-              sortable: 1
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: 0
-              responsive: ''
-            field_faculty_designation_1:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_employment_category:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_building_new:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_room_no:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_phone_no_new:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_email_new:
-              align: ''
-              separator: ''
-              empty_column: 0
+              empty_column: false
               responsive: ''
           default: '-1'
-          empty_table: 0
-          elements:
-            search_box: 1
-            table_info: 1
-            save_state: 0
-            table_tools: 0
-          layout:
-            autowidth: 1
-            themeroller: 0
-            sdom: ''
-          pages:
-            pagination_style: no_pagination
-            length_change: 0
-            display_length: ''
-          hidden_columns:
-            field_faculty_photo: '0'
-            title: '0'
-            field_faculty_designation_1: '0'
-            field_employment_category: '0'
-            field_building_new: '0'
-            field_room_no: '0'
-            field_phone_no_new: '0'
-            field_email_new: '0'
+          empty_table: false
       row:
         type: fields
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        counter:
+          id: counter
+          table: views
+          field: counter
           relationship: none
           group_type: group
           admin_label: ''
-          label: Name
+          label: 'no'
           exclude: false
           alter:
             alter_text: false
@@ -212,8 +106,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -233,31 +127,16 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
-        field_faculty_designation_1:
-          id: field_faculty_designation_1
-          table: node__field_faculty_designation
-          field: field_faculty_designation
+          counter_start: 1
+          plugin_id: counter
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
-          label: Designation
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -299,8 +178,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: list_default
-          settings: {  }
+          type: string
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -312,14 +192,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_employment_category:
-          id: field_employment_category
-          table: node__field_employment_category
-          field: field_employment_category
+        field_faculty_name_ref:
+          id: field_faculty_name_ref
+          table: node__field_faculty_name_ref
+          field: field_faculty_name_ref
           relationship: none
           group_type: group
           admin_label: ''
-          label: Appointment
+          label: 'PI Name'
           exclude: false
           alter:
             alter_text: false
@@ -352,7 +232,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -363,7 +243,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: false
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -375,14 +255,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_room_no:
-          id: field_room_no
-          table: node__field_room_no
-          field: field_room_no
+        field_co_faculty_name_ref:
+          id: field_co_faculty_name_ref
+          table: node__field_co_faculty_name_ref
+          field: field_co_faculty_name_ref
           relationship: none
           group_type: group
           admin_label: ''
-          label: Room_no.
+          label: Co-PIs
           exclude: false
           alter:
             alter_text: false
@@ -415,18 +295,19 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: number_unformatted
-          settings: {  }
-          group_column: value
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -460,7 +341,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            fac_page: fac_page
+            phd_fellowship_: phd_fellowship_
           group: 1
           exposed: false
           expose:
@@ -469,6 +350,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -476,8 +359,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -493,69 +374,69 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_employment_category_target_id:
-          id: field_employment_category_target_id
-          table: node__field_employment_category
-          field: field_employment_category_target_id
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value:
-            7: 7
-            6: 6
-            11: 11
-            10: 10
-            9: 9
-          group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_employment_category_target_id_op
-            label: Appointment
-            description: ''
-            use_operator: false
-            operator: field_employment_category_target_id_op
-            identifier: appointment
-            required: true
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: true
-            chosen_override: 0
-            disable_search: 0
-            search_contains: 0
-            placeholder_text_multiple: 'Choose some options'
-            placeholder_text_single: 'Choose an option'
-            no_results_text: 'No results match'
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
             label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: employment_category
-          hierarchy: false
-          error_message: false
-          plugin_id: taxonomy_index_tid
+          granularity: second
+      title: 'Research Projects (Seeds)'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+      use_more: false
+      use_more_always: false
+      use_more_text: more
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_co_faculty_name_ref'
+        - 'config:field.storage.node.field_faculty_name_ref'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Table
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      link_display: page_1
+      defaults:
+        link_display: false
+        link_url: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        sorts: false
+        style: false
+        row: false
+      link_url: ''
+      use_more: true
+      use_more_always: false
+      use_more_text: more
       sorts:
-        field_full_name_family:
-          id: field_full_name_family
-          table: node__field_full_name
-          field: field_full_name_family
+        created:
+          id: created
+          table: node_field_data
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
@@ -563,69 +444,113 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
-      title: 'Faculty Directory'
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: true
-          content: ''
-          plugin_id: text_custom
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-      use_ajax: true
-      css_class: ''
+          granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            counter: counter
+            title: title
+            field_faculty_name_ref: field_faculty_name_ref
+            field_co_faculty_name_ref: field_co_faculty_name_ref
+            field_status: field_status
+          info:
+            counter:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_faculty_name_ref:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_co_faculty_name_ref:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_status:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
+      row:
+        type: fields
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_employment_category'
-        - 'config:field.storage.node.field_faculty_designation'
-        - 'config:field.storage.node.field_room_no'
+        - 'config:field.storage.node.field_co_faculty_name_ref'
+        - 'config:field.storage.node.field_faculty_name_ref'
   page_1:
     display_plugin: page
     id: page_1
     display_title: Page
-    position: 1
+    position: 2
     display_options:
       display_extenders: {  }
-      path: faculty-directory
-      menu:
-        type: none
-        title: Faculty
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
+      pager:
+        type: full
+        options:
+          items_per_page: 5
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      defaults:
+        pager: false
+      path: phd-fellowships
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_employment_category'
-        - 'config:field.storage.node.field_faculty_designation'
-        - 'config:field.storage.node.field_room_no'
+        - 'config:field.storage.node.field_co_faculty_name_ref'
+        - 'config:field.storage.node.field_faculty_name_ref'

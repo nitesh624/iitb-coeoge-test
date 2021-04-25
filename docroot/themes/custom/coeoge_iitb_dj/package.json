@@ -20,7 +20,7 @@
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp-sass-lint": "^1.4.0",
-    "sass-lint-auto-fix": "^0.15.2"
+    "sass-lint-auto-fix": "^0.21.2"
   },
   "author": "",
   "license": "MIT",

@@ -1,0 +1,28 @@
+uuid: af470cb6-6f10-438d-8fb6-9b21721abc15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_faculty_name_ref
+    - node.type.fac_page
+    - node.type.phd_fellowship_
+id: node.phd_fellowship_.field_co_faculty_name_ref
+field_name: field_co_faculty_name_ref
+entity_type: node
+bundle: phd_fellowship_
+label: Co-PIs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fac_page: fac_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
