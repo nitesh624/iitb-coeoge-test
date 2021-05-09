@@ -1,0 +1,37 @@
+uuid: d2d50402-e8e4-404b-bf67-ed7e75ed3d16
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.research_verticals.body
+    - field.field.node.research_verticals.field_co_faculty_name_ref
+    - field.field.node.research_verticals.field_content
+    - field.field.node.research_verticals.field_faculty_name_ref
+    - node.type.research_verticals
+  module:
+    - text
+    - user
+id: node.research_verticals.teaser
+targetEntityType: node
+bundle: research_verticals
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_co_faculty_name_ref: true
+  field_content: true
+  field_faculty_name_ref: true
+  langcode: true

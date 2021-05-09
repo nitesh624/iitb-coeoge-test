@@ -1,16 +1,16 @@
-uuid: 4b6b0b06-a781-40df-be2e-281dadc580ef
+uuid: 0b1ae178-c6ba-4553-89b0-178f8ab0b743
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_co_faculty_name_ref
     - field.storage.node.field_faculty_name_ref
-    - node.type.phd_fellowship_
+    - node.type.mission_mode_project
   module:
     - node
     - user
-id: phd_fellowship
-label: 'Phd fellowship'
+id: mission_mode_projects
+label: 'Mission mode Projects'
 module: views
 description: ''
 tag: ''
@@ -49,10 +49,26 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: some
+        type: full
         options:
           items_per_page: 20
           offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       style:
         type: table
         options:
@@ -341,7 +357,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            phd_fellowship_: phd_fellowship_
+            mission_mode_project: mission_mode_project
           group: 1
           exposed: false
           expose:
@@ -390,7 +406,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Research Projects (Seeds)'
+      title: 'Mission mode Projects'
       header: {  }
       footer: {  }
       empty: {  }
@@ -405,6 +421,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -429,7 +446,7 @@ display:
         style: false
         row: false
       link_url: ''
-      use_more: true
+      use_more: false
       use_more_always: false
       use_more_text: more
       sorts:
@@ -502,49 +519,6 @@ display:
       row:
         type: fields
         options: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_co_faculty_name_ref'
-        - 'config:field.storage.node.field_faculty_name_ref'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 2
-    display_options:
-      display_extenders: {  }
-      pager:
-        type: full
-        options:
-          items_per_page: 5
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
-      defaults:
-        pager: false
-        css_class: false
-      path: phd-fellowships
-      css_class: container
     cache_metadata:
       max-age: -1
       contexts:

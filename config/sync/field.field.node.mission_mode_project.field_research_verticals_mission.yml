@@ -1,0 +1,28 @@
+uuid: bfe0b6ee-8711-493b-922c-cd5ec6bee6ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_verticals_mission
+    - node.type.mission_mode_project
+    - node.type.research_verticals
+id: node.mission_mode_project.field_research_verticals_mission
+field_name: field_research_verticals_mission
+entity_type: node
+bundle: mission_mode_project
+label: 'Research Verticals'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      research_verticals: research_verticals
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

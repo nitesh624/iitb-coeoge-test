@@ -1,0 +1,21 @@
+uuid: 786d6772-0582-4dfc-9a52-03c0d1fbcfde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_leaving
+    - node.type.staff_page
+  module:
+    - datetime
+id: node.staff_page.field_date_of_leaving
+field_name: field_date_of_leaving
+entity_type: node
+bundle: staff_page
+label: 'Date of leaving'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

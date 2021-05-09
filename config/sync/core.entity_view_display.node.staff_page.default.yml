@@ -4,18 +4,22 @@ status: true
 dependencies:
   config:
     - field.field.node.staff_page.body
+    - field.field.node.staff_page.field_date_of_joining
+    - field.field.node.staff_page.field_date_of_leaving
     - field.field.node.staff_page.field_email
     - field.field.node.staff_page.field_phone_no
     - field.field.node.staff_page.field_staff_category
     - field.field.node.staff_page.field_staff_designation
     - field.field.node.staff_page.field_staff_full_name
     - field.field.node.staff_page.field_staff_photo
+    - field.field.node.staff_page.field_staff_status
     - image.style.acad_fac_max_650x650
     - node.type.staff_page
   enforced:
     module:
       - staff_page
   module:
+    - datetime
     - ds
     - media
     - name
@@ -98,6 +102,24 @@ content:
             fis-def-at: false
             fi-def-at: false
     region: ds_content
+  field_date_of_joining:
+    weight: 14
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_of_leaving:
+    weight: 15
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_email:
     weight: 3
     label: above
@@ -330,6 +352,13 @@ content:
             fi: false
             fi-def-at: false
     region: ds_content
+  field_staff_status:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   links:
     weight: 0
     region: ds_content

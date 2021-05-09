@@ -1,0 +1,22 @@
+uuid: 649f20d1-a9a5-4ed0-8f0e-055c2392bae8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.seed_project
+id: node.seed_project.promote
+field_name: promote
+entity_type: node
+bundle: seed_project
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

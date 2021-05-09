@@ -1,0 +1,11 @@
+uuid: 37a3e9ab-92ad-4a61-8515-ff7f0d1bfe45
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mission_mode_project
+id: node.mission_mode_project
+target_entity_type_id: node
+target_bundle: mission_mode_project
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,28 @@
+uuid: 542bda6b-43b2-452a-8dd1-e276662cbde0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_faculty_name_ref
+    - node.type.fac_page
+    - node.type.mission_mode_project
+id: node.mission_mode_project.field_co_faculty_name_ref
+field_name: field_co_faculty_name_ref
+entity_type: node
+bundle: mission_mode_project
+label: Co-PIs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fac_page: fac_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

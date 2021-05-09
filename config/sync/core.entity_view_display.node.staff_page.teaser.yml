@@ -5,12 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.staff_page.body
+    - field.field.node.staff_page.field_date_of_joining
+    - field.field.node.staff_page.field_date_of_leaving
     - field.field.node.staff_page.field_email
     - field.field.node.staff_page.field_phone_no
     - field.field.node.staff_page.field_staff_category
     - field.field.node.staff_page.field_staff_designation
     - field.field.node.staff_page.field_staff_full_name
     - field.field.node.staff_page.field_staff_photo
+    - field.field.node.staff_page.field_staff_status
     - node.type.staff_page
   enforced:
     module:
@@ -37,10 +40,13 @@ content:
     weight: 100
     region: content
 hidden:
+  field_date_of_joining: true
+  field_date_of_leaving: true
   field_email: true
   field_phone_no: true
   field_staff_category: true
   field_staff_designation: true
   field_staff_full_name: true
   field_staff_photo: true
+  field_staff_status: true
   langcode: true

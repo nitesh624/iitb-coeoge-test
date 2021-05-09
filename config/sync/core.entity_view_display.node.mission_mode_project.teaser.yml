@@ -1,0 +1,39 @@
+uuid: f05d47f3-754f-4957-86ac-d817b0a62131
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.mission_mode_project.body
+    - field.field.node.mission_mode_project.field_co_faculty_name_ref
+    - field.field.node.mission_mode_project.field_content
+    - field.field.node.mission_mode_project.field_faculty_name_ref
+    - field.field.node.mission_mode_project.field_research_verticals_mission
+    - node.type.mission_mode_project
+  module:
+    - text
+    - user
+id: node.mission_mode_project.teaser
+targetEntityType: node
+bundle: mission_mode_project
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_co_faculty_name_ref: true
+  field_content: true
+  field_faculty_name_ref: true
+  field_research_verticals_mission: true
+  langcode: true

@@ -1,0 +1,64 @@
+uuid: b27c7111-20c1-44cc-a204-5e391356c257
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.research_verticals.body
+    - field.field.node.research_verticals.field_co_faculty_name_ref
+    - field.field.node.research_verticals.field_content
+    - field.field.node.research_verticals.field_faculty_name_ref
+    - node.type.research_verticals
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.research_verticals.default
+targetEntityType: node
+bundle: research_verticals
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_co_faculty_name_ref:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_content:
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_faculty_name_ref:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

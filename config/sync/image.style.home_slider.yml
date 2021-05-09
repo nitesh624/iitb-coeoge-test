@@ -2,9 +2,13 @@ uuid: f367edc8-af15-4f50-80fd-1fb2b32378cd
 langcode: en
 status: true
 dependencies:
+  config:
+    - crop.type.crop_16_9
   enforced:
     module:
       - acadmix_slider
+  module:
+    - crop
 _core:
   default_config_hash: 0xXJdZkK3ArZ46OtgsZIWRheuzotC9HXzEHHtMkw3ec
 name: home_slider
@@ -13,8 +17,14 @@ effects:
   db4734d4-6268-45d1-8e49-1b2676b2e467:
     uuid: db4734d4-6268-45d1-8e49-1b2676b2e467
     id: image_scale_and_crop
-    weight: 1
+    weight: -9
     data:
       width: 1200
       height: 500
       anchor: center-center
+  95e19943-f3db-4a8a-b146-2b0f4f763d2d:
+    uuid: 95e19943-f3db-4a8a-b146-2b0f4f763d2d
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: crop_16_9

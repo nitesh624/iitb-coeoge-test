@@ -1,15 +1,14 @@
-uuid: 47e6c81e-478d-44cb-a747-7a1fe11c03d3
+uuid: ea640eb7-085f-462b-9bd9-f276a613917f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_department
-    - node.type.fac_page
+    - node.type.research_verticals
   module:
     - node
     - user
-id: faculty_list
-label: 'Faculty List'
+id: research_verticals
+label: 'Research Verticals'
 module: views
 description: ''
 tag: ''
@@ -48,17 +47,12 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: mini
         options:
-          items_per_page: 30
+          items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -67,9 +61,15 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          tags:
+            previous: ‹‹
+            next: ››
       style:
-        type: table
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
       fields:
@@ -80,7 +80,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Name
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -113,12 +113,12 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -137,69 +137,6 @@ display:
           field_api_classes: false
           entity_type: node
           entity_field: title
-          plugin_id: field
-        field_department:
-          id: field_department
-          table: node__field_department
-          field: field_department
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Department
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
           plugin_id: field
       filters:
         status:
@@ -220,7 +157,7 @@ display:
           table: node_field_data
           field: type
           value:
-            fac_page: fac_page
+            research_verticals: research_verticals
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -232,7 +169,7 @@ display:
           id: created
           table: node_field_data
           field: created
-          order: DESC
+          order: ASC
           entity_type: node
           entity_field: created
           plugin_id: date
@@ -243,7 +180,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Faculty List'
+      title: 'Research Verticals'
       header: {  }
       footer: {  }
       empty: {  }
@@ -258,8 +195,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_department'
+      tags: {  }
   block_1:
     display_plugin: block
     id: block_1
@@ -267,6 +203,39 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
+      pager:
+        type: full
+        options:
+          items_per_page: 20
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      defaults:
+        pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
+      use_more: false
+      use_more_always: false
+      use_more_text: more
+      link_display: page_1
+      link_url: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -275,5 +244,4 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_department'
+      tags: {  }

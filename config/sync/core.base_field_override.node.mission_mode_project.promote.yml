@@ -1,0 +1,22 @@
+uuid: d19afc8a-54ff-4f7b-9143-33e89ada9992
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mission_mode_project
+id: node.mission_mode_project.promote
+field_name: promote
+entity_type: node
+bundle: mission_mode_project
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

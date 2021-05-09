@@ -1,0 +1,28 @@
+uuid: 27328337-09b6-4878-b0a5-06e363282051
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_name_ref
+    - node.type.fac_page
+    - node.type.seed_project
+id: node.seed_project.field_faculty_name_ref
+field_name: field_faculty_name_ref
+entity_type: node
+bundle: seed_project
+label: 'PI Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fac_page: fac_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

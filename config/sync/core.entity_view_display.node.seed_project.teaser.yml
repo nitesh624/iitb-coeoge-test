@@ -1,0 +1,39 @@
+uuid: c7008fa1-4a5f-4308-9865-0cd2c66cd145
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.seed_project.body
+    - field.field.node.seed_project.field_co_faculty_name_ref
+    - field.field.node.seed_project.field_content
+    - field.field.node.seed_project.field_faculty_name_ref
+    - field.field.node.seed_project.field_research_verticals_seed
+    - node.type.seed_project
+  module:
+    - text
+    - user
+id: node.seed_project.teaser
+targetEntityType: node
+bundle: seed_project
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_co_faculty_name_ref: true
+  field_content: true
+  field_faculty_name_ref: true
+  field_research_verticals_seed: true
+  langcode: true

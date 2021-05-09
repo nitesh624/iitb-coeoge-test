@@ -1,0 +1,22 @@
+uuid: 4e16adee-08e1-4103-b9c4-82de86826a05
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.research_verticals
+id: node.research_verticals.promote
+field_name: promote
+entity_type: node
+bundle: research_verticals
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

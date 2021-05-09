@@ -1,0 +1,84 @@
+uuid: 8f54edd7-859e-42a7-9541-4cd1e4428165
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.seed_project
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.attachments
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.seed_project.field_content
+field_name: field_content
+entity_type: node
+bundle: seed_project
+label: 'Additional Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      attachments: attachments
+      gallery: gallery
+      image: image
+      text: text
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 17
+      accordion_item:
+        weight: 18
+        enabled: false
+      attachments:
+        enabled: true
+        weight: 19
+      banner:
+        weight: 20
+        enabled: false
+      card:
+        weight: 21
+        enabled: false
+      card_list:
+        weight: 22
+        enabled: false
+      cta:
+        weight: 23
+        enabled: false
+      from_library:
+        weight: 24
+        enabled: false
+      gallery:
+        enabled: true
+        weight: 25
+      hero_view:
+        weight: 26
+        enabled: false
+      image:
+        enabled: true
+        weight: 27
+      list_view:
+        weight: 28
+        enabled: false
+      r_d_projects:
+        weight: 29
+        enabled: false
+      text:
+        enabled: true
+        weight: 30
+      text_and_image:
+        weight: 31
+        enabled: false
+      video:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions
