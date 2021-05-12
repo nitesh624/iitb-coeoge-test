@@ -1,0 +1,22 @@
+uuid: 7fe51edd-f8c8-490a-8768-afc49082b5a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: mission_mode_prject_type_alias
+label: 'Mission Mode prject type alias'
+type: 'canonical_entities:node'
+pattern: 'mission-mode-project/[node:title]'
+selection_criteria:
+  b2ca0e59-12e2-4cf7-8268-3548ebf71e90:
+    id: node_type
+    bundles:
+      mission_mode_project: mission_mode_project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b2ca0e59-12e2-4cf7-8268-3548ebf71e90
+selection_logic: and
+weight: -5
+relationships: {  }

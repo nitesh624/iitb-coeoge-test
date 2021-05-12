@@ -1,0 +1,22 @@
+uuid: 0e0edce2-9fa0-42ce-900f-afa64a2235b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: seed_project_alias
+label: 'Seed Project alias[node:title]'
+type: 'canonical_entities:node'
+pattern: 'seed-project/[node:title]'
+selection_criteria:
+  4784b73d-9d11-4af2-8751-3f5aae0feb0d:
+    id: node_type
+    bundles:
+      seed_project: seed_project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4784b73d-9d11-4af2-8751-3f5aae0feb0d
+selection_logic: and
+weight: -5
+relationships: {  }

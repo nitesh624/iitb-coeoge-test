@@ -1,0 +1,22 @@
+uuid: b4db7852-7cb4-4ba9-9d32-82863dec9dbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: research_verticals
+label: 'Research verticals'
+type: 'canonical_entities:node'
+pattern: 'research-verticals/[node:title]'
+selection_criteria:
+  691e4e11-a345-4650-9676-af0464eb551c:
+    id: node_type
+    bundles:
+      research_verticals: research_verticals
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 691e4e11-a345-4650-9676-af0464eb551c
+selection_logic: and
+weight: -5
+relationships: {  }
