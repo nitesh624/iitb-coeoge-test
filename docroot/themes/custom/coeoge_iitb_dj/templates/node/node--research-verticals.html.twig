@@ -103,16 +103,18 @@
       {% endif %}
     </div>
 
-    <ul id="myTabs" class="nav nav-pills nav-justified" role="tablist" data-tabs="tabs">
-      <li class="active"><a href="#mission" data-toggle="tab">mission mode project</a></li>
-      <li><a href="#seeds" data-toggle="tab">seed projects</a></li>
-    </ul>
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade in active" id="mission"> 
-        {{ drupal_view('related_mission_mode_proj', 'block_1') }}
-      </div>
-      <div role="tabpanel" class="tab-pane fade" id="seeds">
-        {{ drupal_view('related_seed_projects', 'block_1') }}
+    <div class="project-switcher">
+      <ul id="myTabs" class="nav nav-pills nav-justified" role="tablist" data-tabs="tabs">
+        <li class="active"><a href="#mission" data-toggle="tab">mission mode project</a></li>
+        <li><a href="#seeds" data-toggle="tab">seed projects</a></li>
+      </ul>
+      <div class="tab-content mt-30">
+        <div role="tabpanel" class="tab-pane fade in active" id="mission"> 
+          {{ drupal_view('related_mission_mode_proj', 'block_1') }}
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="seeds">
+          {{ drupal_view('related_seed_projects', 'block_1') }}
+        </div>
       </div>
     </div>
   </div>
