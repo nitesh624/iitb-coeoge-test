@@ -1,20 +1,23 @@
-uuid: 83bcfeae-1210-4914-8697-f4efd8ebe164
+uuid: bbf5e9ff-fc7b-48b6-b071-c40824e476b1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link
-    - field.storage.node.field_partner_logo
-    - image.style.card_list_200x200
-    - image.style.card_list_400x400
-    - node.type.industrial_partner
+    - field.storage.node.field_slider_media
+    - field.storage.node.field_slider_subtitle
+    - node.type.main_slider
+  enforced:
+    module:
+      - acadmix_slider
   module:
-    - link
-    - media
+    - flexslider_views
     - node
+    - text
     - user
-id: industrial_partner
-label: 'Industrial Partner'
+_core:
+  default_config_hash: 5gR2BVVMQoPmNUIV8WMBplpLxQa_FPtqcTIMasyp1WY
+id: duplicate_of_main_slider
+label: 'Duplicate of Main Slider'
 module: views
 description: ''
 tag: ''
@@ -55,17 +58,27 @@ display:
       pager:
         type: none
         options:
-          items_per_page: null
           offset: 0
       style:
-        type: default
+        type: flexslider
+        options:
+          grouping: {  }
+          flexslider: null
+          optionset: default
+          captionfield: title
+          id: ''
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
-        field_partner_logo:
-          id: field_partner_logo
-          table: node__field_partner_logo
-          field: field_partner_logo
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -98,24 +111,23 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: h1
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: h1
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: media_thumbnail
+          click_sort_column: value
+          type: string
           settings:
-            image_style: card_list_400x400
-            image_link: ''
-          group_column: target_id
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -125,87 +137,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
           plugin_id: field
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            industrial_partner: industrial_partner
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      title: 'Industrial Partner'
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_partner_logo'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: 'Industrial Partner Grid'
-    position: 2
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: 'Industrial Partner Grid'
-      pager:
-        type: some
-        options:
-          items_per_page: 12
-          offset: 0
-      defaults:
-        pager: false
-        fields: false
-      fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_slider_subtitle:
+          id: field_slider_subtitle
+          table: node__field_slider_subtitle
+          field: field_slider_subtitle
           relationship: none
           group_type: group
           admin_label: ''
@@ -251,9 +189,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -264,18 +201,16 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
           plugin_id: field
-        field_link:
-          id: field_link
-          table: node__field_link
-          field: field_link
+        field_slider_media:
+          id: field_slider_media
+          table: node__field_slider_media
+          field: field_slider_media
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -315,78 +250,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: uri
-          type: link
-          settings:
-            trim_length: 80
-            url_only: true
-            url_plain: true
-            rel: nofollow
-            target: _blank
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_partner_logo:
-          id: field_partner_logo
-          table: node__field_partner_logo
-          field: field_partner_logo
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: true
-            path: '{{ field_link }}'
-            absolute: false
-            external: true
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: _blank
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
           click_sort_column: target_id
-          type: media_thumbnail
+          type: entity_reference_entity_view
           settings:
-            image_style: card_list_200x200
-            image_link: ''
+            view_mode: home_slider
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -398,6 +265,55 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            main_slider: main_slider
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Main Slider'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -406,5 +322,25 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_link'
-        - 'config:field.storage.node.field_partner_logo'
+        - 'config:field.storage.node.field_slider_media'
+        - 'config:field.storage.node.field_slider_subtitle'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      allow:
+        items_per_page: true
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_slider_media'
+        - 'config:field.storage.node.field_slider_subtitle'

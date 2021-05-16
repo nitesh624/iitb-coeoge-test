@@ -39,7 +39,9 @@
     "drupal/entity_usage": "^2.0@beta",
     "drupal/draggableviews": "^2.0",
     "drupal/mixitup_views": "^1.12",
-    "drupal/transliterate_filenames": "^1.5"
+    "drupal/transliterate_filenames": "^1.5",
+    "drupal/flexslider": "^2.0",
+    "bower-asset/flexslider": "~2.7.2"
   },
   "conflict": {
     "symfony/http-foundation": "3.4.24"

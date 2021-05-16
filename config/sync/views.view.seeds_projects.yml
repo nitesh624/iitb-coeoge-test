@@ -122,7 +122,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'no'
+          label: No.
           exclude: false
           alter:
             alter_text: false

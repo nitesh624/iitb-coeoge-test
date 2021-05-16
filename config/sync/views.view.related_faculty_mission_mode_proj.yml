@@ -1,4 +1,4 @@
-uuid: b7f13af3-79b2-4bd7-a29e-795d2acd66a7
+uuid: 816e0b0c-7c18-4695-9687-6b72499272f0
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,8 @@ dependencies:
   module:
     - node
     - user
-id: related_mission_mode_proj
-label: 'Related mission mode proj'
+id: related_faculty_mission_mode_proj
+label: 'Related faculty mission mode proj'
 module: views
 description: ''
 tag: ''
@@ -184,7 +184,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Related mission mode project'
+      title: 'Related faculty mission mode project'
       header: {  }
       footer: {  }
       empty:
@@ -203,10 +203,10 @@ display:
           plugin_id: text
       relationships: {  }
       arguments:
-        field_research_verticals_mission_target_id:
-          id: field_research_verticals_mission_target_id
-          table: node__field_research_verticals_mission
-          field: field_research_verticals_mission_target_id
+        field_faculty_name_ref_target_id:
+          id: field_faculty_name_ref_target_id
+          table: node__field_faculty_name_ref
+          field: field_faculty_name_ref_target_id
           relationship: none
           group_type: group
           admin_label: ''

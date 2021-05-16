@@ -31,7 +31,7 @@ function coeoge_iitb_dj_preprocess_ds_1col(&$variables){
   $variables['news_header_style'] = '';
   $news_header_bg_file = theme_get_setting('news_header_bg_file', $active_theme);  
   if ($news_header_bg_file) {
-    $variables['news_header_style'] .= 'background-img: url(' . $news_header_bg_file . ');';
+    $variables['news_header_style'] .= 'background-image: url(' . $news_header_bg_file . ');';
   }
 }
 

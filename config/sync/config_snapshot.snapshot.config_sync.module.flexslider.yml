@@ -1,0 +1,108 @@
+uuid: 598f6e05-7813-49a9-b38a-c9b95358aae1
+langcode: en
+status: true
+dependencies:
+  module:
+    - flexslider
+id: config_sync.module.flexslider
+snapshotSet: config_sync
+extensionType: module
+extensionName: flexslider
+items:
+  -
+    collection: ''
+    name: flexslider.optionset.default
+    data:
+      id: default
+      label: Default
+      options:
+        animation: fade
+        animationSpeed: 600
+        direction: horizontal
+        slideshow: true
+        easing: swing
+        smoothHeight: false
+        reverse: false
+        slideshowSpeed: 7000
+        animationLoop: true
+        randomize: false
+        startAt: 0
+        itemWidth: 0
+        itemMargin: 0
+        minItems: 0
+        maxItems: 0
+        move: 0
+        directionNav: true
+        controlNav: '1'
+        thumbCaptions: false
+        thumbCaptionsBoth: false
+        keyboard: true
+        multipleKeyboard: false
+        mousewheel: false
+        touch: true
+        prevText: Previous
+        nextText: Next
+        namespace: flex-
+        selector: '.slides > li'
+        sync: ''
+        asNavFor: ''
+        initDelay: 0
+        useCSS: true
+        video: false
+        pausePlay: false
+        pauseText: Pause
+        playText: Play
+        pauseOnAction: true
+        pauseOnHover: false
+        controlsContainer: .flex-control-nav-container
+        manualControls: ''
+      _core:
+        default_config_hash: zW8dEKuN_hbYbIx-q05dK7KEUuXcAjFV4-9MKe9EOiw
+  -
+    collection: ''
+    name: flexslider.settings
+    data:
+      flexslider_version: '2.0'
+      flexslider_debug: false
+      flexslider_css: true
+      flexslider_module_css: true
+      _core:
+        default_config_hash: I6uwuOQ5tVmaCvXgeQSXv7c_oTVRK-zTeoVa78GU1QQ
+  -
+    collection: ''
+    name: image.style.flexslider_full
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: flexslider_full
+      label: 'Flexslider Full'
+      effects:
+        7c3142f8-ebf5-4cb3-9815-2140c9ef8466:
+          uuid: 7c3142f8-ebf5-4cb3-9815-2140c9ef8466
+          id: image_scale_and_crop
+          weight: 1
+          data:
+            width: 800
+            height: 500
+      _core:
+        default_config_hash: NzoU8g2Q_HdPlk1Mm7KilV1FwnWeMmNt6dRjcCBJXj4
+  -
+    collection: ''
+    name: image.style.flexslider_thumbnail
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: flexslider_thumbnail
+      label: 'Flexslider Thumbnail'
+      effects:
+        b4778d08-beca-43b7-8403-3d87e42991f6:
+          uuid: b4778d08-beca-43b7-8403-3d87e42991f6
+          id: image_scale_and_crop
+          weight: 1
+          data:
+            width: 160
+            height: 100
+      _core:
+        default_config_hash: CaB9WW_9yUbbica2-gL171M13OrbHwR9xFL1_UIqPY0

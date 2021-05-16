@@ -34,10 +34,7 @@ dependencies:
     - link
     - media_library
     - name
-    - paragraphs
     - path
-    - shs
-    - text
 third_party_settings:
   field_group:
     group_personal_information:
@@ -45,9 +42,7 @@ third_party_settings:
         - field_full_name
         - field_department
         - field_faculty_designation
-        - field_employment_category
         - field_faculty_photo
-        - field_faculty_attachments
       parent_name: ''
       weight: 8
       format_type: tab
@@ -65,7 +60,7 @@ third_party_settings:
         - field_scopus_id
         - field_orcid
       parent_name: ''
-      weight: 10
+      weight: 12
       format_type: tab
       format_settings:
         id: ''
@@ -74,17 +69,16 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'External Id'
-      region: content
+      region: hidden
     group_contact_information:
       children:
         - field_room_no
         - field_building
         - field_email
-        - field_mobile_number
         - field_phone_no
         - field_detailed_information_page
       parent_name: ''
-      weight: 11
+      weight: 9
       format_type: tab
       format_settings:
         id: ''
@@ -99,7 +93,7 @@ third_party_settings:
         - field_research_area
         - field_faculty_rd_proj
       parent_name: ''
-      weight: 12
+      weight: 14
       format_type: tab
       format_settings:
         id: ''
@@ -108,7 +102,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Research data'
-      region: content
+      region: hidden
     group_teaching_and_professional_:
       children:
         - field_background
@@ -116,7 +110,7 @@ third_party_settings:
         - field_awards_and_fellowship
         - field_courses_taught
       parent_name: ''
-      weight: 9
+      weight: 13
       format_type: tab
       format_settings:
         id: ''
@@ -125,7 +119,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Teaching and professional backgrounds'
-      region: content
+      region: hidden
 _core:
   default_config_hash: wuE737WyxICuNk4K1_DsgMEyxVfmCxS2OmkoxOjbxYA
 id: node.fac_page.default
@@ -139,30 +133,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_affiliations:
-    weight: 18
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_awards_and_fellowship:
-    weight: 19
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_background:
-    weight: 17
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_building:
     weight: 17
     settings:
@@ -170,14 +140,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_courses_taught:
-    weight: 20
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
     region: content
   field_department:
     weight: 20
@@ -201,23 +163,6 @@ content:
     third_party_settings: {  }
     type: email_default
     region: content
-  field_employment_category:
-    weight: 22
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_faculty_attachments:
-    type: media_library_widget
-    weight: 24
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-    region: content
   field_faculty_designation:
     weight: 21
     settings: {  }
@@ -229,18 +174,6 @@ content:
     weight: 23
     settings:
       media_types: {  }
-    third_party_settings: {  }
-    region: content
-  field_faculty_rd_proj:
-    type: entity_reference_paragraphs
-    weight: 29
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
     third_party_settings: {  }
     region: content
   field_full_name:
@@ -274,30 +207,6 @@ content:
     third_party_settings: {  }
     type: name_default
     region: content
-  field_google_scholar_id:
-    weight: 20
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_mobile_number:
-    weight: 19
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_orcid:
-    weight: 22
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_phone_no:
     weight: 20
     settings:
@@ -306,30 +215,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_research_area:
-    weight: 28
-    settings:
-      display_node_count: false
-      create_new_items: false
-      create_new_levels: false
-      force_deepest: false
-    third_party_settings: {  }
-    type: options_shs
-    region: content
   field_room_no:
     weight: 15
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_scopus_id:
-    weight: 21
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   langcode:
     type: language_select
@@ -385,3 +276,15 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_affiliations: true
+  field_awards_and_fellowship: true
+  field_background: true
+  field_courses_taught: true
+  field_employment_category: true
+  field_faculty_attachments: true
+  field_faculty_rd_proj: true
+  field_google_scholar_id: true
+  field_mobile_number: true
+  field_orcid: true
+  field_research_area: true
+  field_scopus_id: true

@@ -1,14 +1,14 @@
-uuid: b7f13af3-79b2-4bd7-a29e-795d2acd66a7
+uuid: 21f42abd-f047-4e52-9f6f-a85ff8834e70
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.mission_mode_project
+    - node.type.seed_project
   module:
     - node
     - user
-id: related_mission_mode_proj
-label: 'Related mission mode proj'
+id: related_faculty_seed_projects
+label: 'Related faculty seed projects'
 module: views
 description: ''
 tag: ''
@@ -83,9 +83,6 @@ display:
           id: title
           table: node_field_data
           field: title
-          settings:
-            link_to_entity: true
-          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -122,7 +119,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -132,6 +129,8 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -142,6 +141,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -160,14 +160,44 @@ display:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
-            mission_mode_project: mission_mode_project
+            seed_project: seed_project
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: node
           entity_field: type
           plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
       sorts:
         created:
           id: created
@@ -184,7 +214,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Related mission mode project'
+      title: 'Related seed projects'
       header: {  }
       footer: {  }
       empty:
@@ -203,10 +233,10 @@ display:
           plugin_id: text
       relationships: {  }
       arguments:
-        field_research_verticals_mission_target_id:
-          id: field_research_verticals_mission_target_id
-          table: node__field_research_verticals_mission
-          field: field_research_verticals_mission_target_id
+        field_faculty_name_ref_target_id:
+          id: field_faculty_name_ref_target_id
+          table: node__field_faculty_name_ref
+          field: field_faculty_name_ref_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -234,7 +264,7 @@ display:
             type: none
             fail: 'not found'
           validate_options: {  }
-          break_phrase: false
+          break_phrase: true
           not: false
           plugin_id: numeric
       display_extenders: {  }

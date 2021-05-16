@@ -10,8 +10,8 @@ dependencies:
     module:
       - acadmix_slider
   module:
+    - flexslider_views
     - node
-    - slick_views
     - text
     - user
 _core:
@@ -60,47 +60,13 @@ display:
         options:
           offset: 0
       style:
-        type: slick
+        type: flexslider
         options:
-          vanilla: false
-          optionset: main_slider_full
-          skin: default
-          layout: ''
-          caption:
-            field_slider_subtitle: field_slider_subtitle
-            field_slider_image: '0'
-            title: '0'
-            field_slider_media: '0'
-          optionset_thumbnail: ''
-          skin_thumbnail: ''
-          thumbnail_position: ''
-          thumbnail_caption: ''
-          grid_header: ''
-          grid: null
-          grid_medium: null
-          grid_small: null
-          visible_items: null
-          preserve_keys: false
-          image: field_slider_media
-          thumbnail: ''
-          overlay: ''
-          title: title
-          link: ''
-          class: ''
+          grouping: {  }
+          flexslider: null
+          optionset: main_slider
+          captionfield: title
           id: ''
-          override: false
-          overridables:
-            dots: dots
-            arrows: '0'
-            autoplay: '0'
-            draggable: '0'
-            infinite: '0'
-            mouseWheel: '0'
-            randomize: '0'
-            variableWidth: '0'
-          cache: 0
-          current_view_mode: block_1
-          thumbnail_effect: hover
       row:
         type: fields
         options:
@@ -117,7 +83,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -182,7 +148,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''

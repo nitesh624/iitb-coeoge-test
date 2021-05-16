@@ -9,12 +9,14 @@
  * - ds_content: content region
  */
 #}
-	<header class="sabbi-page-header page-header-lg event-page-header" {% if faculty_header_style %} style = "{{ faculty_header_style }}" {% endif %}>
+{# {% if faculty_header_style %}
+	<header class="sabbi-page-header page-header-lg event-page-header" style = "{{ faculty_header_style }}">
 		<div class="page-header-content">
 			<div class="header-title-block">
 		  </div>
 		</div>
   </header>
+{% endif %}
 <{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
 
   {{ title_suffix.contextual_links }}
@@ -128,7 +130,50 @@
 		  </div><!-- #main col-sm-8 -->
 
 	   </div> <!-- row -->
-	</div> <!-- container -->
+	</div> <!-- container --> 
+</{{ ds_content_wrapper }}>#}
 
+
+<{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="align-center">{{ ds_content.field_faculty_photo }}</div>
+            <h2 class="text-center">{{ds_content.field_full_name}}</h2>
+       				{% if ds_content.field_phone_no|render or ds_content.field_email|render %}
+                <div class="contact-info text-center">
+                  <p class="__ci_num inline"><span>{{ ds_content.field_phone_no }}</span></p>
+                  <p class="__ci_num inline"> <span>{{ ds_content.field_email }}</span></p>
+                </div>
+              {% endif %}
+
+              {% if ds_content.field_room_no|render or ds_content.field_building_new|render %}
+                <div class="text-center mt-10">
+                <h4 class="entry-title inline">Location: </h4>{{ ds_content.field_room_no.0 }}{% if ds_content.field_room_no|render and ds_content.field_building|render %}, {% endif %}{{ ds_content.field_building.0 }}
+                </div>
+              {% endif %}
+
+          <h3 class="text-center mb-10">Research Projects with OGE center</h3>
+            <div class="project-switcher">
+            <ul id="myTabs" class="nav nav-pills nav-justified" role="tablist" data-tabs="tabs">
+              <li class="active"><a href="#mission" data-toggle="tab">Mission mode projects</a></li>
+              <li><a href="#seeds" data-toggle="tab">Seed projects</a></li>
+            </ul>
+            <div class="tab-content mt-30">
+              <div role="tabpanel" class="tab-pane fade in active" id="mission"> 
+                {{ drupal_view('related_faculty_mission_mode_proj', 'block_1') }}
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="seeds">
+                {{ drupal_view('related_faculty_seed_projects', 'block_1') }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 </{{ ds_content_wrapper }}>
