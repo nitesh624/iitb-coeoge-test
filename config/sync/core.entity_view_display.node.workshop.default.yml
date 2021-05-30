@@ -1,0 +1,37 @@
+uuid: 4ad770bb-8a97-472a-9ff3-61d5223563cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.workshop.body
+    - field.field.node.workshop.field_content
+    - field.field.node.workshop.field_end_date
+    - field.field.node.workshop.field_start_date
+    - node.type.workshop
+  module:
+    - entity_reference_revisions
+    - user
+id: node.workshop.default
+targetEntityType: node
+bundle: workshop
+mode: default
+content:
+  field_content:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_end_date: true
+  field_start_date: true
+  langcode: true

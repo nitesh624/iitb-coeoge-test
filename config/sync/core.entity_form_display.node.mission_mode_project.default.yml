@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.mission_mode_project.field_co_faculty_name_ref
     - field.field.node.mission_mode_project.field_content
     - field.field.node.mission_mode_project.field_faculty_name_ref
+    - field.field.node.mission_mode_project.field_project_status
     - field.field.node.mission_mode_project.field_research_verticals_mission
     - node.type.mission_mode_project
   module:
@@ -72,6 +73,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_project_status:
+    weight: 126
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_research_verticals_mission:
     weight: 125

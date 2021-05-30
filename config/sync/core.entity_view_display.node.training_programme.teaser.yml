@@ -1,0 +1,37 @@
+uuid: 3cc1480a-f469-4f03-976b-14264ebd23fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.training_programme.body
+    - field.field.node.training_programme.field_content
+    - field.field.node.training_programme.field_start_date
+    - field.field.node.training_programme.field_training_programme_date
+    - node.type.training_programme
+  module:
+    - text
+    - user
+id: node.training_programme.teaser
+targetEntityType: node
+bundle: training_programme
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_content: true
+  field_start_date: true
+  field_training_programme_date: true
+  langcode: true

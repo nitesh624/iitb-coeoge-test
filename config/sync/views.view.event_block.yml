@@ -374,6 +374,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -383,8 +385,6 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -419,6 +419,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -428,8 +430,6 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -451,7 +451,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: false
           expose:
             label: ''
@@ -500,8 +500,8 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      use_more: true
-      use_more_always: true
+      use_more: false
+      use_more_always: false
       use_more_text: 'view past events'
       link_url: events-all
       link_display: custom_url

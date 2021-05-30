@@ -1,0 +1,19 @@
+uuid: 0a4ba6c2-fd42-4c9c-b032-0d0e3abc95d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_status
+    - node.type.seed_project
+id: node.seed_project.field_project_status
+field_name: field_project_status
+entity_type: node
+bundle: seed_project
+label: 'Project Status'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

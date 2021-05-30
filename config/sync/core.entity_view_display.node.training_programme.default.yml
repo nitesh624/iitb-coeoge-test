@@ -1,0 +1,72 @@
+uuid: df4cc016-3c2c-4b77-8f19-7a1d071ee974
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.training_programme.body
+    - field.field.node.training_programme.field_content
+    - field.field.node.training_programme.field_start_date
+    - field.field.node.training_programme.field_training_programme_date
+    - node.type.training_programme
+  module:
+    - entity_reference_revisions
+    - user
+id: node.training_programme.default
+targetEntityType: node
+bundle: training_programme
+mode: default
+content:
+  field_content:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_training_programme_date:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Date
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: string
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_start_date: true
+  langcode: true

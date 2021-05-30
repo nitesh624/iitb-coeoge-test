@@ -52,14 +52,12 @@ third_party_settings:
         - field_staff_designation
         - field_email
         - field_phone_no
-        - field_mobile_number
-        - field_lab_room_number
-        - field_building
         - field_staff_category
         - body
-        - field_r_d_projects
-        - field_awards_and_fellowships
         - field_staff_photo
+        - field_date_of_joining
+        - field_date_of_leaving
+        - field_staff_status
 _core:
   default_config_hash: 8I4YH8adUSW18MJILNaoj04-1pAzlUqYBeZejhMoubI
 id: node.staff_page.default
@@ -106,20 +104,76 @@ content:
     weight: 14
     label: above
     settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
+      timezone_override: Asia/Kolkata
+      format_type: html_date
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
     type: datetime_default
-    region: content
+    region: ds_content
   field_date_of_leaving:
     weight: 15
     label: above
     settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
+      timezone_override: Asia/Kolkata
+      format_type: html_date
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
     type: datetime_default
-    region: content
+    region: ds_content
   field_email:
     weight: 3
     label: above
@@ -204,10 +258,9 @@ content:
     weight: 8
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings:
       ds:
-        ds_limit: ''
         ft:
           id: expert
           settings:
@@ -356,9 +409,37 @@ content:
     weight: 16
     label: above
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
     type: list_default
-    region: content
+    region: ds_content
   links:
     weight: 0
     region: ds_content

@@ -1,0 +1,23 @@
+uuid: ec3c8667-a911-4220-b3ed-66298b1e69a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.training_programme
+  module:
+    - text
+id: node.training_programme.body
+field_name: body
+entity_type: node
+bundle: training_programme
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

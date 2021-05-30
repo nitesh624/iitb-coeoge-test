@@ -9,14 +9,22 @@ dependencies:
     module:
       - staff_page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    plain_format: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 _core:
   default_config_hash: ctywM5y6nR2VE1Hu97SuEYaDqmGDvWqtE2YrCNeY8k8
 id: node.staff_page.body
 field_name: body
 entity_type: node
 bundle: staff_page
-label: 'Work Involved in'
+label: Responsibilities
 description: ''
 required: false
 translatable: true

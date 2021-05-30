@@ -155,24 +155,36 @@
                 <h4 class="entry-title inline">Location: </h4>{{ ds_content.field_room_no.0 }}{% if ds_content.field_room_no|render and ds_content.field_building|render %}, {% endif %}{{ ds_content.field_building.0 }}
                 </div>
               {% endif %}
+          {% set related_mission_mode_proj_view = drupal_view_result('related_faculty_mission_mode_proj', 'block_1')|length %}
+          {% set related_seed_proj_view = drupal_view_result('related_faculty_seed_projects', 'block_1')|length %}
 
-          <h3 class="text-center mb-10">Research Projects with OGE center</h3>
-            <div class="project-switcher">
+          <h3 class="text-center mb-10">Research Projects with CoE-OGE center</h3>
+          <div class="project-switcher">
             <ul id="myTabs" class="nav nav-pills nav-justified" role="tablist" data-tabs="tabs">
-              <li class="active"><a href="#mission" data-toggle="tab">Mission mode projects</a></li>
-              <li><a href="#seeds" data-toggle="tab">Seed projects</a></li>
+              {% if related_mission_mode_proj_view > 0 %}
+                <li class="active"><a href="#mission" data-toggle="tab">Mission mode projects</a></li>
+              {% endif %}
+              {% if related_seed_proj_view > 0 %}
+                <li class="active"><a href="#seeds" data-toggle="tab">Seed projects</a></li>
+              {% endif %}
             </ul>
             <div class="tab-content mt-30">
+            {% if related_mission_mode_proj_view > 0 %}
               <div role="tabpanel" class="tab-pane fade in active" id="mission"> 
                 {{ drupal_view('related_faculty_mission_mode_proj', 'block_1') }}
               </div>
-              <div role="tabpanel" class="tab-pane fade" id="seeds">
-                {{ drupal_view('related_faculty_seed_projects', 'block_1') }}
-              </div>
+            {% endif %}
+              {% if related_seed_proj_view > 0 %}
+                <div role="tabpanel" class="tab-pane fade in active" id="seeds">     
+                  {{ drupal_view('related_faculty_seed_projects', 'block_1') }}
+                </div>
+              {% endif %}
             </div>
           </div>
+          <div class="mt-20 btn btn-primary">
+            <a href="{{ content.field_detailed_information_page.0['#url'] }}" target="_blank">Personal Webpage of the faculty</a>
+          </div>
         </div>
-
       </div>
     </div>
 

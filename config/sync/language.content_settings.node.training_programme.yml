@@ -1,0 +1,11 @@
+uuid: ba2f094a-9a36-44fb-843c-9c9cf6cc8a4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.training_programme
+id: node.training_programme
+target_entity_type_id: node
+target_bundle: training_programme
+default_langcode: site_default
+language_alterable: false

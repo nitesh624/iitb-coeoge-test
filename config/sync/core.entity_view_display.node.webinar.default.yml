@@ -1,0 +1,37 @@
+uuid: 730e8e00-5e05-4e97-b2a7-762db6fd31c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.webinar.body
+    - field.field.node.webinar.field_content
+    - field.field.node.webinar.field_end_date
+    - field.field.node.webinar.field_start_date
+    - node.type.webinar
+  module:
+    - entity_reference_revisions
+    - user
+id: node.webinar.default
+targetEntityType: node
+bundle: webinar
+mode: default
+content:
+  field_content:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_end_date: true
+  field_start_date: true
+  langcode: true

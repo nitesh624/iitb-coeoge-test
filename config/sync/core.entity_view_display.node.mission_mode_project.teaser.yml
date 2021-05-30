@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.mission_mode_project.field_co_faculty_name_ref
     - field.field.node.mission_mode_project.field_content
     - field.field.node.mission_mode_project.field_faculty_name_ref
+    - field.field.node.mission_mode_project.field_project_status
     - field.field.node.mission_mode_project.field_research_verticals_mission
     - node.type.mission_mode_project
   module:
@@ -35,5 +36,6 @@ hidden:
   field_co_faculty_name_ref: true
   field_content: true
   field_faculty_name_ref: true
+  field_project_status: true
   field_research_verticals_mission: true
   langcode: true

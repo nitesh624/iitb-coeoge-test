@@ -1,0 +1,19 @@
+uuid: 2edbcfc7-754c-46e4-b7f4-f915523336c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_programme_date
+    - node.type.training_programme
+id: node.training_programme.field_training_programme_date
+field_name: field_training_programme_date
+entity_type: node
+bundle: training_programme
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
