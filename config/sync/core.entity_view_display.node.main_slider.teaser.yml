@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.main_slider.body
     - field.field.node.main_slider.field_faculty_name_ref_slider
+    - field.field.node.main_slider.field_sequence
     - field.field.node.main_slider.field_slider_media
     - field.field.node.main_slider.field_slider_subtitle
     - image.style.home_slider
@@ -77,5 +78,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_faculty_name_ref_slider: true
+  field_sequence: true
   field_slider_subtitle: true
   langcode: true

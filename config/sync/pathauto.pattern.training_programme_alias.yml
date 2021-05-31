@@ -1,0 +1,22 @@
+uuid: 6f3b4775-063a-40ff-8d4c-b3902eb7d8d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: training_programme_alias
+label: 'Training Programme alias'
+type: 'canonical_entities:node'
+pattern: 'training-programme/[node:title]'
+selection_criteria:
+  09d6cf19-3b14-409d-90ce-05023a94ff89:
+    id: node_type
+    bundles:
+      training_programme: training_programme
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 09d6cf19-3b14-409d-90ce-05023a94ff89
+selection_logic: and
+weight: -5
+relationships: {  }

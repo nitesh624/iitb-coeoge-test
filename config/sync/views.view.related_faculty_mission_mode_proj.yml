@@ -35,7 +35,7 @@ display:
         type: views_query
         options:
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_comment: ''
           query_tags: {  }
@@ -291,7 +291,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Roll
+          label: Role
           exclude: false
           alter:
             alter_text: true
@@ -466,7 +466,7 @@ display:
           admin_label: ''
           default_action: default
           exception:
-            value: all
+            value: ''
             title_enable: false
             title: All
           title_enable: false
@@ -483,7 +483,7 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
             type: none
             fail: 'not found'
@@ -500,7 +500,7 @@ display:
           admin_label: ''
           default_action: default
           exception:
-            value: all
+            value: ''
             title_enable: false
             title: All
           title_enable: false

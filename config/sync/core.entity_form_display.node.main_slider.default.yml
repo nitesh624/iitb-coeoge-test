@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.main_slider.body
     - field.field.node.main_slider.field_faculty_name_ref_slider
+    - field.field.node.main_slider.field_sequence
     - field.field.node.main_slider.field_slider_media
     - field.field.node.main_slider.field_slider_subtitle
     - node.type.main_slider
@@ -46,6 +47,13 @@ content:
       match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_sequence:
+    weight: 122
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_slider_media:
     type: media_library_widget

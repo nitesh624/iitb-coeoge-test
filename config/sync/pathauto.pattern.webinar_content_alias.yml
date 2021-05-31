@@ -1,0 +1,22 @@
+uuid: 5d3b3c04-8b7d-436d-96d5-d9a971c3421f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: webinar_content_alias
+label: 'Webinar content alias'
+type: 'canonical_entities:node'
+pattern: 'webinar/[node:title]'
+selection_criteria:
+  2863255e-782b-44ee-9a92-6f693e97442b:
+    id: node_type
+    bundles:
+      webinar: webinar
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2863255e-782b-44ee-9a92-6f693e97442b
+selection_logic: and
+weight: -5
+relationships: {  }

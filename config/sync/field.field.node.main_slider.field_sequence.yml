@@ -1,0 +1,23 @@
+uuid: 42f99c82-26e7-47f4-bd4a-40254401b0a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sequence
+    - node.type.main_slider
+id: node.main_slider.field_sequence
+field_name: field_sequence
+entity_type: node
+bundle: main_slider
+label: Sequence
+description: 'Enter the value for order of this slide on home page. A lower number will appear first.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -292,6 +292,18 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts:
+        field_sequence_value:
+          id: field_sequence_value
+          table: node__field_sequence
+          field: field_sequence_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         created:
           id: created
           table: node_field_data
