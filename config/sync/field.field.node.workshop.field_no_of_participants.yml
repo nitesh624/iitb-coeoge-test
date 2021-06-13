@@ -1,0 +1,23 @@
+uuid: 2f1da113-2100-4c74-9323-a522cfb5d9d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_no_of_participants
+    - node.type.workshop
+id: node.workshop.field_no_of_participants
+field_name: field_no_of_participants
+entity_type: node
+bundle: workshop
+label: 'No of Participants'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

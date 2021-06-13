@@ -1,0 +1,19 @@
+uuid: a41bba53-f44e-4fd0-a482-e29b8f41ddfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supporting_psu
+    - node.type.training_programme
+id: node.training_programme.field_supporting_psu
+field_name: field_supporting_psu
+entity_type: node
+bundle: training_programme
+label: 'PSUs Involved'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

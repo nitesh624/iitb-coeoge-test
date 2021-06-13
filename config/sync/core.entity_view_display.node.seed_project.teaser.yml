@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.seed_project.field_faculty_name_ref
     - field.field.node.seed_project.field_project_status
     - field.field.node.seed_project.field_research_verticals_seed
+    - field.field.node.seed_project.field_supporting_psu
     - node.type.seed_project
   module:
     - text
@@ -38,4 +39,5 @@ hidden:
   field_faculty_name_ref: true
   field_project_status: true
   field_research_verticals_seed: true
+  field_supporting_psu: true
   langcode: true

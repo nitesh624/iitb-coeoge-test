@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.mission_mode_project.field_co_faculty_name_ref
     - field.field.node.mission_mode_project.field_content
     - field.field.node.mission_mode_project.field_faculty_name_ref
+    - field.field.node.mission_mode_project.field_pi_psu
     - field.field.node.mission_mode_project.field_project_status
     - field.field.node.mission_mode_project.field_research_verticals_mission
     - node.type.mission_mode_project
@@ -21,7 +22,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
@@ -31,12 +32,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_co_faculty_name_ref:
-    weight: 123
+    weight: 10
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -46,7 +47,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_content:
-    weight: 124
+    weight: 12
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -65,7 +66,7 @@ content:
     type: paragraphs
     region: content
   field_faculty_name_ref:
-    weight: 122
+    weight: 9
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -74,8 +75,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_pi_psu:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_project_status:
-    weight: 126
+    weight: 14
     settings:
       size: 60
       placeholder: ''
@@ -83,7 +92,7 @@ content:
     type: string_textfield
     region: content
   field_research_verticals_mission:
-    weight: 125
+    weight: 13
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -94,14 +103,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -109,26 +118,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 7
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -136,7 +145,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60

@@ -1,0 +1,19 @@
+uuid: 2c2a6f1f-c402-4458-aebc-9be1d5c65806
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_ordinator
+    - node.type.training_programme
+id: node.training_programme.field_co_ordinator
+field_name: field_co_ordinator
+entity_type: node
+bundle: training_programme
+label: Co-ordinator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

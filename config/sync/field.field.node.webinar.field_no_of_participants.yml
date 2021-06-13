@@ -1,0 +1,23 @@
+uuid: 10d896c8-1716-4c1e-9a88-7de954077459
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_no_of_participants
+    - node.type.webinar
+id: node.webinar.field_no_of_participants
+field_name: field_no_of_participants
+entity_type: node
+bundle: webinar
+label: 'No of Participants'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

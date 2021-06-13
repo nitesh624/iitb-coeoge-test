@@ -5,6 +5,7 @@ ft-show-colon: false
 classes:
   region:
     - card
+    - container
     - row
     - col-md-2
     - col-md-3

@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.workshop.body
     - field.field.node.workshop.field_content
     - field.field.node.workshop.field_end_date
+    - field.field.node.workshop.field_no_of_participants
     - field.field.node.workshop.field_start_date
+    - field.field.node.workshop.field_supporting_psu
     - node.type.workshop
   module:
     - text
@@ -33,5 +35,7 @@ content:
 hidden:
   field_content: true
   field_end_date: true
+  field_no_of_participants: true
   field_start_date: true
+  field_supporting_psu: true
   langcode: true

@@ -1,0 +1,22 @@
+uuid: 41d4f7a3-cb1d-4223-bbfe-968e8fe19a06
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: phd_fellowship_pattern
+label: 'Phd fellowship Pattern'
+type: 'canonical_entities:node'
+pattern: 'phd-fellowship/[node:title]'
+selection_criteria:
+  c3fb4543-f1bd-402b-9f08-80e17652aff4:
+    id: node_type
+    bundles:
+      phd_fellowship_: phd_fellowship_
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c3fb4543-f1bd-402b-9f08-80e17652aff4
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.webinar.body
     - field.field.node.webinar.field_content
     - field.field.node.webinar.field_end_date
+    - field.field.node.webinar.field_no_of_participants
     - field.field.node.webinar.field_start_date
+    - field.field.node.webinar.field_supporting_psu
     - node.type.webinar
   module:
     - text
@@ -33,5 +35,7 @@ content:
 hidden:
   field_content: true
   field_end_date: true
+  field_no_of_participants: true
   field_start_date: true
+  field_supporting_psu: true
   langcode: true

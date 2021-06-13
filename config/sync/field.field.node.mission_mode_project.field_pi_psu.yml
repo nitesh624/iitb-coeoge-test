@@ -1,0 +1,19 @@
+uuid: a9f9fecb-4ba3-438f-9cc5-d3a0ff5051ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pi_psu
+    - node.type.mission_mode_project
+id: node.mission_mode_project.field_pi_psu
+field_name: field_pi_psu
+entity_type: node
+bundle: mission_mode_project
+label: 'PIs from PSU'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

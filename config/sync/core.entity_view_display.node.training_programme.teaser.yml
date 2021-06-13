@@ -5,8 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.training_programme.body
+    - field.field.node.training_programme.field_co_ordinator
     - field.field.node.training_programme.field_content
+    - field.field.node.training_programme.field_no_of_participants
     - field.field.node.training_programme.field_start_date
+    - field.field.node.training_programme.field_supporting_psu
     - field.field.node.training_programme.field_training_programme_date
     - node.type.training_programme
   module:
@@ -31,7 +34,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_co_ordinator: true
   field_content: true
+  field_no_of_participants: true
   field_start_date: true
+  field_supporting_psu: true
   field_training_programme_date: true
   langcode: true

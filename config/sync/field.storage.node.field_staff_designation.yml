@@ -17,14 +17,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: 'Research Staff'
-      label: 'Research Staff'
+      value: 'Project Research Scientist'
+      label: 'Project Research Scientist'
+    -
+      value: 'Project Research Assistant'
+      label: 'Project Research Assistant'
+    -
+      value: 'CoU-OGE Phd Fellow'
+      label: 'CoU-OGE Phd Fellow'
     -
       value: 'Project Staff'
       label: 'Project Staff'
-    -
-      value: 'Technical Staff'
-      label: 'Technical Staff'
     -
       value: 'Office Staff'
       label: 'Office Staff'

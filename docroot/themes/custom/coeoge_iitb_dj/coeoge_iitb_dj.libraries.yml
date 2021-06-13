@@ -97,7 +97,10 @@ paragraph-type-cta:
   css:
     theme:
       css/paragraph/cta.css: {}
-
+paragraph-type-list-view:
+  css:
+    theme:
+      css/paragraph/list-view.css: {}
 node-type-industrial-partner:
   css:
     theme:

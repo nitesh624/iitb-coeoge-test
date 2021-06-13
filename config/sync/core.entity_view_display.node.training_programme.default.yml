@@ -4,30 +4,181 @@ status: true
 dependencies:
   config:
     - field.field.node.training_programme.body
+    - field.field.node.training_programme.field_co_ordinator
     - field.field.node.training_programme.field_content
+    - field.field.node.training_programme.field_no_of_participants
     - field.field.node.training_programme.field_start_date
+    - field.field.node.training_programme.field_supporting_psu
     - field.field.node.training_programme.field_training_programme_date
     - node.type.training_programme
   module:
+    - ds
     - entity_reference_revisions
+    - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class:
+            container: container
+          ds_content: {  }
+    regions:
+      ds_content:
+        - body
+        - links
+        - field_co_ordinator
+        - field_no_of_participants
+        - field_supporting_psu
+        - field_training_programme_date
+        - field_content
 id: node.training_programme.default
 targetEntityType: node
 bundle: training_programme
 mode: default
 content:
-  field_content:
+  body:
+    type: text_trimmed
+    weight: 0
+    region: ds_content
+    label: above
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_co_ordinator:
     weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+  field_content:
+    weight: 6
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
-    region: content
+    region: ds_content
+  field_no_of_participants:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: number_integer
+    region: ds_content
+  field_supporting_psu:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: col-sm-9
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: string
+    region: ds_content
   field_training_programme_date:
-    weight: 1
-    label: inline
+    weight: 5
+    label: above
     settings:
       link_to_entity: false
     third_party_settings:
@@ -37,36 +188,35 @@ content:
           settings:
             lb: Date
             prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
             lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
             ow-at: ''
             fis-el: ''
             fis-cl: ''
             fis-at: ''
-            fi-el: ''
-            fi-cl: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
             fi-at: ''
             suffix: ''
-            lbw: false
             lb-col: false
-            ow: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
             fis-def-at: false
-            fi: false
             fi-def-at: false
     type: string
-    region: content
+    region: ds_content
   links:
-    weight: 0
-    region: content
+    weight: 1
+    region: ds_content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  body: true
   field_start_date: true
   langcode: true

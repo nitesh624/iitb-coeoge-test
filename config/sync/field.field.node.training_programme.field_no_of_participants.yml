@@ -1,0 +1,23 @@
+uuid: c194ab3f-56ed-439c-bd7b-31af70faf633
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_no_of_participants
+    - node.type.training_programme
+id: node.training_programme.field_no_of_participants
+field_name: field_no_of_participants
+entity_type: node
+bundle: training_programme
+label: 'No of Participants'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

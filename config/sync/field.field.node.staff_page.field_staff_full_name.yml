@@ -32,9 +32,9 @@ settings:
     credentials: false
   minimum_components:
     given: true
-    family: true
     title: false
     middle: false
+    family: false
     generational: false
     credentials: false
   allow_family_or_given: false

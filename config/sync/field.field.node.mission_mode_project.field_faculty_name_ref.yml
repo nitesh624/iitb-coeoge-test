@@ -10,7 +10,7 @@ id: node.mission_mode_project.field_faculty_name_ref
 field_name: field_faculty_name_ref
 entity_type: node
 bundle: mission_mode_project
-label: 'PI Name'
+label: 'PIs (IITB)'
 description: ''
 required: false
 translatable: true

@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.training_programme.body
+    - field.field.node.training_programme.field_co_ordinator
     - field.field.node.training_programme.field_content
+    - field.field.node.training_programme.field_no_of_participants
     - field.field.node.training_programme.field_start_date
+    - field.field.node.training_programme.field_supporting_psu
     - field.field.node.training_programme.field_training_programme_date
     - node.type.training_programme
   module:
@@ -23,8 +26,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_co_ordinator:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_content:
-    weight: 8
+    weight: 13
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -42,14 +53,29 @@ content:
     third_party_settings: {  }
     type: paragraphs
     region: content
+  field_no_of_participants:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_start_date:
-    weight: 9
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_supporting_psu:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_training_programme_date:
-    weight: 10
+    weight: 9
     settings:
       size: 60
       placeholder: ''

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.phd_fellowship_.field_co_faculty_name_ref
     - field.field.node.phd_fellowship_.field_content
     - field.field.node.phd_fellowship_.field_faculty_name_ref
+    - field.field.node.phd_fellowship_.field_pi_psu
     - node.type.phd_fellowship_
   module:
     - text
@@ -34,4 +35,5 @@ hidden:
   field_co_faculty_name_ref: true
   field_content: true
   field_faculty_name_ref: true
+  field_pi_psu: true
   langcode: true

@@ -1,0 +1,19 @@
+uuid: cc9f8857-61d5-49dc-b5e2-6b12103bc497
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supporting_psu
+    - node.type.seed_project
+id: node.seed_project.field_supporting_psu
+field_name: field_supporting_psu
+entity_type: node
+bundle: seed_project
+label: 'Supporting PSUs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
