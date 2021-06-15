@@ -346,7 +346,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_faculty_name_ref }}, {{ field_co_faculty_name_ref }}'
+            text: "{% if field_faculty_name_ref %}PIs: {{ field_faculty_name_ref }} <br/> {% endif %}\r\n{% if field_co_faculty_name_ref %}Co-PIs: {{ field_co_faculty_name_ref }}{% endif %}"
             make_link: false
             path: ''
             absolute: false

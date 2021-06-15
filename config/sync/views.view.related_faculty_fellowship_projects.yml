@@ -404,7 +404,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Related faculty mission mode project'
+      title: 'Related faculty fellowship projects'
       header: {  }
       footer: {  }
       empty:
